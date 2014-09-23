@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    <div id="map"></div>
+    <script>
+      var lat, lng, content, marker,
+          map = L.map('map').setView([47.923704717745686, -122.420654296875], 6),
+          markers = new L.featureGroup(),
+          mbox = L.icon({
+            iconUrl: '/assets/leaflet/img/marker.png',
+            iconSize:     [30, 70],
+            iconAnchor:   [15, 35],
+            popupAnchor:  [0, -35]
+          });
+      L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
+        attribution: 'Stamen & OSM'
+      }).addTo(map);
+
+      // jekyll loop through posts
+      {% for post in site.posts %}
+      lat = {{ post.lat }};
+      lng = {{ post.lng }};
+      content = "<strong>{{ post.title }}</strong>";
+      marker = L.marker([lat, lng], {
+        icon: mbox
+      }).bindPopup(content);
+      markers.addLayer(marker);
+      {% endfor %}
+      // end loop through posts
+
+      markers.addTo(map);
+      map.fitBounds(markers.getBounds());
+    </script>
+
+  </body>
+
+</html>
