@@ -6,24 +6,27 @@
   <body>
     <div id="map"></div>
     <script>
+      // set up variables to use during jekyll loop
       var lat, lng, content, marker,
-          map = L.map('map').setView([47.923704717745686, -122.420654296875], 6),
+          map = L.map('map').setView([0, 0], 1),
           markers = new L.featureGroup(),
           mbox = L.icon({
-            iconUrl: '/assets/leaflet/img/marker.png',
-            iconSize:     [30, 70],
-            iconAnchor:   [15, 35],
-            popupAnchor:  [0, -35]
+            iconUrl: '/assets/leaflet/img/marker-icon.png',
+            iconRetinaUrl: '/assets/leaflet/img/marker-icon-2x.png',
+            iconSize:     [25, 41],
+            iconAnchor:   [12.5, 41],
+            popupAnchor:  [0, 41]
           });
       L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
-        attribution: 'Stamen & OSM'
+        attribution: 'Stamen & OSM',
+        detectRetina: true
       }).addTo(map);
 
       // jekyll loop through posts
       {% for post in site.posts %}
       lat = {{ post.lat }};
       lng = {{ post.lng }};
-      content = "<strong>{{ post.title }}</strong>";
+      content = "<strong>{{ post.title }}</strong><br>{{ post.desc }}";
       marker = L.marker([lat, lng], {
         icon: mbox
       }).bindPopup(content);
