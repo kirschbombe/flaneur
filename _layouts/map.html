@@ -10,7 +10,7 @@
       var lat, lng, content, marker,
           map = L.map('map').setView([0, 0], 1),
           markers = new L.featureGroup(),
-          icon = L.icon({
+          mbox = L.icon({
             iconUrl: '/assets/leaflet/img/marker-icon.png',
             iconRetinaUrl: '/assets/leaflet/img/marker-icon-2x.png',
             iconSize:     [25, 41],
@@ -28,7 +28,7 @@
       lng = {{ post.lng }};
       content = "<strong>{{ post.title }}</strong><br>{{ post.desc }}";
       marker = L.marker([lat, lng], {
-        icon: icon
+        icon: mbox
       }).bindPopup(content);
       markers.addLayer(marker);
       {% endfor %}
