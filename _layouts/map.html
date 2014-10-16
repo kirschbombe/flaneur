@@ -11,8 +11,8 @@
           map = L.map('map').setView([0, 0], 1),
           markers = new L.featureGroup(),
           mbox = L.icon({
-            iconUrl: '/assets/leaflet/img/marker-icon.png',
-            iconRetinaUrl: '/assets/leaflet/img/marker-icon-2x.png',
+            iconUrl: '{{ "/assets/leaflet/img/marker-icon.png" | prepend: site.baseurl }}',
+            iconRetinaUrl: '{{ "/assets/leaflet/img/marker-icon-2x.png" | prepend: site.baseurl }}',
             iconSize:     [25, 41],
             iconAnchor:   [12.5, 41],
             popupAnchor:  [0, 41]
