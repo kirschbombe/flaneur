@@ -1,7 +1,7 @@
 # Site settings
 title: Boulevardier
-email: matthews.sam@gmail.com
-description: Jekyll theme for maps and text, based on the Boulevardier framework.
+email: kirschbombe@gmail.com
+description: "Jekyll theme for maps and text"
 baseurl: "/boulevardier-jekyll/" # the subpath of your site, e.g. /blog/
 url: "http://dawnchildress.com/boulevardier-jekyll/" # the base hostname & protocol for your site
 twitter_username: kirschbombe
