@@ -1,11 +1,11 @@
 # Site settings
-title: Jekyll Maps
+title: Boulevardier
 email: matthews.sam@gmail.com
-description: Point-based map engine generated via static Jekyll posts.
-baseurl: "/jekyll-maps/" # the subpath of your site, e.g. /blog/
-url: "http://mapsam.com/jekyll-maps/" # the base hostname & protocol for your site
-twitter_username: vancematthews
-github_username:  svmatthews
+description: Jekyll theme for maps and text, based on the Boulevardier framework.
+baseurl: "/boulevardier-jekyll/" # the subpath of your site, e.g. /blog/
+url: "http://dawnchildress.com/boulevardier-jekyll/" # the base hostname & protocol for your site
+twitter_username: kirschbombe
+github_username:  kirschbombe
 
 # Build settings
 markdown: kramdown
