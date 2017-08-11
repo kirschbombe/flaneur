@@ -1,5 +1,8 @@
-Jekyll Maps
-===========
+### Flâneur
+
+(In development) Flâneur is a Jekyll theme based on the Boulevardier framework. 
+
+Jekyll-maps
 
 **Point-based map engine generated via static Jekyll posts.**
 
