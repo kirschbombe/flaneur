@@ -1,9 +1,9 @@
 # Site settings
-title: Boulevardier
+title: Flaneur
 email: kirschbombe@gmail.com
-description: "Jekyll theme for maps and text"
-baseurl: "/boulevardier-jekyll/" # the subpath of your site, e.g. /blog/
-url: "http://dawnchildress.com/boulevardier-jekyll/" # the base hostname & protocol for your site
+description: "Jekyll port of Boulevardier"
+baseurl: "/flaneur/" # the subpath of your site, e.g. /blog/
+url: "http://dawnchildress.com/flaneur/" # the base hostname & protocol for your site
 twitter_username: kirschbombe
 github_username:  kirschbombe
 
