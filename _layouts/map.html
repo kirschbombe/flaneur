@@ -31,8 +31,11 @@
       content = "<strong>{{ post.title }}</strong><br>{{ post.desc }}";
       var marker = L.marker([lat, lng], {
         icon: mbox,
-      }).bindPopup(content);
+      }).bindPopup(content, {offset:new L.Point(0,-30)});
       
+      marker.on('mouseover', function(){
+        this.openPopup();
+      });
       marker.on('click', function(){
         window.location = ("{{site.baseurl}}/#{{post.url}}");
         $.get("{{site.baseurl}}{{post.url}}", function(data){
