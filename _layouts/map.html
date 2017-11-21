@@ -33,7 +33,7 @@
       }).bindPopup(content);
       
       marker.on('click', function(){
-        window.location = ("{{site.baseurl}}{{post.url}}");
+        window.location = ("{{site.baseurl}}#{{post.url}}");
       });
 
       markers.addLayer(marker);
