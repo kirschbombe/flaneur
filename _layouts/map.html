@@ -2,8 +2,9 @@
 <html>
 
   {% include head.html %}
-
   <body>
+    {% include sidebar.html %}
+
     <div id="map"></div>
     <script>
       // set up variables to use during jekyll loop
@@ -26,18 +27,25 @@
       {% for post in site.posts %}
       lat = {{ post.lat }};
       lng = {{ post.lng }};
-      content = "<strong>{{ post.title }}</strong><br>{{ post.desc }}";
-      marker = L.marker([lat, lng], {
-        icon: mbox
+      content = "<strong>{{ post.title }}</strong><br>{{ post.desc }} {{post.url}}";
+      var marker = L.marker([lat, lng], {
+        icon: mbox,
       }).bindPopup(content);
+      
+      marker.on('click', function(){
+        window.location = ("{{post.url}}");
+      });
+
       markers.addLayer(marker);
       {% endfor %}
       // end loop through posts
 
       markers.addTo(map);
       map.fitBounds(markers.getBounds());
-    </script>
 
+</script>
   </body>
+<style>
 
+</style>
 </html>
