@@ -19,9 +19,13 @@
             iconAnchor:   [12.5, 41],
             popupAnchor:  [0, 41]
           });
-      L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
-        attribution: 'Stamen & OSM',
-        detectRetina: true
+      L.tileLayer('https://{s}.tiles.mapbox.com/v3/kirschbombe.ae0a59b5/{z}/{x}/{y}.png', {
+        "attribution" : "<a href=\"http://www.mapbox.com\">Mapbox</a>", 
+        "minZoom" : 0,
+        "maxZoom" : 15,
+        "errorTileUrl" : "img/error-tile-image.png",
+        "subdomains" : ["a", "b", "c", "d"],
+        "detectRetina" : true
       }).addTo(map);
 
       // jekyll loop through posts
@@ -36,6 +40,7 @@
       marker.on('mouseover', function(){
         this.openPopup();
       });
+
       marker.on('click', function(){
         window.location = ("{{site.baseurl}}/#{{post.url}}");
         $.get("{{site.baseurl}}{{post.url}}", function(data){
