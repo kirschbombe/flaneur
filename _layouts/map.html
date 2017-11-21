@@ -3,7 +3,8 @@
 
   {% include head.html %}
   <body>
-    {% include sidebar.html %}
+    
+  {% include sidebar.html %}
 
     <div id="map"></div>
     <script>
@@ -27,13 +28,16 @@
       {% for post in site.posts %}
       lat = {{ post.lat }};
       lng = {{ post.lng }};
-      content = "<strong>{{ post.title }}</strong><br>{{ post.desc }} {{post.url}}";
+      content = "<strong>{{ post.title }}</strong><br>{{ post.desc }}";
       var marker = L.marker([lat, lng], {
         icon: mbox,
       }).bindPopup(content);
       
       marker.on('click', function(){
-        window.location = ("{{site.baseurl}}#{{post.url}}");
+        window.location = ("{{site.baseurl}}/#{{post.url}}");
+        $.get("{{site.baseurl}}{{post.url}}", function(data){
+        	$("#sidebar-content").html(data)
+        });
       });
 
       markers.addLayer(marker);
