@@ -9,6 +9,7 @@ github_username:  kirschbombe
 
 # Build settings
 markdown: kramdown
+encoding: utf-8
 
 # Map
 map-tileset: 'http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png'
@@ -18,3 +19,4 @@ collections:
   posts:
     output: true 
     permalink: /article/:name
+
