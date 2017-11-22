@@ -2,12 +2,19 @@ body {
   margin:0; padding:0;
   font-family:"Helvetica", arial, sans-serif;
 }
+body {
+  margin:0; padding:0;
+  font-family:"Helvetica", arial, sans-serif;
+}
+
+.container {
+	width: 100%
+}
 #map {
   position:absolute;
   width:67%;
   height:100%;
 }
-
 .sidebar {
 	height:100%;
 	width:33%;
@@ -15,5 +22,61 @@ body {
 	position:fixed!important;
 	z-index:1;
 	right:0;
-	overflow:auto
+	overflow:auto;
+	
+}
+.post-title{
+	font-size: 14px;
+}
+p.post-header {
+letter-spacing: 2px;
+margin-bottom: .5rem;
+font-size: 13px;
+margin-top: 0;
+font-family: "Open Sans Condensed";
+font-weight: 300;
+font-style: italic;
+border-width: 0 0 1px;
+border-style: dotted;
+line-height: 21px;
+text-align: left;
+z-index: 1 !important;
+}
+
+h1.post-title {
+font-size: 18px
+}
+
+p.byline {
+	font-size: 15px;
+	line-height: 15px;
+	margin-bottom: .5rem;
+	font-family: "Open Sans Condensed";
+	font-weight: 300;
+	font-style: italic;
+
+
+}
+
+img {
+height: 200px;
+}
+
+article.post-article {
+height: 480px;
+overflow-y: scroll;
+z-index: 1 !important;
+padding-bottom: 10px;
+font-size: 12px;
+
+}
+
+
+p {
+	display: block;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	text-align: left
 }
