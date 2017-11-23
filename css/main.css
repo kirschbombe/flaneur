@@ -23,12 +23,16 @@ body {
 	z-index:1;
 	right:0;
 	overflow:auto;
-	
 }
 
 .post-title{
 	font-size: 14px;
 }
+
+.post {
+padding: 1em;
+}
+
 p.post-header {
 letter-spacing: 2px;
 margin-bottom: .5rem;
@@ -64,7 +68,7 @@ height: 200px;
 }
 
 article.post-article {
-height: 480px;
+height: 60vw;
 overflow-y: scroll;
 z-index: 1 !important;
 padding-bottom: 10px;
@@ -94,7 +98,9 @@ p {
         overflow-y: hidden;
         overflow-x: hidden
     }
-
+	article.post-article {
+	height: 25vw;
+	}
     #map {
         top: 0
     }
