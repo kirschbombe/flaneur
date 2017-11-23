@@ -25,6 +25,7 @@ body {
 	overflow:auto;
 	
 }
+
 .post-title{
 	font-size: 14px;
 }
@@ -58,7 +59,7 @@ p.byline {
 
 }
 
-img {
+article.post-article, img {
 height: 200px;
 }
 
@@ -80,3 +81,356 @@ p {
 	-webkit-margin-end: 0px;
 	text-align: left
 }
+
+/*Base Mobile Layout*/
+.wrap {
+	width: 90%;
+	margin: 0 auto;
+}
+
+#main-content, #sidebar-left, #sidebar-right {
+	width: 100%;
+	float: left;
+}
+
+@media (max-width:768px) {
+    .sidebar #header {
+        margin-top: 10px
+    }
+}
+
+.sidebar #header {
+    overflow-y: scroll
+}
+
+.sidebar h1 {
+    font-size: 30px;
+    line-height: 42px;
+    margin: 0 0 10px;
+    font-style: normal
+}
+
+.sidebar p, .sidebar p.pullquote {
+    font-family: Roboto;
+    font-style: normal
+}
+
+.sidebar h1..sidebar-title {
+    margin-bottom: 3px
+}
+
+@media (min-width:768px) {
+    .sidebar #header {
+        margin-top: 30px
+    }
+
+    .sidebar h1 span.glyphicon.glyphicon-expand {
+        display: none
+    }
+}
+
+.sidebar h1 span.glyphicon.glyphicon-expand {
+    font-size: 20px;
+    float: right;
+    color: grey;
+    font-weight: 100;
+    cursor: zoom-in
+}
+
+.sidebar p {
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: 100;
+    margin: 0 0 5px;
+    text-align: left
+}
+
+.sidebar p.pullquote {
+    font-size: 14px;
+    line-height: 17px;
+    border-width: 1px 0;
+    border-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 10px;
+    font-weight: 100
+}
+
+.sidebar h6, .sidebar p.heading {
+    border-width: 0 0 1px;
+    border-style: dotted
+}
+
+.sidebar p.byline, .sidebar p.heading {
+    font-family: "Open Sans Condensed";
+    font-weight: 300;
+    font-style: italic
+}
+
+@media (max-width:768px) {
+    .sidebar p.heading {
+        margin: 0 0 5px
+    }
+}
+
+@media (min-width:768px) {
+    .sidebar p.heading {
+        margin: 0 0 15px
+    }
+}
+
+.sidebar p.heading {
+    letter-spacing: 2px;
+    font-size: 13px;
+    color: #000
+}
+
+@media (max-width:768px) {
+    .sidebar p.byline {
+        margin: 0 0 20px
+    }
+}
+
+@media (min-width:768px) {
+    .sidebar p.byline {
+        margin: 0 0 35px
+    }
+}
+
+.sidebar p.byline {
+    font-size: 15px;
+    line-height: 15px;
+    margin-bottom: 25px
+}
+
+.sidebar p.bibl {
+    font-family: open-sans;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 0
+}
+
+.sidebar h6 {
+    margin: 20px 0 5px;
+    font-family: "Della Respira";
+    font-weight: 400;
+    font-style: normal
+}
+
+.sidebar h3 {
+    font-family: Roboto;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 16px
+}
+
+.sidebar h5 {
+    font-family: "Della Respira";
+    font-weight: 400;
+    font-style: normal
+}
+
+.sidebar img..sidebar-marker {
+    height: 36px;
+    cursor: pointer
+}
+
+.sidebar-images.image-loading {
+    background-image: url(../img/loading.gif);
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.sidebar-images {
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    max-width: 100%;
+    top: 0
+}
+
+.sidebar-images #slides {
+    display: none;
+    height: 100%;
+    max-height: 100%
+}
+
+.sidebar-images #slides .slidesjs-container {
+    height: 100%;
+    max-height: 90%
+}
+
+.sidebar-images #slides .slidesjs-container .slidesjs-control {
+    padding: 0 !important;
+    width: 100%
+}
+
+.sidebar-images #slides .slidesjs-container .slidesjs-control img {
+    padding-left: 30px;
+    padding-right: 30px;
+    position: relative;
+    margin: 0 auto;
+    width: auto;
+    cursor: zoom-in
+}
+
+.sidebar-images #slides .slidesjs-navigation {
+    float: left;
+    margin-left: 20px;
+    margin-top: 5px;
+    font-family: Roboto;
+    font-weight: 400;
+    font-style: normal
+}
+
+.sidebar-images #slides .slidesjs-navigation a {
+    opacity: 1
+}
+
+.sidebar-images #slides .slidesjs-pagination {
+    list-style: none;
+    float: right;
+    margin-right: 10px;
+    margin-top: 8px
+}
+
+.sidebar-images #slides .slidesjs-pagination li {
+    float: left;
+    margin: 0 1px
+}
+
+.sidebar-images #slides .slidesjs-pagination li a {
+    display: block;
+    width: 13px;
+    height: 0;
+    padding-top: 13px;
+    background-image: url(../img/pagination.png);
+    background-position: 0 0;
+    float: left;
+    overflow: hidden
+}
+
+.sidebar-images #slides .slidesjs-pagination li a.active, .sidebar-images #slides .slidesjs-pagination li a:hover.active {
+    background-position: 0 -13px
+}
+
+.sidebar-images #slides .slidesjs-pagination li a:hover {
+    background-position: 0 -26px
+}
+
+div.popover {
+    padding-bottom: 10px
+}
+
+div.popover h3.popover-title {
+    background-color: #fff !important;
+    border: 0;
+    font-weight: 700
+}
+
+div.popover div.popover-content {
+    padding-top: 0;
+    padding-bottom: 0
+}
+
+div.popover div.popover-content p {
+    margin-bottom: 0
+}
+
+div.popover div.popover-content p.attr {
+    font-style: italic
+}
+
+#notsupported {
+    display: none
+}
+
+#map {
+    z-index: 0 !important
+}
+
+#menu, #menu * {
+    z-index: 50 !important
+}
+
+.sidebar, .sidebar * , #issue, #issue * {
+    z-index: 1 !important
+}
+
+body {
+    height: 100vh;
+    width: 100vw
+}
+
+@media (max-width:768px) {
+    .sidebar, #map {
+        position: absolute;
+        left: 0;
+        height: 50vh;
+        width: 100vw
+    }
+
+    body {
+        overflow-y: hidden;
+        overflow-x: hidden
+    }
+
+    #map {
+        top: 0
+    }
+
+    .sidebar {
+        top: 50vh
+    }
+
+    .sidebar .sidebar {
+        height: 50vh !important;
+        width: 100vw
+    }
+
+}
+
+@media (min-width:768px) and (max-width:1100px) {
+    #map {
+        top: 0;
+        height: 100vh;
+        width: 67vw;
+    }
+	
+    #map {
+        left: 0
+    }
+
+    .sidebar {
+    	width: 33vw;
+        position: absolute;
+        right: 0;
+    }
+}
+
+@media (min-width:1100px) {
+    .sidebar, #map {
+        position: absolute;
+        top: 0;
+        height: 100vh
+    }
+
+    body {
+        overflow-y: hidden;
+        overflow-x: hidden
+    }
+
+    #map {
+        left: 0;
+        width: 67vw;
+    }
+
+    .sidebar {
+        width: 33vw;
+        right: 0;
+    }
+}
+
+
