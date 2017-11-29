@@ -42,10 +42,7 @@
       });
 
       marker.on('click', function(){
-        window.location = ("{{site.baseurl}}/#{{post.url}}");
-        $.get("{{site.baseurl}}{{post.url}}", function(data){
-        	$("#sidebar-content").html(data)
-        });
+        window.location = ("{{site.baseurl}}{{post.url}}");
       });
 
       markers.addLayer(marker);
