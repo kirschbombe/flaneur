@@ -18,7 +18,7 @@ The Los Angeles Times article “Sit Down Strike in Ruins Begun by Chavez Evicte
 
 The helplessness and indignation she experienced was felt throughout the community as the city cleared the land, destroying their homes, schools, and churches. The city, driven by economic interests, completely disregarded the powerless minority group and their way of life. To the residents Chavez Ravine was more than just a piece of land. The community was tight-knit and filled with the traditions and culture of the 300 families that lived there (Goldberg). Residents here ran their own schools and churches, grew their own food, and raised livestock (Goldberg).  This community of families was thriving off their way of life, but it did not stop the city of Los Angeles’ attempt to make changes.
 
-![Los Angeles Times, 10 May 1959. Image courtesy of UCLA Library Special Collections]({{site.baseurl}}/images/chavezravine1.JPG "Sit-Down Strike in Ruins Begun by Chavez Evictees")
+![Los Angeles Times, 10 May 1959. Image courtesy of UCLA Library Special Collections](../images/chavezravine1.JPG "Sit-Down Strike in Ruins Begun by Chavez Evictees")
 
 ![Los Angeles Times, 09 May 1959. Image courtesy of UCLA Library Special Collections]({{site.baseurl}}/images/chavezravine2.JPG "Woman, 63, Stands in Ruins of Home to Defy Dodgers and Los Angeles")
 
