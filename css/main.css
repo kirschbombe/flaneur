@@ -15,6 +15,13 @@ body {
   width:67%;
   height:100%;
 }
+.page-content {
+	width: 67%;
+	right: 0;
+}
+article.page-content {
+	width: 100%;
+}
 .sidebar {
 	height:100%;
 	width:33%;
@@ -93,13 +100,19 @@ p {
         height: 50vh;
         width: 100vw
     }
-
+	
     body {
         overflow-y: hidden;
         overflow-x: hidden
     }
 	article.post-article {
 	height: 25vw;
+	}
+	.page-content {
+		width: 100vw;
+	}
+	article.page-content {
+		width: 100vw;
 	}
     #map {
         top: 0

@@ -4,21 +4,9 @@
     	<div id="sidebar-content">
     	
   	{% if page.layout == "post" %}
-
-      <div class="post">
-
-  <p class="post-header">
-  	<span>{{page.collectiontitle}}</span>
-  </p>
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="byline">{% if page.author %}{{ page.author }} ({{page.quarter}}){% endif %}
-    {% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
-
-  <article class="post-article">
-    {{ page.content }}
-  </article>
-</div>
+	{% include article.html %}
+	{% elsif page.layout == 'page' %}
+	{% include intro.html %}
      {% else %}
      {{page.content}}
  	{% endif %}
