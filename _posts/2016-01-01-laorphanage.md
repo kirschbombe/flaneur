@@ -30,8 +30,8 @@ Photograph Album of Early Los Angeles, Forbes, A.S.C, Mrs. Department of Special
 
 &quot;The Los Angeles Orphanage Guild.&quot; N.p.,n.d. Web. http://laorphanageguild.com.
 
-Engh, Michael E., S.J. &quot;Soldiers of Christ, Angels of Mercy: The Daughters of Charity in Los Angeles, 1856-1888.&quot; <emph>Vincentian Heritage Journal</emph>3rd ser. 15.1 (1994):1-27. <emph>DePaul University Libraries.</emph>Web. 1 Mar. 2016. http://via.library.depaul.edu/vhj/vo11/iss1/3.
+Engh, Michael E., S.J. &quot;Soldiers of Christ, Angels of Mercy: The Daughters of Charity in Los Angeles, 1856-1888.&quot; *Vincentian Heritage Journal*3rd ser. 15.1 (1994):1-27. *DePaul University Libraries.*Web. 1 Mar. 2016. http://via.library.depaul.edu/vhj/vo11/iss1/3.
 
 
-<img src='../images/LAOrphanAsylum.jpg' alttext='A black and white photograph of a large Tudor-style five story brick building with multiple window panels on a grass field.'>
+<img src='../images/LAOrphanAsylum.jpg' alt='A black and white photograph of a large Tudor-style five story brick building with multiple window panels on a grass field.'>
 <figcaption><p>Los Angeles Orphan Asylum </p><p><small> 1894. Image courtesy of UCLA Library Special Collections.</small></p>

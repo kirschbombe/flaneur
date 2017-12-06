@@ -40,7 +40,7 @@ Reckard, E. S. &quot;Many I-10 Workers Routinely Earn $2,000 Weekly Take Home Pa
 The Staff of the Los Angeles Times, comp. 4:31: Images of the 1994 Los Angeles Earthquake. Los Angeles, CA: Times, 1994. Print.
 
 
-<img src='../images/Freeway2.jpg' alttext='Color photograph taken underneath a broken portion of the highway.'>
+<img src='../images/Freeway2.jpg' alt='Color photograph taken underneath a broken portion of the highway.'>
 <figcaption><p>Collapsed Highway</p><p><small>Photograph by Jayne Kamin-Oncea from 4:31: Images of the Los Angeles Earthquake, LA Times, 1994</small></p>
-<img src='../images/Freeway3.jpg' alttext='Color photograph of cars among the ruins of the highway.'>
+<img src='../images/Freeway3.jpg' alt='Color photograph of cars among the ruins of the highway.'>
 <figcaption><p>Earthquake Ruins</p><p><small>Photograph by unknown photographer from 4:31: Images of the Los Angeles Earthquake, LA Times, 1994</small></p>

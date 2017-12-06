@@ -39,5 +39,5 @@ Wagstaff. &quot;Warner Brothers vs. Disney | The House Next Door | Slant Magazin
 	Magazine. Slant Magazine, 30 June 2006. Web. 21 Nov. 2015.
 
 
-<img src='../images/dalmations1.jpg' alttext='Cruella De Vil in the presence of one hundred and one dalmatians stolen by her henchmen, Horace and Jasper Badun'>
+<img src='../images/dalmations1.jpg' alt='Cruella De Vil in the presence of one hundred and one dalmatians stolen by her henchmen, Horace and Jasper Badun'>
 <figcaption><p>101 Dalmatians Stolen by Horace and Jasper Badun</p><p><small>Walt Disney Productions, 1938-198x. Image courtesy of UCLA Special Collections</small></p>

@@ -28,7 +28,7 @@ Stephany, Theresa M. &quot;Lesbian Nurse.&quot; Nursing Outlook Magazine Nov. 19
 Giddings, Lynne S., and Marlaine C. Smith. &quot;Stories of Lesbian In/visibility in Nursing.&quot; Nursing Outlook 49.1 (2001): 14-19. Web.
 
 
-<img src='../images/lesbiannurses1.jpg' alttext='Black and white picture of a magazine article.'>
+<img src='../images/lesbiannurses1.jpg' alt='Black and white picture of a magazine article.'>
 <figcaption><p>Lesbian Nurse</p><p><small>Theresa M. Stephany, 1998. Nursing Outlook Magazine. Image courtesy of UCLA Library Special Collections.</small></p>
-<img src='../images/lesbiannurses2.jpg' alttext='Pink pin with a triangle and bottle logo'>
+<img src='../images/lesbiannurses2.jpg' alt='Pink pin with a triangle and bottle logo'>
 <figcaption><p>Lesbian Nurses of Los Angeles pin</p><p><small>Image courtesy of UCLA Library Special Collections.</small></p>

@@ -26,9 +26,9 @@ Wachs, Martin. &quot;Autos, Transit, and the Sprawl of Los Angeles: The 1920s.&q
 Walker, Jim. The Yellow Cars of Los Angeles: A Roster of Streetcars of Los Angeles Railway and Successors from the 1890s to 1963. Glendale: Interurbans, 1977.
 
 
-<img src='../images/Bus1.jpg' alttext='Black and white image of an interior of a Pacific Electric Motor Coach'>
+<img src='../images/Bus1.jpg' alt='Black and white image of an interior of a Pacific Electric Motor Coach'>
 <figcaption><p>Interior of a Pacific Electric Motor Coach</p><p><small>1940s-1950s. Image courtesy of UCLA Library Special Collections</small></p>
-<img src='../images/Bus2.jpg' alttext='Magnified version of the original image to show detail of seats and the exterior'>
+<img src='../images/Bus2.jpg' alt='Magnified version of the original image to show detail of seats and the exterior'>
 <figcaption><p>Magnified view of the outside</p><p><small>1940s-1950s. Image courtesy of UCLA Library Special Collections</small></p>
-<img src='../images/Bus3.jpg' alttext='Magnified version of the original image to show the detail of the advertisments above the windows'>
+<img src='../images/Bus3.jpg' alt='Magnified version of the original image to show the detail of the advertisments above the windows'>
 <figcaption><p>Magnified view of advertisments</p><p><small>1940s-1950s. Image courtesy of UCLA Library Special Collections</small></p>

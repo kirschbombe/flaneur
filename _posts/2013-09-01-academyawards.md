@@ -26,5 +26,5 @@ The American movie The Best Years of Our Lives dominated the awards ceremony, wi
 Program for awards ceremony, Raymond Chandler Papers (Collection 638). UCLA Library Special Collections, Charles E. Young Research Library.
 
 
-<img src='../images/academyawards.jpg' alttext='Pamphlet with a picture of an Academy Award on the cover. Text says "19th annual academy awards Shrine Civic Auditorium March 13th 1947 Academy of Motion Picture Arts and Sciences.'>
+<img src='../images/academyawards.jpg' alt='Pamphlet with a picture of an Academy Award on the cover. Text says "19th annual academy awards Shrine Civic Auditorium March 13th 1947 Academy of Motion Picture Arts and Sciences.'>
 <figcaption><p>Poster for the 19th Annual Academy Awards</p><p><small>Chandler, Raymond, 1947. Image courtesy of UCLA Library Special Collections.</small></p>

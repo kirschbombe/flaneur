@@ -32,5 +32,5 @@ As Los Angeles is notorious for tearing down its heritage buildings, one wouldn'
 Houghton, Frank B. History of the Old Plaza Church and Olvera Street. Los Angeles: n.p., n.d. Print.
 
 
-<img src='../images/picohouse.jpg' alttext='Photograph of a large building with a sign saying Pico House and people gathered outside.'>
+<img src='../images/picohouse.jpg' alt='Photograph of a large building with a sign saying Pico House and people gathered outside.'>
 <figcaption><p>Pico House</p><p><small>Ana Bégué de Packman, 1875. Image courtesy of UCLA Special Collections</small></p>

@@ -30,5 +30,5 @@ Paraire, Philippe. 50 Years of Rock Music. Edinburgh: Chambers, 1992.
 Seabury, Steve. &quot;Best Metal Bars and Eats In Los Angeles.&quot; CBS Los Angeles. 15 Dec. 2010.
 
 
-<img src='../images/Jacket1.jpg' alttext='Displayed is a jean jacket embroidered with metal studs and various band patches. The patches on the denim jacket represent many bands in a showy fashion. Some bands even appear on the jacket multiple times. The jacket also has buttons with band logos pinned onto it.  '>
+<img src='../images/Jacket1.jpg' alt='Displayed is a jean jacket embroidered with metal studs and various band patches. The patches on the denim jacket represent many bands in a showy fashion. Some bands even appear on the jacket multiple times. The jacket also has buttons with band logos pinned onto it.  '>
 <figcaption><p>Heavy Metal Jacket</p><p><small>Created in the 1980s to 1990s. Image courtesy of UCLA</small></p>

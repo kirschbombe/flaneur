@@ -40,9 +40,9 @@ Joe, Sherry. &quot;Gangs' Paper Trail : Magazines: Teen Angels Prints Graffiti, 
 Perez, Annemarie. &quot;David Holland.&quot; Introduction to Chicano and Latino Studies. Loyola Marymount University, 3 Apr. 2015. Web.
 
 
-<img src='../images/teenangels1.jpg' alttext='Teen Angels Magazine illustration of a car surrounded by four gang members. They are holding up their hands to form the word "CUZZ," commonly associated wiht the Cripps.'>
+<img src='../images/teenangels1.jpg' alt='Teen Angels Magazine illustration of a car surrounded by four gang members. They are holding up their hands to form the word "CUZZ," commonly associated wiht the Cripps.'>
 <figcaption><p>Teen Angels, Volume 34 Cover</p><p><small>David Holland, 1984. Image courtesy of UCLA Library Special Collections</small></p>
-<img src='../images/teenangels2.jpg' alttext='A call-to-action anti-gang sentiment published in the magazine. It compares the 18th Street gang to an army, saying people should be more wary of the effects of gang culture on the community.'>
+<img src='../images/teenangels2.jpg' alt='A call-to-action anti-gang sentiment published in the magazine. It compares the 18th Street gang to an army, saying people should be more wary of the effects of gang culture on the community.'>
 <figcaption><p>Teen Angels, Volume 34 Anti-gang Sentiment</p><p><small>David Holland, 1984. Image courtesy of UCLA Special Collections</small></p>
-<img src='../images/teenangels3.jpg' alttext='A picture of four members of 18th Street gang holding shotguns.'>
+<img src='../images/teenangels3.jpg' alt='A picture of four members of 18th Street gang holding shotguns.'>
 <figcaption><p>Teen Angels, Volume 34 18th Street Gang Members</p><p><small>David Holland, 1984. Image courtesy of UCLA Special Collections</small></p>

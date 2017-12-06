@@ -26,5 +26,5 @@ Over time the Ice Follies lost their popularity. Fewer people would purchase tic
 <bibl/>
 <bibl/>
 
-<img src='../images/icefollies.jpg' alttext='Black and white photograph of an ice skater jumping over two 50's style rockets.'>
+<img src='../images/icefollies.jpg' alt='Black and white photograph of an ice skater jumping over two 50's style rockets.'>
 <figcaption><p>Ice Follies Dress Rehearsal</p><p><small>1946. Image courtesy of UCLA Library Special Collections.</small></p>

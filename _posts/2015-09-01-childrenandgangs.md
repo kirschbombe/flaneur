@@ -28,9 +28,9 @@ The three pictures found within the Time Magazine article aren’t directly rela
 Stanley, Alessandra. &quot;Los Angeles All Ganged Up,&quot; Time. Time Inc., 18 June 1990. 
 
 
-<img src='../images/gang1.jpg' alttext='The Los Angeles police department questions kids wearing gang regalia.'>
+<img src='../images/gang1.jpg' alt='The Los Angeles police department questions kids wearing gang regalia.'>
 <figcaption><p>Three Young Gangmembers</p><p><small>Image courtesy of UCLA library special collections</small></p>
-<img src='../images/gang2.jpg' alttext='Under the outstretched arm of Jesus Christ, teenagers line up to be searched for weapons and drugs.'>
+<img src='../images/gang2.jpg' alt='Under the outstretched arm of Jesus Christ, teenagers line up to be searched for weapons and drugs.'>
 <figcaption><p>Jesus and 7 Young Gangmembers</p><p><small>UCLA libarary special collections</small></p>
-<img src='../images/gang3.jpg' alttext='A 15-year-old sits handcuffed, waiting for his fate to be decided.'>
+<img src='../images/gang3.jpg' alt='A 15-year-old sits handcuffed, waiting for his fate to be decided.'>
 <figcaption><p>Young Teen Locked Up</p><p><small>Creator, date. Image courtesy of ...</small></p>

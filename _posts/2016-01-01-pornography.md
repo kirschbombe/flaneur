@@ -35,5 +35,5 @@ Huffstutter, P. J. &quot;See no Evil; in California's Unregulated Porn Film Indu
 &quot;UCLA Center for the Study of Women: From the June Mazer Lesbian Archives: WAVAW.&quot; UCLA Center for the Study of Women: From the June Mazer Lesbian Archives: WAVAW. N.p., n.d. Web. 03 Mar. 2016.
 
 
-<img src='../images/pornographyconference.jpg' alttext='Program for a conference based on violence in pornography and media.'>
+<img src='../images/pornographyconference.jpg' alt='Program for a conference based on violence in pornography and media.'>
 <figcaption><p>Conference Program</p><p><small>Image courtesy of UCLA Library Special Collections.</small></p>

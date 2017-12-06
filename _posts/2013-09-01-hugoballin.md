@@ -29,5 +29,5 @@ Whether it was the urge to depict history through a brush or the simply idea tha
 
 <bibl/>
 
-<img src='../images/ballin.jpg' alttext='Mural depicting the arrival of the Spanish to the coming of white settlers in covered wagons'>
+<img src='../images/ballin.jpg' alt='Mural depicting the arrival of the Spanish to the coming of white settlers in covered wagons'>
 <figcaption><p>Ballin's Lunette</p><p><small>Hugo Ballin, 1930. Image courtesy of UCLA Library Special Collections</small></p>
