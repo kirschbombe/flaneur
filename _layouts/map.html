@@ -31,17 +31,20 @@
       // jekyll loop through posts
 var overlays = {
 };
+var category_layers = []
 {% for category in site.categories %}
+var layers = [];
 {% capture category_name %}{{ category | first }}{% endcapture %}
-var {{category | first}} = new L.LayerGroup();
+//var {{category | first}} = new L.LayerGroup();
 {% for post in site.categories[category_name] %}
       lat = {{ post.lat }};
       lng = {{ post.lng }};
+
       content = "<strong>{{ post.title }}</strong><br>{{ post.desc }}";
       var marker = L.marker([lat, lng], {
         icon: mbox,
-      }).bindPopup(content, {offset:new L.Point(0,-30)}).addTo({{category_name}});
-      
+      }).bindPopup(content, {offset:new L.Point(0,-30)});
+      layers.push(marker)
       marker.on('mouseover', function(){
         this.openPopup();
       });
@@ -52,13 +55,18 @@ var {{category | first}} = new L.LayerGroup();
       markers.addLayer(marker);
       {% endfor %}
       overlays.{{category_name}} = '{{category_name}}';
+      category_layers.push("{{category_name}}")
+      console.log(layers)
+      var {{category_name}} = L.layerGroup(layers)
  {% endfor %}
       // end loop through posts
 
 var baseLayers = {
 
 };
+
 console.log(overlays)
+
 L.control.layers(baseLayers, overlays).addTo(map);
 markers.addTo(map);
 map.fitBounds(markers.getBounds());
