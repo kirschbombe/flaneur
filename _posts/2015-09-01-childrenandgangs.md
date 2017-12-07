@@ -23,7 +23,7 @@ The three pictures found within the Time Magazine article aren’t directly rela
 
 **Bibliography**
 
-&quot;Grape Street Watts Crips – South Los Angeles | Jordan Downs | Baby Locos.&quot; Grape Street Watts Crips – South Los Angeles. N.p., n.d. Web. 23 Nov. 2015.
+&quot;Grape Street Watts Crips – South Los Angeles &#124; Jordan Downs &#124; Baby Locos.&quot; Grape Street Watts Crips – South Los Angeles. N.p., n.d. Web. 23 Nov. 2015.
 
 Stanley, Alessandra. &quot;Los Angeles All Ganged Up,&quot; Time. Time Inc., 18 June 1990. 
 

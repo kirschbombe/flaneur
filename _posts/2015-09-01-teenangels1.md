@@ -34,5 +34,5 @@ Kun, J. &quot;Cover story: the new chicano movement.&quot; Los Angeles Times, 9 
 Ramos, L. &quot;Touring retrospective examines chicano art.&quot; Los Angeles Times, 30 August, 1990.
 
 
-<img src='../images/teenangelsimage.jpg' alt='Image of Chicano man and woman in old Chrysler with the words "Teen Angels" written above. The image is an example of the influence of the Chicano Art Movement on graffiti and tattoo art,'>
+<img src='../images/teenangelsimage.jpg' alt='Image of Chicano man and woman in old Chrysler with the words &#34;Teen Angels&#34; written above. The image is an example of the influence of the Chicano Art Movement on graffiti and tattoo art,'>
 <figcaption><p>Chicano artwork in Teen Angels Magazine</p><p><small>Milpitas, 1981. Image courtesy of UCLA Library Special Collections.</small></p>

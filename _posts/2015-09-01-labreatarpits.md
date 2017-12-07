@@ -29,6 +29,3 @@ Built adjacent to the La Brea Tar Pits, The Los Angeles County Museum of Art. It
 
 No citation
 
-
-<img src='../images/nameofimage.jpg' alt='Black and white photograph of an ice skater jumping over two 50's style rockets.'>
-<figcaption><p>Ice Follies Dress Rehearsal</p><p><small>Creator, date. Image courtesy of ...</small></p>

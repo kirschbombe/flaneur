@@ -21,10 +21,5 @@ In 1939, the success of the Ice Follies inspired the production of a movie entit
 Over time the Ice Follies lost their popularity. Fewer people would purchase tickets to watch the show, but the Ice Follies inspired the formation of other shows in years to come. In 1954, the partners sold the Ice Follies for $3.5 million dollars to become “Holiday on Ice,” and then eventually “Disney on Ice” which it still is today. What started out as a group of ice skaters performing on a frozen lake in Minnesota is today the head company in ice entertainment. Disney on Ice tours in more than 110 cities and twenty countries each year, perpetuating the legacy of the Shipstad brothers and Oscar Johnson.
 
 
-**Bibliography**
-
-<bibl/>
-<bibl/>
-
-<img src='../images/icefollies.jpg' alt='Black and white photograph of an ice skater jumping over two 50's style rockets.'>
+<img src='../images/icefollies.jpg' alt='Black and white photograph of an ice skater jumping over two 50&#39;s style rockets.'>
 <figcaption><p>Ice Follies Dress Rehearsal</p><p><small>1946. Image courtesy of UCLA Library Special Collections.</small></p>

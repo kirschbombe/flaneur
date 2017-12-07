@@ -26,5 +26,5 @@ Walker, J. Michael. &quot;Lyrical map of the concept of Los Angeles,&quot; UCLA 
 <figcaption><p>Lyrical Map title</p><p><small>J. Michael Walker, 2011. Image courtesy of UCLA Digital Library.</small></p>
 <img src='../images/lyrical2.jpg' alt='Conceptual drawing of female figure with a poem enclosed in the figure.'>
 <figcaption><p>Close up of Lyrical Map poem</p><p><small>J. Michael Walker, 2011. Image courtesy of UCLA Digital Library.</small></p>
-<img src='../images/lyrical3.jpg' alt='Drawing of Father Boyle with youth, reads: "Nothing stops a bullet like a job," Father Greg Boyle, Homeboy Industries.'>
+<img src='../images/lyrical3.jpg' alt='Drawing of Father Boyle with youth, reads: &#34;Nothing stops a bullet like a job,&#34; Father Greg Boyle, Homeboy Industries.'>
 <figcaption><p>Father Boyle</p><p><small>J. Michael Walker, 2011. Image courtesy of UCLA Digital Library.</small></p>
