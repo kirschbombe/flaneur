@@ -20,3 +20,5 @@ collections:
     output: true 
     permalink: /article/:name
 
+permalink: /:categories/:title/
+
