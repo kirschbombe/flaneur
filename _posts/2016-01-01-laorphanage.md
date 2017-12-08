@@ -21,6 +21,9 @@ The Los Angeles Orphanage Guild was founded in 1952 and is still active today. T
 Maryvale is no longer an orphanage but a place providing care for foster youth. Their location has moved from Boyle Heights to Rosemead. They provide residential treatment for girls ages 6-17, transitional housing and aftercare for girls 18-21, emergency shelter for children ages 6-12, a family resource center, early education centers and mental health services. In 2014 it was the only organization that provided emergency placement for boys 6-12 in the Los Angeles area, and one of 2 providing placement of girls of the same age group. Their residential treatment center served 137 individuals in 2014 by providing 24-hour care, housing, and mental health services.  In 2014 alone, they helped 1,242 people in total (Maryvale).
 
 
+<img src='../images/LAOrphanAsylum.jpg' alt='A black and white photograph of a large Tudor-style five story brick building with multiple window panels on a grass field.'>
+<figcaption><p>Los Angeles Orphan Asylum </p><p><small> 1894. Image courtesy of UCLA Library Special Collections.</small></p>
+<section id="categories" markdown="1">
 **Bibliography**
 
 Photograph Album of Early Los Angeles, Forbes, A.S.C, Mrs. Department of Special Collections, Charles E. Young Research Library, University of California, Los Angeles.
@@ -32,5 +35,4 @@ Photograph Album of Early Los Angeles, Forbes, A.S.C, Mrs. Department of Special
 Engh, Michael E., S.J. &quot;Soldiers of Christ, Angels of Mercy: The Daughters of Charity in Los Angeles, 1856-1888.&quot; *Vincentian Heritage Journal*3rd ser. 15.1 (1994):1-27. *DePaul University Libraries.*Web. 1 Mar. 2016. http://via.library.depaul.edu/vhj/vo11/iss1/3.
 
 
-<img src='../images/LAOrphanAsylum.jpg' alt='A black and white photograph of a large Tudor-style five story brick building with multiple window panels on a grass field.'>
-<figcaption><p>Los Angeles Orphan Asylum </p><p><small> 1894. Image courtesy of UCLA Library Special Collections.</small></p>
+</section>

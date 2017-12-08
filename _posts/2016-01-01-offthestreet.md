@@ -21,6 +21,11 @@ In addition to Tucker and Callwood, Stephen Berens and Neal Taylor created profo
 The art exhibition, Off the Streets, was created simply for artists, such as the four discussed, to have the opportunity to showcase their work to the city. The City’s Print Shop became of great significance in 1985 when its old, abandoned walls held this once in a lifetime art exhibit. The only trace left of the exhibition can be found in this catalog, “Off the Street.” From the ashes of the print shop rose the Japanese American National Museum, which still stands today in Little Tokyo. The museum continues to showcase photos and pieces of artwork pertaining to Japanese-American culture, similar to how the art exhibition did with artwork pertaining to modern culture at the time. Even though the original building of this exhibit no longer exists, the site itself holds historical significance and the artwork still endures and remains accessible in the catalog.
 
 
+<img src='../images/offthestreet.JPG' alt='A street wall made of brick with the title of the art exhibition &#34;Off the Streets&#34;.'>
+<figcaption><p>A One-time Art Exhibition</p><p><small>Fritz A. Frauchiger, April 27-May 26, 1985. Image courtesy of UCLA Library Special Collections.</small></p>
+<img src='../images/offthestreet3.jpg' alt='Painting of helicopters putting out a fire from a car crash caused by a realistic Los Angeles mural during sunset on the side of a building.'>
+<figcaption><p>Sunset on the Fig</p><p><small>Carlos Almaraz, [1981]. Image courtesy of UCLA Library Special Collections.</small></p>
+<section id="categories" markdown="1">
 **Bibliography**
 
 Off the Street, 150002. Library Special Collections, Charles E. Young Research Library, UCLA.
@@ -36,7 +41,4 @@ Messer, Jon. &quot;BRIAN TUCKER ART.&quot; BRIAN TUCKER ART. Jan. 2007. Web. 03 
 Riggott, Juliet. &quot;Writing on the Wall.&quot; Pasadena Weekly. 18 Oct. 2007. Web. 03 Mar. 2016.
 
 
-<img src='../images/offthestreet.JPG' alt='A street wall made of brick with the title of the art exhibition &#34;Off the Streets&#34;.'>
-<figcaption><p>A One-time Art Exhibition</p><p><small>Fritz A. Frauchiger, April 27-May 26, 1985. Image courtesy of UCLA Library Special Collections.</small></p>
-<img src='../images/offthestreet3.jpg' alt='Painting of helicopters putting out a fire from a car crash caused by a realistic Los Angeles mural during sunset on the side of a building.'>
-<figcaption><p>Sunset on the Fig</p><p><small>Carlos Almaraz, [1981]. Image courtesy of UCLA Library Special Collections.</small></p>
+</section>
