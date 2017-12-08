@@ -2,7 +2,7 @@
 layout: post
 title: "Teen Angels: Gang Culture of Los Angeles"
 date: 2015-09-01
-categories: "arts_and_culture"
+categories: ["arts and culture"]
 author: "Yesenia Avila, Mary Rshtouni, Hailey Marie Leach"
 lat: 34.1064001
 lng: -117.37032349999998

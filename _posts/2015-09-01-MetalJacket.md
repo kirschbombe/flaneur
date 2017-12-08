@@ -2,7 +2,7 @@
 layout: post
 title: "Heavy Metal Jacket"
 date: 2015-09-01
-categories: "arts_and_culture"
+categories: ["arts and culture"]
 author: "Jacob Augustine, Kieran Monks, Polly Chan"
 lat: 34.101884
 lng: -118.329058

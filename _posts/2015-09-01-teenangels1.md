@@ -2,7 +2,7 @@
 layout: post
 title: "Teen Angels: Illustration of Gang Lifestyle and Culture"
 date: 2015-09-01
-categories: "arts_and_culture"
+categories: ["arts and culture"]
 author: "Cambria C., Faye T., Kelly D., Raunak K., Lauren H."
 lat: 34.02244170000001
 lng: -118.1669736

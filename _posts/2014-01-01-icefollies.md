@@ -2,7 +2,7 @@
 layout: post
 title: "Ice Follies: The Evolution of Traveling Ice Shows"
 date: 2014-01-01
-categories: "arts_and_culture"
+categories: ["arts and culture"]
 author: "Ashley Z."
 lat: 34.156207
 lng: -118.32518900000002

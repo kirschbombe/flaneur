@@ -2,7 +2,7 @@
 layout: post
 title: "Feminist Perspective on Pornography"
 date: 2016-01-01
-categories: "politics_and_society"
+categories: ["politics and society"]
 author: "Karen Ortiz, Jose Ruiz Rodriguez, Mina Malloy"
 lat: 34.074971
 lng: -118.44143839999998
