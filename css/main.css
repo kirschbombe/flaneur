@@ -12,11 +12,11 @@ body {
 }
 #map {
   position:absolute;
-  width:67%;
+  width:60%;
   height:100%;
 }
 .page-content {
-	width: 67%;
+	width: 60%;
 	right: 0;
 }
 article.page-content {
@@ -24,7 +24,7 @@ article.page-content {
 }
 .sidebar {
 	height:100%;
-	width:33%;
+	width:40%;
 	background-color:#fff;
 	position:fixed!important;
 	z-index:1;
@@ -136,7 +136,7 @@ p {
     #map {
         top: 0;
         height: 100vh;
-        width: 67vw;
+        width: 60vw;
     }
 
     #map {
@@ -144,7 +144,7 @@ p {
     }
 
     .sidebar {
-    	width: 33vw;
+    	width: 40vw;
         position: absolute;
         right: 0;
     }
@@ -164,11 +164,11 @@ p {
 
     #map {
         left: 0;
-        width: 67vw;
+        width: 60vw;
     }
 
     .sidebar {
-        width: 33vw;
+        width: 40vw;
         right: 0;
     }
 }

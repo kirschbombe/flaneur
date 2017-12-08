@@ -21,10 +21,12 @@ In 1942 (the 16th ceremony), because of increased audience, the event was held i
 The American movie The Best Years of Our Lives dominated the awards ceremony, winning Best Motion Picture (Samuel Goldwyn for RKO Radio Pictures), Best Adapted Screenplay (Robert E. Sherwood), Best Musical Score of a dramatic or comedy picture (Hugo Friedhofer), Best Film Editing (Daniel Mandell), Best Directing (William Wyler), Best Actor (Fredric March), and Best Supporting Actor (Harold Russell).  Harold Russell’s story alone is something to marvel at because, unlike the other actors competing in his category, Russell was an amateur.  He was an ex-serviceman whose hands had been blown off by TNT; therefore, William Wyler cast him as the character Homer because both men had hooks instead of hands.  The movie itself reflected the post-war era of the late 1940s, as it explored how three veterans adjusted as they returned home from World War II.  The theme of soldiers’ homecoming and re-acclimatization into society is a universal theme that is still relevant today.
 
 
+<img src='../images/academyawards.jpg' alt='Pamphlet with a picture of an Academy Award on the cover. Text says &#34;19th annual academy awards Shrine Civic Auditorium March 13th 1947 Academy of Motion Picture Arts and Sciences.'>
+<figcaption><p>Poster for the 19th Annual Academy Awards</p><p><small>Chandler, Raymond, 1947. Image courtesy of UCLA Library Special Collections.</small></p>
+<section id="categories" markdown="1">
 **Bibliography**
 
 Program for awards ceremony, Raymond Chandler Papers (Collection 638). UCLA Library Special Collections, Charles E. Young Research Library.
 
 
-<img src='../images/academyawards.jpg' alt='Pamphlet with a picture of an Academy Award on the cover. Text says &#34;19th annual academy awards Shrine Civic Auditorium March 13th 1947 Academy of Motion Picture Arts and Sciences.'>
-<figcaption><p>Poster for the 19th Annual Academy Awards</p><p><small>Chandler, Raymond, 1947. Image courtesy of UCLA Library Special Collections.</small></p>
+</section>
