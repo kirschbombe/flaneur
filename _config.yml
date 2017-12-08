@@ -1,7 +1,7 @@
 # Site settings
-title: Flaneur
+title: Flâneur
 email: kirschbombe@gmail.com
-description: "Jekyll port of Boulevardier"
+description: "A Jekyll theme for maps and text"
 baseurl: "/flaneur" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 twitter_username: kirschbombe
@@ -17,8 +17,7 @@ map-credits: '<a target="_blank" href="https://github.com/svmatthews/jekyll-maps
 
 collections:
   posts:
-    output: true 
+    output: true
     permalink: /article/:name
 
 permalink: /:categories/:title/
-

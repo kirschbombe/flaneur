@@ -3,12 +3,11 @@ layout: page
 title: Contributors
 permalink: /contributors/
 ---
-# Los Angeles: the City and the Library
 # Contributors
 
 ##### Editors
 * Colleen Jaurretsche, Editor
-* Dawn Childress, Technical Editor
+* Dawn Childress, Editor
 
 ##### Authors
 * Students of ENG 3, Los Angeles: The City and the Library, Fall 2015
@@ -16,6 +15,7 @@ permalink: /contributors/
 ##### Developers
 * Dawn Childress, UCLA Digital Library Program
 * Nathan Day, Developer
+* Dominique O'Neill, Developer
 
 ##### Project Support
 * Andy Rutkowski
