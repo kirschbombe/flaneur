@@ -39,10 +39,10 @@ counter += 1;
 {% for post in site.categories[category_name] %}
       lat = {{ post.lat }};
       lng = {{ post.lng }};
-      console.log(icons[counter])
+      
       content = "<strong>{{ post.title }}</strong><br>{{ post.desc }}";
       var iconurl = "{{site.baseurl}}/assets/leaflet/img/" + icons[counter]
-      console.log(iconurl)
+
       mbox = L.icon({
             iconUrl: iconurl,
             iconSize:     [300, 41],
@@ -62,19 +62,17 @@ counter += 1;
       });
       markers.addLayer(marker);
       {% endfor %}
-      var imageurl = '<img class="legend" src="' + iconurl + '">'
-      var name = imageurl + '<span>{{category_name}}</span>';
-      console.log(name);
-      overlays[name] = new L.layerGroup(layers);
-      map.addLayer(overlays[name])
+      
+    var imageurl = '<img class="legend" src="' + iconurl + '">'
+    var name = imageurl + '<span>{{category_name}}</span>';
+    overlays[name] = new L.layerGroup(layers);
+    map.addLayer(overlays[name])
  {% endfor %}
       // end loop through posts
 
 var baseLayers = {
 
 };
-
-console.log(overlays)
 
 L.control.layers(baseLayers, overlays).addTo(map);
 markers.addTo(map);
