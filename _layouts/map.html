@@ -45,16 +45,22 @@ counter += 1;
 
       mbox = L.icon({
             iconUrl: iconurl,
-            iconSize:     [300, 41],
-            iconAnchor:   [150, 41],
-            popupAnchor:  [0, 41]
+            iconSize : [32, 37],
+            iconAnchor : [17, 36],
+            popupAnchor : [-1, -32]
           });
       var marker = L.marker([lat, lng], {
         icon: mbox,
       }).bindPopup(content, {offset:new L.Point(0,-30)});
+      
       layers.push(marker)
+      
       marker.on('mouseover', function(){
         this.openPopup();
+      });
+      
+      marker.on('mouseout', function(){
+        this.closePopup()();
       });
 
       marker.on('click', function(){
