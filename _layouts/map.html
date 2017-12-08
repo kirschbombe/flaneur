@@ -19,7 +19,6 @@
         "errorTileUrl" : "img/error-tile-image.png",
         "subdomains" : ["a", "b", "c", "d"],
         "detectRetina" : true,
-        'layers' : ["arts and culture"]
       }).addTo(map);
 
       // jekyll loop through posts
@@ -82,7 +81,8 @@ var baseLayers = {
 
 L.control.layers(baseLayers, overlays).addTo(map);
 markers.addTo(map);
-map.fitBounds(markers.getBounds());
+map.setView([34.0253, -118.3085], 11)
+//map.fitBounds(markers.getBounds());
 
 </script>
   </body>
