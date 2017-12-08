@@ -2,7 +2,7 @@
 layout: post
 title: "Lesbian Nurses in Los Angeles"
 date: 2016-01-01
-categories: "environment and science"
+categories: ["environment and science"]
 author: "Sara Martinez, Ruperto de Haro, Lucas Jenkins"
 lat: 34.08834
 lng: -118.3784286999997

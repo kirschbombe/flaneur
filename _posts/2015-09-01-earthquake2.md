@@ -2,7 +2,7 @@
 layout: post
 title: "Devastating Effects of the 1994 Northridge Earthquake"
 date: 2015-09-01
-categories: "environment and science"
+categories: ["environment and science"]
 author: "Ashlie B., Danae B., Jagjot D., Pashmeen K., Albert Y."
 lat: 34.034812
 lng: -118.336782

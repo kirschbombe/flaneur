@@ -2,7 +2,7 @@
 layout: post
 title: "The 19th Annual Academy Awards"
 date: 2013-09-01
-categories: "arts and culture"
+categories: ["arts and culture"]
 author: "Anonymous"
 lat: 34.02398579999999
 lng: -118.28127169999999

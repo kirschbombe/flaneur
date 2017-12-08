@@ -2,7 +2,7 @@
 layout: post
 title: "Off the Street"
 date: 2016-01-01
-categories: "arts and culture"
+categories: ["arts and culture"]
 author: "Audrey Leshay, Nicole Claveria"
 lat: 34.054427
 lng: -118.246698

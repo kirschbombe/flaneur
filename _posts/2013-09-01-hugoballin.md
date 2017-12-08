@@ -2,7 +2,7 @@
 layout: post
 title: "Hugo Ballin"
 date: 2013-09-01
-categories: "arts and culture"
+categories: ["arts and culture"]
 author: "Deisy R., Cynthia C., Estefani R."
 lat: 34.119322
 lng: -118.30015200000003
