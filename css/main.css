@@ -78,7 +78,7 @@ height: 200px;
 }
 
 article.post-article {
-height: 60vw;
+height: 45vw;
 overflow-y: scroll;
 z-index: 1 !important;
 padding-bottom: 10px;
