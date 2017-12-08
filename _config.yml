@@ -2,14 +2,23 @@
 title: Flaneur
 email: kirschbombe@gmail.com
 description: "Jekyll port of Boulevardier"
-baseurl: "/flaneur/" # the subpath of your site, e.g. /blog/
-url: "http://dawnchildress.com/flaneur/" # the base hostname & protocol for your site
+baseurl: "/flaneur" # the subpath of your site, e.g. /blog/
+url: "" # the base hostname & protocol for your site
 twitter_username: kirschbombe
 github_username:  kirschbombe
 
 # Build settings
 markdown: kramdown
+encoding: utf-8
 
 # Map
 map-tileset: 'http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png'
 map-credits: '<a target="_blank" href="https://github.com/svmatthews/jekyll-maps">Jekyll Maps</a> | Tiles: Stamen & OSM'
+
+collections:
+  posts:
+    output: true 
+    permalink: /article/:name
+
+permalink: /:categories/:title/
+
