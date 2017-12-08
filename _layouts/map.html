@@ -63,7 +63,7 @@ counter += 1;
       markers.addLayer(marker);
       {% endfor %}
       var imageurl = '<img class="legend" src="' + iconurl + '">'
-      var name = imageurl + '<span>{{category_name}}</span>'.split('_').join(' ');
+      var name = imageurl + '<span>{{category_name}}</span>';
       console.log(name);
       overlays[name] = new L.layerGroup(layers);
       map.addLayer(overlays[name])
