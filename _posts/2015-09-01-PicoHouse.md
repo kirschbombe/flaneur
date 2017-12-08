@@ -2,7 +2,7 @@
 layout: post
 title: "Pico House"
 date: 2015-09-01
-categories: ["architecture", "urban_planning"]
+categories: "architecture_and_urban_planning"
 author: "Noemi C., Guadalupe F., Lucy J., Sydney B."
 lat: 34.0561683
 lng: -118.239439

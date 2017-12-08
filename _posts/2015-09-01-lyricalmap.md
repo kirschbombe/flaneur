@@ -2,7 +2,7 @@
 layout: post
 title: "Lyrical Map of the Concept of Los Angeles"
 date: 2015-09-01
-categories: ["arts", "culture"]
+categories: "arts_and_culture"
 author: "Libros Schmibros"
 lat: 34.0476014
 lng: -118.2194174

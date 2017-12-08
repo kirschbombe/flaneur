@@ -2,7 +2,7 @@
 layout: post
 title: "Pacific Electric"
 date: 2015-09-01
-categories: ["architecture", "urban_planning"]
+categories: "architecture_and_urban_planning"
 author: "Alex Ruppert, Isha Kakar, Maria Gasca"
 lat: 34.045543
 lng: -118.249971

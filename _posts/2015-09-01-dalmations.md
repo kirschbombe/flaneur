@@ -2,7 +2,7 @@
 layout: post
 title: "101 Dalmatians"
 date: 2015-09-01
-categories: ["arts", "culture"]
+categories: "arts_and_culture"
 author: "Rice Z., Andrew G., Stephanie H., Celynne H."
 lat: 34.155478
 lng: -118.322958
