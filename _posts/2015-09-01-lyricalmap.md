@@ -15,6 +15,13 @@ desc: "Created at the Hammer Museum as part of Libros Schmibros' residency, the 
 The map is now part of UCLA’s Digital Archive and can be viewed either in its entirety or in part here. Get the artist’s perspective here.&quot;
 
 
+<img src='../images/lyrical1.jpg' alt='Image of the hand-drawn title of the work. Reads: Lyrical map of the concept of Los Angeles. J. Michael Walker, 2011. Designer & Cartographer.'>
+<figcaption><p>Lyrical Map title</p><p><small>J. Michael Walker, 2011. Image courtesy of UCLA Digital Library.</small></p>
+<img src='../images/lyrical2.jpg' alt='Conceptual drawing of female figure with a poem enclosed in the figure.'>
+<figcaption><p>Close up of Lyrical Map poem</p><p><small>J. Michael Walker, 2011. Image courtesy of UCLA Digital Library.</small></p>
+<img src='../images/lyrical3.jpg' alt='Drawing of Father Boyle with youth, reads: &#34;Nothing stops a bullet like a job,&#34; Father Greg Boyle, Homeboy Industries.'>
+<figcaption><p>Father Boyle</p><p><small>J. Michael Walker, 2011. Image courtesy of UCLA Digital Library.</small></p>
+<section id="categories" markdown="1">
 **Bibliography**
 
 “Literary Map of Los Angeles.” Libros Schmibros Lending Library. Web. 23 Sept. 2015.
@@ -22,9 +29,4 @@ The map is now part of UCLA’s Digital Archive and can be viewed either in its 
 Walker, J. Michael. &quot;Lyrical map of the concept of Los Angeles,&quot; UCLA Library Digital Collections, 2011.
 
 
-<img src='../images/lyrical1.jpg' alt='Image of the hand-drawn title of the work. Reads: Lyrical map of the concept of Los Angeles. J. Michael Walker, 2011. Designer & Cartographer.'>
-<figcaption><p>Lyrical Map title</p><p><small>J. Michael Walker, 2011. Image courtesy of UCLA Digital Library.</small></p>
-<img src='../images/lyrical2.jpg' alt='Conceptual drawing of female figure with a poem enclosed in the figure.'>
-<figcaption><p>Close up of Lyrical Map poem</p><p><small>J. Michael Walker, 2011. Image courtesy of UCLA Digital Library.</small></p>
-<img src='../images/lyrical3.jpg' alt='Drawing of Father Boyle with youth, reads: &#34;Nothing stops a bullet like a job,&#34; Father Greg Boyle, Homeboy Industries.'>
-<figcaption><p>Father Boyle</p><p><small>J. Michael Walker, 2011. Image courtesy of UCLA Digital Library.</small></p>
+</section>

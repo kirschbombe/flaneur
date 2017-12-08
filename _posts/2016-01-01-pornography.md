@@ -20,6 +20,9 @@ The pornography industry is still prevalent in Los Angeles today, but conference
 Last year on Valentine’s Day, the BDSM (Bondage, Dominance, Sadism and Masochism) ‘romance’ film Fifty Shades of Grey “was an immediate box office success, breaking numerous box office records and earning over $566 million worldwide” (“Fifty”). Natalie Collins began a campaign, “50 Shades is Domestic Abuse”, to stop this film from screening. This campaign consists of hashtags and social media to bring attention and awareness to the brutality women face in media. Women today continue to fight to end the injustices in the pornography industry through different mediums, like the conference depicted below.
 
 
+<img src='../images/pornographyconference.jpg' alt='Program for a conference based on violence in pornography and media.'>
+<figcaption><p>Conference Program</p><p><small>Image courtesy of UCLA Library Special Collections.</small></p>
+<section id="categories" markdown="1">
 **Bibliography**
 
 Robin Ruth Linden Papers (Collection 1957). UCLA Library Collections, Charles E. Young Research Library, UCLA.
@@ -35,5 +38,4 @@ Huffstutter, P. J. &quot;See no Evil; in California's Unregulated Porn Film Indu
 &quot;UCLA Center for the Study of Women: From the June Mazer Lesbian Archives: WAVAW.&quot; UCLA Center for the Study of Women: From the June Mazer Lesbian Archives: WAVAW. N.p., n.d. Web. 03 Mar. 2016.
 
 
-<img src='../images/pornographyconference.jpg' alt='Program for a conference based on violence in pornography and media.'>
-<figcaption><p>Conference Program</p><p><small>Image courtesy of UCLA Library Special Collections.</small></p>
+</section>

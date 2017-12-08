@@ -27,10 +27,12 @@ Pico House Hotel offered accommodations for travelers from near and far. As a re
 As Los Angeles is notorious for tearing down its heritage buildings, one wouldn't think Pico House would survive, but the once luxury hotel of 1800s stands strong. Today, the interior of the building is mostly used for museum viewings, art exhibitions and the occasional haunted house tour. The ghost tours have appeared on the TV series Ghost Adventures. As a result of the vicious riot in 1871, the historical residence is said to be home to the lingering spirits of the 19 Chinese men killed. In complete contrast, the courtyard area is often described by visitors as one of the strongest assets of Pico House. Currently the courtyard area is mostly a fashionable space for wedding receptions; as the open air roof on the interior, the inner carriage house and the exposed brick walls mould together to paint the perfect quaint wedding. The overwhelming history and significance of Pico House has left the once deluxe hotel in impeccable condition, allowing individuals visiting the downtown area to become connected to the ‘old’ Los Angeles. Pico House currently serves as a landmark and historical building that is part of the larger Los Angeles Plaza Historical District. The rich history that pours from the white walls of Pico House and its surroundings on Olvera Street proves and will continue to be a popular attraction for all visitors.
 
 
+<img src='../images/picohouse.jpg' alt='Photograph of a large building with a sign saying Pico House and people gathered outside.'>
+<figcaption><p>Pico House</p><p><small>Ana Bégué de Packman, 1875. Image courtesy of UCLA Special Collections</small></p>
+<section id="categories" markdown="1">
 **Bibliography**
 
 Houghton, Frank B. History of the Old Plaza Church and Olvera Street. Los Angeles: n.p., n.d. Print.
 
 
-<img src='../images/picohouse.jpg' alt='Photograph of a large building with a sign saying Pico House and people gathered outside.'>
-<figcaption><p>Pico House</p><p><small>Ana Bégué de Packman, 1875. Image courtesy of UCLA Special Collections</small></p>
+</section>

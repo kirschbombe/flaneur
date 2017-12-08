@@ -25,6 +25,13 @@ M-18 rapidly began to grow, spreading from coast to coast and taking over all ne
 “La Vida Loca” is a mural located in Los Angeles that was created by the M-18 that depicts the gang in its entirety. It holds portraits of some of the gang’s core members and depicts scenes of violence, death, and imprisonment, while still illustrating freedom, brotherhood, and unity. This mural signifies ownership of the neighborhood and “commands respect” of the gang (Franco); no rival gang has attempted to molest or graffiti over this mural. Just like this mural, Teen Angels Magazine was able to create a space for the Latino gang culture to express themselves and let others see the world from their perspective.
 
 
+<img src='../images/teenangels1.jpg' alt='Teen Angels Magazine illustration of a car surrounded by four gang members. They are holding up their hands to form the word &#34;CUZZ,&#34; commonly associated wiht the Cripps.'>
+<figcaption><p>Teen Angels, Volume 34 Cover</p><p><small>David Holland, 1984. Image courtesy of UCLA Library Special Collections</small></p>
+<img src='../images/teenangels2.jpg' alt='A call-to-action anti-gang sentiment published in the magazine. It compares the 18th Street gang to an army, saying people should be more wary of the effects of gang culture on the community.'>
+<figcaption><p>Teen Angels, Volume 34 Anti-gang Sentiment</p><p><small>David Holland, 1984. Image courtesy of UCLA Special Collections</small></p>
+<img src='../images/teenangels3.jpg' alt='A picture of four members of 18th Street gang holding shotguns.'>
+<figcaption><p>Teen Angels, Volume 34 18th Street Gang Members</p><p><small>David Holland, 1984. Image courtesy of UCLA Special Collections</small></p>
+<section id="categories" markdown="1">
 **Bibliography**
 
 Castor, Richard. &quot;RIP TEEN ANGEL.&quot; LA TACO. N.p., 03 Apr. 2015. Web. 23 Nov. 2015.
@@ -40,9 +47,4 @@ Joe, Sherry. &quot;Gangs' Paper Trail : Magazines: Teen Angels Prints Graffiti, 
 Perez, Annemarie. &quot;David Holland.&quot; Introduction to Chicano and Latino Studies. Loyola Marymount University, 3 Apr. 2015. Web.
 
 
-<img src='../images/teenangels1.jpg' alt='Teen Angels Magazine illustration of a car surrounded by four gang members. They are holding up their hands to form the word &#34;CUZZ,&#34; commonly associated wiht the Cripps.'>
-<figcaption><p>Teen Angels, Volume 34 Cover</p><p><small>David Holland, 1984. Image courtesy of UCLA Library Special Collections</small></p>
-<img src='../images/teenangels2.jpg' alt='A call-to-action anti-gang sentiment published in the magazine. It compares the 18th Street gang to an army, saying people should be more wary of the effects of gang culture on the community.'>
-<figcaption><p>Teen Angels, Volume 34 Anti-gang Sentiment</p><p><small>David Holland, 1984. Image courtesy of UCLA Special Collections</small></p>
-<img src='../images/teenangels3.jpg' alt='A picture of four members of 18th Street gang holding shotguns.'>
-<figcaption><p>Teen Angels, Volume 34 18th Street Gang Members</p><p><small>David Holland, 1984. Image courtesy of UCLA Special Collections</small></p>
+</section>

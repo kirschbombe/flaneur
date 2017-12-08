@@ -24,6 +24,7 @@
       // jekyll loop through posts
 var overlays = {
 };
+var overLayers = [];
 //var category_layers = []
 icons = ['noun_33862_cc_aqua.svg', 'noun_33862_cc_blue.svg', 'noun_33862_cc_red.svg', 
 'noun_33862_cc_green.svg', 'noun_33862_cc_orange.svg', 'noun_33862_cc_pink.svg', 'noun_33862_cc_plum.svg', 
@@ -57,30 +58,28 @@ counter += 1;
       marker.on('mouseover', function(){
         this.openPopup();
       });
-      
-      marker.on('mouseout', function(){
-        this.closePopup()();
-      });
 
       marker.on('click', function(){
         window.location = ("{{site.baseurl}}{{post.url}}");
       });
-      markers.addLayer(marker);
+      //markers.addLayer(marker);
       {% endfor %}
       
     var imageurl = '<img class="legend" src="' + iconurl + '">'
-    var name = imageurl + '<span>{{category_name}}</span>';
-    overlays[name] = new L.layerGroup(layers);
-    map.addLayer(overlays[name])
+    var name = '{{category_name}}';
+    //overlays[name] = new L.layerGroup(layers);
+    overLayers.push({"name":name, icon: imageurl, active: true, "layer":L.layerGroup(layers)})
+    //map.addLayer(overlays[name])
  {% endfor %}
       // end loop through posts
 
-var baseLayers = {
+var panelLayers = new L.Control.PanelLayers(null, overLayers, {
+	compact: true,
+	collapsed: true,	
+});
+map.addControl(panelLayers);
 
-};
-
-L.control.layers(baseLayers, overlays).addTo(map);
-markers.addTo(map);
+//L.control.panelLayers(null, overLayers).addTo(map);markers.addTo(map);
 map.setView([34.0253, -118.3085], 11)
 //map.fitBounds(markers.getBounds());
 
