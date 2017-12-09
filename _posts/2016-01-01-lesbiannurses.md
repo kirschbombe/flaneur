@@ -21,9 +21,9 @@ As the gay rights movement progressed from its beginnings in the 1960s and homos
 Unfortunately, LNLA did not last forever, but its ten years of existence was enough of a foundation for other organizations to take its place. The group served as an important support structure for many nurses who faced the difficult reality of life as a lesbian in an unwelcoming environment. As Stephany says in the article pictured, “Let’s talk about this sexuality issue until we dissipate the fear on both sides.” LNLA was important in encouraging people to have this talk. Their parades and public image forced people to acknowledge that the nurses that were saving their lives were also lesbians, and that there was nothing wrong with that!
 
 
-<img src='../images/lesbiannurses1.jpg' alt='Black and white picture of a magazine article.'>
+<img src='images/lesbiannurses1.jpg' alt='Black and white picture of a magazine article.'>
 <figcaption><p>Lesbian Nurse</p><p><small>Theresa M. Stephany, 1998. Nursing Outlook Magazine. Image courtesy of UCLA Library Special Collections.</small></p>
-<img src='../images/lesbiannurses2.jpg' alt='Pink pin with a triangle and bottle logo'>
+<img src='images/lesbiannurses2.jpg' alt='Pink pin with a triangle and bottle logo'>
 <figcaption><p>Lesbian Nurses of Los Angeles pin</p><p><small>Image courtesy of UCLA Library Special Collections.</small></p>
 <section id="categories" markdown="1">
 **Bibliography**
