@@ -95,6 +95,11 @@ p {
   line-height: 22px;
 }
 
+img {
+  display: block;
+  margin: auto;
+}
+
 @media (max-width:768px) {
     .sidebar, #map {
         position: absolute;
