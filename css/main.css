@@ -62,7 +62,7 @@ margin-bottom: .3em;
 p.byline {
 	font-size: 15px;
 	line-height: 15px;
-  margin-top: .3em;
+    margin-top: .3em;
 	margin-bottom: .5rem;
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
@@ -71,12 +71,12 @@ p.byline {
 
 }
 
-article.post-article, img {
+img {
 height: 200px;
 }
 
 article.post-article {
-height: 45vw;
+height: 75vh;
 overflow-y: scroll;
 z-index: 1 !important;
 padding-bottom: 10px;
@@ -110,7 +110,7 @@ p {
         overflow-x: hidden
     }
 	article.post-article {
-	height: 25vw;
+	height: 32vh;
 	}
 	.page-content {
 		width: 100vw;

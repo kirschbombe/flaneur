@@ -4,9 +4,15 @@
   {% include head.html %}
   <body>
 
-  	<div id="article">{% include sidebar.html %}</div>
+  	<div id="article">{% include sidebar.html %}
+  	<script>
+  	window.onload = function(){
+  	reloadhtml();
+  	};
+  	</script></div>
 
     <div id="map"></div>
+
     <script>
       // set up variables to use during jekyll loop
       var lat, lng, content, marker,
@@ -35,7 +41,6 @@ var counter = -1;
 var layers = [];
 counter += 1;
 {% capture category_name %}{{ category | first }}{% endcapture %}
-//var {{category | first}} = new L.LayerGroup();
 {% for post in site.categories[category_name] %}
       lat = {{ post.lat }};
       lng = {{ post.lng }};
@@ -60,16 +65,18 @@ counter += 1;
       });
 
       marker.on('click', function(){
-        window.location = ("{{site.baseurl}}{{post.url}}");
+        post_url = "{{site.baseurl}}/#{{post.url}}";
+        window.location = (post_url);
+        $.get("{{site.baseurl}}{{post.url}}", function(data){
+        	console.log(data);
+        	$("#sidebar-content").html(data);
+        });
       });
-      //markers.addLayer(marker);
       {% endfor %}
 
     var imageurl = '<img class="legend" src="' + iconurl + '">'
     var name = '{{category_name}}';
-    //overlays[name] = new L.layerGroup(layers);
     overLayers.push({"name":name, icon: imageurl, active: true, "layer":L.layerGroup(layers)})
-    //map.addLayer(overlays[name])
  {% endfor %}
       // end loop through posts
 
@@ -79,10 +86,10 @@ var panelLayers = new L.Control.PanelLayers(null, overLayers, {
 });
 map.addControl(panelLayers);
 
-//L.control.panelLayers(null, overLayers).addTo(map);markers.addTo(map);
 map.setView([34.0253, -118.3085], 11)
 //map.fitBounds(markers.getBounds());
 
 </script>
+
   </body>
 </html>

@@ -2,14 +2,9 @@
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
     	<div id="sidebar-content">
-    	
-  	{% if page.layout == "post" %}
-	{% include article.html %}
-	{% elsif page.layout == 'page' %}
-	{% include intro.html %}
-     {% else %}
-     {{page.content}}
- 	{% endif %}
+    	{% if page.layout == "page" %}
+    	{% include intro.html %}
+    	{% endif %}
   </div>
   </div>
 </div>
