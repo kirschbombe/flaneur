@@ -84,7 +84,6 @@ font-size: 16px;
 
 }
 
-
 p {
 	display: block;
 	-webkit-margin-before: 1em;
@@ -98,6 +97,10 @@ p {
 img {
   display: block;
   margin: auto;
+}
+
+li {
+  margin-bottom: 8px;
 }
 
 @media (max-width:768px) {
@@ -185,6 +188,16 @@ img {
   text-align: center;
   color: #5a5a5a;
   padding: 0px 10px;
+}
+
+/*style bibliography*/
+.bibliography {
+  list-style-type: none;
+  text-indent: -1rem;
+  font-size: 14px;
+  padding-left: 20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
 }
 
 img.legend {
