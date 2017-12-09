@@ -7,23 +7,12 @@
   	<div id="article">{% include sidebar.html %}
   	<script>
   	window.onload = function(){
-  	url = window.location.href;
-  	if (url.includes("article")) {
-  		article_url = url.replace("#", "");
-  		$.get(article_url, function(data){
-        	$("#sidebar-content").html(data);
-        });
-  	} else {
-  	about_url = url + "/about"
-  	$.get(about_url, function(data){
-  	console.log(data);
-  	$("#sidebar-content").html(data);
-  	 });
-  	}
+  	reloadhtml();
   	};
   	</script></div>
 
     <div id="map"></div>
+
     <script>
       // set up variables to use during jekyll loop
       var lat, lng, content, marker,
@@ -76,7 +65,7 @@ counter += 1;
       });
 
       marker.on('click', function(){
-        post_url = "{{site.baseurl}}/#" + '{{post.url}}'.replace("/", "");
+        post_url = "{{site.baseurl}}/#{{post.url}}";
         window.location = (post_url);
         $.get("{{site.baseurl}}{{post.url}}", function(data){
         	console.log(data);
@@ -101,5 +90,6 @@ map.setView([34.0253, -118.3085], 11)
 //map.fitBounds(markers.getBounds());
 
 </script>
+
   </body>
 </html>
