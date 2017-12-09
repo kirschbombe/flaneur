@@ -60,10 +60,6 @@ counter += 1;
 
       layers.push(marker)
 
-      marker.on('mouseover', function(){
-        this.openPopup();
-      });
-
       marker.on('click', function(){
         post_url = "{{site.baseurl}}/#{{post.url}}";
         window.location = (post_url);
@@ -71,6 +67,7 @@ counter += 1;
         	console.log(data);
         	$("#sidebar-content").html(data);
         });
+       this.openPopup();
       });
       {% endfor %}
 
