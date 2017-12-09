@@ -9,7 +9,7 @@ function reloadhtml(){
         	$("#sidebar-content").html(data);
         });
   	} else {
-  	about_url = url + "/about"
+  	about_url = url + "about"
   	$.get(about_url, function(data){
   	console.log(data);
   	$("#sidebar-content").html(data);
