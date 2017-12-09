@@ -11,5 +11,6 @@
 
   <article class="post-article">
     {{ page.content }}
+    {{ post.img | replace: '..', site.baseurl }}
   </article>
 </div>
