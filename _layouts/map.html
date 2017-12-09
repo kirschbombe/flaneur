@@ -3,17 +3,17 @@
 
   {% include head.html %}
   <body>
-    
+
   	<div id="article">{% include sidebar.html %}</div>
 
     <div id="map"></div>
     <script>
       // set up variables to use during jekyll loop
       var lat, lng, content, marker,
-          map = L.map('map').setView([0, 0], 1),
+          map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1),
           markers = new L.featureGroup();
       L.tileLayer('https://{s}.tiles.mapbox.com/v3/kirschbombe.l007nm13/{z}/{x}/{y}.png', {
-        "attribution" : "<a href=\"http://www.mapbox.com\">Mapbox</a>", 
+        "attribution" : "<a href=\"http://www.mapbox.com\">Mapbox</a>",
         "minZoom" : 0,
         "maxZoom" : 15,
         "errorTileUrl" : "img/error-tile-image.png",
@@ -26,8 +26,8 @@ var overlays = {
 };
 var overLayers = [];
 //var category_layers = []
-icons = ['noun_33862_cc_aqua.svg', 'noun_33862_cc_blue.svg', 'noun_33862_cc_red.svg', 
-'noun_33862_cc_green.svg', 'noun_33862_cc_orange.svg', 'noun_33862_cc_pink.svg', 'noun_33862_cc_plum.svg', 
+icons = ['noun_33862_cc_aqua.svg', 'noun_33862_cc_blue.svg', 'noun_33862_cc_red.svg',
+'noun_33862_cc_green.svg', 'noun_33862_cc_orange.svg', 'noun_33862_cc_pink.svg', 'noun_33862_cc_plum.svg',
 'noun_33862_cc_purple.svg', 'noun_33862_cc_black.svg',
 'noun_33862_cc_rose.svg', 'noun_33862_cc_teal.svg']
 var counter = -1;
@@ -39,7 +39,7 @@ counter += 1;
 {% for post in site.categories[category_name] %}
       lat = {{ post.lat }};
       lng = {{ post.lng }};
-      
+
       content = "<strong>{{ post.title }}</strong><br>{{ post.desc }}";
       var iconurl = "{{site.baseurl}}/assets/leaflet/img/" + icons[counter]
 
@@ -52,9 +52,9 @@ counter += 1;
       var marker = L.marker([lat, lng], {
         icon: mbox,
       }).bindPopup(content, {offset:new L.Point(0,-30)});
-      
+
       layers.push(marker)
-      
+
       marker.on('mouseover', function(){
         this.openPopup();
       });
@@ -64,7 +64,7 @@ counter += 1;
       });
       //markers.addLayer(marker);
       {% endfor %}
-      
+
     var imageurl = '<img class="legend" src="' + iconurl + '">'
     var name = '{{category_name}}';
     //overlays[name] = new L.layerGroup(layers);
@@ -75,7 +75,7 @@ counter += 1;
 
 var panelLayers = new L.Control.PanelLayers(null, overLayers, {
 	compact: true,
-	collapsed: true,	
+	collapsed: true,
 });
 map.addControl(panelLayers);
 

@@ -2,10 +2,6 @@ body {
   margin:0; padding:0;
   font-family: 'Barlow', sans-serif;
 }
-body {
-  margin:0; padding:0;
-  font-family: 'Barlow', sans-serif;
-}
 
 .container {
 	width: 100%
@@ -37,10 +33,10 @@ article.page-content {
 }
 
 .post {
-  padding-left: 1.6em;
-  padding-right: 1em;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
+  padding-top: 3em;
+  padding-bottom: 3em;
 }
 
 p.post-header {
@@ -59,12 +55,14 @@ z-index: 1 !important;
 }
 
 h1.post-title {
-font-size: 18px
+font-size: 18px;
+margin-bottom: .3em;
 }
 
 p.byline {
 	font-size: 15px;
 	line-height: 15px;
+  margin-top: .3em;
 	margin-bottom: .5rem;
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
@@ -82,6 +80,8 @@ height: 45vw;
 overflow-y: scroll;
 z-index: 1 !important;
 padding-bottom: 10px;
+padding-top: 15px;
+padding-right: 20px;
 font-size: 16px;
 
 }
@@ -93,7 +93,8 @@ p {
 	-webkit-margin-after: 1em;
 	-webkit-margin-start: 0px;
 	-webkit-margin-end: 0px;
-	text-align: left
+	text-align: justify;
+  line-height: 22px;
 }
 
 @media (max-width:768px) {
@@ -177,4 +178,9 @@ img.legend {
 	height: 24px;
 	padding: 0px;
 	vertical-align: middle;
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  font-family: "Barlow", serif;
+  font-size: 14px;
 }
