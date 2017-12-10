@@ -104,10 +104,16 @@ li {
 }
 
 @media (max-width:768px) {
-    .sidebar, #map {
+    #map {
         position: absolute;
         left: 0;
-        height: 50vh;
+        height: 40vh;
+        width: 100vw
+    }
+    .sidebar {
+        position: absolute;
+        left: 0;
+        height: 60vh;
         width: 100vw
     }
 
@@ -129,7 +135,7 @@ li {
     }
 
     .sidebar {
-        top: 50vh
+        top: 40vh
     }
 
     .sidebar .sidebar {
@@ -143,7 +149,7 @@ li {
     #map {
         top: 0;
         height: 100vh;
-        width: 60vw;
+        width: 50vw;
     }
 
     #map {
@@ -151,7 +157,7 @@ li {
     }
 
     .sidebar {
-    	width: 40vw;
+    	width: 50vw;
         position: absolute;
         right: 0;
     }
@@ -171,11 +177,11 @@ li {
 
     #map {
         left: 0;
-        width: 60vw;
+        width: 55vw;
     }
 
     .sidebar {
-        width: 40vw;
+        width: 45vw;
         right: 0;
     }
 }
@@ -209,4 +215,9 @@ img.legend {
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
   font-family: "Barlow", serif;
   font-size: 14px;
+}
+
+label.leaflet-panel-layers-title {
+  font-family: "Barlow", sans-serif;
+  text-transform: uppercase;
 }
