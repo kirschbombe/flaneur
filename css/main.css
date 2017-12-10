@@ -79,7 +79,8 @@ overflow-y: scroll;
 z-index: 1 !important;
 padding-bottom: 10px;
 padding-top: 15px;
-padding-right: 20px;
+padding-right: 15px;
+margin-right: -15px;
 font-size: 16px;
 
 }
