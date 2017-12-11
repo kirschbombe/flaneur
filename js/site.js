@@ -16,4 +16,7 @@ function reloadhtml(){
   	 });
   	}
 };
-
+function myFunction(popup){
+  //popup.openPopup();
+  alert(popup);
+};

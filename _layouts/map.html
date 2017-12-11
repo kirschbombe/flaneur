@@ -66,7 +66,8 @@ counter += 1;
       marker.on('click', function(){
         post_url = "{{site.baseurl}}/#{{post.url}}";
         window.location = (post_url);
-        var articleicon = "<img class='article-marker' src='" + this.iconURL + "'>";
+
+        var articleicon = "<img class='article-marker' src='" + this.iconURL  + "' onclick='" + this.openPopup() + "' >";
         $.get("{{site.baseurl}}{{post.url}}", function(data){
         	var index = data.indexOf("</h1>");
         	data = data.slice(0, index) + articleicon + data.slice(index,);
@@ -76,7 +77,7 @@ counter += 1;
       });
       {% endfor %}
 
-    var imageurl = '<img class="legend" src="' + iconurl + '">'
+    var imageurl = '<img class="legend" src="' + iconurl + '">' 
     var name = '{{category_name}}';
     overLayers.push({"name":name, icon: imageurl, active: true, "layer":L.layerGroup(layers)})
  {% endfor %}
