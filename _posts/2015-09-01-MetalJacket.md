@@ -23,7 +23,7 @@ Metal is a special genre in the sense that it has one of the most dedicated fanb
 The cultural influence of Heavy Metal was significant and remains relevant today in both the major music industry and backyards of Los Angeles. Many local music and commercial establishments thrive solely off of Heavy Metal. For example, one can even find eateries like Loaded and Cinespace that pride themselves on their playlist and modeling their decor to be reminiscent of the old Metal scene. Even The Rainbow, one of the most famous rock clubs in California, often features Heavy Metal. The culture that is Heavy Metal is still thriving as much as it did during its inception period, and it isn’t going anywhere soon. People will continue to attend Heavy Metal concerts, listen to the music, and even wear war vests. 
 
 
-'![Displayed is a jean jacket embroidered with metal studs and various band patches. The patches on the denim jacket represent many bands in a showy fashion. Some bands even appear on the jacket multiple times. The jacket also has buttons with band logos pinned onto it.  ](images/Jacket1.jpg)'
+![Displayed is a jean jacket embroidered with metal studs and various band patches. The patches on the denim jacket represent many bands in a showy fashion. Some bands even appear on the jacket multiple times. The jacket also has buttons with band logos pinned onto it.  ](images/Jacket1.jpg)
 
 Heavy Metal Jacket. Created in the 1980s to 1990s. Image courtesy of UCLA
    {:.caption}

@@ -21,12 +21,12 @@ In addition to Tucker and Callwood, Stephen Berens and Neal Taylor created profo
 The art exhibition, Off the Streets, was created simply for artists, such as the four discussed, to have the opportunity to showcase their work to the city. The City’s Print Shop became of great significance in 1985 when its old, abandoned walls held this once in a lifetime art exhibit. The only trace left of the exhibition can be found in this catalog, “Off the Street.” From the ashes of the print shop rose the Japanese American National Museum, which still stands today in Little Tokyo. The museum continues to showcase photos and pieces of artwork pertaining to Japanese-American culture, similar to how the art exhibition did with artwork pertaining to modern culture at the time. Even though the original building of this exhibit no longer exists, the site itself holds historical significance and the artwork still endures and remains accessible in the catalog.
 
 
-'![A street wall made of brick with the title of the art exhibition &#34;Off the Streets&#34;.](images/offthestreet.JPG)'
+![A street wall made of brick with the title of the art exhibition &#34;Off the Streets&#34;.](images/offthestreet.JPG)'
 
 A One-time Art Exhibition. Fritz A. Frauchiger, April 27-May 26, 1985. Image courtesy of UCLA Library Special Collections.
    {:.caption}
 
-'![Painting of helicopters putting out a fire from a car crash caused by a realistic Los Angeles mural during sunset on the side of a building.](images/offthestreet3.jpg)'
+![Painting of helicopters putting out a fire from a car crash caused by a realistic Los Angeles mural during sunset on the side of a building.](images/offthestreet3.jpg)
 
 Sunset on the Fig. Carlos Almaraz, [1981]. Image courtesy of UCLA Library Special Collections.
    {:.caption}
