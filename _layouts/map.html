@@ -6,10 +6,8 @@
 
   	<div id="article">{% include sidebar.html %}
   	<script>
-  	console.log(this);
   	window.onload = function(){
   	element = document.querySelectorAll("post-article");
-  	console.log(element);
   	reloadhtml();
   	};
   	</script></div>
@@ -62,7 +60,7 @@ counter += 1;
       }).bindPopup(content, {offset:new L.Point(0,-30)});
       marker.iconURL = iconurl;
       layers.push(marker);
-      
+
       marker.on('click', function(){
         post_url = "{{site.baseurl}}/#{{post.url}}";
         window.location = (post_url);
@@ -73,7 +71,7 @@ counter += 1;
         	data = data.slice(0, index) + articleicon + data.slice(index,);
         	$("#sidebar-content").html(data);
         });
-        this.openPopup();
+       this.openPopup();
       });
       {% endfor %}
 
