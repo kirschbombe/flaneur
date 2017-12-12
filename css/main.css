@@ -30,6 +30,7 @@ article.page-content {
 
 .post-title{
 	font-size: 14px;
+  position: relative;
 }
 
 .post {
@@ -215,7 +216,8 @@ img.legend {
 img.article-marker {
 	height: 42px;
 	padding: 0px;
-	vertical-align: right;
+  align:right;
+  cursor: pointer;
   display: inline;
 }
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
