@@ -23,26 +23,24 @@ After such a devastating and expensive earthquake, Los Angeles knew changes woul
 There is much to be taken from the 1994 Northridge Earthquake. It is easy to dwell on the negative effects of a huge disaster, but it is necessary to be able to learn from failure. The collapse of the Santa Monica Freeway meant devastation, disturbance, and destruction. Lives were lost, businesses suffered, and livelihood was disrupted. Southern California’s “transportation artery” was severed; the temporary patch was essential in getting lives running again. In the long term, improved design and careful consideration will ultimately stitch the city back together.
 
 
-<img src='images/Freeway2.jpg' alt='Color photograph taken underneath a broken portion of the highway.'>
-<figcaption><p>Collapsed Highway</p><p><small>Photograph by Jayne Kamin-Oncea from 4:31: Images of the Los Angeles Earthquake, LA Times, 1994</small></p>
-<img src='images/Freeway3.jpg' alt='Color photograph of cars among the ruins of the highway.'>
-<figcaption><p>Earthquake Ruins</p><p><small>Photograph by unknown photographer from 4:31: Images of the Los Angeles Earthquake, LA Times, 1994</small></p>
-<section id="categories" markdown="1">
-**Bibliography**
+'![Color photograph taken underneath a broken portion of the highway.](images/Freeway2.jpg)'
 
-Boarnet, Marlon G. &quot;Business losses, transportation damage and the Northridge earthquake.&quot; University of California Transportation Center (1996).
+Collapsed Highway. Photograph by Jayne Kamin-Oncea from 4:31: Images of the Los Angeles Earthquake, LA Times, 1994
+   {:.caption}
 
-Bolin, Robert C., and Lois Stanford. The Northridge Earthquake: Vulnerability and Disaster. London: Routledge, 1998. Print.
+'![Color photograph of cars among the ruins of the highway.](images/Freeway3.jpg)'
 
-Giuliano, Genevieve, and Jacqueline Golob. &quot;Impacts of the Northridge earthquake on transit and highway use.&quot; Journal of Transportation and Statistics 1.2 (1998): 1-20.
-
-Mitchell, Denis, et al. &quot;Performance of bridges in the 1994 Northridge earthquake.&quot; Canadian Journal of Civil Engineering 22.2 (1995): 415-427.
-
-Nora Zamichow and Virginia Ellis, Times Staff Writers, “Santa Monica Freeway to Reopen on Tuesday : Recovery: The contractor will get a $14.5-million bonus for finishing earthquake repairs 74 days early.” California Department of Transportation, April 6, 1994
-
-Reckard, E. S. &quot;Many I-10 Workers Routinely Earn $2,000 Weekly Take Home Pay.&quot; Los Angeles Sentinel (1934-2005): 1. Apr 07 1994. ProQuest.
-
-The Staff of the Los Angeles Times, comp. 4:31: Images of the 1994 Los Angeles Earthquake. Los Angeles, CA: Times, 1994. Print.
+Earthquake Ruins. Photograph by unknown photographer from 4:31: Images of the Los Angeles Earthquake, LA Times, 1994
+   {:.caption}
 
 
-</section>
+#### Works cited
+
+{:.bibliography}
+1. Boarnet, Marlon G. &quot;Business losses, transportation damage and the Northridge earthquake.&quot; University of California Transportation Center (1996).
+2. Bolin, Robert C., and Lois Stanford. The Northridge Earthquake: Vulnerability and Disaster. London: Routledge, 1998. Print.
+3. Giuliano, Genevieve, and Jacqueline Golob. &quot;Impacts of the Northridge earthquake on transit and highway use.&quot; Journal of Transportation and Statistics 1.2 (1998): 1-20.
+4. Mitchell, Denis, et al. &quot;Performance of bridges in the 1994 Northridge earthquake.&quot; Canadian Journal of Civil Engineering 22.2 (1995): 415-427.
+5. Nora Zamichow and Virginia Ellis, Times Staff Writers, “Santa Monica Freeway to Reopen on Tuesday : Recovery: The contractor will get a $14.5-million bonus for finishing earthquake repairs 74 days early.” California Department of Transportation, April 6, 1994
+6. Reckard, E. S. &quot;Many I-10 Workers Routinely Earn $2,000 Weekly Take Home Pay.&quot; Los Angeles Sentinel (1934-2005): 1. Apr 07 1994. ProQuest.
+7. The Staff of the Los Angeles Times, comp. 4:31: Images of the 1994 Los Angeles Earthquake. Los Angeles, CA: Times, 1994. Print.

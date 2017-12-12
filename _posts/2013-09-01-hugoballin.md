@@ -1,4 +1,4 @@
----
+ ---
 layout: post
 title: "Hugo Ballin"
 date: 2013-09-01
@@ -26,5 +26,8 @@ Whether it was the urge to depict history through a brush or the simply idea tha
 
 ![Mural depicting the arrival of the Spanish to the coming of white settlers in covered wagons](images/ballin.jpg "Ballin's Lunette. Hugo Ballin, 1930. Image courtesy of UCLA Library Special Collections.")
 
-<img src='images/ballin.jpg' alt='Mural depicting the arrival of the Spanish to the coming of white settlers in covered wagons'>
-<figcaption><p>Ballin's Lunette</p><p><small>Hugo Ballin, 1930. Image courtesy of UCLA Library Special Collections</small></p>
+'![Mural depicting the arrival of the Spanish to the coming of white settlers in covered wagons](images/ballin.jpg)'
+
+Ballin's Lunette. Hugo Ballin, 1930. Image courtesy of UCLA Library Special Collections
+   {:.caption}
+

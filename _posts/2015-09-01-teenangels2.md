@@ -25,26 +25,28 @@ M-18 rapidly began to grow, spreading from coast to coast and taking over all ne
 “La Vida Loca” is a mural located in Los Angeles that was created by the M-18 that depicts the gang in its entirety. It holds portraits of some of the gang’s core members and depicts scenes of violence, death, and imprisonment, while still illustrating freedom, brotherhood, and unity. This mural signifies ownership of the neighborhood and “commands respect” of the gang (Franco); no rival gang has attempted to molest or graffiti over this mural. Just like this mural, Teen Angels Magazine was able to create a space for the Latino gang culture to express themselves and let others see the world from their perspective.
 
 
-<img src='images/teenangels1.jpg' alt='Teen Angels Magazine illustration of a car surrounded by four gang members. They are holding up their hands to form the word &#34;CUZZ,&#34; commonly associated wiht the Cripps.'>
-<figcaption><p>Teen Angels, Volume 34 Cover</p><p><small>David Holland, 1984. Image courtesy of UCLA Library Special Collections</small></p>
-<img src='images/teenangels2.jpg' alt='A call-to-action anti-gang sentiment published in the magazine. It compares the 18th Street gang to an army, saying people should be more wary of the effects of gang culture on the community.'>
-<figcaption><p>Teen Angels, Volume 34 Anti-gang Sentiment</p><p><small>David Holland, 1984. Image courtesy of UCLA Special Collections</small></p>
-<img src='images/teenangels3.jpg' alt='A picture of four members of 18th Street gang holding shotguns.'>
-<figcaption><p>Teen Angels, Volume 34 18th Street Gang Members</p><p><small>David Holland, 1984. Image courtesy of UCLA Special Collections</small></p>
-<section id="categories" markdown="1">
-**Bibliography**
+'![Teen Angels Magazine illustration of a car surrounded by four gang members. They are holding up their hands to form the word &#34;CUZZ,&#34; commonly associated wiht the Cripps.](images/teenangels1.jpg)'
 
-Castor, Richard. &quot;RIP TEEN ANGEL.&quot; LA TACO. N.p., 03 Apr. 2015. Web. 23 Nov. 2015.
+Teen Angels, Volume 34 Cover. David Holland, 1984. Image courtesy of UCLA Library Special Collections
+   {:.caption}
 
-Cummings, Scott, and Daniel J. Monti. Gangs: The Origins and Impact of Contemporary Youth Gangs in the United States. Albany: State U of New York, 1993. Print.
+'![A call-to-action anti-gang sentiment published in the magazine. It compares the 18th Street gang to an army, saying people should be more wary of the effects of gang culture on the community.](images/teenangels2.jpg)'
 
-Franco, Celinda. &quot;The MS 13 and 18th Street Gangs: Emerging Transnational Gang Threats?.&quot; Congressional Research Service, Library of Congress, 2007.
+Teen Angels, Volume 34 Anti-gang Sentiment. David Holland, 1984. Image courtesy of UCLA Special Collections
+   {:.caption}
 
-Holland, David. Teen Angels 34 (1984): n. pag. UCLA Library Special Collections. Print.
+'![A picture of four members of 18th Street gang holding shotguns.](images/teenangels3.jpg)'
 
-Joe, Sherry. &quot;Gangs' Paper Trail : Magazines: Teen Angels Prints Graffiti, Art, Poetry and Obituaries. Critics Say It Glorifies the Lifestyle but Doesn't Show the Consequences.&quot; 24 Mar. 1992: n. pag. Print.
-
-Perez, Annemarie. &quot;David Holland.&quot; Introduction to Chicano and Latino Studies. Loyola Marymount University, 3 Apr. 2015. Web.
+Teen Angels, Volume 34 18th Street Gang Members. David Holland, 1984. Image courtesy of UCLA Special Collections
+   {:.caption}
 
 
-</section>
+#### Works cited
+
+{:.bibliography}
+1. Castor, Richard. &quot;RIP TEEN ANGEL.&quot; LA TACO. N.p., 03 Apr. 2015. Web. 23 Nov. 2015.
+2. Cummings, Scott, and Daniel J. Monti. Gangs: The Origins and Impact of Contemporary Youth Gangs in the United States. Albany: State U of New York, 1993. Print.
+3. Franco, Celinda. &quot;The MS 13 and 18th Street Gangs: Emerging Transnational Gang Threats?.&quot; Congressional Research Service, Library of Congress, 2007.
+4. Holland, David. Teen Angels 34 (1984): n. pag. UCLA Library Special Collections. Print.
+5. Joe, Sherry. &quot;Gangs' Paper Trail : Magazines: Teen Angels Prints Graffiti, Art, Poetry and Obituaries. Critics Say It Glorifies the Lifestyle but Doesn't Show the Consequences.&quot; 24 Mar. 1992: n. pag. Print.
+6. Perez, Annemarie. &quot;David Holland.&quot; Introduction to Chicano and Latino Studies. Loyola Marymount University, 3 Apr. 2015. Web.
