@@ -19,20 +19,20 @@ The Los Angeles Times article “Sit Down Strike in Ruins Begun by Chavez Evicte
 The helplessness and indignation she experienced was felt throughout the community as the city cleared the land, destroying their homes, schools, and churches. The city, driven by economic interests, completely disregarded the powerless minority group and their way of life. To the residents Chavez Ravine was more than just a piece of land. The community was tight-knit and filled with the traditions and culture of the 300 families that lived there (Goldberg). Residents here ran their own schools and churches, grew their own food, and raised livestock (Goldberg).  This community of families was thriving off their way of life, but it did not stop the city of Los Angeles’ attempt to make changes.
 
 
-<img src='images/chavezravine1.JPG' alt='The photograph of a page from the L A Times with the sub-headline that reads &#39;No Move, says Clan&#39;s Matriarch&#39; and a hand-written annotation that reads &#34;I am scared.&#34; The photograph shows members of the Arechiga family searching for personal items in the remains of their home, which was bulldozed down only moments before.'>
-<figcaption><p>"Sit-Down Strike in Ruins Begun by Chavez Evictees"</p><p><small>Los Angeles Times, 10 May 1959. Image courtesy of UCLA Library Special Collections</small></p>
-<img src='images/chavezravine2.JPG' alt='The two photographs of a page from the LA Times with the sub-headline that reads &#34;Woman, 63, Stands in Ruins of Home to Defy Dodgers and Los Angeles.&#34; The one on the upper left shows Mrs. Glen Walters shouting at police as they forcibly evicted a neighbor. In the picture below, members of the Arechiga family search the rubble of their former home which was demolished to the ground by bulldozers. '>
-<figcaption><p>"Woman, 63, Stands in Ruins of Home to Defy Dodgers and Los Angeles"</p><p><small>Los Angeles Times, 09 May 1959. Image courtesy of UCLA Library Special Collections</small></p>
-<section id="categories" markdown="1">
-**Bibliography**
+'![The photograph of a page from the L A Times with the sub-headline that reads &#39;No Move, says Clan&#39;s Matriarch&#39; and a hand-written annotation that reads &#34;I am scared.&#34; The photograph shows members of the Arechiga family searching for personal items in the remains of their home, which was bulldozed down only moments before.](images/chavezravine1.JPG)'
 
-Goldberg, Eve. &quot;Frank Wilkinson and the Battle of Chavez Ravine.&quot; Sports in American Popular Culture Americana: The Institute for the Study of American Popular Culture, May 2010. Web. 03 Nov. 2015.
+"Sit-Down Strike in Ruins Begun by Chavez Evictees". Los Angeles Times, 10 May 1959. Image courtesy of UCLA Library Special Collections
+   {:.caption}
 
-Normark, Don. Chávez Ravine: 1949: A Los Angeles Story. San Francisco: Chronicle LLC, 1999. PDF.
+'![The two photographs of a page from the LA Times with the sub-headline that reads &#34;Woman, 63, Stands in Ruins of Home to Defy Dodgers and Los Angeles.&#34; The one on the upper left shows Mrs. Glen Walters shouting at police as they forcibly evicted a neighbor. In the picture below, members of the Arechiga family search the rubble of their former home which was demolished to the ground by bulldozers. ](images/chavezravine2.JPG)'
 
-Skyhorse, Brando. The Madonnas of Echo Park. New York: Free, 2010. Print.
-
-&quot;The History of Chavez Ravine.&quot; Independent Lens. PBS, n.d. Web. 03 Nov. 2015.
+"Woman, 63, Stands in Ruins of Home to Defy Dodgers and Los Angeles". Los Angeles Times, 09 May 1959. Image courtesy of UCLA Library Special Collections
+   {:.caption}
 
 
-</section>
+#### Works cited
+
+1. Goldberg, Eve. &quot;Frank Wilkinson and the Battle of Chavez Ravine.&quot; Sports in American Popular Culture Americana: The Institute for the Study of American Popular Culture, May 2010. Web. 03 Nov. 2015.
+2. Normark, Don. Chávez Ravine: 1949: A Los Angeles Story. San Francisco: Chronicle LLC, 1999. PDF.
+3. Skyhorse, Brando. The Madonnas of Echo Park. New York: Free, 2010. Print.
+4. &quot;The History of Chavez Ravine.&quot; Independent Lens. PBS, n.d. Web. 03 Nov. 2015.

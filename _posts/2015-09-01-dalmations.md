@@ -25,18 +25,15 @@ While Warner Brothers had the verbally brash Bugs Bunny, Disney had the Chapline
 The people of the counterculture were influenced by One Hundred and One Dalmatians and absorbed the film’s values of social resistance and anti-capitalism. The character Roger (not shown in the Special Collections picture) has no desire for money unless it were to be obtained by his love and passion for musical composition. But there's another side to the story: the antagonist of the film, Cruella de Vil, who is the epitome of anti-capitalism, portrays materialism as unfavorable by the association of her evil character and materialistic behaviors. The Special Collections picture proves this by displaying her attempts to kidnap the Dalmatians; Cruella, standing in a gaudy fur coat, is glaring at her henchmen, wanting them to capture the puppies for more fur coats. The picture, therefore, is central to the notion of a resistance to greed. Money-fixations and materialism only incite villainous behavior such as that of making puppies into coats. On the other hand, Roger is delightful and respectable because he is not money-obsessed and values a pursuit of what he loves more. The movie viewer—more specifically, a kid of the '60s—observes such aspects subconsciously. Disney plants a distaste for materialism into the viewer's head. Disney films, similar to this one, have been factors in creating social resistance, shaping the counterculture, and changing the U.S.
 
 
-<img src='images/dalmations1.jpg' alt='Cruella De Vil in the presence of one hundred and one dalmatians stolen by her henchmen, Horace and Jasper Badun'>
-<figcaption><p>101 Dalmatians Stolen by Horace and Jasper Badun</p><p><small>Walt Disney Productions, 1938-198x. Image courtesy of UCLA Special Collections</small></p>
-<section id="categories" markdown="1">
-**Bibliography**
+'![Cruella De Vil in the presence of one hundred and one dalmatians stolen by her henchmen, Horace and Jasper Badun](images/dalmations1.jpg)'
 
-Brode, Douglas. From Walt to Woodstock. Austin: University of Texas Press, 2004. Print.
-
-Finch, Christopher. The Art of Walt Disney: From Mickey Mouse to the Magic Kingdoms and Beyond. Burbank: Walt Disney Productions, 1973. Print. (pg. 301-306)
-
-Stevenson, Richard W. &quot;Disney's Re-released '101 Dalmatians' a Surprise Hit at the Box Office.&quot; Tribunedigital-baltimoresun. New York Times News Service, 06 Aug 1991. Web. 19 Nov. 2015.
-
-Wagstaff. &quot;Warner Brothers vs. Disney &#124; The House Next Door &#124; Slant Magazine.&quot; Slant Magazine. Slant Magazine, 30 June 2006. Web. 21 Nov. 2015.
+101 Dalmatians Stolen by Horace and Jasper Badun. Walt Disney Productions, 1938-198x. Image courtesy of UCLA Special Collections
+   {:.caption}
 
 
-</section>
+#### Works cited
+
+1. Brode, Douglas. From Walt to Woodstock. Austin: University of Texas Press, 2004. Print.
+2. Finch, Christopher. The Art of Walt Disney: From Mickey Mouse to the Magic Kingdoms and Beyond. Burbank: Walt Disney Productions, 1973. Print. (pg. 301-306)
+3. Stevenson, Richard W. &quot;Disney's Re-released '101 Dalmatians' a Surprise Hit at the Box Office.&quot; Tribunedigital-baltimoresun. New York Times News Service, 06 Aug 1991. Web. 19 Nov. 2015.
+4. Wagstaff. &quot;Warner Brothers vs. Disney &#124; The House Next Door &#124; Slant Magazine.&quot; Slant Magazine. Slant Magazine, 30 June 2006. Web. 21 Nov. 2015.
