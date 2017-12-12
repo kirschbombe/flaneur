@@ -26,8 +26,6 @@ Whether it was the urge to depict history through a brush or the simply idea tha
 
 ![Mural depicting the arrival of the Spanish to the coming of white settlers in covered wagons](images/ballin.jpg "Ballin's Lunette. Hugo Ballin, 1930. Image courtesy of UCLA Library Special Collections.")
 
-'![Mural depicting the arrival of the Spanish to the coming of white settlers in covered wagons](images/ballin.jpg)'
-
 Ballin's Lunette. Hugo Ballin, 1930. Image courtesy of UCLA Library Special Collections
    {:.caption}
 
