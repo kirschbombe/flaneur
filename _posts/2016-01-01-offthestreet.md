@@ -34,6 +34,7 @@ Sunset on the Fig. Carlos Almaraz, [1981]. Image courtesy of UCLA Library Specia
 
 #### Works cited
 
+{:.bibliography}
 1. Off the Street, 150002. Library Special Collections, Charles E. Young Research Library, UCLA.
 2. Almaraz, Carlos. Sunset on the Fig. 1981. Craft and Folk Art Museum, Los Angeles.
 3. &quot;Biography.&quot; Stephen Berens. Web. 03 Mar. 2016.

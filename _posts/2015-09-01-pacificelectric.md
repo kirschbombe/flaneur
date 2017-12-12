@@ -37,5 +37,6 @@ Magnified view of advertisments. 1940s-1950s. Image courtesy of UCLA Library Spe
 
 #### Works cited
 
+{:.bibliography}
 1. Wachs, Martin. &quot;Autos, Transit, and the Sprawl of Los Angeles: The 1920s.&quot; Journal of the American Planning Association, 1984.
 2. Walker, Jim. The Yellow Cars of Los Angeles: A Roster of Streetcars of Los Angeles Railway and Successors from the 1890s to 1963. Glendale: Interurbans, 1977.

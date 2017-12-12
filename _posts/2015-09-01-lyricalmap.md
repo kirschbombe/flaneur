@@ -33,5 +33,6 @@ Father Boyle. J. Michael Walker, 2011. Image courtesy of UCLA Digital Library.
 
 #### Works cited
 
+{:.bibliography}
 1. “Literary Map of Los Angeles.” Libros Schmibros Lending Library. Web. 23 Sept. 2015.
 2. Walker, J. Michael. &quot;Lyrical map of the concept of Los Angeles,&quot; UCLA Library Digital Collections, 2011.

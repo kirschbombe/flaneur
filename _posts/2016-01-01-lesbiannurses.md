@@ -34,5 +34,6 @@ Lesbian Nurses of Los Angeles pin. Image courtesy of UCLA Library Special Collec
 
 #### Works cited
 
+{:.bibliography}
 1. Stephany, Theresa M. &quot;Lesbian Nurse.&quot; Nursing Outlook Magazine Nov. 1998: 295. Print.
 2. Giddings, Lynne S., and Marlaine C. Smith. &quot;Stories of Lesbian In/visibility in Nursing.&quot; Nursing Outlook 49.1 (2001): 14-19. Web.

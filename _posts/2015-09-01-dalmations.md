@@ -33,6 +33,7 @@ The people of the counterculture were influenced by One Hundred and One Dalmatia
 
 #### Works cited
 
+{:.bibliography}
 1. Brode, Douglas. From Walt to Woodstock. Austin: University of Texas Press, 2004. Print.
 2. Finch, Christopher. The Art of Walt Disney: From Mickey Mouse to the Magic Kingdoms and Beyond. Burbank: Walt Disney Productions, 1973. Print. (pg. 301-306)
 3. Stevenson, Richard W. &quot;Disney's Re-released '101 Dalmatians' a Surprise Hit at the Box Office.&quot; Tribunedigital-baltimoresun. New York Times News Service, 06 Aug 1991. Web. 19 Nov. 2015.

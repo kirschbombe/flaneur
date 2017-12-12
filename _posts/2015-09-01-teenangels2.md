@@ -43,6 +43,7 @@ Teen Angels, Volume 34 18th Street Gang Members. David Holland, 1984. Image cour
 
 #### Works cited
 
+{:.bibliography}
 1. Castor, Richard. &quot;RIP TEEN ANGEL.&quot; LA TACO. N.p., 03 Apr. 2015. Web. 23 Nov. 2015.
 2. Cummings, Scott, and Daniel J. Monti. Gangs: The Origins and Impact of Contemporary Youth Gangs in the United States. Albany: State U of New York, 1993. Print.
 3. Franco, Celinda. &quot;The MS 13 and 18th Street Gangs: Emerging Transnational Gang Threats?.&quot; Congressional Research Service, Library of Congress, 2007.

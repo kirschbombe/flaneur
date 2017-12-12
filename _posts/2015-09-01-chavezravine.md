@@ -32,6 +32,7 @@ The helplessness and indignation she experienced was felt throughout the communi
 
 #### Works cited
 
+{:.bibliography}
 1. Goldberg, Eve. &quot;Frank Wilkinson and the Battle of Chavez Ravine.&quot; Sports in American Popular Culture Americana: The Institute for the Study of American Popular Culture, May 2010. Web. 03 Nov. 2015.
 2. Normark, Don. Chávez Ravine: 1949: A Los Angeles Story. San Francisco: Chronicle LLC, 1999. PDF.
 3. Skyhorse, Brando. The Madonnas of Echo Park. New York: Free, 2010. Print.

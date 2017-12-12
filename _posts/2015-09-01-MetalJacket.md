@@ -31,5 +31,6 @@ Heavy Metal Jacket. Created in the 1980s to 1990s. Image courtesy of UCLA
 
 #### Works cited
 
+{:.bibliography}
 1. Paraire, Philippe. 50 Years of Rock Music. Edinburgh: Chambers, 1992.
 2. Seabury, Steve. &quot;Best Metal Bars and Eats In Los Angeles.&quot; CBS Los Angeles. 15 Dec. 2010.

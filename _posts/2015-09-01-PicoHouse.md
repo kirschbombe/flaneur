@@ -35,4 +35,5 @@ Pico House. Ana Bégué de Packman, 1875. Image courtesy of UCLA Special Collect
 
 #### Works cited
 
+{:.bibliography}
 1. Houghton, Frank B. History of the Old Plaza Church and Olvera Street. Los Angeles: n.p., n.d. Print.
