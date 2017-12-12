@@ -29,6 +29,7 @@ Los Angeles Orphan Asylum .  1894. Image courtesy of UCLA Library Special Collec
 
 #### Works cited
 
+{:.bibliography}
 1. Photograph Album of Early Los Angeles, Forbes, A.S.C, Mrs. Department of Special Collections, Charles E. Young Research Library, University of California, Los Angeles.
 2. &quot;First Orphanage in Los Angeles.&quot; Maryvale. Maryvale, n.d. Web. 23 Feb. 2016. http://www.maryvale.org/about-us/first-orphanage-in-los-angeles.
 3. &quot;The Los Angeles Orphanage Guild.&quot; N.p.,n.d. Web. http://laorphanageguild.com.

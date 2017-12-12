@@ -31,6 +31,7 @@ Chicano artwork in Teen Angels Magazine. Milpitas, 1981. Image courtesy of UCLA 
 
 #### Works cited
 
+{:.bibliography}
 1. Garza, G. &quot;Chicano visions historic exhibit is the first survey of the art that emerged along with the spirit of a people.&quot; Los Angeles Times, 26 August, 1990.
 2. Joe, Sherry. &quot;Gangs' Paper Trail : Magazines: Teen Angels prints graffiti, art, poetry and obituaries.&quot; Los Angeles Times, 24 March, 1992. 
 3. Kun, J. &quot;Cover story: the new chicano movement.&quot; Los Angeles Times, 9 January, 2005.

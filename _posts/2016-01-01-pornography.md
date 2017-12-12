@@ -28,6 +28,7 @@ Conference Program. Image courtesy of UCLA Library Special Collections.
 
 #### Works cited
 
+{:.bibliography}
 1. Robin Ruth Linden Papers (Collection 1957). UCLA Library Collections, Charles E. Young Research Library, UCLA.
 2. Baker, Bob. &quot;MOVIES; Pushing Porn to the Fore; 'Deep Throat' (1972) Rattled Cultural Taboos.
 3. &quot;Connections Between Pornography and Sex Trafficking.&quot; Covenant Eyes. Covenant Eyes, 07 Sept. 2011. Web. 10 Feb. 2016.

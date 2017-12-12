@@ -39,5 +39,6 @@ Young Teen Locked Up. Creator, date. Image courtesy of ...
 
 #### Works cited
 
+{:.bibliography}
 1. &quot;Grape Street Watts Crips – South Los Angeles &#124; Jordan Downs &#124; Baby Locos.&quot; Grape Street Watts Crips – South Los Angeles. N.p., n.d. Web. 23 Nov. 2015.
 2. Stanley, Alessandra. &quot;Los Angeles All Ganged Up,&quot; Time. Time Inc., 18 June 1990. 

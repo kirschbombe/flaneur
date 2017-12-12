@@ -36,6 +36,7 @@ Earthquake Ruins. Photograph by unknown photographer from 4:31: Images of the Lo
 
 #### Works cited
 
+{:.bibliography}
 1. Boarnet, Marlon G. &quot;Business losses, transportation damage and the Northridge earthquake.&quot; University of California Transportation Center (1996).
 2. Bolin, Robert C., and Lois Stanford. The Northridge Earthquake: Vulnerability and Disaster. London: Routledge, 1998. Print.
 3. Giuliano, Genevieve, and Jacqueline Golob. &quot;Impacts of the Northridge earthquake on transit and highway use.&quot; Journal of Transportation and Statistics 1.2 (1998): 1-20.

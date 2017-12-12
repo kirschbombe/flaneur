@@ -29,4 +29,5 @@ Poster for the 19th Annual Academy Awards. Chandler, Raymond, 1947. Image courte
 
 #### Works cited
 
+{:.bibliography}
 1. Program for awards ceremony, Raymond Chandler Papers (Collection 638). UCLA Library Special Collections, Charles E. Young Research Library.
