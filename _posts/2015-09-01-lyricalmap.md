@@ -15,17 +15,17 @@ desc: "Created at the Hammer Museum as part of Libros Schmibros' residency, the 
 The map is now part of UCLA’s Digital Archive and can be viewed either in its entirety or in part here. Get the artist’s perspective here.&quot;
 
 
-'![Image of the hand-drawn title of the work. Reads: Lyrical map of the concept of Los Angeles. J. Michael Walker, 2011. Designer & Cartographer.](images/lyrical1.jpg)'
+![Image of the hand-drawn title of the work. Reads: Lyrical map of the concept of Los Angeles. J. Michael Walker, 2011. Designer & Cartographer.](images/lyrical1.jpg)
 
 Lyrical Map title. J. Michael Walker, 2011. Image courtesy of UCLA Digital Library.
    {:.caption}
 
-'![Conceptual drawing of female figure with a poem enclosed in the figure.](images/lyrical2.jpg)'
+![Conceptual drawing of female figure with a poem enclosed in the figure.](images/lyrical2.jpg)
 
 Close up of Lyrical Map poem. J. Michael Walker, 2011. Image courtesy of UCLA Digital Library.
    {:.caption}
 
-'![Drawing of Father Boyle with youth, reads: &#34;Nothing stops a bullet like a job,&#34; Father Greg Boyle, Homeboy Industries.](images/lyrical3.jpg)'
+![Drawing of Father Boyle with youth, reads: &#34;Nothing stops a bullet like a job,&#34; Father Greg Boyle, Homeboy Industries.](images/lyrical3.jpg)
 
 Father Boyle. J. Michael Walker, 2011. Image courtesy of UCLA Digital Library.
    {:.caption}

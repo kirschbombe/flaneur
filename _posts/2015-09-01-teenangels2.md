@@ -25,17 +25,17 @@ M-18 rapidly began to grow, spreading from coast to coast and taking over all ne
 “La Vida Loca” is a mural located in Los Angeles that was created by the M-18 that depicts the gang in its entirety. It holds portraits of some of the gang’s core members and depicts scenes of violence, death, and imprisonment, while still illustrating freedom, brotherhood, and unity. This mural signifies ownership of the neighborhood and “commands respect” of the gang (Franco); no rival gang has attempted to molest or graffiti over this mural. Just like this mural, Teen Angels Magazine was able to create a space for the Latino gang culture to express themselves and let others see the world from their perspective.
 
 
-'![Teen Angels Magazine illustration of a car surrounded by four gang members. They are holding up their hands to form the word &#34;CUZZ,&#34; commonly associated wiht the Cripps.](images/teenangels1.jpg)'
+![Teen Angels Magazine illustration of a car surrounded by four gang members. They are holding up their hands to form the word &#34;CUZZ,&#34; commonly associated wiht the Cripps.](images/teenangels1.jpg)
 
 Teen Angels, Volume 34 Cover. David Holland, 1984. Image courtesy of UCLA Library Special Collections
    {:.caption}
 
-'![A call-to-action anti-gang sentiment published in the magazine. It compares the 18th Street gang to an army, saying people should be more wary of the effects of gang culture on the community.](images/teenangels2.jpg)'
+![A call-to-action anti-gang sentiment published in the magazine. It compares the 18th Street gang to an army, saying people should be more wary of the effects of gang culture on the community.](images/teenangels2.jpg)
 
 Teen Angels, Volume 34 Anti-gang Sentiment. David Holland, 1984. Image courtesy of UCLA Special Collections
    {:.caption}
 
-'![A picture of four members of 18th Street gang holding shotguns.](images/teenangels3.jpg)'
+![A picture of four members of 18th Street gang holding shotguns.](images/teenangels3.jpg)
 
 Teen Angels, Volume 34 18th Street Gang Members. David Holland, 1984. Image courtesy of UCLA Special Collections
    {:.caption}

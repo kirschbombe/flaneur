@@ -19,17 +19,17 @@ Years after Huntington’s death the Huntington estate eventually sold Pacific E
 The Los Angeles County Metropolitan Transit Authority, established in 1951, was a planning agency tasked with developing a publicly owned system. In 1957, the Metro took over all privately owned transportation companies, including Los Angeles Transit Lines (LATL). Los Angeles Transit Lines, also known as the yellow car system, was established at the end of the second world war and was used to substitute buses on most of the streetcar lines. It functioned mainly around what is now central Los Angeles and had a very high ridership. Around one million people lived within very close proximity to the LATL streetcar and bus lines. In 1946, there were 424 rides per person on the LA Railway, Pacific Electric, and the LA Motor coach; this was the highest transit ridership ever. The acquisition of all these private companies was a boon for the citizens of Los Angeles because it standardized public transportation throughout the city. Yet the rise of the freeways ultimately led to the downfall in ridership for the Metro in the 1960s. Transit ridership reached its lowest point in 1969, where the bus network only handled 96 transit rides per person. Thus, car usage in Los Angeles increased and bus patronage continued to decline throughout the latter half of the 20th century.
 
 
-'![Black and white image of an interior of a Pacific Electric Motor Coach](images/Bus1.jpg)'
+![Black and white image of an interior of a Pacific Electric Motor Coach](images/Bus1.jpg)
 
 Interior of a Pacific Electric Motor Coach. 1940s-1950s. Image courtesy of UCLA Library Special Collections
    {:.caption}
 
-'![Magnified version of the original image to show detail of seats and the exterior](images/Bus2.jpg)'
+![Magnified version of the original image to show detail of seats and the exterior](images/Bus2.jpg)
 
 Magnified view of the outside. 1940s-1950s. Image courtesy of UCLA Library Special Collections
    {:.caption}
 
-'![Magnified version of the original image to show the detail of the advertisments above the windows](images/Bus3.jpg)'
+![Magnified version of the original image to show the detail of the advertisments above the windows](images/Bus3.jpg)
 
 Magnified view of advertisments. 1940s-1950s. Image courtesy of UCLA Library Special Collections
    {:.caption}
