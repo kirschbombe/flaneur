@@ -14,6 +14,7 @@ function reloadhtml(){
           data = data.slice(0, index) + articleicon + data.slice(index,);
           $("#sidebar-content").html(data);
         });
+    marker.openPopup();
   	} else {
   	about_url = url + "about/"
   	$.get(about_url, function(data){
