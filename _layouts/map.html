@@ -37,7 +37,7 @@ var icons = ['noun_33862_cc_aqua.svg', 'noun_33862_cc_blue.svg', 'noun_33862_cc_
 'noun_33862_cc_purple.svg', 'noun_33862_cc_black.svg',
 'noun_33862_cc_rose.svg', 'noun_33862_cc_teal.svg']
 var counter = -1;
-
+items = {};
 {% for category in site.categories %}
 var layers = [];
 counter += 1;
@@ -59,13 +59,15 @@ counter += 1;
         icon: mbox,
       }).bindPopup(content, {offset:new L.Point(0,-30)});
       marker.iconURL = iconurl;
-      layers.push(marker);
 
+      filename = "{{post.url}}"
+      items[filename] = marker;
+      layers.push(marker);
+      
       marker.on('click', function(){
         post_url = "{{site.baseurl}}/#{{post.url}}";
         window.location = (post_url);
-
-        var articleicon = "<img class='article-marker' src='" + this.iconURL  + "' onclick='" + this.openPopup() + "' >";
+        var articleicon = "<img class='article-marker' src='" + this.iconURL  + "' onclick='myFunction()'>";
         $.get("{{site.baseurl}}{{post.url}}", function(data){
         	var index = data.indexOf("</h1>");
         	data = data.slice(0, index) + articleicon + data.slice(index,);

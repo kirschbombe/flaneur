@@ -215,7 +215,8 @@ img.legend {
 img.article-marker {
 	height: 42px;
 	padding: 0px;
-	vertical-align: middle;
+	vertical-align: right;
+  display: inline;
 }
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
   font-family: "Barlow", serif;
