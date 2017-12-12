@@ -7,6 +7,7 @@
   	<div id="article">{% include sidebar.html %}
   	<script>
   	window.onload = function(){
+  	element = document.querySelectorAll("post-article");
   	reloadhtml();
   	};
   	</script></div>
@@ -28,15 +29,15 @@
       }).addTo(map);
 
       // jekyll loop through posts
-var overlays = {
-};
+
 var overLayers = [];
 //var category_layers = []
-icons = ['noun_33862_cc_aqua.svg', 'noun_33862_cc_blue.svg', 'noun_33862_cc_red.svg',
+var icons = ['noun_33862_cc_aqua.svg', 'noun_33862_cc_blue.svg', 'noun_33862_cc_red.svg',
 'noun_33862_cc_green.svg', 'noun_33862_cc_orange.svg', 'noun_33862_cc_pink.svg', 'noun_33862_cc_plum.svg',
 'noun_33862_cc_purple.svg', 'noun_33862_cc_black.svg',
 'noun_33862_cc_rose.svg', 'noun_33862_cc_teal.svg']
 var counter = -1;
+items = {};
 {% for category in site.categories %}
 var layers = [];
 counter += 1;
@@ -48,7 +49,7 @@ counter += 1;
       content = "<strong>{{ post.title }}</strong><br>{{ post.desc }}";
       var iconurl = "{{site.baseurl}}/assets/leaflet/img/" + icons[counter]
 
-      mbox = L.icon({
+      var mbox = L.icon({
             iconUrl: iconurl,
             iconSize : [32, 37],
             iconAnchor : [17, 36],
@@ -57,21 +58,26 @@ counter += 1;
       var marker = L.marker([lat, lng], {
         icon: mbox,
       }).bindPopup(content, {offset:new L.Point(0,-30)});
+      marker.iconURL = iconurl;
 
-      layers.push(marker)
-
+      filename = "{{post.url}}"
+      items[filename] = marker;
+      layers.push(marker);
+      
       marker.on('click', function(){
         post_url = "{{site.baseurl}}/#{{post.url}}";
         window.location = (post_url);
+        var articleicon = "<img class='article-marker' src='" + this.iconURL  + "' onclick='myFunction()'>";
         $.get("{{site.baseurl}}{{post.url}}", function(data){
-        	console.log(data);
+        	var index = data.indexOf("</h1>");
+        	data = data.slice(0, index) + articleicon + data.slice(index,);
         	$("#sidebar-content").html(data);
         });
        this.openPopup();
       });
       {% endfor %}
 
-    var imageurl = '<img class="legend" src="' + iconurl + '">'
+    var imageurl = '<img class="legend" src="' + iconurl + '">' 
     var name = '{{category_name}}';
     overLayers.push({"name":name, icon: imageurl, active: true, "layer":L.layerGroup(layers)})
  {% endfor %}

@@ -6,10 +6,10 @@
   </p>
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="byline">{% if page.author %}{{ page.author }} ({{page.quarter}}){% endif %}
-    {% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    </p>
   </header>
-
-  <article class="post-article">
+<categories id="{{page.categories}}"></categories>
+  <article class="post-article" id="{{page.categories}}">
     {{ page.content }}
   </article>
 </div>
