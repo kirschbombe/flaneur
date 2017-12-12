@@ -20,22 +20,17 @@ The pornography industry is still prevalent in Los Angeles today, but conference
 Last year on Valentine’s Day, the BDSM (Bondage, Dominance, Sadism and Masochism) ‘romance’ film Fifty Shades of Grey “was an immediate box office success, breaking numerous box office records and earning over $566 million worldwide” (“Fifty”). Natalie Collins began a campaign, “50 Shades is Domestic Abuse”, to stop this film from screening. This campaign consists of hashtags and social media to bring attention and awareness to the brutality women face in media. Women today continue to fight to end the injustices in the pornography industry through different mediums, like the conference depicted below.
 
 
-<img src='images/pornographyconference.jpg' alt='Program for a conference based on violence in pornography and media.'>
-<figcaption><p>Conference Program</p><p><small>Image courtesy of UCLA Library Special Collections.</small></p>
-<section id="categories" markdown="1">
-**Bibliography**
+'![Program for a conference based on violence in pornography and media.](images/pornographyconference.jpg)'
 
-Robin Ruth Linden Papers (Collection 1957). UCLA Library Collections, Charles E. Young Research Library, UCLA.
-
-Baker, Bob. &quot;MOVIES; Pushing Porn to the Fore; 'Deep Throat' (1972) Rattled Cultural Taboos.
-
-&quot;Connections Between Pornography and Sex Trafficking.&quot; Covenant Eyes. Covenant Eyes, 07 Sept. 2011. Web. 10 Feb. 2016.
-
-&quot;50 Shades Is Domestic Abuse.&quot; 50shadesisdomesticabuse. N.p., n.d. Web. 03 Mar. 2016.
-
-Huffstutter, P. J. &quot;See no Evil; in California's Unregulated Porn Film Industry, an Alarming Number of Performers are Infected with HIV and Other Sexually Transmitted Diseases. and Nobody Seems to Care.&quot; Los Angeles Times. Jan 12 2003. ProQuest. Web. 03 Mar. 2016
-
-&quot;UCLA Center for the Study of Women: From the June Mazer Lesbian Archives: WAVAW.&quot; UCLA Center for the Study of Women: From the June Mazer Lesbian Archives: WAVAW. N.p., n.d. Web. 03 Mar. 2016.
+Conference Program. Image courtesy of UCLA Library Special Collections.
+   {:.caption}
 
 
-</section>
+#### Works cited
+
+1. Robin Ruth Linden Papers (Collection 1957). UCLA Library Collections, Charles E. Young Research Library, UCLA.
+2. Baker, Bob. &quot;MOVIES; Pushing Porn to the Fore; 'Deep Throat' (1972) Rattled Cultural Taboos.
+3. &quot;Connections Between Pornography and Sex Trafficking.&quot; Covenant Eyes. Covenant Eyes, 07 Sept. 2011. Web. 10 Feb. 2016.
+4. &quot;50 Shades Is Domestic Abuse.&quot; 50shadesisdomesticabuse. N.p., n.d. Web. 03 Mar. 2016.
+5. Huffstutter, P. J. &quot;See no Evil; in California's Unregulated Porn Film Industry, an Alarming Number of Performers are Infected with HIV and Other Sexually Transmitted Diseases. and Nobody Seems to Care.&quot; Los Angeles Times. Jan 12 2003. ProQuest. Web. 03 Mar. 2016
+6. &quot;UCLA Center for the Study of Women: From the June Mazer Lesbian Archives: WAVAW.&quot; UCLA Center for the Study of Women: From the June Mazer Lesbian Archives: WAVAW. N.p., n.d. Web. 03 Mar. 2016.

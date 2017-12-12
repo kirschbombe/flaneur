@@ -25,7 +25,6 @@ The bones were usually not part of the same organism. In fact, until 1975, when 
 Built adjacent to the La Brea Tar Pits, The Los Angeles County Museum of Art. Its proposed renovation, which includes modeling a building after a splatter of tar, would harm the tar pits. The museum’s roof design would block light and rain that could interfere with   natural processes and vegetation. As of now, the project is still in its early stages, and further plans will be made while considering the impact to the environment.
 
 
-**Bibliography**
+#### Works cited
 
-No citation
-
+1. No citation
