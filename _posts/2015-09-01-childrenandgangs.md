@@ -21,17 +21,17 @@ Children join gangs for personal advantages, protection, and affection. In the W
 The three pictures found within the Time Magazine article aren’t directly related to Little Ducc, Henry, or specifically any of the mentioned gangs, but their stories give valuable context for the people in these pictures. The first picture depicts three young latino boys being questioned by a police officer. The second is of seven latino teenagers in front a mural of Jesus, about to be questioned by police. The third is of a worried looking boy in a waiting cell. Under the first picture is a caption that reads “The Los Angeles police department questions kids wearing gang regalia.” Regardless of age, the police question anyone who wears clothes that resemble gang culture. Rather than be at home late at night, these boys are out putting in “work” for their gang. The second picture has a caption under it that says “Under the outstretched arm of Jesus Christ, teenagers line up to be searched for weapons and drugs.” The common style that young latino gang members adopt are large white t-shirts, baggy pants, Nike Cortez’s and Chuck Taylors, and colored bandanas that represent their respective gang. The mural is painted on a building near 111th street and and Vermont Avenue in Los Angeles. It was “commissioned” by South Los (Solos) gang who assisted in painting it. It's ironic that a gang whose goals are to disrupt the streets of South Central by killing, stealing, and dealing drugs would want to depict Jesus, who traditionally represents peace and love. As Jesus spreads his arm across to show the young adults lined up, we ask ourselves: What has the world come to? The last picture appeals to the reader’s emotion because it portrays a melancholic young boy in handcuffs. Head on his knees, the child awaits his fate, which could be imprisonment. It’s unfortunate to know that a kid who did not have control over the cards he was dealt would be susceptible to the stereotype . It exemplifies the cycle children living in Watts, Los Angeles must experience on a regular basis.
 
 
-'![The Los Angeles police department questions kids wearing gang regalia.](images/gang1.jpg)'
+![The Los Angeles police department questions kids wearing gang regalia.](images/gang1.jpg)
 
 Three Young Gangmembers. Image courtesy of UCLA library special collections
    {:.caption}
 
-'![Under the outstretched arm of Jesus Christ, teenagers line up to be searched for weapons and drugs.](images/gang2.jpg)'
+![Under the outstretched arm of Jesus Christ, teenagers line up to be searched for weapons and drugs.](images/gang2.jpg)
 
 Jesus and 7 Young Gangmembers. UCLA libarary special collections
    {:.caption}
 
-'![A 15-year-old sits handcuffed, waiting for his fate to be decided.](images/gang3.jpg)'
+![A 15-year-old sits handcuffed, waiting for his fate to be decided.](images/gang3.jpg)
 
 Young Teen Locked Up. Creator, date. Image courtesy of ...
    {:.caption}

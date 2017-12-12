@@ -23,12 +23,12 @@ After such a devastating and expensive earthquake, Los Angeles knew changes woul
 There is much to be taken from the 1994 Northridge Earthquake. It is easy to dwell on the negative effects of a huge disaster, but it is necessary to be able to learn from failure. The collapse of the Santa Monica Freeway meant devastation, disturbance, and destruction. Lives were lost, businesses suffered, and livelihood was disrupted. Southern California’s “transportation artery” was severed; the temporary patch was essential in getting lives running again. In the long term, improved design and careful consideration will ultimately stitch the city back together.
 
 
-'![Color photograph taken underneath a broken portion of the highway.](images/Freeway2.jpg)'
+![Color photograph taken underneath a broken portion of the highway.](images/Freeway2.jpg)
 
 Collapsed Highway. Photograph by Jayne Kamin-Oncea from 4:31: Images of the Los Angeles Earthquake, LA Times, 1994
    {:.caption}
 
-'![Color photograph of cars among the ruins of the highway.](images/Freeway3.jpg)'
+![Color photograph of cars among the ruins of the highway.](images/Freeway3.jpg)
 
 Earthquake Ruins. Photograph by unknown photographer from 4:31: Images of the Los Angeles Earthquake, LA Times, 1994
    {:.caption}

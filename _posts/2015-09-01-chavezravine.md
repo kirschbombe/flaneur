@@ -19,12 +19,12 @@ The Los Angeles Times article “Sit Down Strike in Ruins Begun by Chavez Evicte
 The helplessness and indignation she experienced was felt throughout the community as the city cleared the land, destroying their homes, schools, and churches. The city, driven by economic interests, completely disregarded the powerless minority group and their way of life. To the residents Chavez Ravine was more than just a piece of land. The community was tight-knit and filled with the traditions and culture of the 300 families that lived there (Goldberg). Residents here ran their own schools and churches, grew their own food, and raised livestock (Goldberg).  This community of families was thriving off their way of life, but it did not stop the city of Los Angeles’ attempt to make changes.
 
 
-'![The photograph of a page from the L A Times with the sub-headline that reads &#39;No Move, says Clan&#39;s Matriarch&#39; and a hand-written annotation that reads &#34;I am scared.&#34; The photograph shows members of the Arechiga family searching for personal items in the remains of their home, which was bulldozed down only moments before.](images/chavezravine1.JPG)'
+![The photograph of a page from the L A Times with the sub-headline that reads &#39;No Move, says Clan&#39;s Matriarch&#39; and a hand-written annotation that reads &#34;I am scared.&#34; The photograph shows members of the Arechiga family searching for personal items in the remains of their home, which was bulldozed down only moments before.](images/chavezravine1.JPG)'
 
 "Sit-Down Strike in Ruins Begun by Chavez Evictees". Los Angeles Times, 10 May 1959. Image courtesy of UCLA Library Special Collections
    {:.caption}
 
-'![The two photographs of a page from the LA Times with the sub-headline that reads &#34;Woman, 63, Stands in Ruins of Home to Defy Dodgers and Los Angeles.&#34; The one on the upper left shows Mrs. Glen Walters shouting at police as they forcibly evicted a neighbor. In the picture below, members of the Arechiga family search the rubble of their former home which was demolished to the ground by bulldozers. ](images/chavezravine2.JPG)'
+![The two photographs of a page from the LA Times with the sub-headline that reads &#34;Woman, 63, Stands in Ruins of Home to Defy Dodgers and Los Angeles.&#34; The one on the upper left shows Mrs. Glen Walters shouting at police as they forcibly evicted a neighbor. In the picture below, members of the Arechiga family search the rubble of their former home which was demolished to the ground by bulldozers. ](images/chavezravine2.JPG)'
 
 "Woman, 63, Stands in Ruins of Home to Defy Dodgers and Los Angeles". Los Angeles Times, 09 May 1959. Image courtesy of UCLA Library Special Collections
    {:.caption}
