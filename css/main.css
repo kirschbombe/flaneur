@@ -25,7 +25,7 @@ article.page-content {
 	position:fixed!important;
 	z-index:1;
 	right:0;
-	/*overflow:auto;*/
+	overflow:auto;
 }
 
 .post-title{
