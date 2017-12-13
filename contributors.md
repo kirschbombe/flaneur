@@ -3,7 +3,6 @@ layout: page
 title: Contributors
 permalink: /contributors/
 ---
-# Contributors
 
 ##### Editors
 * Colleen Jaurretsche, Editor
