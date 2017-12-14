@@ -28,6 +28,7 @@ As Los Angeles is notorious for tearing down its heritage buildings, one wouldn'
 
 
 ![Photograph of a large building with a sign saying Pico House and people gathered outside.](images/picohouse.jpg)
+{:.image}
 
 Pico House. Ana Bégué de Packman, 1875. Image courtesy of UCLA Special Collections
    {:.caption}

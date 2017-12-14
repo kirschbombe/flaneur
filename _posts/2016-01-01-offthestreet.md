@@ -27,6 +27,7 @@ A One-time Art Exhibition. Fritz A. Frauchiger, April 27-May 26, 1985. Image cou
    {:.caption}
 
 ![Painting of helicopters putting out a fire from a car crash caused by a realistic Los Angeles mural during sunset on the side of a building.](images/offthestreet3.jpg)
+{:.image}
 
 Sunset on the Fig. Carlos Almaraz, [1981]. Image courtesy of UCLA Library Special Collections.
    {:.caption}

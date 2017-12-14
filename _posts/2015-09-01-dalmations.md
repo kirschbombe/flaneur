@@ -26,6 +26,7 @@ The people of the counterculture were influenced by One Hundred and One Dalmatia
 
 
 ![Cruella De Vil in the presence of one hundred and one dalmatians stolen by her henchmen, Horace and Jasper Badun](images/dalmations1.jpg)
+{:.image}
 
 101 Dalmatians Stolen by Horace and Jasper Badun. Walt Disney Productions, 1938-198x. Image courtesy of UCLA Special Collections
    {:.caption}

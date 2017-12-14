@@ -22,11 +22,13 @@ Unfortunately, LNLA did not last forever, but its ten years of existence was eno
 
 
 ![Black and white picture of a magazine article.](images/lesbiannurses1.jpg)
+{:.image}
 
 Lesbian Nurse. Theresa M. Stephany, 1998. Nursing Outlook Magazine. Image courtesy of UCLA Library Special Collections.
    {:.caption}
 
 ![Pink pin with a triangle and bottle logo](images/lesbiannurses2.jpg)
+{:.image}
 
 Lesbian Nurses of Los Angeles pin. Image courtesy of UCLA Library Special Collections.
    {:.caption}

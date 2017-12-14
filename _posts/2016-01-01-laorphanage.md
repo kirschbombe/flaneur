@@ -22,6 +22,7 @@ Maryvale is no longer an orphanage but a place providing care for foster youth. 
 
 
 ![A black and white photograph of a large Tudor-style five story brick building with multiple window panels on a grass field.](images/LAOrphanAsylum.jpg)
+{:.image}
 
 Los Angeles Orphan Asylum .  1894. Image courtesy of UCLA Library Special Collections.
    {:.caption}

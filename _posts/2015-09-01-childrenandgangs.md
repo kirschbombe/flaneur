@@ -22,16 +22,19 @@ The three pictures found within the Time Magazine article aren’t directly rela
 
 
 ![The Los Angeles police department questions kids wearing gang regalia.](images/gang1.jpg)
+{:.image}
 
 Three Young Gangmembers. Image courtesy of UCLA library special collections
    {:.caption}
 
 ![Under the outstretched arm of Jesus Christ, teenagers line up to be searched for weapons and drugs.](images/gang2.jpg)
+{:.image}
 
 Jesus and 7 Young Gangmembers. UCLA libarary special collections
    {:.caption}
 
 ![A 15-year-old sits handcuffed, waiting for his fate to be decided.](images/gang3.jpg)
+{:.image}
 
 Young Teen Locked Up. Creator, date. Image courtesy of ...
    {:.caption}

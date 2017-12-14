@@ -24,6 +24,7 @@ The cultural influence of Heavy Metal was significant and remains relevant today
 
 
 ![Displayed is a jean jacket embroidered with metal studs and various band patches. The patches on the denim jacket represent many bands in a showy fashion. Some bands even appear on the jacket multiple times. The jacket also has buttons with band logos pinned onto it.  ](images/Jacket1.jpg)
+{:.image}
 
 Heavy Metal Jacket. Created in the 1980s to 1990s. Image courtesy of UCLA
    {:.caption}

@@ -21,6 +21,7 @@ Last year on Valentine’s Day, the BDSM (Bondage, Dominance, Sadism and Masochi
 
 
 ![Program for a conference based on violence in pornography and media.](images/pornographyconference.jpg)
+{:.image}
 
 Conference Program. Image courtesy of UCLA Library Special Collections.
    {:.caption}

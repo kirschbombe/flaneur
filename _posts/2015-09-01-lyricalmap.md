@@ -16,16 +16,19 @@ The map is now part of UCLA’s Digital Archive and can be viewed either in its 
 
 
 ![Image of the hand-drawn title of the work. Reads: Lyrical map of the concept of Los Angeles. J. Michael Walker, 2011. Designer & Cartographer.](images/lyrical1.jpg)
+{:.image}
 
 Lyrical Map title. J. Michael Walker, 2011. Image courtesy of UCLA Digital Library.
    {:.caption}
 
 ![Conceptual drawing of female figure with a poem enclosed in the figure.](images/lyrical2.jpg)
+{:.image}
 
 Close up of Lyrical Map poem. J. Michael Walker, 2011. Image courtesy of UCLA Digital Library.
    {:.caption}
 
 ![Drawing of Father Boyle with youth, reads: &#34;Nothing stops a bullet like a job,&#34; Father Greg Boyle, Homeboy Industries.](images/lyrical3.jpg)
+{:.image}
 
 Father Boyle. J. Michael Walker, 2011. Image courtesy of UCLA Digital Library.
    {:.caption}
