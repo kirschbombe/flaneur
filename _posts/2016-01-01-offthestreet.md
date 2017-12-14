@@ -22,6 +22,7 @@ The art exhibition, Off the Streets, was created simply for artists, such as the
 
 
 ![A street wall made of brick with the title of the art exhibition &#34;Off the Streets&#34;.](images/offthestreet.JPG)'
+{:.image}
 
 A One-time Art Exhibition. Fritz A. Frauchiger, April 27-May 26, 1985. Image courtesy of UCLA Library Special Collections.
    {:.caption}
