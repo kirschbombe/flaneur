@@ -24,6 +24,7 @@ Teen Angels illustrates the social and political aspects of gang culture in Los 
 
 
 ![Image of Chicano man and woman in old Chrysler with the words &#34;Teen Angels&#34; written above. The image is an example of the influence of the Chicano Art Movement on graffiti and tattoo art,](images/teenangelsimage.jpg)
+{:.image}
 
 Chicano artwork in Teen Angels Magazine. Milpitas, 1981. Image courtesy of UCLA Library Special Collections.
    {:.caption}

@@ -8,8 +8,23 @@
     <p class="byline">{% if page.author %}{{ page.author }} ({{page.quarter}}){% endif %}
     </p>
   </header>
-<categories id="{{page.categories}}"></categories>
-  <article class="post-article" id="{{page.categories}}">
+  <article class="post-article">
     {{ page.content }}
   </article>
+  
 </div>
+
+<script>
+var images = document.getElementsByClassName("image");
+var caption = document.getElementsByClassName("caption");
+
+for (var i = 0; i < images.length; i++) {
+   	var link = images[i].childNodes[0].src;
+   	images[i].innerHTML = "<a href='" + link + "' data-lightbox=' ' data-title='" + caption[i].innerHTML  + "'>" + images[i].childNodes[0].outerHTML + "</a>";
+}
+
+lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true
+ })
+</script>

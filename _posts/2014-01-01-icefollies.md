@@ -22,6 +22,7 @@ Over time the Ice Follies lost their popularity. Fewer people would purchase tic
 
 
 ![Black and white photograph of an ice skater jumping over two 50&#39;s style rockets.](images/icefollies.jpg)
+{:.image}
 
 Ice Follies Dress Rehearsal. 1946. Image courtesy of UCLA Library Special Collections.
    {:.caption}

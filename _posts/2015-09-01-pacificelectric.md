@@ -20,16 +20,19 @@ The Los Angeles County Metropolitan Transit Authority, established in 1951, was 
 
 
 ![Black and white image of an interior of a Pacific Electric Motor Coach](images/Bus1.jpg)
+{:.image}
 
 Interior of a Pacific Electric Motor Coach. 1940s-1950s. Image courtesy of UCLA Library Special Collections
    {:.caption}
 
 ![Magnified version of the original image to show detail of seats and the exterior](images/Bus2.jpg)
+{:.image}
 
 Magnified view of the outside. 1940s-1950s. Image courtesy of UCLA Library Special Collections
    {:.caption}
 
 ![Magnified version of the original image to show the detail of the advertisments above the windows](images/Bus3.jpg)
+{:.image}
 
 Magnified view of advertisments. 1940s-1950s. Image courtesy of UCLA Library Special Collections
    {:.caption}

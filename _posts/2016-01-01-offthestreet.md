@@ -22,11 +22,13 @@ The art exhibition, Off the Streets, was created simply for artists, such as the
 
 
 ![A street wall made of brick with the title of the art exhibition &#34;Off the Streets&#34;.](images/offthestreet.JPG)'
+{:.image}
 
 A One-time Art Exhibition. Fritz A. Frauchiger, April 27-May 26, 1985. Image courtesy of UCLA Library Special Collections.
    {:.caption}
 
 ![Painting of helicopters putting out a fire from a car crash caused by a realistic Los Angeles mural during sunset on the side of a building.](images/offthestreet3.jpg)
+{:.image}
 
 Sunset on the Fig. Carlos Almaraz, [1981]. Image courtesy of UCLA Library Special Collections.
    {:.caption}

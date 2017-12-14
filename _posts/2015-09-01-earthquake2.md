@@ -24,11 +24,13 @@ There is much to be taken from the 1994 Northridge Earthquake. It is easy to dwe
 
 
 ![Color photograph taken underneath a broken portion of the highway.](images/Freeway2.jpg)
+{:.image}
 
 Collapsed Highway. Photograph by Jayne Kamin-Oncea from 4:31: Images of the Los Angeles Earthquake, LA Times, 1994
    {:.caption}
 
 ![Color photograph of cars among the ruins of the highway.](images/Freeway3.jpg)
+{:.image}
 
 Earthquake Ruins. Photograph by unknown photographer from 4:31: Images of the Los Angeles Earthquake, LA Times, 1994
    {:.caption}
