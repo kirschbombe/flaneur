@@ -25,7 +25,7 @@ article.page-content {
 	position:fixed!important;
 	z-index:1;
 	right:0;
-	overflow:auto;
+	/* overflow:auto; */
 }
 
 .post-title{
@@ -68,12 +68,13 @@ z-index: 1 !important;
 h1.post-title {
 font-size: 18px;
 margin-bottom: .3em;
+font-family: "Lato", sans-serif;
 }
 
 p.byline {
 	font-size: 15px;
 	line-height: 15px;
-    margin-top: .3em;
+  margin-top: .3em;
 	margin-bottom: .5rem;
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
@@ -84,9 +85,17 @@ img {
 height: 200px;
 }
 
+h1, h2, h3, h4 {
+  font-family: "Lato", sans-serif;
+}
+
 article.post-article {
 max-height: 70vh;
 overflow-y: scroll;
+padding-bottom: 10px;
+padding-top: 15px;
+padding-right: 15px;
+margin-right: -15px;
 z-index: 1 !important;
 font-size: 16px;
 
@@ -150,7 +159,7 @@ li {
         height: 50vh !important;
         width: 100vw
     }
-    
+
 
 }
 
