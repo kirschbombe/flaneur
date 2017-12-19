@@ -2,6 +2,7 @@
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
     	<div id="sidebar-content">
+      {{page.path}}
       {% if page.path == 'index.html' %}
       {% for page in site.pages %}
         {% if page.layout == "home" %}
