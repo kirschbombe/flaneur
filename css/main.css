@@ -12,12 +12,14 @@ body {
   height:100vh;
 }
 .page-content {
-	width: 60vw;
-	right: 0;
+   overflow: scroll;
+   padding-bottom: 10px;
+   padding-top: 15px;
+   padding-right: 15px;
+   margin-right: -15px;
+	
 }
-article.page-content {
-	width: 100vw;
-}
+
 .sidebar {
 	height:100vh;
 	width:40vw;
