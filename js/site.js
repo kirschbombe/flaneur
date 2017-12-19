@@ -16,11 +16,10 @@ function reloadhtml(){
         });
     marker.openPopup();
   	} else {
-  	//about_url = url + "about/"
-    console.log(window.location.href);
-  	//$.get(about_url, function(data){
-  	//$("#sidebar-content").html(data);
-  	 //});
+  	page_url = url.replace("/#", "");
+  	$.get(page_url, function(data){
+  	$("#sidebar-content").html(data);
+  	 });
   	}
 };
 
