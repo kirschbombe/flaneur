@@ -25,3 +25,4 @@ collections:
     permalink: /post-index/:name
 
 permalink: /:categories/:title/
+statuses: ['category', 'atoz', 'quarter']
