@@ -19,5 +19,9 @@ collections:
   posts:
     output: true
     permalink: /article/:name
+  post-index:
+    title: Post Index
+    output: true
+    permalink: /post-index/:name
 
 permalink: /:categories/:title/
