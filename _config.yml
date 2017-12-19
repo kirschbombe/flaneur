@@ -12,7 +12,7 @@ markdown: kramdown
 encoding: utf-8
 
 # Map
-map-tileset: 'http://a.tile.openstreetmap.org/${z}/${x}/${y}.png'
+map-tileset: 'http://a.tile.openstreetmap.org/${z}/${x}/${y}.png http://b.tile.openstreetmap.org/${z}/${x}/${y}.png http://c.tile.openstreetmap.org/${z}/${x}/${y}.png'
 map-credits: '<a target="_blank" href="https://github.com/kirschbombe/flaneur">Flâneur</a> | Tiles: OSM'
 
 collections:
