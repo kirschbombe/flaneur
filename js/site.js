@@ -20,7 +20,11 @@ function reloadhtml(){
   	$.get(page_url, function(data){
   	$("#sidebar-content").html(data);
   	 });
-  	}
+  	} else {
+    $.get(url, function(data){
+  	$("#sidebar-content").html(data);
+  	 });    
+    }
 };
 
 function myFunction(){
