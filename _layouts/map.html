@@ -7,9 +7,11 @@
   	<div id="article">{% include sidebar.html %}
   	<script>
   	window.onload = function(){
-  	element = document.querySelectorAll("post-article");
   	reloadhtml();
   	};
+	window.onhashchange = function() {
+	reloadhtml();
+	};
   	</script></div>
 
     <div id="map"></div>
@@ -20,7 +22,7 @@
           map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1),
           markers = new L.featureGroup();
       L.tileLayer('{{site.map-tileset}}', {
-        "attribution" : "{{site.map-credits}}",
+        "attribution" : '{{site.map-credits}}',
         "minZoom" : 0,
         "maxZoom" : 15,
         "errorTileUrl" : "img/error-tile-image.png",
