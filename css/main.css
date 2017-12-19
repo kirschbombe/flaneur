@@ -1,23 +1,42 @@
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
 body {
-  margin:0; padding:0;
-  font-family: 'Barlow', sans-serif;
+  margin:0;
+  padding:0;
+}
+
+html {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .container {
 	width: 100%;
 }
+
 #map {
   position:absolute;
   width:60vw;
   height:100vh;
 }
+
 .page-content {
 	width: 60vw;
 	right: 0;
 }
+
 article.page-content {
 	width: 100vw;
 }
+
 .sidebar {
 	height:100vh;
 	width:40vw;
@@ -26,11 +45,6 @@ article.page-content {
 	z-index:1;
 	right:0;
 	/* overflow:auto; */
-}
-
-.post-title{
-	font-size: 14px;
-  position: relative;
 }
 
 div#sidebar-content {
@@ -51,54 +65,30 @@ div.wrapper {
 }
 
 p.post-header {
-letter-spacing: 2px;
-margin-bottom: .5rem;
-font-size: 13px;
-margin-top: 0;
-font-family: 'Lato', sans-serif;
-font-weight: 300;
-font-style: italic;
-border-width: 0 0 1px;
-border-style: dotted;
-line-height: 21px;
-text-align: left;
-z-index: 1 !important;
+  letter-spacing: 1.5px;
+  margin-bottom: .5rem;
+  font-size: .8em;
+  margin-top: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  border-width: 0 0 1px;
+  border-style: dotted;
+  line-height: 17px;
+  text-align: left;
+  z-index: 1 !important;
 }
 
-h1.post-title {
-font-size: 18px;
-margin-bottom: .3em;
-font-family: "Lato", sans-serif;
-}
-
-p.byline {
-	font-size: 15px;
-	line-height: 15px;
-  margin-top: .3em;
-	margin-bottom: .5rem;
-	font-family: 'Lato', sans-serif;
-	font-weight: 300;
-	font-style: italic;
-}
-
-img {
-height: 200px;
-}
-
-h1, h2, h3, h4 {
+h1.post-title{
+  font-size: 1.2em;
+  line-height: .5;
+  letter-spacing: -.025rem;
+  position: relative;
+  margin-bottom: .1em;
+  margin-top: .1em;
   font-family: "Lato", sans-serif;
-}
-
-article.post-article {
-max-height: 70vh;
-overflow-y: scroll;
-padding-bottom: 10px;
-padding-top: 15px;
-padding-right: 15px;
-margin-right: -15px;
-z-index: 1 !important;
-font-size: 16px;
-
+  -webkit-margin-before: .1em;
+  -webkit-margin-after: -.6em;
 }
 
 p {
@@ -111,9 +101,36 @@ p {
   line-height: 22px;
 }
 
+p.byline {
+	font-size: .9em;
+	line-height: 15px;
+  margin-top: .3em;
+	padding-bottom: .2em;
+	font-style: italic;
+}
+
+article.post-article {
+max-height: 80vh;
+overflow-y: scroll;
+padding-bottom: 10px;
+padding-right: 15px;
+margin-right: -15px;
+z-index: 1 !important;
+}
+
 img {
+  height: 200px;
   display: block;
   margin: auto;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Lato", sans-serif;
+}
+
+h4 {
+  -webkit-margin-before: 1.33em;
+  -webkit-margin-after: 1em;
 }
 
 li {
@@ -121,6 +138,9 @@ li {
 }
 
 @media (max-width:768px) {
+    html {
+        font-size: 14px;
+    }
     #map {
         position: absolute;
         left: 0;
@@ -133,51 +153,47 @@ li {
         height: 60vh;
         width: 100vw
     }
-
     body {
         overflow-y: hidden;
         overflow-x: hidden
     }
-	article.post-article {
-	max-height: 30vh;
-	}
-	div.wrapper {
-		width: 100vw;
-		height: 40vh;
-		overflow: auto;
-	}
-
+	  article.post-article {
+	      max-height: 35vh;
+	  }
+	  div.wrapper {
+		    width: 100vw;
+		    height: 40vh;
+		    overflow: auto;
+	  }
     #map {
         top: 0
     }
-
     .sidebar {
         top: 40vh
     }
-
     .sidebar .sidebar {
         height: 50vh !important;
         width: 100vw
     }
-
-
 }
 
 @media (min-width:768px) and (max-width:1100px) {
+    html {
+      font-size: 15px;
+    }
     #map {
         top: 0;
         height: 100vh;
         width: 50vw;
-    }
-
-    #map {
         left: 0
     }
-
     .sidebar {
     	width: 50vw;
         position: absolute;
         right: 0;
+    }
+    article.post-article {
+        max-height: 70vh;
     }
     div.wrapper {
 		top: 0;
@@ -193,17 +209,14 @@ li {
         top: 0;
         height: 100vh;
     }
-
     body {
         overflow-y: hidden;
         overflow-x: hidden
     }
-
     #map {
         left: 0;
         width: 55vw;
     }
-
     .sidebar {
         width: 45vw;
         right: 0;
@@ -219,7 +232,8 @@ li {
 /*style figure captions*/
 .caption {
   font-family: 'Barlow', sans-serif;
-  font-size: 14px;
+  line-height: 1.4em;
+  font-size: .9em;
   font-style: italic;
   text-align: center;
   color: #5a5a5a;
@@ -230,9 +244,8 @@ li {
 .bibliography {
   list-style-type: none;
   text-indent: -1rem;
-  font-size: 14px;
+  font-size: .9em;
   padding-left: 20px;
-  font-family: 'Lato', sans-serif;
   font-weight: 300;
 }
 
@@ -250,11 +263,18 @@ img.article-marker {
 	vertical-align: middle;
 }
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
-  font-family: "Barlow", serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
   font-size: 14px;
 }
 
 label.leaflet-panel-layers-title {
-  font-family: "Barlow", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
   text-transform: uppercase;
+}
+@media (max-width:768px) {
+  .leaflet-popup-content-wrapper, .leaflet-popup-tip {
+     font-size: 13px;
+  }
 }
