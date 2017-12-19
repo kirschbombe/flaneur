@@ -35,7 +35,6 @@
 var overLayers = [];
 var icons = [];
 {% for image in site.static_files %}
-    console.log(image);
     {% if image.path contains 'assets/leaflet/img' %}
         icons.push('{{ image.path }}');
     {% endif %}
@@ -52,7 +51,7 @@ counter += 1;
       lng = {{ post.lng }};
 
       content = "<strong>{{ post.title }}</strong><br>{{ post.desc }}";
-      var iconurl = "{{site.baseurl}}/assets/leaflet/img/" + icons[counter]
+      var iconurl = "{{site.baseurl}}" + icons[counter]
 
       var mbox = L.icon({
             iconUrl: iconurl,
