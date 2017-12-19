@@ -137,7 +137,7 @@ li {
   margin-bottom: 8px;
 }
 
-@media (max-width:768px) and (orientation : portrait) {
+@media (max-width:768px) {
     html {
         font-size: 14px;
     }
@@ -227,6 +227,46 @@ li {
         height: 100vh;
 		overflow: auto;
 	}
+}
+
+@media (orientation: landscape) {
+  html {
+      font-size: 15px;
+  }
+  #map {
+      position: absolute;
+      left: 0;
+      height: 40vh;
+      width: 100vw;
+  }
+  .sidebar {
+      position: absolute;
+      left: 0;
+      height: 60vh;
+      width: 100vw
+  }
+  body {
+      overflow-y: hidden;
+      overflow-x: hidden
+  }
+  article.post-article {
+      max-height: 40vh;
+  }
+  div.wrapper {
+      width: 100vw;
+      height: 40vh;
+      overflow: auto;
+  }
+  #map {
+      top: 0
+  }
+  .sidebar {
+      top: 40vh
+  }
+  .sidebar .sidebar {
+      height: 50vh !important;
+      width: 100vw
+  }
 }
 
 /*style figure captions*/
