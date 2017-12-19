@@ -137,7 +137,7 @@ li {
   margin-bottom: 8px;
 }
 
-@media (max-width:768px) {
+@media (max-width:768px) and (orientation : portrait) {
     html {
         font-size: 14px;
     }
@@ -177,7 +177,7 @@ li {
     }
 }
 
-@media (min-width:768px) and (max-width:1100px) and (orientation : portrait) {
+@media (min-width:768px) and (max-width:1100px) {
     html {
       font-size: 15px;
     }
