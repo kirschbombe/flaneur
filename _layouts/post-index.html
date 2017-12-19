@@ -7,7 +7,8 @@
 {% for status in site.status %}
     <a href="{{site.baseurl}}/#{{ status.url }}" class="button">{{ status.title }}</a>
 {% endfor %}
-
+{{page.status}}
+{{page.status}} == 'atoz'
 <h1>{{page.title}}</h1>
 {% if status == 'category' %}
 <div id="posts-list">
