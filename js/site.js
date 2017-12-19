@@ -15,7 +15,7 @@ function reloadhtml(){
           $("#sidebar-content").html(data);
         });
     marker.openPopup();
-  	} else {
+  	} else if (url.includes("#")) {
   	page_url = url.replace("/#", "");
   	$.get(page_url, function(data){
   	$("#sidebar-content").html(data);
