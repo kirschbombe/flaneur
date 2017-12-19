@@ -33,11 +33,14 @@
       // jekyll loop through posts
 
 var overLayers = [];
-//var category_layers = []
-var icons = ['noun_33862_cc_aqua.svg', 'noun_33862_cc_blue.svg', 'noun_33862_cc_red.svg',
-'noun_33862_cc_green.svg', 'noun_33862_cc_orange.svg', 'noun_33862_cc_pink.svg', 'noun_33862_cc_plum.svg',
-'noun_33862_cc_purple.svg', 'noun_33862_cc_black.svg',
-'noun_33862_cc_rose.svg', 'noun_33862_cc_teal.svg']
+var icons = [];
+{% for image in site.static_files %}
+    console.log(image);
+    {% if image.path contains 'assets/leaflet/img' %}
+        icons.push({{ image.path }});
+    {% endif %}
+{% endfor %}
+
 var counter = -1;
 items = {};
 {% for category in site.categories %}
