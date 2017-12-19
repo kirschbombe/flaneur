@@ -3,7 +3,7 @@ title: Flâneur
 email: kirschbombe@gmail.com
 description: "A Jekyll theme for maps and text"
 baseurl: "/flaneur" # the subpath of your site, e.g. /blog/
-url: "http://dawnchildress.com" # the base hostname & protocol for your site
+url: "" # the base hostname & protocol for your site
 twitter_username: kirschbombe
 github_username:  kirschbombe
 
@@ -19,5 +19,9 @@ collections:
   posts:
     output: true
     permalink: /article/:name
+  post-index:
+    title: Post Index
+    output: true
+    permalink: /post-index/:name
 
 permalink: /:categories/:title/

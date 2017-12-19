@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: home
 title: "Los Angeles: The City and the Library"
 ---
 
