@@ -37,7 +37,7 @@ var icons = [];
 {% for image in site.static_files %}
     console.log(image);
     {% if image.path contains 'assets/leaflet/img' %}
-        icons.push({{ image.path }});
+        icons.push('{{ image.path }}');
     {% endif %}
 {% endfor %}
 
