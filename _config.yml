@@ -12,8 +12,8 @@ markdown: kramdown
 encoding: utf-8
 
 # Map
-map-tileset: 'http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png'
-map-credits: '<a target="_blank" href="https://github.com/svmatthews/jekyll-maps">Jekyll Maps</a> | Tiles: Stamen & OSM'
+map-tileset: 'http://a.tile.openstreetmap.org/${z}/${x}/${y}.png'
+map-credits: '<a target="_blank" href="https://github.com/kirschbombe/flaneur">Flâneur</a> | Tiles: OSM'
 
 collections:
   posts:
