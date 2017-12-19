@@ -1,7 +1,7 @@
 {% if page.status %}
     {% assign status = page.status %}
 {% else %}
-    {% assign status = 'a-z' %}
+    {% assign status = 'atoz' %}
 {% endif %}
 
 {% for status in site.status %}
@@ -9,7 +9,7 @@
 {% endfor %}
 
 <h1>{{page.title}}</h1>
-
+{{page.status}}
 {% if status == 'category %}
 <div id="posts-list">
 {% for category in site.categories %}
@@ -23,7 +23,9 @@
     </ul>
 {% endfor %}
 </div>
-{% if status == 'a-z' %}
+{% endif %}
+
+{% if status == 'atoz' %}
 <div id="posts-list">
 {% for post in site.posts %}
 <li><a href="{{site.baseurl}}/#{{post.url}}" onclick='onClick("{{post.url}}");'>{{post.title}}</a></li>
@@ -40,7 +42,6 @@
 </div>
 {% endif %}
 
-{% endif %}
 <style>
 .post-list {
  height: 70vh;
