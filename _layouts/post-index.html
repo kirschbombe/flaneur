@@ -1,12 +1,20 @@
 <h1>Posts by Category</h1>
+<div id="posts_by_category">
 {% for category in site.categories %}
-  <li><a name="{{ category | first }}">{{ category | first }}</a>
+  <h2><a name="{{ category | first }}">{{ category | first }}</a></h2>
     <ul>
     {% for posts in category %}
       {% for post in posts %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        <li><a href="{{site.baseurl}}/#{{post.url}}" onclick='onClick("{{post.url}}");'>{{post.title}}</a></li>
       {% endfor %}
     {% endfor %}
     </ul>
-  </li>
 {% endfor %}
+</div>
+
+<style>
+.posts_by_category {
+ height: 70vh;
+  overflow: scroll;
+  }
+</style>
