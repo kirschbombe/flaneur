@@ -1,3 +1,3 @@
 ---
-layouts: post-index
+layout: post-index
 ---
