@@ -4,7 +4,7 @@
     {% assign status = 'atoz' %}
 {% endif %}
 
-{% for status in site.status %}
+{% for status in site.statuses %}
     <a href="{{site.baseurl}}/#{{ status.url }}" class="button">{{ status.title }}</a>
 {% endfor %}
 
