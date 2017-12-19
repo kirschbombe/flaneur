@@ -2,9 +2,11 @@
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
     	<div id="sidebar-content">
+        {{page.layout}}
     	{% if page.layout == "home" %}
         {{content}}
     	{% endif %}
   </div>
   </div>
+</div>
 </div>
