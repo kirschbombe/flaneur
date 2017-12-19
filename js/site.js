@@ -15,13 +15,14 @@ function reloadhtml(){
           $("#sidebar-content").html(data);
         });
     marker.openPopup();
-  	} else if (url.includes("#")) {
+  	} else if (url.includes("#") == true) {
   	page_url = url.replace("/#", "");
   	$.get(page_url, function(data){
   	$("#sidebar-content").html(data);
   	 });
   	} else {
-    $.get(url, function(data){
+    home_url = window.location.origin + window.location.pathname + "home/"
+    $.get(home_url, function(data){
   	$("#sidebar-content").html(data);
   	 });    
     }
