@@ -229,7 +229,7 @@ li {
 	}
 }
 
-@media (orientation: landscape) {
+@media all and (orientation: landscape) {
   html {
       font-size: 15px;
   }
