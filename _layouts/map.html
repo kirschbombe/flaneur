@@ -19,9 +19,8 @@
       var lat, lng, content, marker,
           map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1),
           markers = new L.featureGroup();
-	console.log({{site.map-tileset}});
-      L.tileLayer('https://{s}.tiles.mapbox.com/v3/kirschbombe.l007nm13/{z}/{x}/{y}.png', {
-        "attribution" : "<a href=\"http://www.mapbox.com\">Mapbox</a>",
+      L.tileLayer('{{site.map-tileset}}', {
+        "attribution" : "{{site.map-credits}}",
         "minZoom" : 0,
         "maxZoom" : 15,
         "errorTileUrl" : "img/error-tile-image.png",
