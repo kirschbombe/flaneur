@@ -2,8 +2,8 @@
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
     	<div id="sidebar-content">
-    	{% if page.path == "index.html" %}
-    	{{ content }}
+    	{% if page.layout == "home" %}
+        {{content}}
     	{% endif %}
   </div>
   </div>
