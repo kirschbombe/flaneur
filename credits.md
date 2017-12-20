@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Contributors
-permalink: /contributors/
+title: Credits
+permalink: /credits/
 ---
 
 ##### Editors
