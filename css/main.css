@@ -27,6 +27,12 @@ html {
   width:60vw;
   height:100vh;
 }
+.header {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 
 .page-content {
      max-height: 80vh;
