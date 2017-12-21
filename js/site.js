@@ -22,7 +22,9 @@ function reloadhtml(){
   	page_url = url.replace("/#", "");
   	$.get(page_url, function(data, xhr){
     var data = data; 
+    var xhr = xhr;
     });
+      console.log(xhr);
       if (xhr.status == 200) {
       $("#sidebar-content").html(data);
       } else {
