@@ -112,8 +112,7 @@ p.byline {
 }
 
 article.post-article {
-padding: 16px;
-margin-top: 30px;
+margin-top: 4em;
 overflow-y: scroll;
 padding-bottom: 10px;
 padding-right: 15px;
