@@ -111,7 +111,8 @@ p.byline {
 }
 
 article.post-article {
-max-height: 80vh;
+padding: 16px;
+margin-top: 30px;
 overflow-y: scroll;
 padding-bottom: 10px;
 padding-right: 15px;
