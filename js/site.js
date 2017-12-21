@@ -21,6 +21,7 @@ function reloadhtml(){
   	} else if (url.includes("#") == true) {
   	page_url = url.replace("/#", "");
   	$.get(page_url, function(data){
+      console.log(data)
   	$("#sidebar-content").html(data);
   	 });
   	} else {
