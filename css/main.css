@@ -113,12 +113,12 @@ p.byline {
 
 article.post-article {
 margin-top: 5em;
-height: calc(100% - 65px);
-height: -o-calc(100% - 65px); /* opera */
-height: -webkit-calc(100% - 65px); /* google, safari */
-height: -moz-calc(100% - 65px); /* firefox */
+height: calc(100vh - 3vh);
+height: -o-calc(100vh - 3vh); /* opera */
+height: -webkit-calc(100vh - 3vh); /* google, safari */
+height: -moz-calc(100vh - 3vh); /* firefox */
 overflow-y: scroll;
-padding-bottom: 10px;
+padding-bottom: 3em;
 padding-right: 15px;
 margin-right: -15px;
 z-index: 1 !important;
