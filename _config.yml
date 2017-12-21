@@ -26,3 +26,5 @@ collections:
     permalink: /post-index/:name
 
 permalink: /:categories/:title/
+
+theme: jekyll-theme-cayman
