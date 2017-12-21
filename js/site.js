@@ -20,8 +20,10 @@ function reloadhtml(){
     marker.openPopup();
   	} else if (url.includes("#") == true) {
   	page_url = url.replace("/#", "");
-  	$.get(page_url, function(data){
-      console.log(data)
+  	$.get(page_url, function(data, status, xhr){
+      console.log(data);
+      console.log(xhr.status);
+      console.log(xhr);
   	$("#sidebar-content").html(data);
   	 });
   	} else {
