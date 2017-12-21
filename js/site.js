@@ -3,9 +3,6 @@ $(document).ready(function(){
 });
 function reloadhtml(){
   	url = window.location.href;
-    if (url.slice(-1) != "/") {
-       url = url + "/"; 
-    }
   	if (url.includes("article")) {
   		article_url = url.replace("/#", "");
       url = url.split("#");
