@@ -28,4 +28,10 @@ lightbox.option({
       'resizeDuration': 200,
       'wrapAround': true
  })
+
+var header_height = $( ".header" ).height();
+console.log(header_height);
+var output_height = header_height + 1;
+var margintop = output_height + 'px';
+$( ".post-article" ).css('margin-top', margintop);
 </script>

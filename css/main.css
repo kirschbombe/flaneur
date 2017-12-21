@@ -29,20 +29,17 @@ html {
 }
 .header {
   overflow: hidden;
-  position: fixed;
+  position: absolute;
   top: 0;
   padding-top: 3em;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
+  padding-right: 3em;
 }
 
 .page-content {
-     max-height: 80vh;
-     overflow-y: scroll;
-     padding-bottom: 10px;
-     padding-right: 15px;
-     margin-right: -15px;
-     z-index: 1 !important;
+    z-index: 1 !important;
+	padding-bottom: 3em;
 }
 
 .sidebar {
@@ -112,7 +109,7 @@ p.byline {
 	font-style: italic;
 }
 
-.post {
+.post, .page {
 height: 100vh;
 box-sizing: border-box;
 padding-bottom: 3em;
@@ -122,8 +119,8 @@ margin-right: -15px;
 }
 
 article.post-article {
-margin-top: 5em;
 z-index: 1 !important;
+padding-bottom: 3em;
 }
 
 img {
@@ -165,9 +162,7 @@ li {
         overflow-y: hidden;
         overflow-x: hidden
     }
-	  article.post-article {
-	      max-height: 35vh;
-	  }
+
 	  div.wrapper {
 		    width: 100vw;
 		    height: 40vh;
@@ -200,9 +195,7 @@ li {
         position: absolute;
         right: 0;
     }
-    article.post-article {
-        max-height: 70vh;
-    }
+
     div.wrapper {
 		top: 0;
         width: 50vw;
@@ -257,9 +250,7 @@ li {
       overflow-y: hidden;
       overflow-x: hidden
   }
-  article.post-article {
-      max-height: 40vh;
-  }
+
   div.wrapper {
       width: 100vw;
       height: 40vh;

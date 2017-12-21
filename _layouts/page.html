@@ -1,6 +1,6 @@
 <div class="page">
 
-  <header class="page-header">
+  <header class="page-header header" style="width:100%">
     <h1 class="page-title">{{ page.title }}</h1>
   </header>
 
@@ -10,3 +10,10 @@
 
 </div>
 
+<script>
+var header_height = $( ".header" ).height();
+console.log(header_height);
+var output_height = header_height + 1;
+var margintop = output_height + 'px';
+$( ".page-content" ).css('margin-top', margintop);
+</script>
