@@ -29,12 +29,12 @@ html {
 }
 
 .page-content {
-	width: 60vw;
-	right: 0;
-}
-
-article.page-content {
-	width: 100vw;
+     max-height: 80vh;
+     overflow-y: scroll;
+     padding-bottom: 10px;
+     padding-right: 15px;
+     margin-right: -15px;
+     z-index: 1 !important;
 }
 
 .sidebar {
