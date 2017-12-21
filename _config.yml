@@ -2,7 +2,7 @@
 title: Flâneur
 email: kirschbombe@gmail.com
 description: "A Jekyll theme for maps and text"
-baseurl: "/testflaneur" # the subpath of your site, e.g. /blog/
+baseurl: "/flaneur" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 twitter_username: kirschbombe
 github_username:  kirschbombe
