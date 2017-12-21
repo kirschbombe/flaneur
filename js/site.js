@@ -20,12 +20,16 @@ function reloadhtml(){
     marker.openPopup();
   	} else if (url.includes("#") == true) {
   	page_url = url.replace("/#", "");
-  	$.get(page_url, function(data, status, xhr){
-      console.log(data);
-      console.log(xhr.status);
-      console.log(xhr);
+  	$.get(page_url, function(data, xhr){
+      if (xhr.status == 200) {
   	$("#sidebar-content").html(data);
   	 });
+    } else {
+    home_url = window.location.origin + window.location.pathname + "home/"
+    $.get(home_url, function(data){
+  	$("#sidebar-content").html(data);
+  	 });        
+    }
   	} else {
     home_url = window.location.origin + window.location.pathname + "home/"
     $.get(home_url, function(data){
