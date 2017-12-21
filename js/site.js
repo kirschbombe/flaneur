@@ -21,9 +21,8 @@ function reloadhtml(){
   	} else if (url.includes("#") == true) {
   	page_url = url.replace("/#", "");
   	$.get(page_url, function(data){
-      $("#sidebar-content").html(data);
-       });
-      }
+  	$("#sidebar-content").html(data);
+  	 });
   	} else {
     home_url = window.location.origin + window.location.pathname + "home/"
     $.get(home_url, function(data){
@@ -66,5 +65,3 @@ function myFunction(){
   marker = items[item_id];
   marker.togglePopup();
 };
-
-
