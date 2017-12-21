@@ -112,7 +112,11 @@ p.byline {
 }
 
 article.post-article {
-margin-top: 4em;
+margin-top: 5em;
+height: calc(100% - 65px);
+height: -o-calc(100% - 65px); /* opera */
+height: -webkit-calc(100% - 65px); /* google, safari */
+height: -moz-calc(100% - 65px); /* firefox */
 overflow-y: scroll;
 padding-bottom: 10px;
 padding-right: 15px;
