@@ -41,7 +41,7 @@ function onClick(url){
         });
     marker.openPopup();
     } else {
-    	page_url = window.location.origin + window.location.pathname + url 
+    	page_url = window.location.origin + window.location.pathname + url
     	$.get(page_url, function(data){
     		$("#sidebar-content").html(data);
     	});
@@ -56,3 +56,5 @@ function myFunction(){
   marker = items[item_id];
   marker.togglePopup();
 };
+
+
