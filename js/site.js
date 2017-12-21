@@ -3,6 +3,9 @@ $(document).ready(function(){
 });
 function reloadhtml(){
   	url = window.location.href;
+    if (url.slice(-1) != "/") {
+       url = url + "/"; 
+    }
   	if (url.includes("article")) {
   		article_url = url.replace("/#", "");
       url = url.split("#");
@@ -30,6 +33,9 @@ function reloadhtml(){
 
 function onClick(url){
     if (url.includes("article")) {
+      if (url.slice(-1) != "/") {
+       url = url + "/"; 
+      }
       item_id = url;
       article_url = window.location.origin + window.location.pathname + item_id;
       marker = items[item_id];
@@ -41,7 +47,10 @@ function onClick(url){
         });
     marker.openPopup();
     } else {
-    	page_url = window.location.origin + window.location.pathname + url
+      if (url.slice(-1) != "/") {
+       url = url + "/"; 
+      }
+    	page_url = window.location.origin + window.location.pathname + url 
     	$.get(page_url, function(data){
     		$("#sidebar-content").html(data);
     	});
