@@ -26,3 +26,4 @@ collections:
     permalink: /post-index/:name
 
 permalink: /:categories/:title/
+

@@ -1,5 +1,5 @@
 
-* {
+html, body {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -28,13 +28,20 @@ html {
   height:100vh;
 }
 
-.page-content {
-	width: 60vw;
-	right: 0;
+.header {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  padding-top: 3em;
+  background-color: white;
+  color: black;
+  padding-right: 3em;
+  width: 85%;
 }
 
-article.page-content {
-	width: 100vw;
+.page-content {
+    z-index: 1 !important;
+	padding-bottom: 3em;
 }
 
 .sidebar {
@@ -82,6 +89,7 @@ h1.post-title{
   margin-bottom: .1em;
   margin-top: .1em;
   font-family: "Lato", sans-serif;
+  position: relative;
   -webkit-margin-before: .1em;
   -webkit-margin-after: -.6em;
 }
@@ -104,13 +112,18 @@ p.byline {
 	font-style: italic;
 }
 
-article.post-article {
-max-height: 80vh;
+.post, .page {
+height: 100vh;
+box-sizing: border-box;
+padding-bottom: 3em;
 overflow-y: scroll;
-padding-bottom: 10px;
 padding-right: 15px;
 margin-right: -15px;
+}
+
+article.post-article {
 z-index: 1 !important;
+padding-bottom: 3em;
 }
 
 img {
@@ -152,9 +165,7 @@ li {
         overflow-y: hidden;
         overflow-x: hidden
     }
-	  article.post-article {
-	      max-height: 35vh;
-	  }
+
 	  div.wrapper {
 		    width: 100vw;
 		    height: 40vh;
@@ -187,9 +198,7 @@ li {
         position: absolute;
         right: 0;
     }
-    article.post-article {
-        max-height: 70vh;
-    }
+
     div.wrapper {
 		top: 0;
         width: 50vw;
@@ -244,9 +253,7 @@ li {
       overflow-y: hidden;
       overflow-x: hidden
   }
-  article.post-article {
-      max-height: 40vh;
-  }
+
   div.wrapper {
       width: 100vw;
       height: 40vh;
