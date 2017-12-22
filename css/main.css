@@ -27,6 +27,7 @@ html {
   width:60vw;
   height:100vh;
 }
+
 .header {
   overflow: hidden;
   position: absolute;
@@ -35,6 +36,7 @@ html {
   background-color: white;
   color: black;
   padding-right: 3em;
+  width: 85%;
 }
 
 .page-content {
