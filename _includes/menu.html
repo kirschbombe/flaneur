@@ -2,6 +2,7 @@
  <button class="dropbtn" onclick="toggle()"><i class="fa fa-bars" aria-hidden="true"></i></button>
  		<div class="sub-menu" onclick="toggle()">
  		<div class="menu-links">
+ 		<a><i class="fa fa-times" aria-hidden="true"></i></a>
  		<a href="{{site.baseurl}}/">Home</a>
  		{% for page in site.pages %}
  		{% if page.title != 'Home' and page.path != 'home.md' %}
@@ -70,14 +71,13 @@ console.log($('.sub-menu').css("height"))
    $('.sub-menu').css("height", '{{site.menu-height}}')
    $('.sub-menu').css("width", '{{site.menu-width}}')
    $('.sub-menu').css("opacity", '1')
-   $('.dropbtn').html('<i class="fa fa-times" aria-hidden="true"></i>')
-   
+   $('.dropbtn').css("display", "none")
    
   } else {
   	$('.sub-menu').css("height", '0px')
   	$('.sub-menu').css("width", '0px')
   	$('.sub-menu').css("opacity", '0')
-  	$('.dropbtn').html('<i class="fa fa-bars" aria-hidden="true"></i>')
+  	$('.dropbtn').css("display", "inline-block")
   }
 }
 </script>
