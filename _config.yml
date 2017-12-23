@@ -29,4 +29,5 @@ permalink: /:categories/:title/
 
 menu-height: '200px'
 menu-width: '200px'
+menu-opacity: '.95'
 

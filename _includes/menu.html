@@ -1,8 +1,8 @@
 
- <button class="dropbtn" onclick="toggle()"><i class="fa fa-bars" aria-hidden="true"></i></button>
+ <button class="menu-button" onclick="toggle()"><i class="fa fa-bars" aria-hidden="true"></i></button>
  		<div class="sub-menu" onclick="toggle()">
  		<div class="menu-links">
- 		<a><i class="fa fa-times" aria-hidden="true"></i></a>
+ 		<a class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></a>
  		<a href="{{site.baseurl}}/">Home</a>
  		{% for page in site.pages %}
  		{% if page.title != 'Home' and page.path != 'home.md' %}
@@ -21,10 +21,10 @@
 	    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 		height: 0;
 		width: 0;
-		right: 52vw;
+		right: 50vw;
 		top: 0;
 		position: absolute;
-		background-color: rgba(38, 84, 133, 0.54);
+		background-color: rgb(38, 84, 133);
 		border-radius: 50%;
 		z-index: 18;
 		overflow: hidden;
@@ -47,7 +47,7 @@
 padding-top: 10px;
 }
 	
-.dropbtn {
+.menu-button {
     background-color: darkgray;
     color: white;
     padding: 15px;
@@ -70,14 +70,14 @@ console.log($('.sub-menu').css("height"))
    console.log('{{site.menu-height}}')
    $('.sub-menu').css("height", '{{site.menu-height}}')
    $('.sub-menu').css("width", '{{site.menu-width}}')
-   $('.sub-menu').css("opacity", '1')
-   $('.dropbtn').css("display", "none")
+   $('.sub-menu').css("opacity", '{{site.menu-opacity}}')
+   $('.menu-button').css("display", "none")
    
   } else {
   	$('.sub-menu').css("height", '0px')
   	$('.sub-menu').css("width", '0px')
   	$('.sub-menu').css("opacity", '0')
-  	$('.dropbtn').css("display", "inline-block")
+  	$('.menu-button').css("display", "inline-block")
   }
 }
 </script>
