@@ -66,6 +66,20 @@ div.wrapper {
 	color: white;
 }
 
+.index-button {
+background-color: white;
+color: black;
+font-size: 14px;
+border: 1px solid black;
+padding: 10px;
+text-align: center;
+text-decoration: none;
+cursor: pointer;
+border-radius: 200px;
+display: inline-block;
+margin-left: 3px;
+}
+
 p.post-header {
   letter-spacing: 1.5px;
   margin-bottom: .5rem;
