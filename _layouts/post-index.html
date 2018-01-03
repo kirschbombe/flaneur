@@ -6,9 +6,6 @@ layout: page
 {% else %}
     {% assign status = 'atoz' %}
 {% endif %}
-{% for status in site.post-index %}
-    <a href="{{site.baseurl}}/#{{ status.url }}/" class="index-button" onclick='onClick("{{post.url}}");'>{{ status.title }}</a>
-{% endfor %}
 
 <div id="post-list" class="index">
 {% if status == 'category' %}
