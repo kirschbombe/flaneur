@@ -90,6 +90,7 @@ counter += 1;
 var panelLayers = new L.Control.PanelLayers(null, overLayers, {
 	compact: true,
 	collapsed: true,
+	position: 'topleft'
 });
 map.addControl(panelLayers);
 
@@ -97,6 +98,6 @@ map.setView([34.0253, -118.3085], 11)
 //map.fitBounds(markers.getBounds());
 
 </script>
-
+{% include menu.html %}
   </body>
 </html>

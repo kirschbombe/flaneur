@@ -1,57 +1,45 @@
+---
+layout: page
+---
 {% if page.status %}
     {% assign status = page.status %}
 {% else %}
     {% assign status = 'atoz' %}
 {% endif %}
 
-{% for status in site.post-index %}
-    <a href="{{site.baseurl}}/#{{ status.url }}" class="button" onclick='onClick("{{post.url}}");'>{{ status.title }}</a>
-{% endfor %}
-
-<h1>{{page.title}}</h1>
-{% if page.path == 'post-index.md' %}
-<h1>Posts by A-Z</h1>
-{% endif %}
-
+<div id="post-list" class="index">
 {% if status == 'category' %}
-<div id="posts-list">
 {% for category in site.categories %}
 {% capture category_name %}{{ category | first }}{% endcapture %}
   <h2>{{ category_name | capitalize }}</h2>
+<ul>
 {% for post in site.categories[category_name] %}
-    <ul>
         <li><a href="{{site.baseurl}}/#{{post.url}}" onclick='onClick("{{post.url}}");'>{{post.title}}</a></li>
-    </ul>
 {% endfor %}
+</ul>
 {% endfor %}
-</div>
 {% endif %}
 
 {% if status == 'atoz' %}
 {% assign atozsort = site.posts | sort: 'title' %}
-<div id="posts-list">
+<ul>
 {% for post in atozsort %}
 <li><a href="{{site.baseurl}}/#{{post.url}}" onclick='onClick("{{post.url}}");'>{{post.title}}</a></li>
 {% endfor %}
-</div>
+</ul>
 {% endif %}
 
 {% if status == 'quarter' %}
 {% assign postsort = site.posts  | sort: 'date' | reverse | group_by_exp:"post", "post.quarter" %}
-<div id="posts-list">
 {% for year in postsort %}
 <h2>{{year.name}}</h2>
+<ul>
 {% for post in year.items %}
 <li><a href="{{site.baseurl}}/#{{post.url}}" onclick='onClick("{{post.url}}");'>{{post.title}}</a></li>
 {% endfor %}
+</ul>
 {% endfor %}
-</div>
 {% endif %}
+</div>
 
-<style>
-#posts-list {
- height: 70vh;
-  overflow: scroll;
-  }
-</style>
 
