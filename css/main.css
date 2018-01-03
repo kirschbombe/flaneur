@@ -160,7 +160,7 @@ li {
 }
 
 
-.sub-menu {
+.morphing-content {
 	transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	height: 0;
 	width: 0;
@@ -172,7 +172,7 @@ li {
 	overflow: hidden;	
 	}
 
-.sub-menu a{
+.morphing-content a{
 	margin-top: 10px;
 	color: white;
 	text-decoration: none;
@@ -198,7 +198,29 @@ padding-top: 10px;
     position: absolute;
     display: inline-block;
 }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(38, 84, 133);
+    z-index: 1;
+    border-radius: 10px;
+    right: 0;
+    left: auto;
+}
 
+.dropdown-content a {
+    color: white;
+    font-weight: bold;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+.dropdown-content a:hover {
+    background-color: rgb(8, 54, 93);
+    border-radius: 10px;
+}
 @media (max-width:768px) {
     html {
         font-size: 14px;
