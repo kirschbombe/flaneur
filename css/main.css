@@ -175,6 +175,9 @@ li {
         height: 60vh;
         width: 100vw
     }
+    .post, .page {
+	height: 60vh;
+	}
     body {
         overflow-y: hidden;
         overflow-x: hidden
@@ -262,6 +265,9 @@ li {
       left: 0;
       height: 60vh;
       width: 100vw
+  }
+  .post, .page {
+	height: 60vh;
   }
   body {
       overflow-y: hidden;
