@@ -8,7 +8,6 @@
  		{% if site.exclude_pages contains page.path %}
  		{% continue %}
  		{% else %}
- 			{{page.path}}
  			<a href="{{site.baseurl}}/#{{page.url}}" onclick="onClick('{{page.url}}')" class="menu-link">{{page.title}}</a>
 		{% endif %}
 		{% endfor %}
