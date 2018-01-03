@@ -308,6 +308,7 @@ li {
     }
     .sub-menu, .menu-button {
 	right: 45vw;
+	padding-bottom: 10px;
 	}
     div.wrapper {
 		left: 0;
