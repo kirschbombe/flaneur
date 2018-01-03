@@ -145,6 +145,46 @@ li {
   margin-bottom: 8px;
 }
 
+
+.sub-menu {
+	transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	height: 0;
+	width: 0;
+	top: 0;
+	position: absolute;
+	background-color: rgb(38, 84, 133);
+	border-radius: 50%;
+	z-index: 18;
+	overflow: hidden;	
+	}
+
+.sub-menu a{
+	margin-top: 10px;
+	color: white;
+	text-decoration: none;
+	font-family: 'Lato', Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+
+.menu-links {
+padding-top: 10px;
+}
+	
+.menu-button {
+    background-color: darkgray;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    position: absolute;
+    display: inline-block;
+}
+
 @media (max-width:768px) {
     html {
         font-size: 14px;
@@ -181,6 +221,9 @@ li {
         height: 50vh !important;
         width: 100vw
     }
+    .sub-menu, .menu-button {
+	right: 0vw;
+	}
 }
 
 @media (min-width:768px) and (max-width:1100px) {
@@ -198,7 +241,9 @@ li {
         position: absolute;
         right: 0;
     }
-
+	.sub-menu, .menu-button {
+	right: 50vw;
+	}
     div.wrapper {
 		top: 0;
         width: 50vw;
@@ -225,6 +270,9 @@ li {
         width: 45vw;
         right: 0;
     }
+    .sub-menu, .menu-button {
+	right: 45vw;
+	}
     div.wrapper {
 		left: 0;
         width: 55vw;
@@ -248,6 +296,9 @@ li {
       left: 0;
       height: 60vh;
       width: 100vw
+  }
+  .sub-menu, .menu-button {
+	right: 0vw;
   }
   body {
       overflow-y: hidden;
