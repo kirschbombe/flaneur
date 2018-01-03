@@ -28,10 +28,11 @@ collections:
 permalink: /:categories/:title/
 
 # menu options: dropdown, morphing
-menu-type: dropdown
+menu-type: morphing
 
 # settings for morphing menu
 menu-height: '200px'
 menu-width: '200px'
 menu-opacity: '.95'
 
+exclude_pages: [ "index.html", "/assets/css/style.css", 'home.md']

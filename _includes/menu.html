@@ -5,9 +5,10 @@
  		<i class="fa fa-times {{site.menu-type}}-closebtn" aria-hidden="true"></i>
  		<a href="{{site.baseurl}}/">Home</a>
  		{% for page in site.pages %}
- 		{% if page.title != 'Home' and page.path != 'home.md' %}
- 				{{page.url}}
-				<a href="{{site.baseurl}}/#{{page.url}}" onclick="onClick('{{page.url}}')" class="menu-link">{{page.title}}</a>
+ 		{% if site.exclude_pages contains page.path %}
+ 		{% continue %}
+ 		{% else %}
+ 			<a href="{{site.baseurl}}/#{{page.url}}" onclick="onClick('{{page.url}}')" class="menu-link">{{page.title}}</a>
 		{% endif %}
 		{% endfor %}
 		</div>
