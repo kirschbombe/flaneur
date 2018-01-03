@@ -27,3 +27,11 @@ collections:
 
 permalink: /:categories/:title/
 
+# menu options: dropdown, morphing
+menu-type: dropdown
+
+# settings for morphing menu
+menu-height: '200px'
+menu-width: '200px'
+menu-opacity: '.95'
+

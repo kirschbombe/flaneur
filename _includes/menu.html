@@ -1,0 +1,38 @@
+<div class="{{site.menu-type}}">
+ <button class="menu-button" onclick="{{site.menu-type}}toggle()"><i class="fa fa-bars" aria-hidden="true"></i></button>
+ 		<div class="{{site.menu-type}}-content sub-menu" onclick="{{site.menu-type}}toggle()">
+ 		<div class="menu-links">
+ 		 <a class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></a>
+ 		<a href="{{site.baseurl}}/">Home</a>
+ 		{% for page in site.pages %}
+ 		{% if page.title != 'Home' and page.path != 'home.md' %}
+				<a href="{{site.baseurl}}/#{{page.url}}" onclick="onClick('{{page.url}}')" class="menu-link">{{page.title}}</a>
+		{% endif %}
+		{% endfor %}
+		</div>
+</div>
+</div>
+<script>
+function morphingtoggle() {
+  if ($('.morphing-content').css("height") == '0px') {
+   $('.morphing-content').css("height", '{{site.menu-height}}');
+   $('.morphing-content').css("width", '{{site.menu-width}}');
+   $('.morphing-content').css("opacity", '{{site.menu-opacity}}');
+   $('.menu-button').css("display", "none");
+   
+  } else {
+  	$('.morphing-content').css("height", '0px');
+  	$('.morphing-content').css("width", '0px');
+  	$('.morphing-content').css("opacity", '0');
+  	$('.menu-button').css("display", "inline-block");
+  }
+}
+function dropdowntoggle() {
+  if ($('.dropdown-content').css("display") == 'none') {
+   $('.dropdown-content').css("display", 'block')
+  } else {
+  	$('.dropdown-content').css("display", 'none')
+  }
+}
+
+</script>
