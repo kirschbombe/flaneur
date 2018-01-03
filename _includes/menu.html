@@ -6,6 +6,7 @@
  		<a href="{{site.baseurl}}/">Home</a>
  		{% for page in site.pages %}
  		{% if page.title != 'Home' and page.path != 'home.md' %}
+ 				{{page.url}}
 				<a href="{{site.baseurl}}/#{{page.url}}" onclick="onClick('{{page.url}}')" class="menu-link">{{page.title}}</a>
 		{% endif %}
 		{% endfor %}
