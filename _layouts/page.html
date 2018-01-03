@@ -4,7 +4,7 @@
     <h1 class="page-title">{{ page.title }}</h1>
 {% if page.layout == 'post-index' %} 
 {% for status in site.post-index %}
-    <a href="{{site.baseurl}}/#{{ status.url }}/" class="index-button" onclick='onClick("{{post.url}}");'>{{ status.title }}</a>
+    <a href="{{site.baseurl}}/#{{ status.url }}/" class="index-button" onclick='onClick("{{status.url}}");'>{{ status.title }}</a>
 {% endfor %}
 {% endif %}
   </header>
