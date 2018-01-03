@@ -28,7 +28,7 @@ collections:
 permalink: /:categories/:title/
 
 # menu options: dropdown, morphing
-menu-type: morphing
+menu-type: dropdown
 
 # settings for morphing menu
 menu-height: '200px'
