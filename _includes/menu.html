@@ -1,6 +1,6 @@
 
- <button class="menu-button" onclick="toggle()"><i class="fa fa-bars" aria-hidden="true"></i></button>
- 		<div class="sub-menu" onclick="toggle()">
+ <button class="menu-button" onclick="menutoggle()"><i class="fa fa-bars" aria-hidden="true"></i></button>
+ 		<div class="sub-menu" onclick="menutoggle()">
  		<div class="menu-links">
  		<a class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></a>
  		<a href="{{site.baseurl}}/">Home</a>
@@ -12,29 +12,21 @@
 		</div>
 </div>
 
-
-<style>
-
-
-	
-
-</style>
 <script>
-function toggle() {
-console.log($('.sub-menu').css("height"))
+
+function menutoggle() {
   if ($('.sub-menu').css("height") == '0px') {
-   console.log($('.sub-menu').css("height"))
-   console.log('{{site.menu-height}}')
-   $('.sub-menu').css("height", '{{site.menu-height}}')
-   $('.sub-menu').css("width", '{{site.menu-width}}')
-   $('.sub-menu').css("opacity", '{{site.menu-opacity}}')
-   $('.menu-button').css("display", "none")
+   $('.sub-menu').css("height", '{{site.menu-height}}');
+   $('.sub-menu').css("width", '{{site.menu-width}}');
+   $('.sub-menu').css("opacity", '{{site.menu-opacity}}');
+   $('.menu-button').css("display", "none");
    
   } else {
-  	$('.sub-menu').css("height", '0px')
-  	$('.sub-menu').css("width", '0px')
-  	$('.sub-menu').css("opacity", '0')
-  	$('.menu-button').css("display", "inline-block")
+  	$('.sub-menu').css("height", '0px');
+  	$('.sub-menu').css("width", '0px');
+  	$('.sub-menu').css("opacity", '0');
+  	$('.menu-button').css("display", "inline-block");
   }
 }
+
 </script>
