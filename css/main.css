@@ -210,15 +210,12 @@ li {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    text-align: center;
+    text-align: right;
 }
 
 .dropdown-content a:hover {
     background-color: rgb(8, 54, 93);
     border-radius: 10px;
-}
-a.close-btn {
-	text-align: right;
 }
 
 @media (max-width:768px) {
