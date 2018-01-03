@@ -182,10 +182,6 @@ li {
 	display: block;
 	text-align: center;
 }
-
-.menu-links {
-padding-top: 10px;
-}
 	
 .menu-button {
     background-color: rgb(38, 84, 133);
@@ -220,6 +216,27 @@ padding-top: 10px;
 .dropdown-content a:hover {
     background-color: rgb(8, 54, 93);
     border-radius: 10px;
+}
+.dropdown-closebtn {
+padding-bottom: 1em;
+float: right;
+color: white;
+margin-right: 10px;
+margin-top: 10px;
+cursor: pointer;
+}
+.morphing-closebtn {
+color: white;
+margin-top: 10px;
+cursor: pointer;
+}
+
+.dropdown-closebtn:hover {
+background-color: rgb(8, 54, 93);
+}
+
+.menu-links {
+	text-align: center;
 }
 @media (max-width:768px) {
     html {
