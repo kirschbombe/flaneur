@@ -212,32 +212,14 @@ li {
     display: block;
 }
 
-
 .dropdown-content a:hover {
     background-color: rgb(8, 54, 93);
     border-radius: 10px;
 }
-.dropdown-closebtn {
-padding-bottom: 1em;
-float: right;
-color: white;
-margin-right: 10px;
-margin-top: 10px;
-cursor: pointer;
-}
-.morphing-closebtn {
-color: white;
-margin-top: 10px;
-cursor: pointer;
+.close-btn {
+	text-align: right;
 }
 
-.dropdown-closebtn:hover {
-background-color: rgb(8, 54, 93);
-}
-
-.menu-links {
-	text-align: center;
-}
 @media (max-width:768px) {
     html {
         font-size: 14px;
