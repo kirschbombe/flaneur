@@ -163,7 +163,7 @@ list-style:none;
 padding-left: 8px;
 }
 
-.morphing-content {
+.circle-content {
 	transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	height: 0;
 	width: 0;
@@ -175,7 +175,7 @@ padding-left: 8px;
 	overflow: hidden;	
 	}
 
-.morphing-content a{
+.circle-content a{
 	margin-top: 10px;
 	color: white;
 	text-decoration: none;
@@ -197,6 +197,10 @@ padding-left: 8px;
     position: absolute;
     display: inline-block;
 }
+.menu-button.circle {
+	border-radius: 50%;
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -311,7 +315,6 @@ padding-left: 8px;
     }
     .sub-menu, .menu-button {
 	right: 45vw;
-	padding-bottom: 10px;
 	}
     div.wrapper {
 		left: 0;
