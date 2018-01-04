@@ -20,10 +20,10 @@ collections:
   posts:
     output: true
     permalink: /article/:name
-  post-index:
-    title: Post Index
+  article-index:
+    title: Article Index
     output: true
-    permalink: /post-index/:name
+    permalink: /article-index/:name
 
 permalink: /:categories/:title/
 
