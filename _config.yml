@@ -23,7 +23,7 @@ collections:
   article-index:
     title: Article Index
     output: true
-    permalink: /article-index/:name
+    permalink: /article-index/:name/
 
 permalink: /:categories/:title/
 
