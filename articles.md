@@ -1,4 +1,4 @@
 ---
 layout: post-index
-title: Index
+title: Article index
 ---
