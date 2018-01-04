@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Introduction
-permalink: /intro/
+title: About the project
+permalink: /about/
 ---
 
 ### The Class
