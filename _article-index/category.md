@@ -1,5 +1,5 @@
 ---
-layout: post-index
+layout: article-index
 title: Posts by Category
 status: category
 ---
