@@ -4,7 +4,7 @@ layout: page
 {% if page.status %}
     {% assign status = page.status %}
 {% else %}
-    {% assign status = 'atoz' %}
+    {% assign status = 'a-z' %}
 {% endif %}
 
 <div id="post-list" class="index">
@@ -20,7 +20,7 @@ layout: page
 {% endfor %}
 {% endif %}
 
-{% if status == 'atoz' %}
+{% if status == 'a-z' %}
 {% assign atozsort = site.posts | sort: 'title' %}
 <ul>
 {% for post in atozsort %}
