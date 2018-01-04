@@ -1,5 +1,5 @@
 ---
 layout: article-index
-title: Posts by A-Z
+title: Article index, A-Z
 status: atoz
 ---
