@@ -4,7 +4,7 @@
     <h1 class="page-title">{{ page.title }}</h1>
 {% if page.layout == 'article-index' %} 
 {% for status in site.article-index %}
-    <a href="{{site.baseurl}}/#{{ status.url }}/" class="index-button" onclick='onClick("{{status.url}}");'>{{ status.status | upcase }}</a>
+    <a href="{{site.baseurl}}/#{{ status.url }}/" class="index-button" onclick='onClick("{{status.url}}");'>{{ status.status| replace_first:'to','-' | upcase }}</a>
 {% endfor %}
 {% endif %}
   </header>
