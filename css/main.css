@@ -210,7 +210,7 @@ padding-left: 8px;
 .dropdown-content a {
     color: white;
     font-weight: bold;
-    padding: 12px 16px;
+    padding: 7px 20px;
     text-decoration: none;
     display: block;
     text-align: right;
@@ -311,6 +311,7 @@ padding-left: 8px;
     }
     .sub-menu, .menu-button {
 	right: 45vw;
+	padding-bottom: 10px;
 	}
     div.wrapper {
 		left: 0;
