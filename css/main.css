@@ -33,17 +33,6 @@ a {
   height:100vh;
 }
 
-.header {
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  padding-top: 3em;
-  background-color: white;
-  color: black;
-  padding-right: 3em;
-  width: 85%;
-}
-
 .page-content {
     z-index: 1 !important;
 	padding-bottom: 3em;
@@ -129,15 +118,6 @@ p.byline {
   margin-top: .3em;
 	padding-bottom: .2em;
 	font-style: italic;
-}
-
-.post, .page {
-height: 100vh;
-box-sizing: border-box;
-padding-bottom: 3em;
-/* overflow-y: scroll;
-padding-right: 15px;
-margin-right: -15px; */
 }
 
 img {
