@@ -209,6 +209,7 @@ padding-left: 8px;
     border-radius: 10px;
     right: 0;
     left: auto;
+    padding-bottom: 10px;
 }
 
 .dropdown-content a {
