@@ -3,7 +3,7 @@ $(document).ready(function(){
 });
 function reloadhtml(){
   	url = window.location.href;
-  	if (url.includes("article")) {
+  	if (url.includes("article/")) {
   		article_url = url.replace("/#", "");
       url = url.split("#");
       item_id = url[1];
@@ -29,7 +29,7 @@ function reloadhtml(){
 };
 
 function onClick(url){
-    if (url.includes("article")) {
+    if (url.includes("article/")) {
       item_id = url;
       article_url = window.location.origin + window.location.pathname + item_id;
       marker = items[item_id];

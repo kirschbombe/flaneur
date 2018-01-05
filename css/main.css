@@ -1,5 +1,5 @@
 
-* {
+html, body {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -18,6 +18,11 @@ html {
   line-height: 1.5;
 }
 
+a {
+  color: rgba(31, 106, 173, 1);
+  text-decoration: none;
+  font-weight: 400;
+}
 .container {
 	width: 100%;
 }
@@ -29,12 +34,8 @@ html {
 }
 
 .page-content {
-	width: 60vw;
-	right: 0;
-}
-
-article.page-content {
-	width: 100vw;
+    z-index: 1 !important;
+	padding-bottom: 3em;
 }
 
 .sidebar {
@@ -44,7 +45,7 @@ article.page-content {
 	position:fixed!important;
 	z-index:1;
 	right:0;
-	/* overflow:auto; */
+	overflow:auto;
 }
 
 div#sidebar-content {
@@ -57,6 +58,20 @@ div#sidebar-content {
 div.wrapper {
 	background-color: black;
 	color: white;
+}
+
+.index-button {
+background-color: white;
+color: black;
+font-size: 14px;
+border: .5px solid rgba(96, 74, 120, 1);
+padding: 4px 12px;
+text-align: center;
+text-decoration: none;
+cursor: pointer;
+border-radius: 200px;
+display: inline-block;
+margin-left: 3px;
 }
 
 p.post-header {
@@ -82,6 +97,7 @@ h1.post-title{
   margin-bottom: .1em;
   margin-top: .1em;
   font-family: "Lato", sans-serif;
+  position: relative;
   -webkit-margin-before: .1em;
   -webkit-margin-after: -.6em;
 }
@@ -104,19 +120,14 @@ p.byline {
 	font-style: italic;
 }
 
-article.post-article {
-max-height: 80vh;
-overflow-y: scroll;
-padding-bottom: 10px;
-padding-right: 15px;
-margin-right: -15px;
-z-index: 1 !important;
-}
-
 img {
   height: 200px;
   display: block;
   margin: auto;
+}
+
+img.home-icon {
+  height: 100px;
 }
 
 h1, h2, h3, h4 {
@@ -130,6 +141,73 @@ h4 {
 
 li {
   margin-bottom: 8px;
+}
+ul {
+list-style:none;
+padding-left: 8px;
+}
+
+.circle-content {
+	transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	height: 0;
+	width: 0;
+	top: 0;
+	position: absolute;
+	background-color: rgb(38, 84, 133);
+	border-radius: 50%;
+	z-index: 18;
+	overflow: hidden;
+	}
+
+.circle-content a{
+	margin-top: 10px;
+	color: white;
+	text-decoration: none;
+	font-family: 'Lato', Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+
+.menu-button {
+    background-color: rgb(38, 84, 133);
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    position: absolute;
+    display: inline-block;
+}
+.menu-button.circle {
+	border-radius: 50%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(38, 84, 133);
+    z-index: 1;
+    border-radius: 10px;
+    right: 0;
+    left: auto;
+    padding-bottom: 10px;
+}
+
+.dropdown-content a {
+    color: white;
+    font-weight: bold;
+    padding: 7px 20px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(8, 54, 93);
+    border-radius: 10px;
 }
 
 @media (max-width:768px) {
@@ -148,13 +226,14 @@ li {
         height: 60vh;
         width: 100vw
     }
+    .post, .page {
+	height: 60vh;
+	}
     body {
         overflow-y: hidden;
         overflow-x: hidden
     }
-	  article.post-article {
-	      max-height: 35vh;
-	  }
+
 	  div.wrapper {
 		    width: 100vw;
 		    height: 40vh;
@@ -170,6 +249,9 @@ li {
         height: 50vh !important;
         width: 100vw
     }
+    .sub-menu, .menu-button {
+	right: 0vw;
+	}
 }
 
 @media (min-width:768px) and (max-width:1100px) {
@@ -187,9 +269,9 @@ li {
         position: absolute;
         right: 0;
     }
-    article.post-article {
-        max-height: 70vh;
-    }
+	.sub-menu, .menu-button {
+	right: 50vw;
+	}
     div.wrapper {
 		top: 0;
         width: 50vw;
@@ -216,6 +298,9 @@ li {
         width: 45vw;
         right: 0;
     }
+    .sub-menu, .menu-button {
+	right: 45vw;
+	}
     div.wrapper {
 		left: 0;
         width: 55vw;
@@ -240,13 +325,17 @@ li {
       height: 60vh;
       width: 100vw
   }
+  .sub-menu, .menu-button {
+	right: 0vw;
+   }
+  .post, .page {
+	height: 60vh;
+  }
   body {
       overflow-y: hidden;
       overflow-x: hidden
   }
-  article.post-article {
-      max-height: 40vh;
-  }
+
   div.wrapper {
       width: 100vw;
       height: 40vh;

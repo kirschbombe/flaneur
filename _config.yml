@@ -20,9 +20,20 @@ collections:
   posts:
     output: true
     permalink: /article/:name
-  post-index:
-    title: Post Index
+  article-index:
+    title: Article Index
     output: true
-    permalink: /post-index/:name
+    permalink: /article-index/:name/
 
 permalink: /:categories/:title/
+
+# menu options: dropdown, circle
+menu-type: dropdown
+
+# settings for circle menu
+menu-height: '200px'
+menu-width: '200px'
+menu-opacity: '.95'
+
+#pages to exclude in menu
+exclude_pages: [ "index.html", "assets/css/style.scss", 'home.md']

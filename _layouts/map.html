@@ -3,16 +3,15 @@
 
   {% include head.html %}
   <body>
-
-  	<div id="article">{% include sidebar.html %}
-  	<script>
-  	window.onload = function(){
-  	reloadhtml();
-  	};
-	window.onhashchange = function() {
-	reloadhtml();
-	};
-  	</script></div>
+  	{% include sidebar.html %}
+  	   <script>
+  	    window.onload = function(){
+  	    reloadhtml();
+  	    };
+	      window.onhashchange = function() {
+	      reloadhtml();
+	      };
+  	    </script>
 
     <div id="map"></div>
 
@@ -67,7 +66,7 @@ counter += 1;
       filename = "{{post.url}}"
       items[filename] = marker;
       layers.push(marker);
-      
+
       marker.on('click', function(){
         post_url = "{{site.baseurl}}/#{{post.url}}";
         window.location = (post_url);
@@ -81,7 +80,7 @@ counter += 1;
       });
       {% endfor %}
 
-    var imageurl = '<img class="legend" src="' + iconurl + '">' 
+    var imageurl = '<img class="legend" src="' + iconurl + '">'
     var name = '{{category_name}}';
     overLayers.push({"name":name, icon: imageurl, active: true, "layer":L.layerGroup(layers)})
  {% endfor %}
@@ -90,6 +89,7 @@ counter += 1;
 var panelLayers = new L.Control.PanelLayers(null, overLayers, {
 	compact: true,
 	collapsed: true,
+	position: 'topleft'
 });
 map.addControl(panelLayers);
 
@@ -97,6 +97,6 @@ map.setView([34.0253, -118.3085], 11)
 //map.fitBounds(markers.getBounds());
 
 </script>
-
-  </body>
+{% include menu.html %}
+</body>
 </html>
