@@ -46,7 +46,7 @@ function onClick(url){
     		$("#sidebar-content").html(data);
     	});
     }
-    $( ".sidebar" ).scrollTop(0)
+    $( ".sidebar" ).scrollTop(0) //tell sidebar scroll to go to the top
 }
 
 
