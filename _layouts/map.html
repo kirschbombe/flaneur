@@ -3,16 +3,15 @@
 
   {% include head.html %}
   <body>
-
-  	<div id="article">{% include sidebar.html %}
-  	<script>
-  	window.onload = function(){
-  	reloadhtml();
-  	};
-	window.onhashchange = function() {
-	reloadhtml();
-	};
-  	</script></div>
+  	{% include sidebar.html %}
+  	   <script>
+  	    window.onload = function(){
+  	    reloadhtml();
+  	    };
+	      window.onhashchange = function() {
+	      reloadhtml();
+	      };
+  	    </script>
 
     <div id="map"></div>
 
@@ -67,21 +66,22 @@ counter += 1;
       filename = "{{post.url}}"
       items[filename] = marker;
       layers.push(marker);
-      
+
       marker.on('click', function(){
         post_url = "{{site.baseurl}}/#{{post.url}}";
         window.location = (post_url);
-        var articleicon = "<img class='article-marker' src='" + this.iconURL  + "' onclick='myFunction()'>";
+        var articleicon = "<img class='article-marker' src='" + this.iconURL  + "' onclick='mapClick()'>";
         $.get("{{site.baseurl}}{{post.url}}", function(data){
         	var index = data.indexOf("</h1>");
         	data = data.slice(0, index) + articleicon + data.slice(index,);
         	$("#sidebar-content").html(data);
         });
        this.openPopup();
+       $( ".sidebar" ).scrollTop(0);
       });
       {% endfor %}
 
-    var imageurl = '<img class="legend" src="' + iconurl + '">' 
+    var imageurl = '<img class="legend" src="' + iconurl + '">'
     var name = '{{category_name}}';
     overLayers.push({"name":name, icon: imageurl, active: true, "layer":L.layerGroup(layers)})
  {% endfor %}
@@ -99,5 +99,5 @@ map.setView([34.0253, -118.3085], 11)
 
 </script>
 {% include menu.html %}
-  </body>
+</body>
 </html>

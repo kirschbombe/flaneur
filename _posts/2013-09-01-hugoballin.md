@@ -28,4 +28,3 @@ Whether it was the urge to depict history through a brush or the simply idea tha
 
 Ballin's Lunette. Hugo Ballin, 1930. Image courtesy of UCLA Library Special Collections
    {:.caption}
-

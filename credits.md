@@ -13,7 +13,7 @@ permalink: /credits/
 ##### Developers
 * Dawn Childress, UCLA Digital Library Program
 * Dominique O'Neill, Developer
-* Nathan Day, Developer 
+* Nathan Day, Developer
 
 ##### Project Support
 * Cesar, Fall 2013 -
@@ -21,3 +21,7 @@ permalink: /credits/
 * Saoirse O'Malley, Fall 2016 - Fall 2017
 * Dvorah Lewis, Alejandra Gaeta, Gina Rinsetter, Fall 2015 - Spring 2016
 * Doug Worsham, Simon Lee, & Renee Romero, Fall 2015
+
+##### Icons
+* Map Marker icon created by Berkay Sargin from the Noun Project
+* north by Lluisa Iborra from the Noun Project

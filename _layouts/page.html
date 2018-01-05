@@ -1,24 +1,10 @@
+---
+layout: default
+---
 <div class="page">
-
-  <header class="page-header header" style="width:100%">
+  <header>
+    <p class="post-header">{{ site.title }}</p>
     <h1 class="page-title">{{ page.title }}</h1>
-{% if page.layout == 'article-index' %} 
-{% for status in site.article-index %}
-    <a href="{{site.baseurl}}/#{{ status.url }}" class="index-button" onclick='onClick("{{status.url}}");'>{{ status.status| replace_first:'to','-' | upcase }}</a>
-{% endfor %}
-{% endif %}
   </header>
-
-  <article class="page-content">
     {{ content }}
-  </article>
-
 </div>
-
-<script>
-var header_height = $( ".header" ).height();
-console.log(header_height);
-var output_height = header_height + 3;
-var margintop = output_height + 'px';
-$( ".page-content" ).css('margin-top', margintop);
-</script>

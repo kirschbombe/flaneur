@@ -7,39 +7,41 @@ layout: page
     {% assign status = 'atoz' %}
 {% endif %}
 
+{% for status in site.article-index %}
+    <a href="{{site.baseurl}}/#{{ status.url }}" class="index-button" onclick='onClick("{{status.url}}");'>{{ status.status| replace_first:'to','-' | upcase }}</a>
+{% endfor %}
+
 <div id="post-list" class="index">
-{% if status == 'category' %}
-{% for category in site.categories %}
-{% capture category_name %}{{ category | first }}{% endcapture %}
-  <h2>{{ category_name | capitalize }}</h2>
-<ul>
-{% for post in site.categories[category_name] %}
-        <li><a href="{{site.baseurl}}/#{{post.url}}" onclick='onClick("{{post.url}}");'>{{post.title}}</a></li>
-{% endfor %}
-</ul>
-{% endfor %}
-{% endif %}
+   {% if status == 'category' %}
+   {% for category in site.categories %}
+   {% capture category_name %}{{ category | first }}{% endcapture %}
+   <h2>{{ category_name | capitalize }}</h2>
+   <ul>
+      {% for post in site.categories[category_name] %}
+      <li><a href="{{site.baseurl}}/#{{post.url}}" onclick='onClick("{{post.url}}");'>{{post.title}}</a></li>
+      {% endfor %}
+   </ul>
+   {% endfor %}
+   {% endif %}
 
-{% if status == 'atoz' %}
-{% assign atozsort = site.posts | sort: 'title' %}
-<ul>
-{% for post in atozsort %}
-<li><a href="{{site.baseurl}}/#{{post.url}}" onclick='onClick("{{post.url}}");'>{{post.title}}</a></li>
-{% endfor %}
-</ul>
-{% endif %}
+   {% if status == 'atoz' %}
+   {% assign atozsort = site.posts | sort: 'title' %}
+   <ul>
+  {% for post in atozsort %}
+      <li><a href="{{site.baseurl}}/#{{post.url}}" onclick='onClick("{{post.url}}");'>{{post.title}}</a></li>
+      {% endfor %}
+   </ul>
+   {% endif %}
 
-{% if status == 'quarter' %}
-{% assign postsort = site.posts  | sort: 'date' | reverse | group_by_exp:"post", "post.quarter" %}
-{% for year in postsort %}
-<h2>{{year.name}}</h2>
-<ul>
-{% for post in year.items %}
-<li><a href="{{site.baseurl}}/#{{post.url}}" onclick='onClick("{{post.url}}");'>{{post.title}}</a></li>
-{% endfor %}
-</ul>
-{% endfor %}
-{% endif %}
+   {% if status == 'quarter' %}
+   {% assign postsort = site.posts  | sort: 'date' | reverse | group_by_exp:"post", "post.quarter" %}
+   {% for year in postsort %}
+   <h2>{{year.name}}</h2>
+   <ul>
+   {% for post in year.items %}
+      <li><a href="{{site.baseurl}}/#{{post.url}}" onclick='onClick("{{post.url}}");'>{{post.title}}</a></li>
+      {% endfor %}
+   </ul>
+   {% endfor %}
+   {% endif %}
 </div>
-
-

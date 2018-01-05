@@ -24,7 +24,7 @@ function reloadhtml(){
     home_url = window.location.origin + window.location.pathname + "home/"
     $.get(home_url, function(data){
   	$("#sidebar-content").html(data);
-  	 });    
+  	 });
     }
 };
 
@@ -46,15 +46,14 @@ function onClick(url){
     		$("#sidebar-content").html(data);
     	});
     }
+    $( ".sidebar" ).scrollTop(0)
 }
 
 
-function myFunction(){
+function mapClick(){
   url = window.location.href;
   url = url.split("#");
   item_id = url[1];
   marker = items[item_id];
   marker.togglePopup();
 };
-
-

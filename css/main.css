@@ -33,17 +33,6 @@ a {
   height:100vh;
 }
 
-.header {
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  padding-top: 3em;
-  background-color: white;
-  color: black;
-  padding-right: 3em;
-  width: 85%;
-}
-
 .page-content {
     z-index: 1 !important;
 	padding-bottom: 3em;
@@ -56,7 +45,7 @@ a {
 	position:fixed!important;
 	z-index:1;
 	right:0;
-	/* overflow:auto; */
+	overflow:auto;
 }
 
 div#sidebar-content {
@@ -64,11 +53,6 @@ div#sidebar-content {
   padding-right: 3em;
   padding-top: 3em;
   padding-bottom: 3em;
-}
-
-div.wrapper {
-	background-color: black;
-	color: white;
 }
 
 .index-button {
@@ -131,24 +115,14 @@ p.byline {
 	font-style: italic;
 }
 
-.post, .page {
-height: 100vh;
-box-sizing: border-box;
-padding-bottom: 3em;
-overflow-y: scroll;
-padding-right: 15px;
-margin-right: -15px;
-}
-
-article.post-article {
-z-index: 1 !important;
-padding-bottom: 3em;
-}
-
 img {
   height: 200px;
   display: block;
   margin: auto;
+}
+
+img.home-icon {
+  height: 100px;
 }
 
 h1, h2, h3, h4 {
