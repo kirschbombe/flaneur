@@ -1,5 +1,5 @@
 ---
 layout: article-index
-title: Article index, Quarter
+title: Index of Articles
 status: quarter
 ---

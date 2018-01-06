@@ -1,5 +1,5 @@
 ---
 layout: article-index
-title: Article index, Category
+title: Index of Articles
 status: category
 ---
