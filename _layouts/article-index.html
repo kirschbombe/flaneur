@@ -15,7 +15,7 @@ layout: page
    {% if status == 'category' %}
    {% for category in site.categories %}
    {% capture category_name %}{{ category | first }}{% endcapture %}
-   <h2>{{ category_name | capitalize }}</h2>
+   <h3>{{ category_name | capitalize }}</h3>
    <ul>
       {% for post in site.categories[category_name] %}
       <li><a href="{{site.baseurl}}/#{{post.url}}" onclick='onClick("{{post.url}}");'>{{post.title}}</a></li>
@@ -36,7 +36,7 @@ layout: page
    {% if status == 'quarter' %}
    {% assign postsort = site.posts  | sort: 'date' | reverse | group_by_exp:"post", "post.quarter" %}
    {% for year in postsort %}
-   <h2>{{year.name}}</h2>
+   <h3>{{year.name}}</h3>
    <ul>
    {% for post in year.items %}
       <li><a href="{{site.baseurl}}/#{{post.url}}" onclick='onClick("{{post.url}}");'>{{post.title}}</a></li>

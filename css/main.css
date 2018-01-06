@@ -18,6 +18,38 @@ html {
   line-height: 1.5;
 }
 
+h1, h2, h3, h4 {
+  font-family: "Lato", sans-serif;
+  color: rgba(25, 87, 142, 1);
+}
+
+h3 {
+  margin-bottom: .2rem;
+}
+
+h4 {
+  -webkit-margin-before: 1.33em;
+  -webkit-margin-after: .2em;
+}
+
+h1.post-title {
+  font-size: 1.2em;
+  line-height: .5;
+  letter-spacing: -.025rem;
+  position: relative;
+  margin-bottom: .1em;
+  margin-top: .1em;
+  font-family: "Lato", sans-serif;
+  position: relative;
+  -webkit-margin-before: .1em;
+  -webkit-margin-after: -.6em;
+}
+
+h1.home-title {
+  text-align: center;
+  line-height: 1.4em;
+}
+
 a {
   color: rgba(31, 106, 173, 1);
   text-decoration: none;
@@ -84,22 +116,9 @@ p.post-header {
   z-index: 1 !important;
 }
 
-h1.post-title{
-  font-size: 1.2em;
-  line-height: .5;
-  letter-spacing: -.025rem;
-  position: relative;
-  margin-bottom: .1em;
-  margin-top: .1em;
-  font-family: "Lato", sans-serif;
-  position: relative;
-  -webkit-margin-before: .1em;
-  -webkit-margin-after: -.6em;
-}
-
 p {
 	display: block;
-	-webkit-margin-before: 1em;
+	-webkit-margin-before: .5em;
 	-webkit-margin-after: 1em;
 	-webkit-margin-start: 0px;
 	-webkit-margin-end: 0px;
@@ -125,20 +144,12 @@ img.home-icon {
   height: 100px;
 }
 
-h1, h2, h3, h4 {
-  font-family: "Lato", sans-serif;
-}
-
-h4 {
-  -webkit-margin-before: 1.33em;
-  -webkit-margin-after: 1em;
-}
-
 li {
   margin-bottom: 8px;
 }
 ul {
 list-style:none;
+margin-top: .5em;
 padding-left: 8px;
 }
 
