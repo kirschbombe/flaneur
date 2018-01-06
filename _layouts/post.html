@@ -1,11 +1,15 @@
-<!DOCTYPE html>
-<html lang="en-us">
-
+---
+layout: default
+---
 <div class="post">
+    <header>
   	<p class="post-header">{{page.collectiontitle}}</p>
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="byline">{% if page.author %}{{ page.author }} ({{page.quarter}}){% endif %}</p>
+    <header>
+    <div id="content">
     {{ page.content }}
+  </div>
 </div>
 
 <script>
@@ -21,10 +25,4 @@ lightbox.option({
       'resizeDuration': 200,
       'wrapAround': true
  })
-
-// var header_height = $( ".header" ).height();
-// console.log(header_height);
-// var output_height = header_height + 3;
-// var margintop = output_height + 'px';
-// $( ".post-article" ).css('margin-top', margintop);
 </script>
