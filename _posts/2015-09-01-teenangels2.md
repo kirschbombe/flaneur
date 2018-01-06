@@ -8,7 +8,7 @@ lat: 34.1064001
 lng: -117.37032349999998
 collectiontitle: "UCLA Library Special Collections"
 quarter: Fall 2015
-desc: "Over half the population of Rialto is of Hispanic or Latino descent. The Teen Angels Magazine is a business located in Rialto, where the youth get to speak their mind. This magazine publishes gang graffiti, artwork, poetry and even obituaries; geared toward minorities and youth, it depicts the culture of gangs in Los Angeles"
+desc: "Teen Angels Magazine is a business located in Rialto, where over half the population is of Hispanic or Latino descent. The magazine allows youth get to speak their mind and publishes gang graffiti, artwork, poetry and obituaries. Geared toward minorities and youth, it depicts the culture of gangs in Los Angeles."
 ---
 Teen Angels is an art magazine that established the Chicano lifestyle through pictures, poems, and dedications.
 
