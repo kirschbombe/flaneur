@@ -4,7 +4,7 @@ layout: page
 {% if page.status %}
     {% assign status = page.status %}
 {% else %}
-    {% assign status = 'atoz' %}
+    {% assign status = 'a-z' %}
 {% endif %}
 
 {% for status in site.article-index %}
@@ -24,10 +24,10 @@ layout: page
    {% endfor %}
    {% endif %}
 
-   {% if status == 'atoz' %}
-   {% assign atozsort = site.posts | sort: 'title' %}
+   {% if status == 'a-z' %}
+   {% assign azsort = site.posts | sort: 'title' %}
    <ul>
-  {% for post in atozsort %}
+  {% for post in azsort %}
       <li><a href="{{site.baseurl}}/#{{post.url}}" onclick='onClick("{{post.url}}");'>{{post.title}}</a></li>
       {% endfor %}
    </ul>
