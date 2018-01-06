@@ -99,6 +99,7 @@ cursor: pointer;
 border-radius: 200px;
 display: inline-block;
 margin-left: 3px;
+text-transform: uppercase;
 }
 
 p.post-header {
