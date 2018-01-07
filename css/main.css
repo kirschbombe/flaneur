@@ -388,6 +388,15 @@ padding-left: 8px;
   font-weight: 300;
 }
 
+p.citation {
+  list-style-type: none;
+  text-indent: -1rem;
+  font-size: .9em;
+  padding-left: 20px;
+  font-weight: 300;
+  text-align: left;
+}
+
 img.legend {
 	height: 24px;
 	padding: 0px;
