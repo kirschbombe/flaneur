@@ -11,7 +11,7 @@ function reloadhtml(){
       var articleicon = "<img class='article-marker' src='" + marker.iconURL  + "' onclick='myFunction()'>";
   		$.get(article_url, function(data){
           var index = data.indexOf("</h1>");
-          data = data.slice(0, index) + articleicon + data.slice(index,);
+          data = data.slice(0, index) + articleicon + data.slice(index);
           $("#sidebar-content").html(data);
         });
     marker.openPopup();
@@ -36,7 +36,7 @@ function onClick(url){
       var articleicon = "<img class='article-marker' src='" + marker.iconURL  + "' onclick='myFunction()'>";
       $.get(article_url, function(data){
           var index = data.indexOf("</h1>");
-          data = data.slice(0, index) + articleicon + data.slice(index,);
+          data = data.slice(0, index) + articleicon + data.slice(index);
           $("#sidebar-content").html(data);
         });
     marker.openPopup();
