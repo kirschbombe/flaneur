@@ -142,7 +142,8 @@ p.byline {
 }
 
 img {
-  height: 200px;
+  max-height: 400px;
+  max-width: 80%;
   display: block;
   margin: auto;
 }
@@ -154,6 +155,7 @@ img.home-icon {
 li {
   margin-bottom: 8px;
 }
+
 ul {
 list-style:none;
 margin-top: .5em;
@@ -384,6 +386,15 @@ padding-left: 8px;
   font-size: .9em;
   padding-left: 20px;
   font-weight: 300;
+}
+
+p.citation {
+  list-style-type: none;
+  text-indent: -1rem;
+  font-size: .9em;
+  padding-left: 20px;
+  font-weight: 300;
+  text-align: left;
 }
 
 img.legend {

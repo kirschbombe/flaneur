@@ -4,8 +4,9 @@ title: Credits
 permalink: /credits/
 ---
 
-#### Editor
-* Colleen Jaurretsche, Editor
+#### Editors
+* Colleen Jaurretche, Project Editor
+* Dawn Childress, Technical Editor
 
 #### Authors
 * Students of ENG 3, Los Angeles: The City and the Library, Fall 2015-
@@ -23,5 +24,5 @@ permalink: /credits/
 * Doug Worsham, Simon Lee, & Renee Romero, Fall 2015
 
 #### Icons
-* Map Marker icon created by Berkay Sargin from the Noun Project
-* north by Lluisa Iborra from the Noun Project
+* _Map Marker_ icon created by Berkay Sargin from the Noun Project
+* _north_ by Lluisa Iborra from the Noun Project

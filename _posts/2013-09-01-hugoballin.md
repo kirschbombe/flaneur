@@ -8,7 +8,7 @@ lat: 34.119322
 lng: -118.30015200000003
 collectiontitle: "Hugo Ballin papers, 1890-1956, UCLA Library Special Collections"
 quarter: Fall 2013
-desc: "Ballin was commissioned to paint numerous murals in Los Angeles, including the ceiling and eight wall murals at the Griffith Observatory. The Ballin ceiling mural celebrates classical celestial mythology, with images of Atlas, the four winds, the planets as gods, and the twelve constellations of the zodiac. The eight rectangular Ballin wall murals depict the 'Advancement of Science' with panels on astronomy, aeronautics, navigation, civil engineering, metallurgy and electricity, time, geology and biology, and mathematics and physics. Ballin's lunnete (1930) at the First National Bank in La Jolla, depicted here, has since since been demolished."
+desc: "Ballin was commissioned to paint numerous murals in Los Angeles, including the ceiling and eight wall murals at the Griffith Observatory. The eight rectangular Ballin wall murals depict the 'Advancement of Science' with panels on astronomy, aeronautics, navigation, civil engineering, metallurgy and electricity, time, geology and biology, and mathematics and physics."
 ---
 Hugo Ballin is an artist with amazing talent. Ballin was born on March 7, 1879 in New York, New York.  He moved to Santa Monica, where he lived to be 77 years old when he died on November 27, 1956.
 
