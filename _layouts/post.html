@@ -3,17 +3,19 @@ layout: default
 ---
 <div class="post">
     <header>
-  	<p class="post-header">{{page.collectiontitle}}</p>
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="byline">{% if page.author %}{{ page.author }} ({{page.quarter}}){% endif %}</p>
+  	  <p class="post-header">{{page.collectiontitle}}</p>
+      <h1 class="post-title">{{ page.title }}</h1>
+      <p class="byline">{% if page.author %}{{ page.author }} ({{page.quarter}}){% endif %}</p>
     <header>
     <div id="content">
-    {{ page.content }}
-  </div>
+      {{ page.content }}
+    </div>
+    <div>
+      <h4>Cite this article</h4>
+      <p class="citation">{% include citation.html %}</p>
+    </div>
 </div>
 
-  <h4>Cite this article</h4>
-  <p class="citation">{% include citation.html %}</p>
 
 <script>
 var images = document.getElementsByClassName("image");
