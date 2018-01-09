@@ -61,6 +61,7 @@ a {
   text-decoration: none;
   font-weight: 400;
 }
+
 .container {
 	width: 100%;
 }
@@ -71,10 +72,10 @@ a {
   height:100vh;
 }
 
-.page-content {
-    z-index: 1 !important;
+/* .page-content {
+  z-index: 1 !important;
 	padding-bottom: 3em;
-}
+} */
 
 .sidebar {
 	height:100vh;
@@ -87,40 +88,17 @@ a {
 }
 
 div#sidebar-content {
-  padding-left: 3em;
-  padding-right: 3em;
-  padding-top: 3em;
-  padding-bottom: 3em;
-}
-
-.index-button {
-background-color: white;
-color: black;
-font-size: 14px;
-border: .5px solid rgba(96, 74, 120, 1);
-padding: 3px 12px 4px;
-text-align: center;
-text-decoration: none;
-cursor: pointer;
-border-radius: 200px;
-display: inline-block;
-margin-left: 3px;
-font-variant: small-caps;
+  padding: 3em;
 }
 
 p.post-header {
   letter-spacing: 1.5px;
   margin-bottom: .5rem;
   font-size: .8em;
-  margin-top: 0;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
   font-style: italic;
   border-width: 0 0 1px;
   border-style: dotted;
   line-height: 17px;
-  text-align: left;
-  z-index: 1 !important;
 }
 
 p {
@@ -141,6 +119,15 @@ p.byline {
 	font-style: italic;
 }
 
+p.citation {
+  list-style-type: none;
+  text-indent: -1rem;
+  font-size: .9em;
+  padding-left: 20px;
+  font-weight: 300;
+  text-align: left;
+}
+
 img {
   max-height: 400px;
   max-width: 80%;
@@ -157,11 +144,27 @@ li {
 }
 
 ul {
-list-style:none;
-margin-top: .5em;
-padding-left: 8px;
+  list-style:none;
+  margin-top: .5em;
+  padding-left: 8px;
 }
 
+.index-button {
+  background-color: white;
+  color: black;
+  font-size: 14px;
+  border: .5px solid rgba(96, 74, 120, 1);
+  padding: 3px 12px 4px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 200px;
+  display: inline-block;
+  margin-left: 3px;
+  font-variant: small-caps;
+}
+
+/* Menus */
 .circle-content {
 	transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	height: 0;
@@ -225,6 +228,7 @@ padding-left: 8px;
     border-radius: 10px;
 }
 
+/* Media */
 @media (max-width:768px) {
     html {
         font-size: 14px;
@@ -232,21 +236,16 @@ padding-left: 8px;
     #map {
         position: absolute;
         left: 0;
+        top: 0;
         height: 40vh;
         width: 100vw;
     }
     .sidebar {
         position: absolute;
         left: 0;
+        top: 40vh;
         height: 60vh;
         width: 100vw
-    }
-    .post, .page {
-	height: 60vh;
-	}
-    body {
-        overflow-y: hidden;
-        overflow-x: hidden
     }
 
 	  div.wrapper {
@@ -254,45 +253,40 @@ padding-left: 8px;
 		    height: 40vh;
 		    overflow: auto;
 	  }
-    #map {
-        top: 0
-    }
-    .sidebar {
-        top: 40vh
-    }
-    .sidebar .sidebar {
-        height: 50vh !important;
-        width: 100vw
-    }
+
     .sub-menu, .menu-button {
-	right: 0vw;
-	}
+	     right: 0vw;
+	  }
 }
 
 @media (min-width:768px) and (max-width:1100px) {
     html {
       font-size: 15px;
     }
+
     #map {
         top: 0;
         height: 100vh;
         width: 50vw;
         left: 0
     }
+
     .sidebar {
     	width: 50vw;
-        position: absolute;
-        right: 0;
+      position: absolute;
+      right: 0;
     }
-	.sub-menu, .menu-button {
-	right: 50vw;
-	}
+
+	  .sub-menu, .menu-button {
+	     right: 50vw;
+	  }
+
     div.wrapper {
-		top: 0;
-        width: 50vw;
-        height: 100vh;
-		overflow: auto;
-	}
+		   top: 0;
+       width: 50vw;
+       height: 100vh;
+		   overflow: auto;
+	  }
 }
 
 @media (min-width:1100px) {
@@ -300,11 +294,8 @@ padding-left: 8px;
         position: absolute;
         top: 0;
         height: 100vh;
-    }
-    body {
-        overflow-y: hidden;
-        overflow-x: hidden
-    }
+      }
+
     #map {
         left: 0;
         width: 55vw;
@@ -314,14 +305,14 @@ padding-left: 8px;
         right: 0;
     }
     .sub-menu, .menu-button {
-	right: 45vw;
-	}
+	      right: 45vw;
+	  }
     div.wrapper {
-		left: 0;
-        width: 55vw;
-        height: 100vh;
-		overflow: auto;
-	}
+		   left: 0;
+       width: 55vw;
+       height: 100vh;
+		   overflow: auto;
+	  }
 }
 
 @media (orientation: portrait) {
@@ -331,24 +322,18 @@ padding-left: 8px;
   #map {
       position: absolute;
       left: 0;
+      top: 0;
       height: 40vh;
       width: 100vw;
   }
   .sidebar {
-      position: absolute;
-      left: 0;
       height: 60vh;
-      width: 100vw
+      width: 100vw;
+      top: 40vh;
   }
+
   .sub-menu, .menu-button {
-	right: 0vw;
-   }
-  .post, .page {
-	height: 60vh;
-  }
-  body {
-      overflow-y: hidden;
-      overflow-x: hidden
+	   right: 0vw;
   }
 
   div.wrapper {
@@ -356,19 +341,9 @@ padding-left: 8px;
       height: 40vh;
       overflow: auto;
   }
-  #map {
-      top: 0
-  }
-  .sidebar {
-      top: 40vh
-  }
-  .sidebar .sidebar {
-      height: 50vh !important;
-      width: 100vw
-  }
 }
 
-/*style figure captions*/
+/* Liquid attributes */
 .caption {
   font-family: 'Barlow', sans-serif;
   line-height: 1.4em;
@@ -379,7 +354,6 @@ padding-left: 8px;
   padding: 0px 10px;
 }
 
-/*style bibliography*/
 .bibliography {
   list-style-type: none;
   text-indent: -1rem;
@@ -388,15 +362,7 @@ padding-left: 8px;
   font-weight: 300;
 }
 
-p.citation {
-  list-style-type: none;
-  text-indent: -1rem;
-  font-size: .9em;
-  padding-left: 20px;
-  font-weight: 300;
-  text-align: left;
-}
-
+/* Leaflet */
 img.legend {
 	height: 24px;
 	padding: 0px;
