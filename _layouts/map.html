@@ -74,7 +74,6 @@ counter += 1;
         $.get("{{site.baseurl}}{{post.url}}", function(data){
         	var index = data.indexOf("</h1>");
         	data = data.slice(0, index) + articleicon + data.slice(index);
-		console.log(data);
         	$("#sidebar-content").html(data);
         });
        this.openPopup();
