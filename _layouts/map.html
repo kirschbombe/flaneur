@@ -71,13 +71,14 @@ counter += 1;
         post_url = "{{site.baseurl}}/#{{post.url}}";
         window.location = (post_url);
         var articleicon = "<img class='article-marker' src='" + this.iconURL  + "' onclick='mapClick()'>";
+	console.log(articleicon);
         $.get("{{site.baseurl}}{{post.url}}", function(data){
         	var index = data.indexOf("</h1>");
         	data = data.slice(0, index) + articleicon + data.slice(index);
         	$("#sidebar-content").html(data);
         });
        this.openPopup();
-       $( ".sidebar" ).scrollTop(0); //tell sidebar scroll to go to the top
+       //$( ".sidebar" ).scrollTop(0); //tell sidebar scroll to go to the top
       });
       {% endfor %}
 
