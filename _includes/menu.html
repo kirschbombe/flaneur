@@ -5,7 +5,7 @@
  		<a class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></a>
  		<a href="{{site.baseurl}}/">Home</a>
  		{% for page in site.pages %}
- 		{% if site.exclude_pages contains page.path %}
+ 		{% if site.exclude_pages contains page.path or page.path contains 'css' %}
  		{% continue %}
  		{% else %}
  			<a href="{{site.baseurl}}/#{{page.url}}" onclick="onClick('{{page.url}}')" class="menu-link">{{page.title}}</a>

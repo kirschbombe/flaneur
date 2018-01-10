@@ -22,8 +22,8 @@
           markers = new L.featureGroup();
       L.tileLayer('{{site.map-tileset}}', {
         "attribution" : '{{site.map-credits}}',
-        "minZoom" : 0,
-        "maxZoom" : 15,
+        "minZoom" : {{site.minZoom}},
+        "maxZoom" : {{site.maxZoom}},
         "errorTileUrl" : "img/error-tile-image.png",
         "subdomains" : ["a", "b", "c", "d"],
         "detectRetina" : true,
@@ -95,7 +95,7 @@ var panelLayers = new L.Control.PanelLayers(null, overLayers, {
 });
 map.addControl(panelLayers);
 
-map.setView([34.0253, -118.3085], 11)
+map.setView({{site.setView}})
 //map.fitBounds(markers.getBounds());
 
 </script>
