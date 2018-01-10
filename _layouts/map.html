@@ -69,15 +69,10 @@ counter += 1;
 
       marker.on('click', function(){
         post_url = "{{site.baseurl}}/#{{post.url}}";
+        article_url = '{{site.baseurl}}{{post.url}}';
+        item_id = "{{post.url}}";
         window.location = (post_url);
-        var articleicon = "<img class='article-marker' src='" + this.iconURL  + "' onclick='mapClick()'>";
-        $.get("{{site.baseurl}}{{post.url}}", function(data){
-        	var index = data.indexOf("</h1>");
-        	data = data.slice(0, index) + articleicon + data.slice(index);
-        	$("#sidebar-content").html(data);
-        });
-       this.openPopup();
-       $( ".sidebar" ).scrollTop(0); //tell sidebar scroll to go to the top
+        articlerender(article_url, item_id);
       });
       {% endfor %}
 
