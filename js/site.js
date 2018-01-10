@@ -17,15 +17,22 @@ function reloadhtml(){
 };
 
 function articlerender(articleurl, item_id){
-    console.log(item_id);
     marker = items[item_id];
-    var articleicon = "<img class='article-marker' src='" + marker.iconURL  + "' onclick='mapClick()'>";
+    if (marker.length > 1 ) {
+    var articleicon = ''
+    for (i = 0; i < marker.length; i++) { 
+    articleicon += "<img class='article-marker' src='" + marker[i].iconURL + "' onclick='mapClick(" + i +")'>";
+    marker[i].openPopup();
+	}
+    } else {
+    var articleicon = "<img class='article-marker' src='" + marker[0].iconURL  + "' onclick='mapClick(0)'>";
+    marker[0].openPopup();
+    }
   	$.get(article_url, function(data){
     	var index = data.indexOf("</h1>");
         data = data.slice(0, index) + articleicon + data.slice(index);
         $("#sidebar-content").html(data);
     });
-   marker.openPopup();
    $( ".sidebar" ).scrollTop(0); //tell sidebar scroll to go to the top
 }
 
@@ -33,7 +40,7 @@ function pagerender(page_url){
 	$.get(page_url, function(data){
 		$("#sidebar-content").html(data);
 	  });
-	this.marker.closePopup();
+	map.closePopup();
 	$( ".sidebar" ).scrollTop(0); //tell sidebar scroll to go to the top
 }
 
@@ -49,10 +56,10 @@ function onClick(url){
 }
 
 
-function mapClick(){
+function mapClick(i){
   url = window.location.href;
   url = url.split("#");
   item_id = url[1];
   marker = items[item_id];
-  marker.togglePopup();
+  marker[i].togglePopup();
 };

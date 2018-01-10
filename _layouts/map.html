@@ -64,7 +64,12 @@ counter += 1;
       marker.iconURL = iconurl;
 
       filename = "{{post.url}}"
-      items[filename] = marker;
+      if (items[filename] == undefined) { 
+      items[filename] = [marker];
+      } else {
+      items[filename].push(marker);
+      }
+      
       layers.push(marker);
 
       marker.on('click', function(){
@@ -74,6 +79,7 @@ counter += 1;
         window.location = (post_url);
         articlerender(article_url, item_id);
       });
+      
       {% endfor %}
 
     var imageurl = '<img class="legend" src="' + iconurl + '">'
