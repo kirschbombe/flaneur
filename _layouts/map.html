@@ -19,7 +19,7 @@
       // set up variables to use during jekyll loop
       var lat, lng, content, marker,
           map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1),
-          markers = new L.featureGroup();
+          markers = new L.markerClusterGroup();
       L.tileLayer('{{site.map-tileset}}', {
         "attribution" : '{{site.map-credits}}',
         "minZoom" : {{site.minZoom}},
@@ -33,18 +33,23 @@
 
 var overLayers = [];
 var icons = [];
+
 {% for image in site.static_files %}
     {% if image.path contains 'assets/leaflet/img' %}
         icons.push('{{ image.path }}');
     {% endif %}
 {% endfor %}
-
 var counter = -1;
 items = {};
 {% for category in site.categories %}
 var layers = [];
 counter += 1;
-{% capture category_name %}{{ category | first }}{% endcapture %}
+
+{% capture category_name %}{{ category | first }}{% endcapture %} 
+var group = L.featureGroup(markers);
+var control = L.control.layers(null, null, { collapsed: false }),
+    i, a, title, marker;
+
 {% for post in site.categories[category_name] %}
       lat = {{ post.lat }};
       lng = {{ post.lng }};
@@ -62,6 +67,8 @@ counter += 1;
         icon: mbox,
       }).bindPopup(content, {offset:new L.Point(0,-30)});
       marker.iconURL = iconurl;
+    
+      markers.addLayer(marker);
 
       filename = "{{post.url}}"
       if (items[filename] == undefined) { 
@@ -81,7 +88,7 @@ counter += 1;
       });
       
       {% endfor %}
-
+    map.addLayer(markers);
     var imageurl = '<img class="legend" src="' + iconurl + '">'
     var name = '{{category_name}}';
     overLayers.push({"name":name, icon: imageurl, active: true, "layer":L.layerGroup(layers)})
