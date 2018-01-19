@@ -21,7 +21,7 @@ minZoom: 0
 maxZoom: 20
 #<LatLng> center, <Number> zoom, <Zoom/pan options> options?), 
 #see http://leafletjs.com/reference-1.2.0.html for more info
-setView: '[34.0253, -118.3085], 1'
+setView: '[34.0253, -118.3085], 11'
 
 
 collections:

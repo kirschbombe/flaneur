@@ -2,6 +2,7 @@
 <html>
 
   {% include head.html %}
+  
   <body>
   	{% include sidebar.html %}
   	   <script>
@@ -40,16 +41,20 @@ var icons = [];
     {% endif %}
 {% endfor %}
 var counter = -1;
+var groups = {};
 items = {};
 {% for category in site.categories %}
-var layers = [];
 counter += 1;
 
 {% capture category_name %}{{ category | first }}{% endcapture %} 
-var group = L.featureGroup(markers);
-var control = L.control.layers(null, null, { collapsed: false }),
-    i, a, title, marker;
+groups[counter] = L.featureGroup.subGroup(markers);
+var control = L.control.layers(null, null, { collapsed: true, position: 'topleft' });
 
+//var panelLayers = L.Control.PanelLayers(null, null, {compact: true,
+//	collapsed: true,
+//	position: 'topleft'
+//});
+//map.addControl(panelLayers);
 {% for post in site.categories[category_name] %}
       lat = {{ post.lat }};
       lng = {{ post.lng }};
@@ -61,14 +66,14 @@ var control = L.control.layers(null, null, { collapsed: false }),
             iconUrl: iconurl,
             iconSize : [32, 37],
             iconAnchor : [17, 36],
-            popupAnchor : [-1, -32]
+            popupAnchor : [-1, 8]
           });
       var marker = L.marker([lat, lng], {
         icon: mbox,
       }).bindPopup(content, {offset:new L.Point(0,-30)});
       marker.iconURL = iconurl;
     
-      markers.addLayer(marker);
+      marker.addTo(groups[counter])
 
       filename = "{{post.url}}"
       if (items[filename] == undefined) { 
@@ -77,8 +82,6 @@ var control = L.control.layers(null, null, { collapsed: false }),
       items[filename].push(marker);
       }
       
-      layers.push(marker);
-
       marker.on('click', function(){
         post_url = "{{site.baseurl}}/#{{post.url}}";
         article_url = '{{site.baseurl}}{{post.url}}';
@@ -90,20 +93,22 @@ var control = L.control.layers(null, null, { collapsed: false }),
       {% endfor %}
     map.addLayer(markers);
     var imageurl = '<img class="legend" src="' + iconurl + '">'
-    var name = '{{category_name}}';
-    overLayers.push({"name":name, icon: imageurl, active: true, "layer":L.layerGroup(layers)})
+    var name = imageurl + ' ' + '{{category_name}}';
+    overLayers.push({"name":name, "layer":groups[counter]})
  {% endfor %}
       // end loop through posts
 
-var panelLayers = new L.Control.PanelLayers(null, overLayers, {
-	compact: true,
-	collapsed: true,
-	position: 'topleft'
-});
-map.addControl(panelLayers);
+for (i = 0; i < overLayers.length; i++) {
+	control.addOverlay(overLayers[i]['layer'], overLayers[i]['name']);
+	control.addTo(map);
+	overLayers[i]['layer'].addTo(map);
+}
+control.addTo(map);
 
-map.setView({{site.setView}})
-//map.fitBounds(markers.getBounds());
+
+
+//map.setView({{site.setView}})
+map.fitBounds(markers.getBounds());
 
 </script>
 {% include menu.html %}
