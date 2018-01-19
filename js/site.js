@@ -61,5 +61,5 @@ function mapClick(i){
   url = url.split("#");
   item_id = url[1];
   marker = items[item_id];
-  marker[i].togglePopup();
+  setMapView(marker[i]);
 };

@@ -105,7 +105,11 @@ for (i = 0; i < overLayers.length; i++) {
 }
 control.addTo(map);
 
-
+function setMapView(marker){
+	markers.zoomToShowLayer(marker, function () {
+		marker.togglePopup();
+	});
+}
 
 //map.setView({{site.setView}})
 map.fitBounds(markers.getBounds());
