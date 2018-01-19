@@ -25,6 +25,7 @@ In the third column, a family is seen traveling by wagon. The wife is of white c
 Whether it was the urge to depict history through a brush or the simply idea that history would be preserved, Hugo Ballin captivated many attributes of the history of his locations, specifically noted in the National Bank Mural. His work lives on to remind its observers of the origin of the new world in which they currently live.
 
 ![Mural depicting the arrival of the Spanish to the coming of white settlers in covered wagons](images/ballin.jpg "Ballin's Lunette. Hugo Ballin, 1930. Image courtesy of UCLA Library Special Collections.")
+{:.image}
 
 Ballin's Lunette. Hugo Ballin, 1930. Image courtesy of UCLA Library Special Collections
    {:.caption}

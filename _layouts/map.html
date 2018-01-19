@@ -2,6 +2,7 @@
 <html>
 
   {% include head.html %}
+  
   <body>
   	{% include sidebar.html %}
   	   <script>
@@ -19,11 +20,11 @@
       // set up variables to use during jekyll loop
       var lat, lng, content, marker,
           map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1),
-          markers = new L.featureGroup();
+          markers = new L.markerClusterGroup();
       L.tileLayer('{{site.map-tileset}}', {
         "attribution" : '{{site.map-credits}}',
-        "minZoom" : 0,
-        "maxZoom" : 15,
+        "minZoom" : {{site.minZoom}},
+        "maxZoom" : {{site.maxZoom}},
         "errorTileUrl" : "img/error-tile-image.png",
         "subdomains" : ["a", "b", "c", "d"],
         "detectRetina" : true,
@@ -33,18 +34,27 @@
 
 var overLayers = [];
 var icons = [];
+
 {% for image in site.static_files %}
     {% if image.path contains 'assets/leaflet/img' %}
         icons.push('{{ image.path }}');
     {% endif %}
 {% endfor %}
-
 var counter = -1;
+var groups = {};
 items = {};
 {% for category in site.categories %}
-var layers = [];
 counter += 1;
-{% capture category_name %}{{ category | first }}{% endcapture %}
+
+{% capture category_name %}{{ category | first }}{% endcapture %} 
+groups[counter] = L.featureGroup.subGroup(markers);
+var control = L.control.layers(null, null, { collapsed: true, position: 'topleft' });
+
+//var panelLayers = L.Control.PanelLayers(null, null, {compact: true,
+//	collapsed: true,
+//	position: 'topleft'
+//});
+//map.addControl(panelLayers);
 {% for post in site.categories[category_name] %}
       lat = {{ post.lat }};
       lng = {{ post.lng }};
@@ -56,12 +66,14 @@ counter += 1;
             iconUrl: iconurl,
             iconSize : [32, 37],
             iconAnchor : [17, 36],
-            popupAnchor : [-1, -32]
+            popupAnchor : [-1, 8]
           });
       var marker = L.marker([lat, lng], {
         icon: mbox,
       }).bindPopup(content, {offset:new L.Point(0,-30)});
       marker.iconURL = iconurl;
+    
+      marker.addTo(groups[counter])
 
       filename = "{{post.url}}"
       if (items[filename] == undefined) { 
@@ -70,8 +82,6 @@ counter += 1;
       items[filename].push(marker);
       }
       
-      layers.push(marker);
-
       marker.on('click', function(){
         post_url = "{{site.baseurl}}/#{{post.url}}";
         article_url = '{{site.baseurl}}{{post.url}}';
@@ -81,22 +91,28 @@ counter += 1;
       });
       
       {% endfor %}
-
+    map.addLayer(markers);
     var imageurl = '<img class="legend" src="' + iconurl + '">'
-    var name = '{{category_name}}';
-    overLayers.push({"name":name, icon: imageurl, active: true, "layer":L.layerGroup(layers)})
+    var name = imageurl + ' ' + '{{category_name}}';
+    overLayers.push({"name":name, "layer":groups[counter]})
  {% endfor %}
       // end loop through posts
 
-var panelLayers = new L.Control.PanelLayers(null, overLayers, {
-	compact: true,
-	collapsed: true,
-	position: 'topleft'
-});
-map.addControl(panelLayers);
+for (i = 0; i < overLayers.length; i++) {
+	control.addOverlay(overLayers[i]['layer'], overLayers[i]['name']);
+	control.addTo(map);
+	overLayers[i]['layer'].addTo(map);
+}
+control.addTo(map);
 
-map.setView([34.0253, -118.3085], 11)
-//map.fitBounds(markers.getBounds());
+function setMapView(marker){
+	markers.zoomToShowLayer(marker, function () {
+		marker.togglePopup();
+	});
+}
+
+//map.setView({{site.setView}})
+map.fitBounds(markers.getBounds());
 
 </script>
 {% include menu.html %}
