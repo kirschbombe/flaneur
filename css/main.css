@@ -403,3 +403,10 @@ div.leaflet-control-layers-overlays {
 .leaflet-pane {
 z-index: 0;
 }
+.marker-cluster-small div, .marker-cluster-medium div, .marker-cluster-large div {
+	background-color: {{site.accent_color}};
+}
+.marker-cluster-small, .marker-cluster-medium, .marker-cluster-large {
+	background-color: {{site.accent_color}};
+	color: white;
+}
