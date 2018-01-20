@@ -129,7 +129,7 @@ p.citation {
   text-align: left;
 }
 
-img {
+p.image img {
   max-height: 400px;
   max-width: 80%;
   display: block;
@@ -368,7 +368,9 @@ img.legend {
 	height: 24px;
 	padding: 0px;
 	vertical-align: middle;
+	display: inline-block;
 }
+
 img.article-marker {
 	height: 42px;
 	padding: 0px;
@@ -388,8 +390,24 @@ label.leaflet-panel-layers-title {
   font-weight: 300;
   text-transform: uppercase;
 }
+div.leaflet-control-layers-overlays {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: .9em;
+}
 @media (max-width:768px) {
   .leaflet-popup-content-wrapper, .leaflet-popup-tip {
      font-size: 13px;
   }
+}
+.leaflet-pane {
+z-index: 0;
+}
+.marker-cluster-small div, .marker-cluster-medium div, .marker-cluster-large div {
+	background-color: {{site.accent_color}};
+}
+.marker-cluster-small, .marker-cluster-medium, .marker-cluster-large {
+	background-color: {{site.accent_color}};
+	color: white;
 }
