@@ -22,21 +22,26 @@
 var markergrouping = "{{site.marker-grouping}}";
 
 map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1);
-makeMap(markergrouping, map);
+if (markergrouping == 'grouped') { var markers = new L.markerClusterGroup({showCoverageOnHover: false});}
+else if (markergrouping == 'single') {var markers = new L.featureGroup();}
+items = makeMap(markergrouping, map);
+
  
  window.change_map = function(){
     var choice = document.getElementById("choose").value;
     map.remove();
     map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1);
-    makeMap(choice, map);
+    items = makeMap(choice, map);
 }
+
  function makeMap(markergrouping, map){
+ 	var items = {};
+
       // set up variables to use during jekyll loop
       var lat, lng, content, marker;
           //map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1);
           var map = map;
-          if (markergrouping == 'grouped') { var markers = new L.markerClusterGroup({showCoverageOnHover: false});}
-          else if (markergrouping == 'single') {var markers = new L.featureGroup();}
+          
       L.tileLayer('{{site.map-tileset}}', {
         "attribution" : '{{site.map-credits}}',
         "minZoom" : {{site.minZoom}},
@@ -58,7 +63,6 @@ var icons = [];
 
 var counter = -1;
 var groups = {};
-items = {};
 
 {% for category in site.categories %}
 counter += 1;
@@ -114,6 +118,7 @@ var control = L.control.layers(null, null, { collapsed: true, position: 'topleft
         item_id = "{{post.url}}";
         window.location = (post_url);
         articlerender(article_url, item_id);
+        
       });
       
       {% endfor %}
@@ -147,7 +152,9 @@ map.addControl(panelLayers);
 }
 
 map.setView({{site.setView}})
+
 //map.fitBounds(markers.getBounds());
+return items;
 }
 </script>
 {% include menu.html %}

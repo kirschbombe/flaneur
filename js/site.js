@@ -56,10 +56,11 @@ function onClick(url){
 }
 
 function setMapView(marker){
-	if (markergrouping == 'grouped') { 
+	try { 
 		markers.zoomToShowLayer(marker, function () {
 		});
-	} 
+	} catch(err) {
+	}
 }
 
 function mapClick(i){
