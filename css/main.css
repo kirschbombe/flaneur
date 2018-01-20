@@ -129,7 +129,7 @@ p.citation {
   text-align: left;
 }
 
-p.image img {
+p.image img, img.home-icon {
   max-height: 400px;
   max-width: 80%;
   display: block;
@@ -227,6 +227,19 @@ ul {
 .dropdown-content a:hover {
     background-color: rgba(0, 0, 0, .4);
     border-radius: 10px;
+}
+
+#choose {
+background-color: {{site.accent_color}};
+color: white;
+padding: 15px;
+font-size: 16px;
+border: none;
+cursor: pointer;
+border-radius: 10px;
+position: absolute;
+display: inline-block;
+bottom:0;
 }
 
 /* Media */

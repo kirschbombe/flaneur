@@ -1,0 +1,9 @@
+<select id="choose" class="dropdown" onchange="change_map()">
+    {% if site.marker-grouping == 'grouped %}
+    <option value="grouped" selected>Grouped</option>
+    <option value="single">Single</option>
+    {% else %}
+    <option value="grouped">Grouped</option>
+    <option value="single" selected>Single</option>
+    {% endif %}
+</select>
