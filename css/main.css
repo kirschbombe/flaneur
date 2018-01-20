@@ -129,7 +129,7 @@ p.citation {
   text-align: left;
 }
 
-img {
+p.image img {
   max-height: 400px;
   max-width: 80%;
   display: block;
@@ -370,6 +370,7 @@ img.legend {
 	vertical-align: middle;
 	display: inline-block;
 }
+
 img.article-marker {
 	height: 42px;
 	padding: 0px;

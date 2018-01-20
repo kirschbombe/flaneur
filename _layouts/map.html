@@ -20,8 +20,9 @@
     
       // set up variables to use during jekyll loop
       var lat, lng, content, marker,
-          map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1),
-          markers = new L.markerClusterGroup({showCoverageOnHover: false});
+          map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1);
+          if (markergrouping == 'grouped') { var markers = new L.markerClusterGroup({showCoverageOnHover: false});}
+          else if (markergrouping == 'single') {var markers = new L.featureGroup();}
       L.tileLayer('{{site.map-tileset}}', {
         "attribution" : '{{site.map-credits}}',
         "minZoom" : {{site.minZoom}},
@@ -35,27 +36,28 @@
 
 var overLayers = [];
 var icons = [];
+var markergrouping = "{{site.marker-grouping}}"
 
 {% for image in site.static_files %}
     {% if image.path contains 'assets/leaflet/img' %}
         icons.push('{{ image.path }}');
     {% endif %}
 {% endfor %}
+
 var counter = -1;
 var groups = {};
 items = {};
+
 {% for category in site.categories %}
 counter += 1;
 
 {% capture category_name %}{{ category | first }}{% endcapture %} 
+var layers = [];
+if (markergrouping == 'grouped') {
 groups[counter] = L.featureGroup.subGroup(markers);
 var control = L.control.layers(null, null, { collapsed: true, position: 'topleft' });
+}
 
-//var panelLayers = L.Control.PanelLayers(null, null, {compact: true,
-//	collapsed: true,
-//	position: 'topleft'
-//});
-//map.addControl(panelLayers);
 {% for post in site.categories[category_name] %}
       lat = {{ post.lat }};
       lng = {{ post.lng }};
@@ -74,7 +76,11 @@ var control = L.control.layers(null, null, { collapsed: true, position: 'topleft
       }).bindPopup(content, {offset:new L.Point(0,-30)});
       marker.iconURL = iconurl;
     
-      marker.addTo(groups[counter])
+      if (markergrouping == 'grouped') {
+    	marker.addTo(groups[counter])
+      } else if (markergrouping == 'single') {
+      	layers.push(marker);
+      }
 
       filename = "{{post.url}}"
       if (items[filename] == undefined) { 
@@ -82,6 +88,13 @@ var control = L.control.layers(null, null, { collapsed: true, position: 'topleft
       } else {
       items[filename].push(marker);
       }
+      
+      marker.on('mouseover', function (e) {
+            this.openPopup();
+        });
+        marker.on('mouseout', function (e) {
+            this.closePopup();
+        });
       
       marker.on('click', function(){
         post_url = "{{site.baseurl}}/#{{post.url}}";
@@ -92,24 +105,32 @@ var control = L.control.layers(null, null, { collapsed: true, position: 'topleft
       });
       
       {% endfor %}
-    map.addLayer(markers);
     var imageurl = '<img class="legend" src="' + iconurl + '">'
-    var name = imageurl + ' ' + '{{category_name}}';
-    overLayers.push({"name":name, "layer":groups[counter]})
+    if (markergrouping == 'grouped') { 
+		map.addLayer(markers);
+		var name = imageurl + ' ' + '{{category_name}}';
+		overLayers.push({"name":name, "layer":groups[counter]})
+	} else if (markergrouping == 'single') {
+	 var name = '{{category_name}}';
+	 overLayers.push({"name":name, icon: imageurl, active: true, "layer":L.layerGroup(layers)})
+	}
  {% endfor %}
       // end loop through posts
-
-for (i = 0; i < overLayers.length; i++) {
-	control.addOverlay(overLayers[i]['layer'], overLayers[i]['name']);
+if (markergrouping == 'grouped') { 
+	for (i = 0; i < overLayers.length; i++) {
+		control.addOverlay(overLayers[i]['layer'], overLayers[i]['name']);
+		control.addTo(map);
+		overLayers[i]['layer'].addTo(map);
+	}
 	control.addTo(map);
-	overLayers[i]['layer'].addTo(map);
-}
-control.addTo(map);
-
-function setMapView(marker){
-	markers.zoomToShowLayer(marker, function () {
-		marker.togglePopup();
+} else if (markergrouping == 'single') {
+	var panelLayers = new L.Control.PanelLayers(null, overLayers, {
+		compact: true,
+		collapsed: true,
+		position: 'topleft'
 	});
+map.addControl(panelLayers);
+
 }
 
 map.setView({{site.setView}})

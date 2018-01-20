@@ -56,9 +56,10 @@ function onClick(url){
 }
 
 function setMapView(marker){
-	markers.zoomToShowLayer(marker, function () {
-		marker.togglePopup();
-	});
+	if (markergrouping == 'grouped') { 
+		markers.zoomToShowLayer(marker, function () {
+		});
+	} 
 }
 
 function mapClick(i){
@@ -67,5 +68,5 @@ function mapClick(i){
   item_id = url[1];
   marker = items[item_id];
   setMapView(marker[i]);
+  marker[i].togglePopup();
 };
-
