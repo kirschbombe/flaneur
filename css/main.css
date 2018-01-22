@@ -239,7 +239,6 @@ cursor: pointer;
 border-radius: 10px;
 position: absolute;
 display: inline-block;
-bottom:0;
 }
 
 /* Media */
@@ -271,6 +270,9 @@ bottom:0;
     .sub-menu, .menu-button {
 	     right: 0vw;
 	  }
+	#choose {
+	     top:36.9vh;
+	  }
 }
 
 @media (min-width:768px) and (max-width:1100px) {
@@ -294,6 +296,9 @@ bottom:0;
 	  .sub-menu, .menu-button {
 	     right: 50vw;
 	  }
+	#choose {
+	bottom: 0;
+	}
 
     div.wrapper {
 		   top: 0;
@@ -321,6 +326,9 @@ bottom:0;
     .sub-menu, .menu-button {
 	      right: 45vw;
 	  }
+	#choose {
+	bottom: 0;
+	}
     div.wrapper {
 		   left: 0;
        width: 55vw;
@@ -349,7 +357,11 @@ bottom:0;
   .sub-menu, .menu-button {
 	   right: 0vw;
   }
-
+ 
+  #choose {
+	top:36.9vh;
+  } 
+  
   div.wrapper {
       width: 100vw;
       height: 40vh;
