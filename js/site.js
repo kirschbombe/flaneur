@@ -58,10 +58,10 @@ function onClick(url){
 function setMapView(marker){
 	try { 
 		markers.zoomToShowLayer(marker, function () {
-      marker.togglePopup();
+      marker.openPopup();
 		});
 	} catch(err) {
-    marker.togglePopup();
+    marker.openPopup();
 	}
 }
 
@@ -73,12 +73,13 @@ function mapClick(i){
   setMapView(marker[i]);
 };
 
-function new_map(){
-  var markergrouping = localStorage['selectedtem'];
-  if (markergrouping == undefined){
-    markergrouping = "{{site.marker-grouping}}";
-  }
+function new_map(site_grouping){
+  markergrouping = localStorage['selectedtem'];
+  if (markergrouping == undefined) {
+  markergrouping = site_grouping;
+  } 
   map.remove();
+
   $('#choose').val(markergrouping);
   map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1);
   items = makeMap(markergrouping, map);

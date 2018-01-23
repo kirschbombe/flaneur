@@ -10,7 +10,9 @@
   	    window.onload = function(){
         if (localStorage['selectedtem'] != undefined){ 
           new_map();
-        } 
+        } else {
+		new_map('{{site.marker-grouping}}');
+        }
         reloadhtml();
   	    };
 	      window.onhashchange = function() {
@@ -23,22 +25,17 @@
 
     <script>
    
-var markergrouping = localStorage['selectedtem'];
-  if (markergrouping == undefined){
-    markergrouping = "{{site.marker-grouping}}";
-  }
 map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1);
-if (markergrouping == 'grouped') { var markers = new L.markerClusterGroup({showCoverageOnHover: false});}
-else if (markergrouping == 'single') {var markers = new L.featureGroup();}
-items = makeMap(markergrouping, map);
+var markers = ''
 
- 
  window.change_map = function(){
     localStorage.setItem('selectedtem', document.getElementById("choose").value);
     new_map();
 }
 
  function makeMap(markergrouping, map){
+ 	if (markergrouping == 'grouped') { markers = new L.markerClusterGroup({showCoverageOnHover: false});}
+	else if (markergrouping == 'single') { markers = new L.featureGroup();}
  	var items = {};
 
       // set up variables to use during jekyll loop
