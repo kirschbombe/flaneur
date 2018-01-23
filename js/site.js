@@ -58,10 +58,10 @@ function onClick(url){
 function setMapView(marker){
 	try { 
 		markers.zoomToShowLayer(marker, function () {
-      marker.togglePopup();
+      marker.openPopup();
 		});
 	} catch(err) {
-    marker.togglePopup();
+    marker.openPopup();
 	}
 }
 
