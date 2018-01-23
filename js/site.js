@@ -73,10 +73,10 @@ function mapClick(i){
   setMapView(marker[i]);
 };
 
-function new_map(){
+function new_map(site_grouping){
   markergrouping = localStorage['selectedtem'];
   if (markergrouping == undefined) {
-  markergrouping = "{{site.marker-grouping}}";
+  markergrouping = site_grouping;
   } 
   map.remove();
 
