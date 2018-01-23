@@ -8,9 +8,13 @@
   	{% include sidebar.html %}
   	   <script>
   	    window.onload = function(){
-  	    reloadhtml();
+        if (localStorage['selectedtem'] != undefined){ 
+          new_map();
+        } 
+        reloadhtml();
   	    };
 	      window.onhashchange = function() {
+        new_map();
 	      reloadhtml();
 	      };
   	    </script>
@@ -19,8 +23,10 @@
 
     <script>
    
-var markergrouping = "{{site.marker-grouping}}";
-
+var markergrouping = localStorage['selectedtem'];
+  if (markergrouping == undefined){
+    markergrouping = "{{site.marker-grouping}}";
+  }
 map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1);
 if (markergrouping == 'grouped') { var markers = new L.markerClusterGroup({showCoverageOnHover: false});}
 else if (markergrouping == 'single') {var markers = new L.featureGroup();}
@@ -28,10 +34,8 @@ items = makeMap(markergrouping, map);
 
  
  window.change_map = function(){
-    var choice = document.getElementById("choose").value;
-    map.remove();
-    map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1);
-    items = makeMap(choice, map);
+    localStorage.setItem('selectedtem', document.getElementById("choose").value);
+    new_map();
 }
 
  function makeMap(markergrouping, map){
@@ -105,12 +109,7 @@ var control = L.control.layers(null, null, { collapsed: true, position: 'topleft
       items[filename].push(marker);
       }
       
-      marker.on('mouseover', function (e) {
-            this.openPopup();
-        });
-        marker.on('mouseout', function (e) {
-            this.closePopup();
-        });
+     
       
       marker.on('click', function(){
         post_url = "{{site.baseurl}}/#{{post.url}}";
