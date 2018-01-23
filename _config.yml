@@ -16,6 +16,16 @@ encoding: utf-8
 map-tileset: 'https://{s}.tiles.mapbox.com/v3/kirschbombe.ae0a59b5/{z}/{x}/{y}.png'
 map-credits: '<a target="_blank" href="https://github.com/kirschbombe/flaneur">Flâneur</a> | Tiles: Mapbox'
 
+#leaflet settings
+minZoom: 0
+maxZoom: 20
+#<LatLng> center, <Number> zoom, <Zoom/pan options> options?), 
+#see http://leafletjs.com/reference-1.2.0.html for more info
+setView: '[34.0253, -118.3085], 11'
+#grouped, single
+marker-grouping: grouped
+
+
 collections:
   posts:
     output: true
@@ -36,4 +46,9 @@ menu-width: '200px'
 menu-opacity: '.95'
 
 #pages to exclude in menu
-exclude_pages: [ "index.html", "assets/css/style.scss", 'home.md']
+exclude_pages: [ "index.html", 'home.md']
+
+#accent color can be any css accepted value
+accent_color: rgba(25, 87, 142, 1)
+
+#

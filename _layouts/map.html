@@ -2,37 +2,63 @@
 <html>
 
   {% include head.html %}
+  
   <body>
+
   	{% include sidebar.html %}
   	   <script>
   	    window.onload = function(){
-  	    reloadhtml();
+        if (localStorage['selectedtem'] != undefined){ 
+          new_map();
+        } 
+        reloadhtml();
   	    };
 	      window.onhashchange = function() {
+        //new_map();
 	      reloadhtml();
 	      };
   	    </script>
-
-    <div id="map"></div>
+	
+    <div id="map"> </div>
 
     <script>
+   
+var markergrouping = localStorage['selectedtem'];
+  if (markergrouping == undefined){
+    markergrouping = "{{site.marker-grouping}}";
+  }
+map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1);
+if (markergrouping == 'grouped') { var markers = new L.markerClusterGroup({showCoverageOnHover: false});}
+else if (markergrouping == 'single') {var markers = new L.featureGroup();}
+items = makeMap(markergrouping, map);
+
+ 
+ window.change_map = function(){
+    localStorage.setItem('selectedtem', document.getElementById("choose").value);
+    new_map();
+}
+
+ function makeMap(markergrouping, map){
+ 	var items = {};
+
       // set up variables to use during jekyll loop
-      var lat, lng, content, marker,
-          map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1),
-          markers = new L.featureGroup();
+      var lat, lng, content, marker;
+          //map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1);
+          var map = map;
+          
       L.tileLayer('{{site.map-tileset}}', {
         "attribution" : '{{site.map-credits}}',
-        "minZoom" : 0,
-        "maxZoom" : 15,
+        "minZoom" : {{site.minZoom}},
+        "maxZoom" : {{site.maxZoom}},
         "errorTileUrl" : "img/error-tile-image.png",
         "subdomains" : ["a", "b", "c", "d"],
         "detectRetina" : true,
       }).addTo(map);
 
       // jekyll loop through posts
-
 var overLayers = [];
 var icons = [];
+
 {% for image in site.static_files %}
     {% if image.path contains 'assets/leaflet/img' %}
         icons.push('{{ image.path }}');
@@ -40,11 +66,18 @@ var icons = [];
 {% endfor %}
 
 var counter = -1;
-items = {};
+var groups = {};
+
 {% for category in site.categories %}
-var layers = [];
 counter += 1;
-{% capture category_name %}{{ category | first }}{% endcapture %}
+
+{% capture category_name %}{{ category | first }}{% endcapture %} 
+var layers = [];
+if (markergrouping == 'grouped') {
+groups[counter] = L.featureGroup.subGroup(markers);
+var control = L.control.layers(null, null, { collapsed: true, position: 'topleft' });
+}
+
 {% for post in site.categories[category_name] %}
       lat = {{ post.lat }};
       lng = {{ post.lng }};
@@ -56,12 +89,18 @@ counter += 1;
             iconUrl: iconurl,
             iconSize : [32, 37],
             iconAnchor : [17, 36],
-            popupAnchor : [-1, -32]
+            popupAnchor : [-1, 8]
           });
       var marker = L.marker([lat, lng], {
         icon: mbox,
       }).bindPopup(content, {offset:new L.Point(0,-30)});
       marker.iconURL = iconurl;
+    
+      if (markergrouping == 'grouped') {
+    	marker.addTo(groups[counter])
+      } else if (markergrouping == 'single') {
+      	layers.push(marker);
+      }
 
       filename = "{{post.url}}"
       if (items[filename] == undefined) { 
@@ -70,35 +109,54 @@ counter += 1;
       items[filename].push(marker);
       }
       
-      layers.push(marker);
-
+     
+      
       marker.on('click', function(){
         post_url = "{{site.baseurl}}/#{{post.url}}";
         article_url = '{{site.baseurl}}{{post.url}}';
         item_id = "{{post.url}}";
         window.location = (post_url);
         articlerender(article_url, item_id);
+        
       });
       
       {% endfor %}
 
     var imageurl = '<img class="legend" src="' + iconurl + '">'
-    var name = '{{category_name}}';
-    overLayers.push({"name":name, icon: imageurl, active: true, "layer":L.layerGroup(layers)})
+    if (markergrouping == 'grouped') { 
+		map.addLayer(markers);
+		var name = imageurl + ' ' + '{{category_name}}';
+		overLayers.push({"name":name, "layer":groups[counter]})
+	} else if (markergrouping == 'single') {
+	 var name = '{{category_name}}';
+	 overLayers.push({"name":name, icon: imageurl, active: true, "layer":L.layerGroup(layers)})
+	}
  {% endfor %}
       // end loop through posts
-
-var panelLayers = new L.Control.PanelLayers(null, overLayers, {
-	compact: true,
-	collapsed: true,
-	position: 'topleft'
-});
+if (markergrouping == 'grouped') { 
+	for (i = 0; i < overLayers.length; i++) {
+		control.addOverlay(overLayers[i]['layer'], overLayers[i]['name']);
+		control.addTo(map);
+		overLayers[i]['layer'].addTo(map);
+	}
+	control.addTo(map);
+} else if (markergrouping == 'single') {
+	var panelLayers = new L.Control.PanelLayers(null, overLayers, {
+		compact: true,
+		collapsed: true,
+		position: 'topleft'
+	});
 map.addControl(panelLayers);
 
-map.setView([34.0253, -118.3085], 11)
-//map.fitBounds(markers.getBounds());
+}
 
+map.setView({{site.setView}})
+
+//map.fitBounds(markers.getBounds());
+return items;
+}
 </script>
 {% include menu.html %}
+{% include dropdown.html %}
 </body>
 </html>

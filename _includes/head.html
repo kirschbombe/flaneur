@@ -10,24 +10,35 @@
     <link rel="icon" href="/public/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon" /> 
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-
+   
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Barlow:300|Lato|Lato:300|Montserrat" rel="stylesheet">
 
     <!-- Leaflet -->
     <script type="text/javascript" src="{{ "/assets/jquery/jquery-1.11.0.min.js" | prepend: site.baseurl }}"></script>
-    <link rel="stylesheet" href="{{ "/assets/leaflet/leaflet.css" | prepend: site.baseurl }}">
-    <script type="text/javascript" src="{{ "/assets/leaflet/leaflet.js" | prepend: site.baseurl }}"></script>
+    
     <script type="text/javascript" src="{{ "/js/site.js" | prepend: site.baseurl }}"></script>
+   
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    
     <link rel="stylesheet" href="{{ "/assets/leaflet-panel-layers/leaflet-panel-layers.min.css" | prepend: site.baseurl }}">
     <script type="text/javascript" src="{{ "/assets/leaflet-panel-layers/leaflet-panel-layers.min.js" | prepend: site.baseurl }}"></script>
     <link rel="stylesheet" href="{{ "/assets/leaflet-panel-layers/leaflet-panel-layers.src.css" | prepend: site.baseurl }}">
     <script type="text/javascript" src="{{ "/assets/leaflet-panel-layers/leaflet-panel-layers.src.js" | prepend: site.baseurl }}"></script>
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.4/dist/MarkerCluster.css" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.4/dist/MarkerCluster.Default.css" />
+	<script src="https://unpkg.com/leaflet.markercluster@1.0.4/dist/leaflet.markercluster-src.js"></script>
+
+	<script src="https://unpkg.com/leaflet.featuregroup.subgroup@1.0.2/dist/leaflet.featuregroup.subgroup-src.js"></script>
+	
+	 <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
 
     <!-- Lightbox -->
 	  <link href="assets/lightbox2/lightbox.css" rel="stylesheet">

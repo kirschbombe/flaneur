@@ -22,11 +22,11 @@ function articlerender(articleurl, item_id){
     var articleicon = ''
     for (i = 0; i < marker.length; i++) { 
     articleicon += "<img class='article-marker' src='" + marker[i].iconURL + "' onclick='mapClick(" + i +")'>";
-    marker[i].openPopup();
+    setMapView(marker[i]);
 	}
     } else {
     var articleicon = "<img class='article-marker' src='" + marker[0].iconURL  + "' onclick='mapClick(0)'>";
-    marker[0].openPopup();
+    setMapView(marker[0]);
     }
   	$.get(article_url, function(data){
     	var index = data.indexOf("</h1>");
@@ -55,11 +55,31 @@ function onClick(url){
     }
 }
 
+function setMapView(marker){
+	try { 
+		markers.zoomToShowLayer(marker, function () {
+      marker.togglePopup();
+		});
+	} catch(err) {
+    marker.togglePopup();
+	}
+}
 
 function mapClick(i){
   url = window.location.href;
   url = url.split("#");
   item_id = url[1];
   marker = items[item_id];
-  marker[i].togglePopup();
+  setMapView(marker[i]);
 };
+
+function new_map(){
+  var markergrouping = localStorage['selectedtem'];
+  if (markergrouping == undefined){
+    markergrouping = "{{site.marker-grouping}}";
+  }
+  map.remove();
+  $('#choose').val(markergrouping);
+  map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1);
+  items = makeMap(markergrouping, map);
+}
