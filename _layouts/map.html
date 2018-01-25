@@ -79,7 +79,7 @@ var control = L.control.layers(null, null, { collapsed: true, position: 'topleft
       lat = {{ post.lat }};
       lng = {{ post.lng }};
 
-      if ($(window).height() < {{site.window-height}} && $(window).width() < {{site.window-width}}){
+      if ($(window).height() < {{site.window-height}} || $(window).width() < {{site.window-width}}){
       content = "<strong>{{ post.title | truncatewords: 2}}</strong>";
       } else {
       content = "<strong>{{ post.title }}</strong><br>{{ post.desc }}";
