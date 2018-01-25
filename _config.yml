@@ -6,7 +6,7 @@ baseurl: "/flaneur" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 twitter_username: kirschbombe
 github_username:  kirschbombe
-
+copyright_statement: © 2017 UCLA Library. CC BY-NC-SA 4.0.
 # Build settings
 markdown: kramdown
 encoding: utf-8
