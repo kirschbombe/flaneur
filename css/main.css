@@ -436,3 +436,9 @@ z-index: 0;
 	background-color: {{site.accent_color}};
 	color: white;
 }
+.footer {
+text-align: center;
+font-size: 12px;
+bottom: 0;
+position: relative;
+}
