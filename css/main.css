@@ -442,3 +442,18 @@ font-size: 12px;
 bottom: 0;
 position: relative;
 }
+/*
+.leaflet-panel-layers-overlays .leaflet-panel-layers-item {
+    margin-bottom: 0px; 
+    padding: 0px; 
+    background: transparent;
+    border: transparent;
+    border-radius: 0px;
+}
+.leaflet-panel-layers-icon {
+  background: transparent;
+}*/
+.leaflet-retina .leaflet-control-layers-toggle  {
+  background-image: url('{{site.baseurl}}/assets/leaflet/images/icon.png');
+  background-size: 20px 30px;
+}
