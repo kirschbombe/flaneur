@@ -25,6 +25,9 @@ setView: '[34.0253, -118.3085], 11'
 #grouped, single
 marker-grouping: grouped
 
+#window height / width to only show title and no description
+window-height: 350
+window-width: 540
 
 collections:
   posts:
