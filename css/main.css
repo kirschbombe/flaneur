@@ -441,6 +441,7 @@ text-align: center;
 font-size: 12px;
 bottom: 0;
 position: relative;
+padding-top: 6em;
 }
 /*
 .leaflet-panel-layers-overlays .leaflet-panel-layers-item {
