@@ -7,11 +7,12 @@ View the theme live [here](http://dawnchildress.com/flaneur).
 To use this theme, fork this repo to your GitHub account and follow the setup instructions below.
 
 #### Config file
+coming soon...
 
 #### Posts
 Create posts in the standard `YYYY-MM-DD-title.md` format required for Jekyll. The front matter for posts has several important liquid markup points:
-* `lat:` & `lng:` to pin the post to point on the map
-* `categories:` ["category1", "category2"] - these populate the map layers widget and index
+* `lat:` & `lng:` add latitude and longitude to pin a post to a point on the map
+* `categories:` ["category1", "category2"] - these populate the map layers widget and article index pages
 * `runningtitle:` the running title appears at the top of pages and posts. The default is to display the site title. To activate the post-specific running title, you will need to uncomment line 6 in the post.html layout and comment out line 8:
 ```html
 <!-- <p class="post-header">{{page.runningtitle}}</p> -->
@@ -27,14 +28,17 @@ Images have special formatting using Liquid attributes. The Liquid tags are also
 Image attribution / caption.
    {:.caption}
 ```
-There is also special formatting for bibliographies:
+Bibliographies also have special formatting using Liquid attributes:
 ```md
 {:.bibliography}
 1. Entry 1
 2. Entry 2
 ```
 #### Pages
+coming soon...
 
 #### Index
+coming soon...
 
 #### Leaflet
+coming soon...
