@@ -2,13 +2,13 @@
 <html>
 
   {% include head.html %}
-  
+
   <body>
 
   	{% include sidebar.html %}
   	   <script>
   	    window.onload = function(){
-        if (localStorage['selectedtem'] != undefined){ 
+        if (localStorage['selectedtem'] != undefined){
           new_map();
         } else {
 		new_map('{{site.marker-grouping}}');
@@ -20,11 +20,11 @@
 	      reloadhtml();
 	      };
   	    </script>
-	
+
     <div id="map"> </div>
 
     <script>
-   
+
 map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1);
 var markers = ''
 
@@ -42,7 +42,7 @@ var markers = ''
       var lat, lng, content, marker;
           //map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1);
           var map = map;
-          
+
       L.tileLayer('{{site.map-tileset}}', {
         "attribution" : '{{site.map-credits}}',
         "minZoom" : {{site.minZoom}},
@@ -68,7 +68,7 @@ var groups = {};
 {% for category in site.categories %}
 counter += 1;
 
-{% capture category_name %}{{ category | first }}{% endcapture %} 
+{% capture category_name %}{{ category | first }}{% endcapture %}
 var layers = [];
 if (markergrouping == 'grouped') {
 groups[counter] = L.featureGroup.subGroup(markers);
@@ -88,7 +88,7 @@ var control = L.control.layers(null, null, { collapsed: true, position: 'topleft
       var iconurl = "{{site.baseurl}}" + icons[counter]
       var mbox = L.icon({
             iconUrl: iconurl,
-            iconSize : [32, 37],
+            iconSize : [46, 50],
             iconAnchor : [17, 36],
             popupAnchor : [-1, 8]
           });
@@ -96,7 +96,7 @@ var control = L.control.layers(null, null, { collapsed: true, position: 'topleft
         icon: mbox,
       }).bindPopup(content, {offset:new L.Point(0,-30)});
       marker.iconURL = iconurl;
-    
+
       if (markergrouping == 'grouped') {
     	marker.addTo(groups[counter])
       } else if (markergrouping == 'single') {
@@ -104,27 +104,27 @@ var control = L.control.layers(null, null, { collapsed: true, position: 'topleft
       }
 
       filename = "{{post.url}}"
-      if (items[filename] == undefined) { 
+      if (items[filename] == undefined) {
       items[filename] = [marker];
       } else {
       items[filename].push(marker);
       }
-      
-     
-      
+
+
+
       marker.on('click', function(){
         post_url = "{{site.baseurl}}/#{{post.url}}";
         article_url = '{{site.baseurl}}{{post.url}}';
         item_id = "{{post.url}}";
         window.location = (post_url);
         articlerender(article_url, item_id);
-        
+
       });
-      
+
       {% endfor %}
 
     var imageurl = '<img class="legend" src="' + iconurl + '">'
-    if (markergrouping == 'grouped') { 
+    if (markergrouping == 'grouped') {
 		map.addLayer(markers);
 		var name = imageurl + ' ' + '{{category_name}}';
 		overLayers.push({"name":name, "layer":groups[counter]})
@@ -134,7 +134,7 @@ var control = L.control.layers(null, null, { collapsed: true, position: 'topleft
 	}
  {% endfor %}
       // end loop through posts
-if (markergrouping == 'grouped') { 
+if (markergrouping == 'grouped') {
 	for (i = 0; i < overLayers.length; i++) {
 		control.addOverlay(overLayers[i]['layer'], overLayers[i]['name']);
 		control.addTo(map);
