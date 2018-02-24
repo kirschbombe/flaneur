@@ -18,11 +18,10 @@ Create posts in the standard `YYYY-MM-DD-title.md` format required for Jekyll. T
 <!-- OR -->
 <p class="post-header">{{ site.title }}</p>
 ```
-* `quarter:` Put any human readable date here. The text will display in parentheses next to the author name
 * `desc:` This is the text for the map marker popup
 
 Images have special formatting using Liquid attributes. The Liquid tags are also needed for the Lightbox feature:
-```
+```md
 ![Image title](images/filename.jpg -or- imageurl)
    {:.image}
 Image attribution / caption.
