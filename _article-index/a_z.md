@@ -1,5 +1,5 @@
 ---
 layout: article-index
-title: Index of Articles
+title: Browse Articles
 status: a-z
 ---

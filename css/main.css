@@ -154,13 +154,14 @@ ul {
   color: black;
   font-size: 14px;
   border: .5px solid rgba(96, 74, 120, 1);
-  padding: 3px 12px 4px;
+  padding: .1px 10px 1px 10px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
   border-radius: 200px;
   display: inline-block;
   margin-left: 3px;
+  margin-bottom: 1.5em;
   font-variant: small-caps;
 }
 

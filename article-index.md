@@ -1,4 +1,4 @@
 ---
 layout: article-index
-title: Article Index
+title: Browse Articles
 ---
