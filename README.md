@@ -1,16 +1,41 @@
 ### Flâneur
 
-(In development) Flâneur is a Jekyll theme based on the Boulevardier framework. 
+Flâneur is a Jekyll theme for maps and texts using Leaflet, and based on the earlier [Boulevardier](https://github.com/kirschbombe/boulevardier) framework.
 
-Jekyll-maps
+View the theme live [here](http://dawnchildress.com/flaneur).
 
-**Point-based map engine generated via static Jekyll posts.**
+To use this theme, fork this repo to your GitHub account and follow the setup instructions below.
 
-Create posts in the standard `YYYY-MM-DD-your_stuff.markdown` format required for Jekyll, and these posts are consumed by a jekyll layout, `map.html` and presented on a Leaflet map. The single posts have two important liquid markup points: `lat:` & `lng:`, which are the location nodes used in the `map.html` consumption.
+#### Config file
 
-View this *exact* repository in action [here](http://mapsam.com/jekyll-maps).
+#### Posts
+Create posts in the standard `YYYY-MM-DD-title.md` format required for Jekyll. The front matter for posts has several important liquid markup points:
+* `lat:` & `lng:` to pin the post to point on the map
+* `categories:` ["category1", "category2"] - these populate the map layers widget and index
+* `runningtitle:` the running title appears at the top of pages and posts. The default is to display the site title. To activate the post-specific running title, you will need to uncomment line 6 in the post.html layout and comment out line 8:
+```html
+<!-- <p class="post-header">{{page.runningtitle}}</p> -->
+<!-- OR -->
+<p class="post-header">{{ site.title }}</p>
+```
+* `quarter:` Put any human readable date here. The text will display in parentheses next to the author name
+* `desc:` This is the text for the map marker popup
 
-**Some things to note**
+Images have special formatting using Liquid attributes. The Liquid tags are also needed for the Lightbox feature:
+```
+![Image title](images/filename.jpg -or- imageurl)
+   {:.image}
+Image attribution / caption.
+   {:.caption}
+```
+There is also special formatting for bibliographies:
+```
+{:.bibliography} <-- this tag is needed for bibliography formatting -->
+1. Entry 1
+2. Entry 2
+```
+#### Pages
 
-* **Post content**: The *description* is marked as `desc:` in the front-matter. Currently if you try to use the `{{ post.content }}` within the javascript of the `_layouts/map.html` file, you'll notice a line break that prevents the map from completely rendering. The current solution is to not use the content space of your point (at least within the javascript portion) and instead use the description attribute.
-* The map markers and tiles are set up to respond to *retina-ready* devices.
+#### Index
+
+#### Leaflet

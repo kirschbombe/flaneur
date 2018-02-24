@@ -3,7 +3,10 @@ layout: default
 ---
 <div class="post">
     <header>
-  	  <p class="post-header">{{page.collectiontitle}}</p>
+  	  <!-- <p class="post-header">{{page.runningtitle}}</p> -->
+      <!-- OR -->
+      <p class="post-header">{{ site.title }}</p>
+
       <h1 class="post-title">{{ page.title }}</h1>
       <p class="byline">{% if page.author %}{{ page.author }} ({{page.quarter}}){% endif %}</p>
     </header>

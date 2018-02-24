@@ -1,10 +1,10 @@
 ---
 layout: home
-title: "Los Angeles: The City and the Library"
+title: "Flâneur: A Jekyll theme for maps and texts"
 ---
 
-_Los Angeles: The City and the Library_ is a lower-division composition class that trains students in research and writing, all the while asking them to engage the city around them through direct encounter and library research. The capstone of the class requires students to work directly with the Library’s archives, touching and pondering evidence of the city's past.
+[Flâneur](https://github.com/kirschbombe/flaneur) is a Jekyll map-based theme using the Leaflet JavaScript library for presenting maps and text together. To see a real-world use case, visit the [Los Angeles: The City and the Library](https://citystoriesucla.github.io/lyricalmap/) project.
 
-This site hosts images of those archival artifacts as well as the students’ annotations of the material, cross-referenced by subject and geography. It represents a collaboration between UCLA Writing Programs and the UCLA Library. The class began in Fall 2013, the digital project in Fall 2015; both are ongoing.
+Flâneur was developed by Dawn Childress ported to Jekyll by Dawn Childress & Dominique O'Neill. It is based on the original [Boulevardier](https://github.com/kirschbombe/boulevardier) framework developed by Dawn Childress & Nathan Day.
 
-Colleen Jaurretche is the project editor and course instructor. The project uses the [Flâneur](https://github.com/kirschbombe/flaneur) framework developed by Dawn Childress & Niqui O'Neill (based on the original [Boulevardier](https://github.com/kirschbombe/boulevardier) framework developed by Dawn Childress & Nathan Day) and is hosted on GitHub Pages.
+> "_Flâneur_ (pronounced [flɑnœʁ]), from the French noun _flâneur_, means "stroller", "lounger", "saunterer", or "loafer". _Flânerie_ is the act of strolling, with all of its accompanying associations." ([Wikipedia](https://en.wikipedia.org/wiki/Flâneur))

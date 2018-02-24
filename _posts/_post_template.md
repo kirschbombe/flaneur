@@ -2,29 +2,23 @@
 layout: post
 title: "Title"
 date: 2013-09-01
-categories: ["categories with spaces in quotes"]
+categories: ["categories with spaces in quotes - this populates the map layers widget and index"]
 author: "author"
-lat: 
-lng: 
-collectiontitle: ""
-quarter: 
-desc: "description"
+lat:
+lng:
+runningtitle: "this is the running title at the top. the default is to display the site title, so to activate the running title you will need to uncomment in the post.html layout"
+quarter: "you can put any human readable date here - this shows up in parens next to the author name"
+desc: "this is the map popup text"
 ---
-Article content
+Body text goes here in Markdown
 
-![Image info](image url)
-{:.image} <--image tag important for lightbox. Must be here for lightbox
+![Image title](images/filename.jpg -or- imageurl)
+   {:.image} <-- this tag is needed for image formatting and for Lightbox feature -->
+Image attribution / caption.
+   {:.caption} <-- this tag is needed for caption formatting and for Lightbox feature -->
 
-Image caption.
-   {:.caption}<--image caption important for lightbox. Must be here to show up in lightbox
+#### Works cited
 
-![Image 2 info](image 2 url)
-{:.image} <--image tag important for lightbox. Must be here for lightbox
-
-Image 2 caption.
-   {:.caption}<--image caption important for lightbox. Must be here to show up in lightbox
-
-
-{:.bibliography} <-- Bibliography css will not apply without tag
+{:.bibliography} <-- this tag is needed for bibliography formatting -->
 1. Entry 1
 2. Entry 2

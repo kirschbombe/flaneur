@@ -1,6 +1,6 @@
 # Site settings
-title: "Flâneur"
-email: kirschbombe@gmail.com
+title: "Flâneur: a Jekyll theme for maps and text"
+email: dchildress@library.ucla.edu
 description:
 baseurl: "/flaneur" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
@@ -12,18 +12,18 @@ markdown: kramdown
 encoding: utf-8
 
 # Map
-# map-tileset: 'https://{s}.tiles.mapbox.com/v3/kirschbombe.l007nm13/{z}/{x}/{y}.png'
-map-tileset: 'https://{s}.tiles.mapbox.com/v3/kirschbombe.ae0a59b5/{z}/{x}/{y}.png'
+map-tileset: 'https://{s}.tiles.mapbox.com/v3/kirschbombe.l007nm13/{z}/{x}/{y}.png'
+# map-tileset: 'https://{s}.tiles.mapbox.com/v3/kirschbombe.ae0a59b5/{z}/{x}/{y}.png'
 map-credits: '<a target="_blank" href="https://github.com/kirschbombe/flaneur">Flâneur</a> | Tiles: Mapbox'
 
 #leaflet settings
 minZoom: 0
 maxZoom: 20
-#<LatLng> center, <Number> zoom, <Zoom/pan options> options?), 
+#<LatLng> center, <Number> zoom, <Zoom/pan options> options?),
 #see http://leafletjs.com/reference-1.2.0.html for more info
-setView: '[34.0253, -118.3085], 11'
+setView: '[48.856614, 2.352222], 12'
 #grouped, single
-marker-grouping: grouped
+marker-grouping: single
 
 #window height / width to only show title and no description
 window-height: 700
