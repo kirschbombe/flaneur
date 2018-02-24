@@ -21,15 +21,15 @@ Create posts in the standard `YYYY-MM-DD-title.md` format required for Jekyll. T
 * `desc:` This is the text for the map marker popup
 
 Images have special formatting using Liquid attributes. The Liquid tags are also needed for the Lightbox feature:
-```liquid
+```md
 ![Image title](images/filename.jpg -or- imageurl)
    {:.image}
 Image attribution / caption.
    {:.caption}
 ```
 There is also special formatting for bibliographies:
-```
-{:.bibliography} <-- this tag is needed for bibliography formatting -->
+```md
+{:.bibliography}
 1. Entry 1
 2. Entry 2
 ```
