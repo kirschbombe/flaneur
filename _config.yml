@@ -4,30 +4,39 @@ email: dchildress@library.ucla.edu
 description:
 baseurl: "/flaneur" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
+github_repo: flaneur
+copyright_statement: © 2017 Dawn Childress. CC BY-NC-SA 4.0.
+
+# Styles
+# accent color can be any css accepted value
+accent_color: rgba(18, 127, 157, 1)
+
+# Social
 twitter_username: kirschbombe
 github_username:  kirschbombe
-copyright_statement: © 2017 Dawn Childress. CC BY-NC-SA 4.0.
+
 # Build settings
 markdown: kramdown
 encoding: utf-8
 
-# Map
+# Map settings
 map-tileset: 'https://api.mapbox.com/styles/v1/kirschbombe/cje1t61823u2p2rrwv3u68kf3/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia2lyc2NoYm9tYmUiLCJhIjoiMTQxVVBocyJ9.vWLKsRKrVWU-WG2QlMb6kA'
 map-credits: '<a target="_blank" href="https://github.com/kirschbombe/flaneur">Flâneur</a> | Tiles: Mapbox'
-
-#leaflet settings
 minZoom: 0
 maxZoom: 20
+
 #<LatLng> center, <Number> zoom, <Zoom/pan options> options?),
 #see http://leafletjs.com/reference-1.2.0.html for more info
 setView: '[48.856614, 2.352222], 12'
+
 #grouped, single
 marker-grouping: grouped
 
 #window height / width to only show title and no description
-window-height: 700
+window-height: 600
 window-width: 550
 
+# Links
 collections:
   posts:
     output: true
@@ -39,6 +48,7 @@ collections:
 
 permalink: /:categories/:title/
 
+# MENU
 # menu options: dropdown, circle
 menu-type: dropdown
 
@@ -49,8 +59,3 @@ menu-opacity: '.95'
 
 #pages to exclude in menu
 exclude_pages: [ "index.html", 'home.md']
-
-#accent color can be any css accepted value
-accent_color: rgba(18, 127, 157, 1)
-
-#
