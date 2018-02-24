@@ -7,7 +7,6 @@ author: "author"
 lat:
 lng:
 runningtitle: "this is the running title at the top. the default is to display the site title, so to activate the running title you will need to uncomment in the post.html layout"
-quarter: "you can put any human readable date here - this shows up in parens next to the author name"
 desc: "this is the map popup text"
 ---
 Body text goes here in Markdown

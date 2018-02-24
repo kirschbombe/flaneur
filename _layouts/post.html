@@ -8,7 +8,7 @@ layout: default
       <p class="post-header">{{ site.title }}</p>
 
       <h1 class="post-title">{{ page.title }}</h1>
-      <p class="byline">{% if page.author %}{{ page.author }} ({{page.quarter}}){% endif %}</p>
+      <p class="byline">{% if page.author %}{{ page.author }}, {{ page.date | date_to_string }}{% endif %}</p>
     </header>
     <div id="content">
       {{ page.content }}

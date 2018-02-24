@@ -7,7 +7,6 @@ author: "Dawn Childress"
 lat: 48.869219
 lng: 2.3322078999999576
 runningtitle: "Running title here"
-quarter: "February 24, 2018"
 desc: "Harry's New York Bar, a well-known bar in Paris, is said to be the birthplace of classic cocktails such as the Bloody Mary, French 75, Side Car and the Boulevardier."
 ---
 "The boulevardier cocktail is similar to the Negroni, replacing the Negroni's gin component with bourbon whiskey or rye whiskey. Some boulevardier recipes call for 1 1/2 parts rather than 1 part whiskey."
