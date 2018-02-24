@@ -12,8 +12,7 @@ markdown: kramdown
 encoding: utf-8
 
 # Map
-map-tileset: 'https://{s}.tiles.mapbox.com/v3/kirschbombe.l007nm13/{z}/{x}/{y}.png'
-# map-tileset: 'https://{s}.tiles.mapbox.com/v3/kirschbombe.ae0a59b5/{z}/{x}/{y}.png'
+map-tileset: 'https://api.mapbox.com/styles/v1/kirschbombe/cje1t61823u2p2rrwv3u68kf3/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia2lyc2NoYm9tYmUiLCJhIjoiMTQxVVBocyJ9.vWLKsRKrVWU-WG2QlMb6kA'
 map-credits: '<a target="_blank" href="https://github.com/kirschbombe/flaneur">Flâneur</a> | Tiles: Mapbox'
 
 #leaflet settings
@@ -23,7 +22,7 @@ maxZoom: 20
 #see http://leafletjs.com/reference-1.2.0.html for more info
 setView: '[48.856614, 2.352222], 12'
 #grouped, single
-marker-grouping: single
+marker-grouping: grouped
 
 #window height / width to only show title and no description
 window-height: 700
@@ -52,6 +51,6 @@ menu-opacity: '.95'
 exclude_pages: [ "index.html", 'home.md']
 
 #accent color can be any css accepted value
-accent_color: rgba(25, 87, 142, 1)
+accent_color: rgba(18, 127, 157, 1)
 
 #

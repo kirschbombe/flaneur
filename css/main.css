@@ -20,7 +20,7 @@ html {
 }
 
 h1, h2, h3, h4 {
-  font-family: "Lato", sans-serif;
+  font-family: "Della Respira";
   color: {{site.accent_color}};
 }
 
@@ -40,7 +40,6 @@ h1.post-title {
   position: relative;
   margin-bottom: .1em;
   margin-top: .1em;
-  font-family: "Lato", sans-serif;
   position: relative;
   -webkit-margin-before: .1em;
   -webkit-margin-after: -.6em;
@@ -58,7 +57,7 @@ h1.home-title {
 }
 
 a {
-  color: rgba(31, 106, 173, 1);
+  color: {{ site.accent_color}};
   text-decoration: none;
   font-weight: 400;
 }
@@ -357,11 +356,11 @@ display: inline-block;
   .sub-menu, .menu-button {
 	   right: 0vw;
   }
- 
+
   #choose {
 	top:36.9vh;
-  } 
-  
+  }
+
   div.wrapper {
       width: 100vw;
       height: 40vh;
@@ -445,8 +444,8 @@ padding-top: 6em;
 }
 /*
 .leaflet-panel-layers-overlays .leaflet-panel-layers-item {
-    margin-bottom: 0px; 
-    padding: 0px; 
+    margin-bottom: 0px;
+    padding: 0px;
     background: transparent;
     border: transparent;
     border-radius: 0px;
