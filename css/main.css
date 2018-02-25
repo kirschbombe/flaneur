@@ -20,7 +20,7 @@ html {
 }
 
 h1, h2, h3, h4 {
-  font-family: "Della Respira";
+  font-family: '{{site.accent_font}}';
   color: {{ site.accent_color }};
 }
 
