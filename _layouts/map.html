@@ -39,18 +39,21 @@ var markers = ''
  	var items = {};
 
       // set up variables to use during jekyll loop
-      var lat, lng, content, marker;
+      var lat, lng, content, marker, tileLayer;
           //map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1);
           var map = map;
-
-      L.tileLayer('{{site.map-tileset}}', {
-        "attribution" : '{{site.map-credits}}',
-        "minZoom" : {{site.minZoom}},
-        "maxZoom" : {{site.maxZoom}},
-        "errorTileUrl" : "img/error-tile-image.png",
-        "subdomains" : ["a", "b", "c", "d"],
-        "detectRetina" : true,
-      }).addTo(map);
+      if ('{{site.map-type}}' === 'iiif') {
+        tileLayer = L.tileLayer.iiif('{{site.iiif-url}}').addTo(map);
+      } else {
+        tileLayer = L.tileLayer('{{site.map-tileset}}', {
+          "attribution" : '{{site.map-credits}}',
+          "minZoom" : {{site.minZoom}},
+          "maxZoom" : {{site.maxZoom}},
+          "errorTileUrl" : "img/error-tile-image.png",
+          "subdomains" : ["a", "b", "c", "d"],
+          "detectRetina" : true,
+        }).addTo(map);
+      }
 
       // jekyll loop through posts
 var overLayers = [];
@@ -92,6 +95,9 @@ var control = L.control.layers(null, null, { collapsed: true, position: 'topleft
             iconAnchor : [17, 36],
             popupAnchor : [-1, 8]
           });
+      var point = L.point([lat, lng]);
+      // var unprojected = map.unproject()
+      console.log(map.getZoom())
       var marker = L.marker([lat, lng], {
         icon: mbox,
       }).bindPopup(content, {offset:new L.Point(0,-30)});
@@ -151,7 +157,12 @@ map.addControl(panelLayers);
 
 }
 
-map.setView({{site.setView}})
+// Wait until the tilelayer is loaded to set the view
+tileLayer.on('load', function() {
+  if ('{{site.setView}}') {
+    map.setView({{site.setView}})
+  }
+});
 
 //map.fitBounds(markers.getBounds());
 return items;
