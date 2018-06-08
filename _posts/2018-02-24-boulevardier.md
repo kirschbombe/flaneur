@@ -4,8 +4,8 @@ title: "Boulevardier: The Cocktail"
 date: 2018-02-24
 categories: ["Cocktails"]
 author: "Dawn Childress"
-lat: 1400
-lng: 2700
+lat: 1910
+lng: 2713
 runningtitle: "Running title here"
 desc: "Harry's New York Bar, a well-known bar in Paris, is said to be the birthplace of classic cocktails such as the Bloody Mary, French 75, Side Car and the Boulevardier."
 ---

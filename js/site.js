@@ -73,14 +73,24 @@ function mapClick(i){
   setMapView(marker[i]);
 };
 
-function new_map(site_grouping){
+function new_map(options){
   markergrouping = localStorage['selectedtem'];
   if (markergrouping == undefined) {
-  markergrouping = site_grouping;
+  markergrouping = options.siteGrouping;
   } 
   map.remove();
 
   $('#choose').val(markergrouping);
-  map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1);
+  if (options.mapType === 'iiif') {
+    map = L.map('map' , {
+      scrollWheelZoom: false,
+      center: [0, 0],
+      crs: L.CRS.Simple,
+      zoom: 0
+    });
+  } else {
+    map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1);
+  }
+  
   items = makeMap(markergrouping, map);
 }
