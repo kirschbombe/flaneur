@@ -112,7 +112,7 @@ var control = L.control.layers(null, null, { collapsed: true, position: 'topleft
       var marker;
       if ('{{site.map-type}}' === 'iiif') {
         var unprojected = map.unproject(L.point([lng / 2, lat / 2]), 0);
-        marker = L.marker(unprojected, {
+        marker = L.marker(unprojected, map.getMaxZoom(), {
           icon: mbox
         });
       } else {
