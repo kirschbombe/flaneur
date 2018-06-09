@@ -5,7 +5,7 @@ layout: default
     <header>
   	  <!-- <p class="post-header">{{page.runningtitle}}</p> -->
       <!-- OR -->
-      <p class="post-header">{{ site.title }}</p>
+      <p class="post-header">{{ page.runningtitle }}</p>
 
       <h1 class="post-title">{{ page.title }}</h1>
       <p class="byline">{% if page.author %}{{ page.author }}, {{ page.date | date_to_string }}{% endif %}</p>
