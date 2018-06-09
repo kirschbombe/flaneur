@@ -2,10 +2,10 @@
 layout: post
 title: "Gregorius M., Moralia in Job., t. I (Codex restitutus)"
 date: 2018-02-24
-categories: ["imagery"]
+categories: ["people"]
 author: "Dawn Childress"
-lat: 468
-lng: 385
+lat: 640
+lng: 240
 runningtitle: "[sine loco], codices restituti, Cod. 2 (Frowinus dispersus)"
 desc: "Gregory the Great"
 ---
