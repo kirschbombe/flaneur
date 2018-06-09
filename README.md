@@ -6,6 +6,8 @@ View the theme live [here](http://dawnchildress.com/flaneur).
 
 To use this theme, fork this repo to your GitHub account and follow the setup instructions below.
 
+**Update:** Flâneur will soon have Leaflet-IIIF functionality to allow the use of IIIF-hosted images in place of map tiles, using pixel corrdinates instead of lat,lng. Thanks to Jack Reed ([mejackreed](https://github.com/mejackreed)) for getting this started with his Leaflet-IIIF library. You can view the in-progress version in the "flaneur-iiif" branch.
+
 #### Config file
 coming soon...
 
