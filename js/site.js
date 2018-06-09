@@ -20,7 +20,7 @@ function articlerender(articleurl, item_id){
     marker = items[item_id];
     if (marker.length > 1 ) {
     var articleicon = ''
-    for (i = 0; i < marker.length; i++) { 
+    for (i = 0; i < marker.length; i++) {
     articleicon += "<img class='article-marker' src='" + marker[i].iconURL + "' onclick='mapClick(" + i +")'>";
     setMapView(marker[i]);
 	}
@@ -56,7 +56,7 @@ function onClick(url){
 }
 
 function setMapView(marker){
-	try { 
+	try {
 		markers.zoomToShowLayer(marker, function () {
       marker.openPopup();
 		});
@@ -77,13 +77,13 @@ function new_map(options){
   markergrouping = localStorage['selectedtem'];
   if (markergrouping == undefined) {
   markergrouping = options.siteGrouping;
-  } 
+  }
   map.remove();
 
   $('#choose').val(markergrouping);
   if (options.mapType === 'iiif') {
     map = L.map('map' , {
-      scrollWheelZoom: false,
+      scrollWheelZoom: true,
       center: [0, 0],
       crs: L.CRS.Simple,
       zoom: 0
@@ -91,6 +91,6 @@ function new_map(options){
   } else {
     map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1);
   }
-  
+
   items = makeMap(markergrouping, map);
 }

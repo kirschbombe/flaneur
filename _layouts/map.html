@@ -32,13 +32,13 @@
 
       if ('{{site.map-type}}' === 'iiif') {
         map = L.map('map' , {
-          scrollWheelZoom: false,
+          // scrollWheelZoom: false,
           center: [0, 0],
           crs: L.CRS.Simple,
           zoom: 0
         });
       } else {
-        map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1);  
+        map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1);
       }
       var markers = ''
 
