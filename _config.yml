@@ -26,8 +26,10 @@ map-tileset: 'https://api.mapbox.com/styles/v1/kirschbombe/cje1t61823u2p2rrwv3u6
 map-credits: '<a target="_blank" href="https://github.com/kirschbombe/flaneur">Flâneur</a> | Tiles: Mapbox'
 minZoom: 0
 maxZoom: 20
-setView: '[48.856614, 2.352222], 12'  # set map center point and zoom. See http://leafletjs.com/reference-1.2.0.html for more info.
+# setView: '[0, 0], 2'  # set map center point and zoom. See http://leafletjs.com/reference-1.2.0.html for more info.
 marker-grouping: grouped # sets the default clustering action. Options: grouped, single
+map-type: iiif
+iiif-url: 'https://stacks.stanford.edu/image/iiif/hg676jb4964%2F0380_796-44/info.json'
 
 # Truncates map marker popup on small screens to only display post title
 window-height: 600
