@@ -29,7 +29,7 @@ maxZoom: 20
 # setView: '[0, 0], 2'  # set map center point and zoom. See http://leafletjs.com/reference-1.2.0.html for more info.
 marker-grouping: grouped # sets the default clustering action. Options: grouped, single
 map-type: iiif
-iiif-url: 'http://www.e-codices.unifr.ch/loris/cma/cma-1955-74/cma-1955-74_000b.jp2/info.json'
+iiif-url: 'https://www.e-codices.unifr.ch/loris/cma/cma-1955-74/cma-1955-74_000b.jp2/info.json'
 
 # Truncates map marker popup on small screens to only display post title
 window-height: 600
