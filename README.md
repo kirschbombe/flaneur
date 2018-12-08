@@ -1,4 +1,4 @@
-### Flâneur
+## Flâneur
 
 Flâneur is a Jekyll theme for maps and texts using Leaflet, and based on the earlier [Boulevardier](https://github.com/kirschbombe/boulevardier) framework.
 
@@ -8,7 +8,7 @@ To use this theme, fork this repo to your GitHub account and follow the setup in
 
 **Update:** Flâneur will soon have **Leaflet-IIIF** functionality to allow the use of IIIF-hosted images in place of map tiles, using pixel corrdinates instead of lat,lng. Thanks to Jack Reed ([mejackreed](https://github.com/mejackreed)) for getting this started with his Leaflet-IIIF library. You can view the in-progress version in the "flaneur-iiif" branch.
 
-#### Config file
+### Config file
 
 **Site settings:** You will want to replace the settings here with the info about your new site.
 
@@ -18,7 +18,7 @@ To use this theme, fork this repo to your GitHub account and follow the setup in
 
 **Menu:** There are two menu display options, `dropdown` (default) and `circle`.
 
-#### Posts
+### Posts
 Create posts in the standard `YYYY-MM-DD-title.md` format required for Jekyll. The front matter for posts has several important liquid markup points:
 * `lat:` & `lng:` add latitude and longitude to pin a post to a point on the map
 * `categories:` ["category1", "category2"] - these populate the map layers widget and article index pages
@@ -43,11 +43,11 @@ Bibliographies also have special formatting using Liquid attributes:
 1. Entry 1
 2. Entry 2
 ```
-#### Pages
+### Pages
 coming soon...
 
-#### Index
+### Index
 coming soon...
 
-#### Leaflet
+### Leaflet
 coming soon...
