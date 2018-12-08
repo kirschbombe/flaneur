@@ -9,7 +9,14 @@ To use this theme, fork this repo to your GitHub account and follow the setup in
 **Update:** Flâneur will soon have **Leaflet-IIIF** functionality to allow the use of IIIF-hosted images in place of map tiles, using pixel corrdinates instead of lat,lng. Thanks to Jack Reed ([mejackreed](https://github.com/mejackreed)) for getting this started with his Leaflet-IIIF library. You can view the in-progress version in the "flaneur-iiif" branch.
 
 #### Config file
-coming soon...
+
+**Site settings:** You will want to replace the settings here with the info about your new site.
+
+**Styles:** You can change the site accent color and font here without editing the CSS. You will still need to replace the Google Font import URL in `head.html`.
+
+**Map settings:** Import a map tileset from MapBox, OpenStreetMap, etc. and set the max/min zoom and center point. You also have the option to choose clustered or single map points. Options are `grouped` or `single`.
+
+**Menu:** There are two menu display options, `dropdown` (default) and `circle`.
 
 #### Posts
 Create posts in the standard `YYYY-MM-DD-title.md` format required for Jekyll. The front matter for posts has several important liquid markup points:
