@@ -12,7 +12,6 @@ copyright_statement: © 2017 Dawn Childress. CC BY-NC-SA 4.0.
 # build settings
 markdown: kramdown
 encoding: utf-8
-exclude: [vendor]
 
 # --STYLES--
 accent_color: rgba(18, 127, 157, 1)  # accent color can be any css accepted value
