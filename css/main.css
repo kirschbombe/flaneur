@@ -271,7 +271,7 @@ display: inline-block;
 	     right: 0vw;
 	  }
 	#choose {
-	     top:36.9vh;
+	     bottom: 60vh;
 	  }
 }
 
@@ -359,7 +359,7 @@ display: inline-block;
   }
 
   #choose {
-	top:36.9vh;
+	bottom:60vh;
   }
 
   div.wrapper {
