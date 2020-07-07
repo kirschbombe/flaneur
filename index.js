@@ -226,7 +226,7 @@ const mapview = Vue.component('mapview', {
       let orderlist = _.groupBy(this.postData, function(b) { return b.order});
       let categories = this.postData.map(pd => pd.categories);
       for (var i=0; i<this.postData.length; i++){
-        const post = JSON.parse(JSON.stringify(this.postData[i]));
+        const post = JSON.parse(JSON.stringify(this.postData[i], this.replaceNull));
         var icon = post.leafleticon;
         const iconindex = categories.indexOf(post.categories);
         var counter = iconindex >= icons.length ? 0 : iconindex;
@@ -241,7 +241,7 @@ const mapview = Vue.component('mapview', {
         });
         var marker = L.marker([post.lat, post.lng], {
           icon: mbox,
-        }).bindPopup(`<strong>${post.title}</strong><br>${post.desc }`, {offset:new L.Point(0,-30)});
+        }).bindPopup(`<strong>${post.title}</strong><br>${post.desc}`, {offset:new L.Point(0,-30)});
         marker.iconURL = `<span class="referenceIcons" style="position:relative">${mbox.options.html}</span>`;
         marker.legendIcon = `<img class="my-div-image" src="${iconurl}"/>`
         var vue = this;
@@ -252,6 +252,13 @@ const mapview = Vue.component('mapview', {
         post['prev'] = orderlist[order-1];
         this.mapMarkers.push({'post': post, 'marker': marker, 
           'group': post.categories })
+      }
+    },
+    replaceNull: function(i, val) {
+      if ( val === null ) { 
+        return ""; // change null to empty string
+      } else {
+        return val; // return unchanged
       }
     },
     buildMapView: function(post, marker=false) {
