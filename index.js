@@ -26,7 +26,7 @@ const mapview = Vue.component('mapview', {
         <span v-if="sidebar.date" class="date">{{sidebar.date}}</span>
         </p>
       </header>
-      <div v-html="sidebar.content"></div>
+      <span v-html="sidebar.content"></span>
       </div>
   </div>
   <div id="map"></div>
