@@ -81,7 +81,7 @@ const mapview = Vue.component('mapview', {
     "$route.path": function(){
       this.buildPage();
     },
-    sidebar: async function(){
+    "sidebar.content": async function(){
       await this.$nextTick();
       this.lightBox();
     }
@@ -265,17 +265,26 @@ const mapview = Vue.component('mapview', {
       if (this.$route.path != post.hash){
         this.$router.push(post.hash);
       }
-      axios.get(post.url).then((response) => {
-        const next = post.next ? post.next[0] : post.next;
-        const prev = post.prev ? post.prev[0] : post.prev;
-        this.sidebar = {'content': response.data, 'title': post.title, 
-          'menutitle': post.menutitle, 'markers': marker, 'date': post.date, 
-          'author': post.author, 'header': post.headertitle, 'next': next, 'prev': prev };
-        document.getElementsByClassName('sidebar')[0].scrollTop = 0;
-        if (marker && marker.length > 0) {
-          this.goToMarker(marker[0])
-        }
-      });
+      const next = post.next ? post.next[0] : post.next;
+      const prev = post.prev ? post.prev[0] : post.prev;
+      const sidebar = {'title': post.title, 
+        'menutitle': post.menutitle, 'markers': marker, 'date': post.date, 
+        'author': post.author, 'header': post.headertitle, 'next': next, 'prev': prev };
+      if (post.html){
+        var unescapedHTML = document.createElement('div')
+        unescapedHTML.innerHTML = unescape(post.html);
+        sidebar['content']= unescapedHTML.textContent;
+        this.sidebar = sidebar;
+      } else {
+        axios.get(post.url).then((response) => {
+          sidebar['content']= response.data;
+          this.sidebar = sidebar;
+        })
+      }
+      document.getElementsByClassName('sidebar')[0].scrollTop = 0;
+      if (marker && marker.length > 0) {
+        this.goToMarker(marker[0])
+      }
     },
     goToMarker: function(marker) {
       try {

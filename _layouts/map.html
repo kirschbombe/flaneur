@@ -19,17 +19,17 @@
     {% assign collections = site.collections | where_exp: 'item', 'item.label != "posts"' | map: "docs" %}
     {% assign everything = site.posts | concat: site.pages %}
     {% for collection in collections %}
+
       {% assign everything = everything | concat: collection %}
     {% endfor %}
     {% for post in everything %}
-      postdata.push({'lat': {{ post.lat | jsonify}}, 'lng': {{ post.lng | jsonify }}, 'title': {{ post.title | jsonify}}, 'desc': {{post.desc | jsonify}}, 'leafleticon': {{post.leafleticon | jsonify}}, 'order': {{post.order | jsonify}}, 'url': '{{site.url}}{{site.baseurl}}{{post.url}}', 'categories': {{post.categories | jsonify}}, 'hash': {{post.url | jsonify}}, 'author': {{post.author | jsonify}}, 'date': '{{post.date | date_to_string}}', 'headertitle': {{post.headertitle | jsonify}}, 'menutitle': {{post.menutitle | jsonify}} })
+      postdata.push({'lat': {{ post.lat | jsonify}}, 'lng': {{ post.lng | jsonify }}, 'title': {{ post.title | jsonify}}, 'desc': {{post.desc | jsonify}}, 'leafleticon': {{post.leafleticon | jsonify}}, 'order': {{post.order | jsonify}}, 'url': '{{site.url}}{{site.baseurl}}{{post.url}}', 'categories': {{post.categories | jsonify}}, 'hash': {{post.url | jsonify}}, 'author': {{post.author | jsonify}}, 'date': '{{post.date | date_to_string}}', 'headertitle': {{post.headertitle | jsonify}}, 'menutitle': {{post.menutitle | jsonify}}, 'html': '{{post.output |strip_newlines | escape}}' })
     {% endfor %}
     window.setView = {{site.mapsettings.setView}};
     window.mapView.postdata = postdata;
     window.menuType = "{{site.menu-type}}";
     window.siteTitle = "{{site.title}}"
     </script>
-
   <div id="app">
     <mapview></mapview>
   </div>
