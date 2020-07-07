@@ -205,7 +205,6 @@ ul {
 }
 
 .dropdown-content {
-    display: none;
     position: absolute;
     background-color: {{ site.accent_color }};
     z-index: 1;
@@ -389,11 +388,31 @@ display: inline-block;
 }
 
 /* Leaflet */
-img.legend {
+.legend {
 	height: 24px;
 	padding: 0px;
 	vertical-align: middle;
-	display: inline-block;
+	position: relative;
+
+}
+
+.legend img {
+  height: 40px;
+}
+
+.ordernumber {
+  font-weight: 900;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+}
+.referenceIcons .ordernumber {
+  font-size: 16px;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  color: black;
 }
 
 img.article-marker {
@@ -459,4 +478,8 @@ padding-top: 6em;
 .leaflet-retina .leaflet-control-layers-toggle  {
   background-image: url('{{site.baseurl}}/assets/leaflet/images/icon.png');
   background-size: 20px 30px;
+}
+
+.next {
+  float: right;
 }

@@ -1,6 +1,8 @@
 ---
-layout: home
+layout: page
 title: "Flâneur: A Jekyll theme for maps and texts"
+order: 1
+menutitle: Home
 ---
 
 > "_Flâneur_ (pronounced [flɑnœʁ]), from the French noun _flâneur_, means "stroller", "lounger", "saunterer", or "loafer". _Flânerie_ is the act of strolling, with all of its accompanying associations." ([Wikipedia](https://en.wikipedia.org/wiki/Flâneur))
