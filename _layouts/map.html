@@ -23,15 +23,21 @@
       {% assign everything = everything | concat: collection %}
     {% endfor %}
     {% for post in everything %}
-      postdata.push({'lat': {{ post.lat | jsonify}}, 'lng': {{ post.lng | jsonify }}, 'title': {{ post.title | jsonify}}, 'desc': {{post.desc | jsonify}}, 'leafleticon': {{post.leafleticon | jsonify}}, 'order': {{post.order | jsonify}}, 'url': '{{site.url}}{{site.baseurl}}{{post.url}}', 'categories': {{post.categories | jsonify}}, 'hash': {{post.url | jsonify}}, 'author': {{post.author | jsonify}}, 'date': '{{post.date | date_to_string}}', 'headertitle': {{post.headertitle | jsonify}}, 'menutitle': {{post.menutitle | jsonify}}, 'html': '{{post.output |strip_newlines | escape}}' })
+      postdata.push({'lat': {{ post.lat | jsonify}}, 'lng': {{ post.lng | jsonify }}, 'title': {{ post.title | jsonify}}, 'desc': {{post.desc | jsonify}}, 'leafleticon': {{post.leafleticon | jsonify}}, 'order': {{post.order | jsonify}}, 'url': '{{site.url}}{{site.baseurl}}{{post.url}}', 'categories': {{post.categories | jsonify}}, 'hash': {{post.url | jsonify}}, 'author': {{post.author | jsonify}}, 'date': '{{post.date | date_to_string}}', 'headertitle': {{post.headertitle | jsonify}}, 'menutitle': {{post.menutitle | jsonify}}, 'html': '{{post.output |strip_newlines | escape}}', 'slug': {{post.title | jsonify}}, 'content': {{post.content |strip_newlines | escape | jsonify}}, 'type': "{{post.type}}" })
     {% endfor %}
     window.setView = {{site.mapsettings.setView}};
     window.mapView.postdata = postdata;
     window.menuType = "{{site.menu-type}}";
     window.siteTitle = "{{site.title}}"
+    window.searchItems = postdata;
+    window.searchFields = [{'field': 'title', 'boost': 10},
+    {'field': 'desc', 'boost': 10}, {'field': 'url', 'boost': 10},
+    {'field': 'categories', 'boost': 10}, {'field': 'author', 'boost': 1},
+    {'field': 'date', 'boost': 1}, {'field': 'headertitle', 'boost': 10},
+    {'field': 'menutitle', 'boost': 1}, {'field': 'html', 'boost': 10}, {'field': 'slug', 'boost': 1}, {'field': 'content', 'boost': 10}]
     </script>
   <div id="app">
-    <mapview></mapview>
+    <router-view></router-view>
   </div>
   <script src="index.js"></script>
   <body>
