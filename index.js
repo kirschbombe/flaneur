@@ -74,7 +74,7 @@ const mapview = Vue.component('mapview', {
       <button v-if="sidebar.next" v-on:click="showRoute = !showRoute">
         <span v-if="showRoute">Hide</span><span v-else>Show</span> Directions to {{sidebar.next.title}}
       </button>
-      <button v-on:click="locate()" v-if="sidebar.markers">
+      <button v-on:click="locate()" v-if="sidebar.markers && apiUrl">
         Get directions from current location
       </button>
       <span v-if="routeInfo && showRoute">
