@@ -149,7 +149,8 @@ const mapview = Vue.component('mapview', {
       routeInfo: false,
       showRoute: false,
       apiUrl: mapView.mapData.directionapi,
-      searchview: false
+      searchview: false,
+      removeMarkers: []
   	}
   },
   props: {
@@ -347,11 +348,13 @@ const mapview = Vue.component('mapview', {
       if (this.layerControl) {
         this.layerControl.remove(this.map);
       }
+
       this.map.eachLayer((existinglayer) => {
-        if (existinglayer.iconURL || existinglayer['_layers']){
+        if (this.removeMarkers.indexOf(existinglayer['_leaflet_id']) > -1){
           existinglayer.remove();
         }
       });
+      this.removeMarkers = [];
       this.layerControl = L.control.layers(null, null, { collapsed: true, position: 'topleft' });  
       this.markers = this.getMarkers();        
       for (var key in groupedMarkers){
@@ -359,6 +362,7 @@ const mapview = Vue.component('mapview', {
         var image = markers[0].legendIcon;
         if (this.markergrouping == 'grouped') {
           var group = L.featureGroup.subGroup(this.markers, markers);
+          this.removeMarkers.push(group['_leaflet_id']);
           this.map.addLayer(this.markers);
           var name = `${image} ${key}`;
           overLayers.push({"name":key, "layer":group})
@@ -366,8 +370,10 @@ const mapview = Vue.component('mapview', {
           this.layerControl.addTo(this.map);
           group.addTo(this.map)
         } else if (this.markergrouping == 'single') {
-         overLayers.push({"name":key, icon: image, active: true, "layer":L.layerGroup(markers)})
+          this.removeMarkers = this.removeMarkers.concat(markers.map(element => element['_leaflet_id']))
+          overLayers.push({"name":key, icon: image, active: true, "layer": L.layerGroup(markers)})
        }
+        
       }
       if (this.markergrouping == 'single') {
         this.layerControl = new L.Control.PanelLayers(null, overLayers, {
