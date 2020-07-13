@@ -101,13 +101,16 @@ const mapview = Vue.component('mapview', {
             v-if="marker" v-html="marker.iconURL">
           </a>
         </span>
-        <button v-if="sidebar.next" class="showRouteButton" v-on:click="showRoute = !showRoute">
+        <button v-if="apiUrl && sidebar.markers" class="showRouteButton" v-on:click="showRoute = !showRoute">
           <i v-if="!showRoute" class="fas fa-directions"></i>
           <i v-else class="fa fa-window-close"></i>
         </button>
         </h1>
       </header>
       <span v-if="showRoute">
+        <button v-on:click="getCurrentLocDirections(true)" class="dirButton" v-if="sidebar.markers && apiUrl">
+          <i class="fas fa-directions"></i> Current location to {{sidebar.title}}
+        </button>
         <button v-on:click="getCurrentLocDirections()" class="dirButton" v-if="sidebar.next && sidebar.markers && apiUrl">
           <i class="fas fa-directions"></i> Current location to {{sidebar.next.title}}
         </button>
@@ -116,7 +119,9 @@ const mapview = Vue.component('mapview', {
         </button>
         <div v-if="routeInfo" class="routeInfo">
           <h3>{{routeInfo.title}}</h3>
-          <div>~{{routeInfo.distance}} Miles, {{routeInfo.minutes}} minutes to {{sidebar.next.title}}</div>
+          <div v-if="routeInfo.distance">
+            ~{{routeInfo.distance}} Miles, {{routeInfo.minutes}} minutes to {{sidebar.next.title}}
+          </div>
           <ol>
             <li v-for="direction in routeInfo.directions">
               <a v-on:click="goToGeoJson(direction.geometry)">
@@ -201,11 +206,16 @@ const mapview = Vue.component('mapview', {
     },
     "current.position": function() {
       if (this.getdir){
+        this.routeInfo = {'title': 'Directions loading....'};
         var post = this.current.position._latlng;
-        post['title'] = 'Current location'
-        post['next'] = [this.sidebar['markers'][0]._latlng];
-        post['next'][0]['title'] = this.sidebar.title;
-        this.routeInfo = false;
+        post['title'] = 'Current location';
+        if (this.currentlocation){
+          post['next'] = [this.sidebar['markers'][0]._latlng];
+          post['next'][0]['title'] = this.sidebar.title;
+        } else {
+          post['next'] = [{'lat': this.sidebar.next.lat, 
+            'lng': this.sidebar.next.lng, 'title': this.sidebar.next.title}]
+        }
         this.getRouteData(post, true);
         this.getdir = false;
       }
@@ -282,8 +292,9 @@ const mapview = Vue.component('mapview', {
     locate: function(){
       this.map.locate({setView: true});
     },
-    getCurrentLocDirections: function() {
+    getCurrentLocDirections: function(currentlocation=false) {
       this.getdir = true;
+      this.currentlocation = currentlocation;
       this.locate();
     },
     onLocationFound: function(e) {
@@ -312,6 +323,7 @@ const mapview = Vue.component('mapview', {
     getRouteData: function(post, directions=false) {
       if (post['next'] && this.apiUrl){
         var url = `${this.apiUrl}${post['lng']},${post['lat']};${post['next'][0]['lng']},${post['next'][0]['lat']}?overview=full&geometries=geojson&steps=true`;
+        var vue = this;
         axios.get(url).then((response) => {
           if (Number.isInteger(post['index'])){
             this.$set(this.mapMarkers[post['index']], 'routeData', response.data);
@@ -322,7 +334,9 @@ const mapview = Vue.component('mapview', {
               'post': post,
               'routeData': response.data})
           }
-        })
+        }).catch(function(err){
+          vue.routeInfo.title = err.response.data.message;
+        });
       }
     },
     mapRoute: function(data, post) {
