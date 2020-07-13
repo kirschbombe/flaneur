@@ -1,7 +1,11 @@
 const searchview = Vue.component('searchview', {
   template: `
   <div>
-  <input v-model="searchterm" v-on:change="searchIndex()"/>
+  <div id="input-outer">
+    <input type="text" v-model="searchterm" v-on:change="searchIndex()"/>
+    <div v-on:click="clearSearch();" v-if="searchterm" class="clear">
+    </div>
+  </div>
   <input type="submit" value="Submit" v-on:submit="searchIndex()">
   <div v-if="results">
     <ul v-for="result in results">
@@ -36,6 +40,13 @@ const searchview = Vue.component('searchview', {
     this.buildIndex();
   },
   methods: {
+    clearSearch: function() {
+      this.searchterm = '';
+      this.results=[];
+      if (this.searchterm != this.$route.query['q']){
+        this.$router.push({query:{q: this.searchterm}});
+      }
+    },
     searchIndex: function() {
       var results = this.idx.search(this.searchterm);
       if (this.searchterm != this.$route.query['q']){
@@ -70,25 +81,15 @@ const mapview = Vue.component('mapview', {
   template: `
   <div>
   <div class="sidebar">
-      <div id="sidebar-content">
-      <button v-if="sidebar.next" v-on:click="showRoute = !showRoute">
-        <span v-if="showRoute">Hide</span><span v-else>Show</span> Directions to {{sidebar.next.title}}
-      </button>
-      <button v-on:click="locate()" v-if="sidebar.markers && apiUrl">
-        Get directions from current location
-      </button>
-      <span v-if="routeInfo && showRoute">
-        <div>~{{routeInfo.distance}} Miles, {{routeInfo.minutes}} minutes to {{sidebar.next.title}}</div>
-        <div v-html="routeInfo.directions"></div>
-      </span>
-      <span v-else-if="showRoute">Directions are loading</span>
+    <div id="sidebar-content">
       <header class="defaultheader">
         <p class="post-header" v-if="sidebar.headertitle">{{sidebar.headertitle}}</p>
         <p class="post-header" v-else>{{siteTitle}}</p>
-        <div>
+        <div class="nextprev">
           <router-link v-if="sidebar.prev" class="prev" :to="sidebar.prev.hash">
             <i class="fa fa-chevron-circle-left"></i> {{sidebar.prev.title}}
           </router-link>
+          <a href="" v-if="!sidebar.prev"></a>
           <router-link v-if="sidebar.next" class="next" :to="sidebar.next.hash">
             {{sidebar.next.title}} <i class="fa fa-chevron-circle-right"></i>
           </router-link>
@@ -100,12 +101,35 @@ const mapview = Vue.component('mapview', {
             v-if="marker" v-html="marker.iconURL">
           </a>
         </span>
+        <button v-if="sidebar.next" class="showRouteButton" v-on:click="showRoute = !showRoute">
+          <i v-if="!showRoute" class="fas fa-directions"></i>
+          <i v-else class="fa fa-window-close"></i>
+        </button>
         </h1>
       </header>
+      <span v-if="showRoute">
+        <button v-on:click="getCurrentLocDirections()" class="dirButton" v-if="sidebar.next && sidebar.markers && apiUrl">
+          <i class="fas fa-directions"></i> Current location to {{sidebar.next.title}}
+        </button>
+        <button class="dirButton" v-if="sidebar.next && sidebar.markers && apiUrl" v-on:click="getDirections()">
+          <i class="fas fa-directions"></i> {{sidebar.title}} to {{sidebar.next.title}}
+        </button>
+        <div v-if="routeInfo" class="routeInfo">
+          <h3>{{routeInfo.title}}</h3>
+          <div>~{{routeInfo.distance}} Miles, {{routeInfo.minutes}} minutes to {{sidebar.next.title}}</div>
+          <ol>
+            <li v-for="direction in routeInfo.directions">
+              <a v-on:click="goToGeoJson(direction.geometry)">
+                <span v-html="direction.direction"></span>
+              </a>
+            </li>
+          </ol>
+        </div>
+      </span>
       <span v-html="sidebar.content"></span>
       <div id="scriptholder"></div>
       <searchview v-if="searchview"></searchview>
-      </div>
+    </div>
   </div>
   <div id="map"></div>
   <div v-bind:class="menuType">
@@ -123,17 +147,21 @@ const mapview = Vue.component('mapview', {
       </a>
       </span>
     </div>  
-</div>
-  <select id="choose" class="dropdown" v-model="markergrouping">
-    <option value="grouped">Clustered</option>
-    <option value="single">Not clustered</option>
-  </select>
-
+  </div>
+  <div id="choose">
+    <select class="dropdown" v-model="markergrouping">
+      <option value="grouped">Clustered</option>
+      <option value="single">Not clustered</option>
+    </select>
+    <button class="locationButton" v-on:click="locate()" v-if="sidebar.markers && apiUrl">
+      <i class="fa fa-location-arrow"></i>
+    </button>
+  </div>
   </div>`,
   data: function() {
   	return {
       map: '',
-      markergrouping: 'grouped',
+      markergrouping: mapView.mapData['marker-grouping'],
       overLayers: [],
       markers: '',
       mapMarkers: [],
@@ -150,7 +178,8 @@ const mapview = Vue.component('mapview', {
       showRoute: false,
       apiUrl: mapView.mapData.directionapi,
       searchview: false,
-      removeMarkers: []
+      removeMarkers: [],
+      getdir: false
   	}
   },
   props: {
@@ -170,11 +199,16 @@ const mapview = Vue.component('mapview', {
       await this.$nextTick();
       this.lightBox();
     },
-    mapMarkers: function() {
-      this.getDirections();
-    },
-    "sidebar.index": function() {
-      this.getDirections();
+    "current.position": function() {
+      if (this.getdir){
+        var post = this.current.position._latlng;
+        post['title'] = 'Current location'
+        post['next'] = [this.sidebar['markers'][0]._latlng];
+        post['next'][0]['title'] = this.sidebar.title;
+        this.routeInfo = false;
+        this.getRouteData(post, true);
+        this.getdir = false;
+      }
     }
   },
   created() {   
@@ -189,6 +223,10 @@ const mapview = Vue.component('mapview', {
     this.map.on('locationerror', this.onLocationError);
   },
   methods: {
+    goToGeoJson: function(geometry) {
+      const firstitem = geometry.coordinates[0];
+      this.map.panTo([firstitem[1], firstitem[0]])
+    },
     cleanPostData: function() {
       for (var it=0; it<mapView.postdata.length; it++){
         const post = mapView.postdata[it];
@@ -207,16 +245,15 @@ const mapview = Vue.component('mapview', {
     },
     getDirections: function(maps=false) {
       var maps = maps ? maps : this.mapMarkers[this.sidebar.index];
+      this.mapMarkers.map(element => element['geojson'] ? this.updateGeoJson(element['geojson'], 'red') : '');
       if (maps && maps['geojson'] && this.apiUrl){
-        this.mapMarkers.map(element => element['geojson'] ? this.updateGeoJson(element['geojson'], 'red') : '')
         const routeData = maps['routeData'];
         this.updateGeoJson(maps['geojson'], 'blue');
         maps['geojson'].bringToFront();
-
         var sum = routeData.routes.reduce(function(a, b){
           return a + b['distance'];
         }, 0);
-        var directions = ''
+        var directions = []
         for (var rd=0; rd<routeData.routes.length; rd++){
           for(var lg=0; lg<routeData.routes[rd]['legs'].length; lg++){
            for (var st=0; st<routeData.routes[rd]['legs'][lg]['steps'].length; st++){
@@ -227,12 +264,14 @@ const mapview = Vue.component('mapview', {
               } else {
                 instruction = `${item.maneuver.type} ${item.maneuver.modifier ? item.maneuver.modifier : ''} ${item.name ? 'on ' + item.name: ''}`
               }
-              directions += ` ${instruction} | ${(item.distance*0.000621371192).toFixed(2)} miles | ${(item.duration/60).toFixed(2)} minutes<br>`
+              var direction = `${instruction} | ${(item.distance*0.000621371192).toFixed(2)} miles | ${(item.duration/60).toFixed(2)} minutes<br>`
+              directions.push({'direction': direction, 'geometry': item.geometry})
            }
           }
         }
         const data = {'distance': (sum*0.000621371192).toFixed(2), 
-        'minutes': ((sum/1.4)/60).toFixed(0), 'directions': directions}
+        'minutes': ((sum/1.4)/60).toFixed(0), 'directions': directions,
+        'title': `${maps['post']['title']} to ${maps['post']['next'][0]['title']}`}
         this.routeInfo = data;
       }
     },
@@ -242,6 +281,10 @@ const mapview = Vue.component('mapview', {
     },
     locate: function(){
       this.map.locate({setView: true});
+    },
+    getCurrentLocDirections: function() {
+      this.getdir = true;
+      this.locate();
     },
     onLocationFound: function(e) {
       if (this.current.position) {
@@ -253,9 +296,6 @@ const mapview = Vue.component('mapview', {
 
       this.current.position = L.marker(e.latlng).addTo(this.map)
       .bindPopup("You are within " + radius + " meters from this point").openPopup();
-      var post = e.latlng;
-      post['next'] = [this.sidebar['markers'][0]._latlng];
-      this.getRouteData(post, true);
       this.current.accuracy = L.circle(e.latlng, radius).addTo(this.map);
     },
     onLocationError: function(e) {
@@ -273,12 +313,14 @@ const mapview = Vue.component('mapview', {
       if (post['next'] && this.apiUrl){
         var url = `${this.apiUrl}${post['lng']},${post['lat']};${post['next'][0]['lng']},${post['next'][0]['lat']}?overview=full&geometries=geojson&steps=true`;
         axios.get(url).then((response) => {
-          if (post['index']){
+          if (Number.isInteger(post['index'])){
             this.$set(this.mapMarkers[post['index']], 'routeData', response.data);
           }
           var geojson = this.mapRoute(response.data, post);
           if(directions) {
-            this.getDirections({'geojson': geojson, 'routeData': response.data})
+            this.getDirections({'geojson': geojson, 
+              'post': post,
+              'routeData': response.data})
           }
         })
       }
@@ -287,7 +329,7 @@ const mapview = Vue.component('mapview', {
       var latlngs = data.routes.slice(-1).map(element => element['geometry']);
       var geojson = L.geoJSON(latlngs).addTo(this.map);
       this.updateGeoJson(geojson, 'red');
-      if (post['index']){
+      if (Number.isInteger(post['index'])){
         this.$set(this.mapMarkers[post['index']], 'geojson', geojson);
       } else {
         return geojson;
@@ -296,6 +338,8 @@ const mapview = Vue.component('mapview', {
     buildPage: function() {
       var path = this.$route.path == '/' ? '/home/' : this.$route.path;
       path = this.cleanHash(path);
+      this.showRoute = false;
+      this.searchview = false;
       var matchingpage = this.sitePages.filter(element => this.cleanHash(element['hash']) == path);
       if (matchingpage.length > 0){
         this.searchview = matchingpage[0].type == 'search' ? true : false;
@@ -325,8 +369,9 @@ const mapview = Vue.component('mapview', {
       }).addTo(this.map);
       this.createMarkers();
       this.addMarkers();
-      this.map.setView(setView);
-      this.map.fitBounds(this.markers.getBounds());
+      var setview = mapView.mapData.setView.split(',');
+      setview = setview.map(element => parseFloat(element.replace(/[^0-9.-]/g,'')));
+      this.map.setView([setview[0], setview[1]], setview[2]);
     },
     lightBox: function() {
       var images = document.getElementsByClassName("image");
@@ -348,7 +393,6 @@ const mapview = Vue.component('mapview', {
       if (this.layerControl) {
         this.layerControl.remove(this.map);
       }
-
       this.map.eachLayer((existinglayer) => {
         if (this.removeMarkers.indexOf(existinglayer['_leaflet_id']) > -1){
           existinglayer.remove();
@@ -370,8 +414,8 @@ const mapview = Vue.component('mapview', {
           this.layerControl.addTo(this.map);
           group.addTo(this.map)
         } else if (this.markergrouping == 'single') {
-          this.removeMarkers = this.removeMarkers.concat(markers.map(element => element['_leaflet_id']))
           overLayers.push({"name":key, icon: image, active: true, "layer": L.layerGroup(markers)})
+          this.removeMarkers = this.removeMarkers.concat(markers.map(element => element['_leaflet_id']))
        }
         
       }
