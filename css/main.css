@@ -593,3 +593,7 @@ input[type="submit"] {
     display: inline-block;
     background-image: radial-gradient({{site.accent_color}}, white);
 }
+
+.leaflet-panel-layers.compact.leaflet-control:not(.expanded) .leaflet-panel-layers-icon{
+  width: 100%;
+}

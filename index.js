@@ -188,9 +188,6 @@ const mapview = Vue.component('mapview', {
       homePage: '/home'
   	}
   },
-  props: {
-    sitedata: Object
-  },
   components: {
     'searchview': searchview
   },
@@ -229,8 +226,6 @@ const mapview = Vue.component('mapview', {
         this.getdir = false;
       }
     }
-  },
-  created() {   
   },
   mounted() {   
     this.cleanPostData();
@@ -440,7 +435,8 @@ const mapview = Vue.component('mapview', {
       this.markers = this.getMarkers();        
       for (var key in groupedMarkers){
         var markers = groupedMarkers[key].map(element => element['marker']);
-        var image = markers[0].legendIcon;
+        var image = [...new Set(markers.map(element=>element.legendIcon))]
+        image = `<div style="width: ${100/image.length}%">${image.join("")}</div>`;
         if (this.markergrouping == 'grouped') {
           var group = L.featureGroup.subGroup(this.markers, markers);
           this.removeMarkers.push(group['_leaflet_id']);
@@ -479,7 +475,7 @@ const mapview = Vue.component('mapview', {
         var iconurl = icon ? icon : baseurl + icons[iconindex];
         var order = post.order ? parseInt(post.order) : '';
         var mbox = new L.DivIcon({
-          html: `<img class="my-div-image" src="${iconurl}"/>
+          html: `<img class="my-div-image ${post.categories}" src="${iconurl}"/>
                 <span class="ordernumber">${order}</span>`,
           className: 'my-div-icon',
           iconSize : [30, 50],
