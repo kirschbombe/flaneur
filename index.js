@@ -184,7 +184,8 @@ const mapview = Vue.component('mapview', {
       searchview: false,
       removeMarkers: [],
       getdir: false,
-      geoCurrent: ''
+      geoCurrent: '',
+      homePage: '/home'
   	}
   },
   props: {
@@ -235,6 +236,8 @@ const mapview = Vue.component('mapview', {
     this.cleanPostData();
     var hasTitles = this.sitePages.filter(element => element['order'])
     this.menuItems = _.sortBy(hasTitles,"order");
+    const home = this.sitePages.filter(element => element['type'] == 'home')
+    home.length > 0 ? this.homePage = home[0]['hash'] : '';
     this.createMap();
     this.buildPage();
     this.map.on('locationfound', this.onLocationFound);
@@ -370,7 +373,7 @@ const mapview = Vue.component('mapview', {
       }
     },
     buildPage: function() {
-      var path = this.$route.path == '/' ? '/home/' : this.$route.path;
+      var path = this.$route.path == '/' ? this.homePage : this.$route.path;
       path = this.cleanHash(path);
       this.showRoute = false;
       this.searchview = false;
