@@ -195,6 +195,13 @@ const mapview = Vue.component('mapview', {
     markergrouping: function() {
       this.addMarkers();   
     },
+    geoCurrent: function(newVal, oldVal){
+      if (oldVal){
+        oldVal.remove();
+        this.map.removeLayer(this.current.position);
+      	this.map.removeLayer(this.current.accuracy);
+      }
+    },
     "$route.path": function(){
       this.buildPage();
     },
@@ -207,6 +214,8 @@ const mapview = Vue.component('mapview', {
        this.updateRoutes(geoJSON);
     },
     "sidebar.index": function() {
+       this.routeInfo = false;
+       this.geoCurrent = '';
        var geoJSON = this.mapMarkers[this.sidebar.index] ? this.mapMarkers[this.sidebar.index]['geojson'] : '';
        this.updateRoutes(geoJSON);
     },
@@ -259,13 +268,9 @@ const mapview = Vue.component('mapview', {
         }
       }
     },
-    getDirections: function(maps=false) {
-      if (!maps && this.geoCurrent){
-      	this.geoCurrent.remove();
-        this.map.removeLayer(this.current.position);
-        this.map.removeLayer(this.current.accuracy);
-      }
-      var maps = maps ? maps : this.mapMarkers[this.sidebar.index];
+    getDirections: function(inputmaps=false) {
+      var maps = inputmaps ? inputmaps : this.mapMarkers[this.sidebar.index];
+      this.geoCurrent = inputmaps ? inputmaps['geojson'] : ''; 
       if (maps && maps['geojson'] && this.apiUrl){
         const routeData = maps['routeData'];
         this.updateRoutes(maps['geojson']);
@@ -347,7 +352,6 @@ const mapview = Vue.component('mapview', {
           }
           var geojson = this.mapRoute(response.data, post);
           if(directions) {
-          	this.geoCurrent = geojson;
             this.getDirections({'geojson': geojson, 
               'post': post,
               'routeData': response.data})
