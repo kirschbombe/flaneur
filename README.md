@@ -28,7 +28,7 @@ Create posts in the standard `YYYY-MM-DD-title.md` format required for Jekyll. T
 * `headertitle:` the running title appears at the top of pages and posts. The default is to display the site title.
 * `desc:` This is the text for the map marker popup
 * `order:` This allows you to order the stops for things like a guided tour. It will add a number to the map marker. It will also add a previous/next button to the top of the post page. It will also create routes if there is a `directionsapi.`
-* `leafleticon:` Allows you to set a specific icon for the post.
+* `leafleticon:` Allows you to set a specific icon for the post (this needs to be the URL for the icon). By default icons are choosen based upon the order in the `assets/leaflet/img` folder.
 
 Images have special formatting using Liquid attributes. The Liquid tags are also needed for the Lightbox feature:
 ```md
