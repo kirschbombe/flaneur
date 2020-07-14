@@ -510,12 +510,10 @@ const mapview = Vue.component('mapview', {
       if (this.$route.path != post.hash){
         this.$router.push(post.hash);
       }
-      const next = post.next ? post.next[0] : post.next;
-      const prev = post.prev ? post.prev[0] : post.prev;
-      const sidebar = {'title': post.title, 
-        'menutitle': post.menutitle, 'markers': marker, 'date': post.date, 
-        'author': post.author, 'header': post.headertitle, 'next': next, 'prev': prev,
-        'index': post.index };
+      const sidebar = JSON.parse(JSON.stringify(post));
+      sidebar['markers'] = marker;
+      sidebar['next'] = post.next ? post.next[0] : post.next;
+      sidebar['prev'] = post.prev ? post.prev[0] : post.prev;
       if (post.html){
         var unescapedHTML = document.createElement('div')
         unescapedHTML.innerHTML = unescape(post.html);
