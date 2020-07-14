@@ -27,6 +27,8 @@ Create posts in the standard `YYYY-MM-DD-title.md` format required for Jekyll. T
 * `categories:` ["category1", "category2"] - these populate the map layers widget and article index pages
 * `headertitle:` the running title appears at the top of pages and posts. The default is to display the site title.
 * `desc:` This is the text for the map marker popup
+* `order:` This allows you to order the stops for things like a guided tour. It will add a number to the map marker. It will also add a previous/next button to the top of the post page. It will also create routes if there is a `directionsapi.`
+* `leafleticon:` Allows you to set a specific icon for the post.
 
 Images have special formatting using Liquid attributes. The Liquid tags are also needed for the Lightbox feature:
 ```md
@@ -52,6 +54,8 @@ Create pages that will show up in the sidebar.
 * **Homepage:** By default the homepage is the permalink /home. If you want to change that add `type: home` to the front matter of the page you want to be the homepage;
 
 * **Search:** Add `type: search` to any page and that will make the page the search page. In this example it is the `search.html` file.
+
+* **Article Index:** To add an item into the sort fields create a new file in the `_article_index` folder. Add the following fields to the front-matter: `layout: article-index` and `status: `. The status field should the be post field you want to sort by.
 
 ### Index
 Documentation on the current indexing feature coming soon...
