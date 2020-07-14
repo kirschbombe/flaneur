@@ -167,9 +167,6 @@ ul {
 
 /* Menus */
 .circle-content {
-	transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	height: 0;
-	width: 0;
 	top: 0;
 	position: absolute;
 	background-color: {{ site.accent_color }};
@@ -178,6 +175,19 @@ ul {
 	overflow: hidden;
 	}
 
+.circle-enter-active, .circle-leave-active {
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.circle-enter, .circle-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.dropdown-enter-active, .dropdown-leave-active {
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.dropdown-enter, .dropdown-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 .circle-content a{
 	margin-top: 10px;
 	color: white;

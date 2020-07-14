@@ -137,20 +137,20 @@ const mapview = Vue.component('mapview', {
   </div>
   <div id="map"></div>
   <div v-bind:class="menuType">
-    <button v-bind:class="menuType" v-if="!menuShown" class="menu-button" v-on:click="menuShown = !menuShown;">
+    <transition v-bind:name="menuType">
+      <button v-bind:class="menuType" v-if="!menuShown" class="menu-button" v-on:click="menuShown = !menuShown;">
         <i class="fa fa-bars"></i>
       </button>
-    <div v-bind:class="menuType + '-content'" class="sub-menu" >
-      <span v-if="menuShown">
-      <a v-on:click="menuShown = !menuShown">
+      <div v-if="menuShown" v-bind:class="menuType + '-content'" class="sub-menu" >
+      <a v-on:click="menuShown = !menuShown" key="close">
         <i v-if="menuShown" class="fa fa-times close-btn"></i>
       </a>
-      <a v-for="page in menuItems" v-on:click="updateHash(page)" class="menu-link">
+      <a v-for="page in menuItems" :key="page.hash" v-on:click="updateHash(page)" class="menu-link">
         <span v-if="page.menutitle" v-html="page.menutitle"></span>
         <span v-else v-html="page.title"></span>
       </a>
-      </span>
-    </div>  
+      </div>
+    </transition>  
   </div>
   <div id="choose">
     <select class="dropdown" v-model="markergrouping">
