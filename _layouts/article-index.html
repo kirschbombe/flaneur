@@ -22,7 +22,8 @@ layout: page
        {% endfor %}
       </ul>
   {% elsif status == 'category' %}
-     {% for category in site.categories %}
+    {% assign categories = site.categories | sort %}
+     {% for category in categories %}
        {% capture category_name %}{{ category | first }}{% endcapture %}
        <h3>{{ category_name | capitalize }}</h3>
        <ul>
