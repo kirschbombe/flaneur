@@ -34,7 +34,6 @@ const searchview = Vue.component('searchview', {
       searchItems[si]['id'] = searchItems[si]['slug'];
       this.searchitems[searchItems[si]['slug']] = searchItems[si];
     }
-    //this.buildIndex();
   },
   mounted() {   
     this.buildIndex();
@@ -184,7 +183,8 @@ const mapview = Vue.component('mapview', {
       apiUrl: mapView.mapData.directionapi,
       searchview: false,
       removeMarkers: [],
-      getdir: false
+      getdir: false,
+      geoCurrent: ''
   	}
   },
   props: {
@@ -203,6 +203,14 @@ const mapview = Vue.component('mapview', {
     "sidebar.content": async function(){
       await this.$nextTick();
       this.lightBox();
+    },
+    mapMarkers: function() {
+       var geoJSON = this.mapMarkers[this.sidebar.index] ? this.mapMarkers[this.sidebar.index]['geojson'] : '';
+       this.updateRoutes(geoJSON);
+    },
+    "sidebar.index": function() {
+       var geoJSON = this.mapMarkers[this.sidebar.index] ? this.mapMarkers[this.sidebar.index]['geojson'] : '';
+       this.updateRoutes(geoJSON);
     },
     "current.position": function() {
       if (this.getdir){
@@ -254,12 +262,15 @@ const mapview = Vue.component('mapview', {
       }
     },
     getDirections: function(maps=false) {
+      if (!maps && this.geoCurrent){
+      	this.geoCurrent.remove();
+        this.map.removeLayer(this.current.position);
+        this.map.removeLayer(this.current.accuracy);
+      }
       var maps = maps ? maps : this.mapMarkers[this.sidebar.index];
-      this.mapMarkers.map(element => element['geojson'] ? this.updateGeoJson(element['geojson'], 'red') : '');
       if (maps && maps['geojson'] && this.apiUrl){
         const routeData = maps['routeData'];
-        this.updateGeoJson(maps['geojson'], 'blue');
-        maps['geojson'].bringToFront();
+        this.updateRoutes(maps['geojson']);
         var sum = routeData.routes.reduce(function(a, b){
           return a + b['distance'];
         }, 0);
@@ -279,6 +290,7 @@ const mapview = Vue.component('mapview', {
            }
           }
         }
+        this.goToGeoJson(directions[0].geometry);
         const data = {'distance': (sum*0.000621371192).toFixed(2), 
         'minutes': ((sum/1.4)/60).toFixed(0), 'directions': directions,
         'title': `${maps['post']['title']} to ${maps['post']['next'][0]['title']}`}
@@ -312,6 +324,13 @@ const mapview = Vue.component('mapview', {
     onLocationError: function(e) {
       alert(e.message);
     },
+    updateRoutes: function(geoJSON){
+		this.mapMarkers.map(element => element['geojson'] ? this.updateGeoJson(element['geojson'], 'red') : '');
+		if (geoJSON){
+		   this.updateGeoJson(geoJSON, 'blue');
+		   geoJSON.bringToFront();
+		}
+    },
     updateGeoJson: function(geojson, color) {
       geojson.setStyle({
           weight: 2,
@@ -330,6 +349,7 @@ const mapview = Vue.component('mapview', {
           }
           var geojson = this.mapRoute(response.data, post);
           if(directions) {
+          	this.geoCurrent = geojson;
             this.getDirections({'geojson': geojson, 
               'post': post,
               'routeData': response.data})
