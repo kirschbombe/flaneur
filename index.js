@@ -88,10 +88,10 @@ const mapview = Vue.component('mapview', {
         <p class="post-header" v-if="sidebar.headertitle">{{sidebar.headertitle}}</p>
         <p class="post-header" v-else>{{siteTitle}}</p>
         <div class="nextprev">
-          <router-link v-if="sidebar.prev" class="prev" :to="sidebar.prev.url">
-            <i class="fa fa-chevron-circle-left"></i> {{sidebar.prev.title}}
+          <router-link v-if="sidebar.previous" class="previous" :to="sidebar.previous.url">
+            <i class="fa fa-chevron-circle-left"></i> {{sidebar.previous.title}}
           </router-link>
-          <a v-if="!sidebar.prev"></a>
+          <a v-if="!sidebar.previous"></a>
           <router-link v-if="sidebar.next" class="next" :to="sidebar.next.url">
             {{sidebar.next.title}} <i class="fa fa-chevron-circle-right"></i>
           </router-link>
@@ -510,8 +510,9 @@ const mapview = Vue.component('mapview', {
         marker.on('click', function(){
           vue.buildMapView(post, [this]);
         });
-        post['next'] = orderlist[order+1];
-        post['prev'] = orderlist[order-1]; 
+        const noorder = JSON.stringify(Object.keys(orderlist)) === '["undefined"]'
+        post['next'] = noorder ? [post.next] : orderlist[order+1];
+        post['previous'] = noorder ? [post.previous] : orderlist[order-1]; 
         post['index'] = i;
         this.getRouteData(post);
         this.mapMarkers.push({'post': post, 'marker': marker, 'group': post.categories }) 
@@ -531,7 +532,7 @@ const mapview = Vue.component('mapview', {
       const sidebar = JSON.parse(JSON.stringify(post));
       sidebar['markers'] = marker;
       sidebar['next'] = post.next ? post.next[0] : post.next;
-      sidebar['prev'] = post.prev ? post.prev[0] : post.prev;
+      sidebar['previous'] = post.previous ? post.previous[0] : post.previous;
       if (post.html){
         var unescapedHTML = document.createElement('div')
         unescapedHTML.innerHTML = unescape(post.html);
