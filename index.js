@@ -505,7 +505,7 @@ const mapview = Vue.component('mapview', {
           icon: mbox,
         }).bindPopup(`<strong>${post.title}</strong><br>${post.desc ? post.desc : ''}`, {offset:new L.Point(0,-30)});
         marker.iconURL = `<span class="referenceIcons" style="position:relative">${mbox.options.html}</span>`;
-        marker.legendIcon = `<img class="my-div-image" alt="${post.categories} icon" src="${iconurl}"/>`
+        marker.legendIcon = `<img class="legend" alt="${post.categories} icon" src="${iconurl}"/>`
         var vue = this;
         marker.on('click', function(){
           vue.buildMapView(post, [this]);
