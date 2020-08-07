@@ -10,7 +10,7 @@ const searchview = Vue.component('searchview', {
   <div v-if="results">
     <ul v-for="result in results">
       <li>
-        <router-link :to="result.hash">{{result.title}}
+        <router-link :to="result.url">{{result.title}}
         </router-link>
       </li>
     </ul>
@@ -28,14 +28,16 @@ const searchview = Vue.component('searchview', {
       searchitems: {}
     }
   },
-  created() {   
-    this.searchterm = this.$route.query['q'];
-    for (var si=0; si<searchItems.length; si++){
-      searchItems[si]['id'] = searchItems[si]['slug'];
-      this.searchitems[searchItems[si]['slug']] = searchItems[si];
-    }
+  props: {
+    'fields': Array,
+    'searchcontent': Array
   },
-  mounted() {   
+  created() {  
+    this.searchterm = this.$route.query['q'];
+    for (var si=0; si<this.searchcontent.length; si++){
+      this.searchcontent[si]['id'] = this.searchcontent[si]['slug'];
+      this.searchitems[this.searchcontent[si]['slug']] = this.searchcontent[si];
+    }
     this.buildIndex();
   },
   methods: {
@@ -58,15 +60,16 @@ const searchview = Vue.component('searchview', {
       }
     },
     buildIndex: function() {
+      var vue = this;
       this.idx = lunr(function() {
-        for (var fi=0; fi<searchFields.length; fi++){
-          const field = searchFields[fi];
+        for (var fi=0; fi<vue.fields.length; fi++){
+          const field = vue.fields[fi];
           this.field(field['field'], {'boost': field['boost']});
         }
       })
-      for (var si=0; si<searchItems.length; si++){
-        if (searchItems[si]['id']){
-          this.idx.add(searchItems[si]);
+      for (var si=0; si<this.searchcontent.length; si++){
+        if (this.searchcontent[si]['id']){
+          this.idx.add(this.searchcontent[si]);
         }
       }
       if (this.searchterm) {
@@ -85,11 +88,11 @@ const mapview = Vue.component('mapview', {
         <p class="post-header" v-if="sidebar.headertitle">{{sidebar.headertitle}}</p>
         <p class="post-header" v-else>{{siteTitle}}</p>
         <div class="nextprev">
-          <router-link v-if="sidebar.prev" class="prev" :to="sidebar.prev.hash">
+          <router-link v-if="sidebar.prev" class="prev" :to="sidebar.prev.url">
             <i class="fa fa-chevron-circle-left"></i> {{sidebar.prev.title}}
           </router-link>
           <a v-if="!sidebar.prev"></a>
-          <router-link v-if="sidebar.next" class="next" :to="sidebar.next.hash">
+          <router-link v-if="sidebar.next" class="next" :to="sidebar.next.url">
             {{sidebar.next.title}} <i class="fa fa-chevron-circle-right"></i>
           </router-link>
         </div>
@@ -132,7 +135,7 @@ const mapview = Vue.component('mapview', {
       </span>
       <span v-html="sidebar.content"></span>
       <div id="scriptholder"></div>
-      <searchview v-if="searchview"></searchview>
+      <searchview v-if="searchview" v-bind:fields=searchfields v-bind:searchcontent=searchData></searchview>
     </div>
   </div>
   <div id="map"></div>
@@ -145,7 +148,7 @@ const mapview = Vue.component('mapview', {
       <a aria-label="close menu" v-on:click="menuShown = !menuShown" key="close">
         <i v-if="menuShown" class="fa fa-times close-btn"></i>
       </a>
-      <a v-for="page in menuItems" :key="page.hash" v-on:click="updateHash(page)" class="menu-link">
+      <a v-for="page in menuItems" :key="page.url" v-on:click="updateHash(page)" class="menu-link">
         <span v-if="page.menutitle" v-html="page.menutitle"></span>
         <span v-else v-html="page.title"></span>
       </a>
@@ -165,7 +168,7 @@ const mapview = Vue.component('mapview', {
   data: function() {
   	return {
       map: '',
-      markergrouping: mapView.mapData['marker-grouping'],
+      markergrouping: this.mapdata['marker-grouping'],
       overLayers: [],
       markers: '',
       mapMarkers: [],
@@ -174,19 +177,29 @@ const mapview = Vue.component('mapview', {
       sitePages: [],
       menuItems: [],
       postData: [],
-      menuType: menuType,
+      searchData: [],
+      menuType: this.menutype,
       menuShown: false,
-      siteTitle: siteTitle,
+      siteTitle: this.sitetitle,
       current: {'position': '', 'accuracy': ''},
       routeInfo: false,
       showRoute: false,
-      apiUrl: mapView.mapData.directionapi,
+      apiUrl: this.mapdata.directionapi,
       searchview: false,
       removeMarkers: [],
       getdir: false,
       geoCurrent: '',
       homePage: '/home'
   	}
+  },
+  props: {
+    'mapdata': Object,
+    'sitetitle': String,
+    'menutype': String,
+    'searchfields': Array,
+    'icons': Array,
+    'baseurl': String,
+    'postdata': Array
   },
   components: {
     'searchview': searchview
@@ -241,7 +254,7 @@ const mapview = Vue.component('mapview', {
     var hasTitles = this.sitePages.filter(element => element['order'])
     this.menuItems = _.sortBy(hasTitles,"order");
     const home = this.sitePages.filter(element => element['type'] == 'home')
-    home.length > 0 ? this.homePage = home[0]['hash'] : '';
+    home.length > 0 ? this.homePage = home[0]['url'] : '';
     this.createMap();
     this.buildPage();
     this.map.on('locationfound', this.onLocationFound);
@@ -253,8 +266,9 @@ const mapview = Vue.component('mapview', {
       this.map.panTo([firstitem[1], firstitem[0]])
     },
     cleanPostData: function() {
-      for (var it=0; it<mapView.postdata.length; it++){
-        const post = mapView.postdata[it];
+      const flatpostdata = _.flatten(this.postdata)
+      for (var it=0; it<flatpostdata.length; it++){
+        const post = flatpostdata[it];
         if (post.categories && post.categories.length > 0){
           for (var ca=0; ca<post.categories.length; ca++){ 
             const copy = JSON.parse(JSON.stringify(post));
@@ -267,6 +281,7 @@ const mapview = Vue.component('mapview', {
           this.sitePages.push(JSON.parse(JSON.stringify(post)))
         }
       }
+      this.searchData = this.sitePages.concat(this.postData)
     },
     getDirections: function(inputmaps=false) {
       var maps = inputmaps ? inputmaps : this.mapMarkers[this.sidebar.index];
@@ -301,7 +316,7 @@ const mapview = Vue.component('mapview', {
       }
     },
     updateHash: function(page){
-      this.$router.push(page.hash);
+      this.$router.push(page.url);
       this.menuShown = !this.menuShown;
     },
     locate: function(){
@@ -376,17 +391,17 @@ const mapview = Vue.component('mapview', {
       path = this.cleanHash(path);
       this.showRoute = false;
       this.searchview = false;
-      var matchingpage = this.sitePages.filter(element => this.cleanHash(element['hash']) == path);
+      var matchingpage = this.sitePages.filter(element => this.cleanHash(element['url']) == path);
       if (matchingpage.length > 0){
         this.searchview = matchingpage[0].type == 'search' ? true : false;
         this.buildMapView(matchingpage[0])
       } else {
-        var posts = this.mapMarkers.filter(element => this.cleanHash(element['post']['hash']) == path);
+        var posts = this.mapMarkers.filter(element => this.cleanHash(element['post']['url']) == path);
         if (posts.length > 0){
           var markers = posts.map(post => post['marker'])
           this.buildMapView(posts[0]['post'], markers)
         } else {
-          this.buildMapView({'url': baseurl + this.$route.fullPath})
+          this.buildMapView({'url': this.baseurl + this.$route.fullPath})
         }
       }
     },
@@ -395,17 +410,17 @@ const mapview = Vue.component('mapview', {
     },
     createMap: function() {
       this.map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1);
-      L.tileLayer(mapView.mapData['map-tileset'], {
-        "attribution" : mapView.mapData['map-credits'],
-        "minZoom" : mapView.mapData['minZoom'],
-        "maxZoom" : mapView.mapData['maxZoom'],
+      L.tileLayer(this.mapdata['map-tileset'], {
+        "attribution" : this.mapdata['map-credits'],
+        "minZoom" : this.mapdata['minZoom'],
+        "maxZoom" : this.mapdata['maxZoom'],
         "errorTileUrl" : "img/error-tile-image.png",
         "subdomains" : ["a", "b", "c", "d"],
         "detectRetina" : true,
       }).addTo(this.map);
       this.createMarkers();
       this.addMarkers();
-      var setview = mapView.mapData.setView.split(',');
+      var setview = this.mapdata.setView.split(',');
       setview = setview.map(element => parseFloat(element.replace(/[^0-9.-]/g,'')));
       this.map.setView([setview[0], setview[1]], setview[2]);
     },
@@ -475,8 +490,8 @@ const mapview = Vue.component('mapview', {
         const post = JSON.parse(JSON.stringify(this.postData[i], this.replaceNull));
         var icon = post.leafleticon;
         const iconindex = categories.indexOf(post.categories);
-        var counter = iconindex >= icons.length ? 0 : iconindex;
-        var iconurl = icon ? icon : baseurl + icons[iconindex];
+        var counter = iconindex >= this.icons.length ? 0 : iconindex;
+        var iconurl = icon ? icon : this.baseurl + this.icons[iconindex];
         var order = post.order ? parseInt(post.order) : '';
         var mbox = new L.DivIcon({
           html: `<img alt="${post.title} icon" class="my-div-image ${post.categories}" src="${iconurl}"/>
@@ -488,7 +503,7 @@ const mapview = Vue.component('mapview', {
         
         var marker = L.marker([post.lat, post.lng], {
           icon: mbox,
-        }).bindPopup(`<strong>${post.title}</strong><br>${post.desc}`, {offset:new L.Point(0,-30)});
+        }).bindPopup(`<strong>${post.title}</strong><br>${post.desc ? post.desc : ''}`, {offset:new L.Point(0,-30)});
         marker.iconURL = `<span class="referenceIcons" style="position:relative">${mbox.options.html}</span>`;
         marker.legendIcon = `<img class="my-div-image" alt="${post.categories} icon" src="${iconurl}"/>`
         var vue = this;
@@ -510,8 +525,8 @@ const mapview = Vue.component('mapview', {
       }
     },
     buildMapView: function(post, marker=false) {
-      if (this.$route.path != post.hash){
-        this.$router.push(post.hash);
+      if (this.$route.path != post.url){
+        this.$router.push(post.url);
       }
       const sidebar = JSON.parse(JSON.stringify(post));
       sidebar['markers'] = marker;
@@ -524,7 +539,7 @@ const mapview = Vue.component('mapview', {
         this.javaScriptInserts(unescapedHTML);
         this.sidebar = sidebar;
       } else {
-        axios.get(post.url).then((response) => {
+        axios.get(this.baseurl + post.url).then((response) => {
           var unescapedHTML = document.createElement('div')
           unescapedHTML.innerHTML = response.data;
           this.javaScriptInserts(unescapedHTML);

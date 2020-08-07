@@ -1,45 +1,29 @@
-<!DOCTYPE html>
-<html>
-
+---
+layout: default
+---
   {% include head.html %}
-  <script>
-    window.mapView = window.mapView || {};
-    window.mapView.mapData = {{site.mapsettings | jsonify}};
-    var icons = []
-    {% for image in site.static_files %}
-      {% if image.path contains 'assets/leaflet/img' %}
-          icons.push('{{ image.path }}');
-      {% endif %}
-    {% endfor %}
-    window.mapView.icons = icons;
-    window.baseurl = '{{site.baseurl}}';
-    var postdata = []
-    var counter = -1;
-    counter += 1;
-    {% assign collections = site.collections | where_exp: 'item', 'item.label != "posts"' | map: "docs" %}
-    {% assign everything = site.posts | concat: site.pages %}
-    {% for collection in collections %}
 
-      {% assign everything = everything | concat: collection %}
-    {% endfor %}
-    {% for post in everything %}
-      postdata.push({'lat': {{ post.lat | jsonify}}, 'lng': {{ post.lng | jsonify }}, 'title': {{ post.title | jsonify}}, 'desc': {{post.desc | jsonify}}, 'leafleticon': {{post.leafleticon | jsonify}}, 'order': {{post.order | jsonify}}, 'url': '{{site.url}}{{site.baseurl}}{{post.url}}', 'categories': {{post.categories | jsonify}}, 'hash': {{post.url | jsonify}}, 'author': {{post.author | jsonify}}, 'date': '{{post.date | date_to_string}}', 'headertitle': {{post.headertitle | jsonify}}, 'menutitle': {{post.menutitle | jsonify}}, 'html': '{{post.output |strip_newlines | escape}}', 'slug': {{post.title | jsonify}}, 'content': {{post.content |strip_newlines | escape | jsonify}}, 'type': "{{post.type}}" })
-    {% endfor %}
-    window.setView = {{site.mapsettings.setView}};
-    window.mapView.postdata = postdata;
-    window.menuType = "{{site.menu-type}}";
-    window.siteTitle = "{{site.title}}"
-    window.searchItems = postdata;
-    window.searchFields = [{'field': 'title', 'boost': 10},
+  <!-- creates a list of mapmarker icons -->
+  {% assign icons = "" | split: ',' %}
+  {% for image in site.static_files %}
+      {% if image.path contains 'assets/leaflet/img' %}
+          {% assign icons = icons | push: image.path %}
+      {% endif %}
+   {% endfor %}
+
+  <!-- gets all the collections that are not posts -->
+  {% assign collections = site.collections | map: "docs"| push: site.pages %}
+  <div id="app">
+    <mapview :mapdata='{{site.mapsettings | jsonify}}'
+    sitetitle='{{site.title}}' menutype="{{site.menu-type}}"
+    :searchfields="[{'field': 'title', 'boost': 10},
     {'field': 'desc', 'boost': 10}, {'field': 'url', 'boost': 10},
     {'field': 'categories', 'boost': 10}, {'field': 'author', 'boost': 1},
     {'field': 'date', 'boost': 1}, {'field': 'headertitle', 'boost': 10},
-    {'field': 'menutitle', 'boost': 1}, {'field': 'html', 'boost': 10}, {'field': 'slug', 'boost': 1}, {'field': 'content', 'boost': 10}]
-    </script>
-  <div id="app">
-    <router-view></router-view>
+    {'field': 'menutitle', 'boost': 1}, {'field': 'output', 'boost': 10}, {'field': 'slug', 'boost': 1}, {'field': 'content', 'boost': 10}]"
+    :icons='{{icons | jsonify}}'
+    baseurl="{{site.baseurl}}"
+    :postdata='{{collections | jsonify | escape}}'
+    ></mapview>
   </div>
   <script src="index.js"></script>
-  <body>
-</body>
-</html>
