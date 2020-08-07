@@ -88,7 +88,7 @@ const mapview = Vue.component('mapview', {
           <router-link v-if="sidebar.prev" class="prev" :to="sidebar.prev.hash">
             <i class="fa fa-chevron-circle-left"></i> {{sidebar.prev.title}}
           </router-link>
-          <a href="" v-if="!sidebar.prev"></a>
+          <a v-if="!sidebar.prev"></a>
           <router-link v-if="sidebar.next" class="next" :to="sidebar.next.hash">
             {{sidebar.next.title}} <i class="fa fa-chevron-circle-right"></i>
           </router-link>
@@ -100,7 +100,7 @@ const mapview = Vue.component('mapview', {
             v-if="marker" v-html="marker.iconURL">
           </a>
         </span>
-        <button v-if="apiUrl && sidebar.markers" class="showRouteButton" v-on:click="showRoute = !showRoute">
+        <button aria-label="toggle directions" v-if="apiUrl && sidebar.markers" class="showRouteButton" v-on:click="showRoute = !showRoute">
           <i v-if="!showRoute" class="fas fa-directions"></i>
           <i v-else class="fa fa-window-close"></i>
         </button>
@@ -138,11 +138,11 @@ const mapview = Vue.component('mapview', {
   <div id="map"></div>
   <div v-bind:class="menuType">
     <transition v-bind:name="menuType">
-      <button v-bind:class="menuType" v-if="!menuShown" class="menu-button" v-on:click="menuShown = !menuShown;">
+      <button aria-label="open menu" v-bind:class="menuType" v-if="!menuShown" class="menu-button" v-on:click="menuShown = !menuShown;">
         <i class="fa fa-bars"></i>
       </button>
       <div v-if="menuShown" v-bind:class="menuType + '-content'" class="sub-menu" >
-      <a v-on:click="menuShown = !menuShown" key="close">
+      <a aria-label="close menu" v-on:click="menuShown = !menuShown" key="close">
         <i v-if="menuShown" class="fa fa-times close-btn"></i>
       </a>
       <a v-for="page in menuItems" :key="page.hash" v-on:click="updateHash(page)" class="menu-link">
@@ -153,11 +153,11 @@ const mapview = Vue.component('mapview', {
     </transition>  
   </div>
   <div id="choose">
-    <select class="dropdown" v-model="markergrouping">
-      <option value="grouped">Clustered</option>
-      <option value="single">Not clustered</option>
+    <select class="dropdown" aria-label="groupedsingledropdown" v-model="markergrouping">
+      <option aria-label="grouped" value="grouped">Clustered</option>
+      <option aria-label="single" value="single">Not clustered</option>
     </select>
-    <button class="locationButton" v-on:click="locate()" v-if="sidebar.markers && apiUrl">
+    <button aria-label="get current location button" class="locationButton" v-on:click="locate()" v-if="sidebar.markers && apiUrl">
       <i class="fa fa-location-arrow"></i>
     </button>
   </div>
@@ -479,7 +479,7 @@ const mapview = Vue.component('mapview', {
         var iconurl = icon ? icon : baseurl + icons[iconindex];
         var order = post.order ? parseInt(post.order) : '';
         var mbox = new L.DivIcon({
-          html: `<img class="my-div-image ${post.categories}" src="${iconurl}"/>
+          html: `<img alt="${post.title} icon" class="my-div-image ${post.categories}" src="${iconurl}"/>
                 <span class="ordernumber">${order}</span>`,
           className: 'my-div-icon',
           iconSize : [30, 50],
@@ -490,7 +490,7 @@ const mapview = Vue.component('mapview', {
           icon: mbox,
         }).bindPopup(`<strong>${post.title}</strong><br>${post.desc}`, {offset:new L.Point(0,-30)});
         marker.iconURL = `<span class="referenceIcons" style="position:relative">${mbox.options.html}</span>`;
-        marker.legendIcon = `<img class="my-div-image" src="${iconurl}"/>`
+        marker.legendIcon = `<img class="my-div-image" alt="${post.categories} icon" src="${iconurl}"/>`
         var vue = this;
         marker.on('click', function(){
           vue.buildMapView(post, [this]);
