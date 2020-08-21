@@ -9,7 +9,7 @@ layout: page
 {% endif %}
 
 {% for status in site.article-index %}
-    <a href="{{site.baseurl}}/#{{ status.url }}" class="index-button" onclick='onClick("{{status.url}}");'>{{ status.status }}</a>
+    <a href="{{site.baseurl}}/#{{ status.url }}" class="index-button">{{ status.status }}</a>
 {% endfor %}
 
 <!-- sort a-z -->
@@ -18,27 +18,22 @@ layout: page
      <h3>A-Z</h3>
      <ul>
        {% for post in azsort %}
-         <li><a href="{{site.baseurl}}/#{{post.url}}" onclick='onClick("{{post.url}}");'>{{post.title}}</a></li>
+         <li><a href="{{site.baseurl}}/#{{post.url}}">{{post.title}}</a></li>
        {% endfor %}
       </ul>
-   {% endif %}
-
-<!-- sort category -->
-<div id="post-list" class="index">
-   {% if status == 'category' %}
-     {% for category in site.categories %}
+  {% elsif status == 'category' %}
+    {% assign categories = site.categories | sort %}
+     {% for category in categories %}
        {% capture category_name %}{{ category | first }}{% endcapture %}
        <h3>{{ category_name | capitalize }}</h3>
        <ul>
          {% for post in site.categories[category_name] %}
-          <li><a href="{{site.baseurl}}/#{{post.url}}" onclick='onClick("{{post.url}}");'>{{post.title}}</a></li>
+          <li><a href="{{site.baseurl}}/#{{post.url}}">{{post.title}}</a></li>
          {% endfor %}
        </ul>
      {% endfor %}
-   {% endif %}
-
 <!-- sort date -->
-   {% if status == 'date' %}
+   {% elsif status == 'date' %}
          {% for post in site.posts %}
 	         {% unless post.next %}
 	           <h3>{{ post.date | date: '%Y %b' }}</h3>
@@ -50,21 +45,18 @@ layout: page
 	           {% endif %}
 	         {% endunless %}
              <ul>
-	             <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+	             <li><a href="{{site.baseurl}}/#{{ post.url }}">{{ post.title }}</a></li>
              </ul>
 	       {% endfor %}
+{% else %}
+    {% assign sorted = site.posts | sort: status | group_by: status %}
+    {% for item in sorted %}
+       <h3>{{ item.name | capitalize }}</h3>
+       <ul>
+         {% for post in item.items %}
+          <li><a href="{{site.baseurl}}/#{{post.url}}">{{post.title}}</a></li>
+         {% endfor %}
+       </ul>
+     {% endfor %}
    {% endif %}
-
-<!-- sort quarter -->
-   <!-- {% if status == 'quarter' %}
-     {% assign postsort = site.posts  | sort: 'date' | reverse | group_by_exp:"post", "post.quarter" %}
-       {% for year in postsort %}
-         <h3>{{year.name}}</h3>
-         <ul>
-           {% for post in year.items %}
-             <li><a href="{{site.baseurl}}/#{{post.url}}" onclick='onClick("{{post.url}}");'>{{post.title}}</a></li>
-           {% endfor %}
-         </ul>
-       {% endfor %}
-  {% endif %} -->
 </div>

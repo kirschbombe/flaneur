@@ -1,163 +1,29 @@
-<!DOCTYPE html>
-<html>
-
+---
+layout: default
+---
   {% include head.html %}
 
-  <body>
+  <!-- creates a list of mapmarker icons -->
+  {% assign icons = "" | split: ',' %}
+  {% for image in site.static_files %}
+      {% if image.path contains 'assets/leaflet/img' %}
+          {% assign icons = icons | push: image.path %}
+      {% endif %}
+   {% endfor %}
 
-  	{% include sidebar.html %}
-  	   <script>
-  	    window.onload = function(){
-        if (localStorage['selectedtem'] != undefined){
-          new_map();
-        } else {
-		new_map('{{site.marker-grouping}}');
-        }
-        reloadhtml();
-  	    };
-	      window.onhashchange = function() {
-        //new_map();
-	      reloadhtml();
-	      };
-  	    </script>
-
-    <div id="map"> </div>
-
-    <script>
-
-map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1);
-var markers = ''
-
- window.change_map = function(){
-    localStorage.setItem('selectedtem', document.getElementById("choose").value);
-    new_map();
-}
-
- function makeMap(markergrouping, map){
- 	if (markergrouping == 'grouped') { markers = new L.markerClusterGroup({showCoverageOnHover: false});}
-	else if (markergrouping == 'single') { markers = new L.featureGroup();}
- 	var items = {};
-
-      // set up variables to use during jekyll loop
-      var lat, lng, content, marker;
-          //map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1);
-          var map = map;
-
-      L.tileLayer('{{site.map-tileset}}', {
-        "attribution" : '{{site.map-credits}}',
-        "minZoom" : {{site.minZoom}},
-        "maxZoom" : {{site.maxZoom}},
-        "errorTileUrl" : "img/error-tile-image.png",
-        "subdomains" : ["a", "b", "c", "d"],
-        "detectRetina" : true,
-      }).addTo(map);
-
-      // jekyll loop through posts
-var overLayers = [];
-var icons = [];
-
-{% for image in site.static_files %}
-    {% if image.path contains 'assets/leaflet/img' %}
-        icons.push('{{ image.path }}');
-    {% endif %}
-{% endfor %}
-
-var counter = -1;
-var groups = {};
-
-{% for category in site.categories %}
-counter += 1;
-
-{% capture category_name %}{{ category | first }}{% endcapture %}
-var layers = [];
-if (markergrouping == 'grouped') {
-groups[counter] = L.featureGroup.subGroup(markers);
-var control = L.control.layers(null, null, { collapsed: true, position: 'topleft' });
-}
-
-{% for post in site.categories[category_name] %}
-      lat = {{ post.lat }};
-      lng = {{ post.lng }};
-
-      if ($(window).height() < {{site.window-height}} || $(window).width() < {{site.window-width}}){
-      content = "<strong>{{ post.title | truncatewords: 2}}</strong>";
-      } else {
-      content = "<strong>{{ post.title }}</strong><br>{{ post.desc }}";
-      }
-
-      var iconurl = "{{site.baseurl}}" + icons[counter]
-      var mbox = L.icon({
-            iconUrl: iconurl,
-            iconSize : [46, 50],
-            iconAnchor : [17, 36],
-            popupAnchor : [-1, 8]
-          });
-      var marker = L.marker([lat, lng], {
-        icon: mbox,
-      }).bindPopup(content, {offset:new L.Point(0,-30)});
-      marker.iconURL = iconurl;
-
-      if (markergrouping == 'grouped') {
-    	marker.addTo(groups[counter])
-      } else if (markergrouping == 'single') {
-      	layers.push(marker);
-      }
-
-      filename = "{{post.url}}"
-      if (items[filename] == undefined) {
-      items[filename] = [marker];
-      } else {
-      items[filename].push(marker);
-      }
-
-
-
-      marker.on('click', function(){
-        post_url = "{{site.baseurl}}/#{{post.url}}";
-        article_url = '{{site.baseurl}}{{post.url}}';
-        item_id = "{{post.url}}";
-        window.location = (post_url);
-        articlerender(article_url, item_id);
-
-      });
-
-      {% endfor %}
-
-    var imageurl = '<img class="legend" src="' + iconurl + '">'
-    if (markergrouping == 'grouped') {
-		map.addLayer(markers);
-		var name = imageurl + ' ' + '{{category_name}}';
-		overLayers.push({"name":name, "layer":groups[counter]})
-	} else if (markergrouping == 'single') {
-	 var name = '{{category_name}}';
-	 overLayers.push({"name":name, icon: imageurl, active: true, "layer":L.layerGroup(layers)})
-	}
- {% endfor %}
-      // end loop through posts
-if (markergrouping == 'grouped') {
-	for (i = 0; i < overLayers.length; i++) {
-		control.addOverlay(overLayers[i]['layer'], overLayers[i]['name']);
-		control.addTo(map);
-		overLayers[i]['layer'].addTo(map);
-	}
-	control.addTo(map);
-} else if (markergrouping == 'single') {
-	var panelLayers = new L.Control.PanelLayers(null, overLayers, {
-		compact: true,
-		collapsed: true,
-		position: 'topleft'
-	});
-map.addControl(panelLayers);
-
-}
-
-map.setView({{site.setView}})
-
-//map.fitBounds(markers.getBounds());
-return items;
-}
-</script>
-{% include menu.html %}
-{% include dropdown.html %}
-</body>
-</html>
+  <!-- gets all the collections that are not posts -->
+  {% assign collections = site.collections | map: "docs"| push: site.pages %}
+  <div id="app">
+    <mapview :mapdata='{{site.mapsettings | jsonify}}'
+    sitetitle='{{site.title}}' menutype="{{site.menu-type}}"
+    :searchfields="[{'field': 'title', 'boost': 10},
+    {'field': 'desc', 'boost': 10}, {'field': 'url', 'boost': 10},
+    {'field': 'categories', 'boost': 10}, {'field': 'author', 'boost': 1},
+    {'field': 'date', 'boost': 1}, {'field': 'headertitle', 'boost': 10},
+    {'field': 'menutitle', 'boost': 1}, {'field': 'output', 'boost': 10}, {'field': 'slug', 'boost': 1}, {'field': 'content', 'boost': 10}]"
+    :icons='{{icons | jsonify}}'
+    baseurl="{{site.baseurl}}"
+    :postdata='{{collections | jsonify | escape}}'
+    ></mapview>
+  </div>
+  <script src="index.js"></script>

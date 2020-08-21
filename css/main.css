@@ -13,7 +13,7 @@ body {
 }
 
 html {
-  font-family: 'Lato', sans-serif;
+  font-family: '{{site.accent_font}}';
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
@@ -68,8 +68,8 @@ a {
 
 #map {
   position:absolute;
-  width:60vw;
-  height:100vh;
+  width:60%;
+  height:100%;
 }
 
 /* .page-content {
@@ -78,8 +78,8 @@ a {
 } */
 
 .sidebar {
-	height:100vh;
-	width:40vw;
+	height:100%;
+	width:40%;
 	background-color:#fff;
 	position:fixed!important;
 	z-index:1;
@@ -167,9 +167,6 @@ ul {
 
 /* Menus */
 .circle-content {
-	transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	height: 0;
-	width: 0;
 	top: 0;
 	position: absolute;
 	background-color: {{ site.accent_color }};
@@ -178,11 +175,23 @@ ul {
 	overflow: hidden;
 	}
 
+.circle-enter-active, .circle-leave-active {
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.circle-enter, .circle-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.dropdown-enter-active, .dropdown-leave-active {
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.dropdown-enter, .dropdown-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 .circle-content a{
 	margin-top: 10px;
 	color: white;
 	text-decoration: none;
-	font-family: 'Lato', sans-serif;
 	font-size: 16px;
 	width: 100%;
 	display: block;
@@ -205,7 +214,6 @@ ul {
 }
 
 .dropdown-content {
-    display: none;
     position: absolute;
     background-color: {{ site.accent_color }};
     z-index: 1;
@@ -230,15 +238,17 @@ ul {
 }
 
 #choose {
-background-color: {{ site.accent_color }};
-color: white;
-padding: 15px;
-font-size: 16px;
-border: none;
-cursor: pointer;
-border-radius: 10px;
-position: absolute;
-display: inline-block;
+  position: absolute;
+  display: inline-block;
+}
+
+#choose > * {
+  background-color: {{ site.accent_color }};
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
 /* Media */
@@ -250,28 +260,39 @@ display: inline-block;
         position: absolute;
         left: 0;
         top: 0;
-        height: 40vh;
-        width: 100vw;
+        height: 40%;
+        width: 100%;
     }
+
+    .leaflet-top {
+      height: 100%;
+      overflow: auto;
+    }
+
+    .leaflet-panel-layers.compact {
+      max-height: 45%;
+      overflow: auto;
+    }
+
     .sidebar {
         position: absolute;
         left: 0;
-        top: 40vh;
-        height: 60vh;
-        width: 100vw
+        top: 40%;
+        height: 60%;
+        width: 100%
     }
 
 	  div.wrapper {
-		    width: 100vw;
-		    height: 40vh;
+		    width: 100%;
+		    height: 40%;
 		    overflow: auto;
 	  }
 
     .sub-menu, .menu-button {
-	     right: 0vw;
+	     right: 0%;
 	  }
 	#choose {
-	     bottom: 60vh;
+	     bottom: 60%;
 	  }
 }
 
@@ -282,19 +303,19 @@ display: inline-block;
 
     #map {
         top: 0;
-        height: 100vh;
-        width: 50vw;
+        height: 100%;
+        width: 50%;
         left: 0
     }
 
     .sidebar {
-    	width: 50vw;
+    	width: 50%;
       position: absolute;
       right: 0;
     }
 
 	  .sub-menu, .menu-button {
-	     right: 50vw;
+	     right: 50%;
 	  }
 	#choose {
 	bottom: 0;
@@ -302,8 +323,8 @@ display: inline-block;
 
     div.wrapper {
 		   top: 0;
-       width: 50vw;
-       height: 100vh;
+       width: 50%;
+       height: 100%;
 		   overflow: auto;
 	  }
 }
@@ -312,27 +333,27 @@ display: inline-block;
     .sidebar, #map {
         position: absolute;
         top: 0;
-        height: 100vh;
+        height: 100%;
       }
 
     #map {
         left: 0;
-        width: 55vw;
+        width: 55%;
     }
     .sidebar {
-        width: 45vw;
+        width: 45%;
         right: 0;
     }
     .sub-menu, .menu-button {
-	      right: 45vw;
+	      right: 45%;
 	  }
 	#choose {
 	bottom: 0;
 	}
     div.wrapper {
 		   left: 0;
-       width: 55vw;
-       height: 100vh;
+       width: 55%;
+       height: 100%;
 		   overflow: auto;
 	  }
 }
@@ -345,33 +366,44 @@ display: inline-block;
       position: absolute;
       left: 0;
       top: 0;
-      height: 40vh;
-      width: 100vw;
+      height: 40%;
+      width: 100%;
   }
+
+  .leaflet-top {
+      height: 100%;
+      overflow: auto;
+    }
+
+  .leaflet-panel-layers.compact {
+    max-height: 64%;
+    overflow: auto;
+  }
+
   .sidebar {
-      height: 60vh;
-      width: 100vw;
-      top: 40vh;
+      height: 60%;
+      width: 100%;
+      top: 40%;
   }
 
   .sub-menu, .menu-button {
-	   right: 0vw;
+	   right: 0%;
   }
 
   #choose {
-	bottom:60vh;
+	 bottom:60%;
   }
 
   div.wrapper {
-      width: 100vw;
-      height: 40vh;
+      width: 100%;
+      height: 40%;
       overflow: auto;
   }
 }
 
 /* Liquid attributes */
 .caption {
-  font-family: 'Barlow', sans-serif;
+  font-family: '{{site.accent_font}}', sans-serif;
   line-height: 1.4em;
   font-size: .9em;
   font-style: italic;
@@ -389,11 +421,30 @@ display: inline-block;
 }
 
 /* Leaflet */
-img.legend {
-	height: 24px;
+.legend {
+	max-height: 24px;
 	padding: 0px;
 	vertical-align: middle;
-	display: inline-block;
+	position: relative;
+
+}
+
+.legend img {
+  height: 40px;
+}
+
+.ordernumber {
+  font-weight: 900;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+}
+
+.referenceIcons .ordernumber {
+  font-size: 16px;
+  color: black;
 }
 
 img.article-marker {
@@ -406,18 +457,18 @@ img.article-marker {
 }
 
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
-  font-family: "Lato", sans-serif;
+  font-family: '{{site.accent_font}}', sans-serif;
   font-weight: 300;
   font-size: 14px;
 }
 
 label.leaflet-panel-layers-title {
-  font-family: "Lato", sans-serif;
+  font-family: '{{site.accent_font}}', sans-serif;
   font-weight: 300;
   text-transform: uppercase;
 }
 div.leaflet-control-layers-overlays {
-  font-family: "Lato", sans-serif;
+  font-family: '{{site.accent_font}}', sans-serif;
   font-weight: 300;
   text-transform: uppercase;
   font-size: .9em;
@@ -459,4 +510,116 @@ padding-top: 6em;
 .leaflet-retina .leaflet-control-layers-toggle  {
   background-image: url('{{site.baseurl}}/assets/leaflet/images/icon.png');
   background-size: 20px 30px;
+}
+
+.nextprev {
+  display: flex;
+  justify-content: space-between;
+}
+
+ol {
+  padding-left: 18px;
+  margin: 0px;
+}
+
+#input-outer {
+  height: 2em;
+  border: 1px #777 solid;
+  position: relative;
+  padding: 0px;
+  border-radius: 4px;
+  width: 70%;
+  display: inline-block;
+}
+
+input[type="submit"] {
+  outline: none;
+  color: #666;
+  margin-left: 5px;
+  padding: 5px;
+  border-radius: 4px;
+  display: inline-block;
+  max-width: 25%;
+}
+
+#input-outer input {
+  height: 100%;
+  border: 0px;
+  outline: none;
+  margin: 0 0 0 0px;
+  color: #666;
+  box-sizing: border-box;
+  padding: 5px;
+  padding-right: 35px;
+  border-radius: 4px;
+}
+.clear {
+  position: absolute;
+  float: right;
+  height: 2em;
+  width: 2em;
+  top: 0px;
+  right: 0px;
+  background: #aaa;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0px 4px 4px 0px;
+}
+.clear:after {
+  content: "\274c";
+  position: absolute;
+  top: 4px;
+  right: 7px;
+}
+.clear:hover,
+.clear:focus {
+  background: #888;
+}
+.clear:active {
+  background: #666;
+}
+
+.showRouteButton {
+  all: unset;
+  color: '{{site.accent_font}}';
+  -webkit-text-fill-color: '{{site.accent_font}}';
+  cursor: pointer;
+}
+
+.dirButton {
+  all: unset;
+  color: '{{site.accent_font}}';
+  -webkit-text-fill-color: '{{site.accent_font}}';
+  cursor: pointer;
+}
+
+.routeInfo::after, .routeInfo::before {
+      content: "";
+    position: relative;
+    width: 100%;
+    height: 1px;
+    display: inline-block;
+    background-image: radial-gradient({{site.accent_color}}, white);
+}
+
+.leaflet-panel-layers.compact.leaflet-control:not(.expanded) .leaflet-panel-layers-icon{
+  width: 100%;
+}
+
+.start {
+  text-align: center;
+}
+
+.start button {
+  background-color: {{site.accent_color}};
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
