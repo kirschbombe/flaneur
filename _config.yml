@@ -7,7 +7,8 @@ description:
 baseurl: "/flaneur" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 github_repo: https://github.com/kirschbombe/flaneur
-copyright_statement: © 2017 Dawn Childress. CC BY-NC-SA 4.0.
+copyright_name: Dawn Childress
+license: CC BY-NC-SA 4.0
 
 # build settings
 markdown: kramdown
