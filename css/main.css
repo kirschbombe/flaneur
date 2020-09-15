@@ -13,14 +13,14 @@ body {
 }
 
 html {
-  font-family: '{{site.accent_font}}';
+  font-family: {{site.default_font}};
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
 }
 
 h1, h2, h3, h4 {
-  font-family: '{{site.accent_font}}';
+  font-family: {{site.accent_font}};
   color: {{ site.accent_color }};
 }
 
@@ -192,6 +192,7 @@ ul {
 	margin-top: 10px;
 	color: white;
 	text-decoration: none;
+  font-family: {{site.default_font}};
 	font-size: 16px;
 	width: 100%;
 	display: block;
@@ -403,7 +404,7 @@ ul {
 
 /* Liquid attributes */
 .caption {
-  font-family: '{{site.accent_font}}', sans-serif;
+  font-family: {{site.default_font}};
   line-height: 1.4em;
   font-size: .9em;
   font-style: italic;
@@ -457,18 +458,18 @@ img.article-marker {
 }
 
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
-  font-family: '{{site.accent_font}}', sans-serif;
+  font-family: {{site.default_font}};
   font-weight: 300;
   font-size: 14px;
 }
 
 label.leaflet-panel-layers-title {
-  font-family: '{{site.accent_font}}', sans-serif;
+  font-family: {{site.default_font}};
   font-weight: 300;
   text-transform: uppercase;
 }
 div.leaflet-control-layers-overlays {
-  font-family: '{{site.accent_font}}', sans-serif;
+  font-family: {{site.default_font}};
   font-weight: 300;
   text-transform: uppercase;
   font-size: .9em;
@@ -582,15 +583,15 @@ input[type="submit"] {
 
 .showRouteButton {
   all: unset;
-  color: '{{site.accent_font}}';
-  -webkit-text-fill-color: '{{site.accent_font}}';
+  color: {{site.accent_color}};
+  -webkit-text-fill-color: {{site.accent_color}};
   cursor: pointer;
 }
 
 .dirButton {
   all: unset;
-  color: '{{site.accent_font}}';
-  -webkit-text-fill-color: '{{site.accent_font}}';
+  color: {{site.accent_color}};
+  -webkit-text-fill-color: {{site.accent_color}};
   cursor: pointer;
 }
 

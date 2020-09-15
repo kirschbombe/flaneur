@@ -16,6 +16,8 @@ encoding: utf-8
 # --STYLES--
 accent_color: rgba(18, 127, 157, 1)  # accent color can be any css accepted value
 accent_font: Della Respira  # Gogle Fonts import link is in head.html. You can specify the accent font here and it will add it to the main.css
+default_font: >
+  "Lato", sans-serif
 
 # --SOCIAL--
 twitter_username: kirschbombe
