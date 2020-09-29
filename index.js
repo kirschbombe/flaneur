@@ -85,8 +85,10 @@ const mapview = Vue.component('mapview', {
   <div class="sidebar">
     <div id="sidebar-content">
       <header class="defaultheader">
-        <p class="post-header" v-if="sidebar.headertitle">{{sidebar.headertitle}}</p>
-        <p class="post-header" v-else>{{siteTitle}}</p>
+        <p class="post-header" v-bind:class="sidebar.layout">
+          <span v-if="sidebar.headertitle">{{sidebar.headertitle}}</span>
+          <span v-else>{{siteTitle}}</span>
+        </p>
         <div class="nextprev">
           <router-link v-if="sidebar.previous" class="previous" :to="sidebar.previous.url">
             <i class="fa fa-chevron-circle-left"></i> {{sidebar.previous.title}}

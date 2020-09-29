@@ -1,6 +1,6 @@
 ---
-layout: page
-title: "Flâneur: A Jekyll theme for maps and texts"
+layout: home
+title: ""
 order: 1
 menutitle: Home
 ---
