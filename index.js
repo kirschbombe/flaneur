@@ -150,7 +150,7 @@ const mapview = Vue.component('mapview', {
       <a aria-label="close menu" v-on:click="menuShown = !menuShown" key="close">
         <i v-if="menuShown" class="fa fa-times close-btn"></i>
       </a>
-      <a v-for="page in menuItems" :key="page.url" v-on:click="updateHash(page)" class="menu-link">
+      <a v-for="page in menuItems" :key="page.url" v-on:click="toggleMenu(page)" class="menu-link">
         <span v-if="page.menutitle" v-html="page.menutitle"></span>
         <span v-else v-html="page.title"></span>
       </a>
@@ -317,9 +317,14 @@ const mapview = Vue.component('mapview', {
         this.routeInfo = data;
       }
     },
-    updateHash: function(page){
-      this.$router.push(page.url);
+    toggleMenu: function(page){
+      this.updateHash(page)
       this.menuShown = !this.menuShown;
+    },
+    updateHash: function(page){
+      if (this.$route.path != page.url){
+        this.$router.push(page.url);
+      }
     },
     locate: function(){
       this.map.locate({setView: true});
@@ -528,9 +533,7 @@ const mapview = Vue.component('mapview', {
       }
     },
     buildMapView: function(post, marker=false) {
-      if (this.$route.path != post.url){
-        this.$router.push(post.url);
-      }
+      var vue = this;
       const sidebar = JSON.parse(JSON.stringify(post));
       sidebar['markers'] = marker;
       sidebar['next'] = post.next ? post.next[0] : post.next;
@@ -541,6 +544,7 @@ const mapview = Vue.component('mapview', {
         sidebar['content']= unescapedHTML.textContent;
         this.javaScriptInserts(unescapedHTML);
         this.sidebar = sidebar;
+        this.updateHash(post)
       } else {
         axios.get(this.baseurl + post.url).then((response) => {
           var unescapedHTML = document.createElement('div')
@@ -548,7 +552,17 @@ const mapview = Vue.component('mapview', {
           this.javaScriptInserts(unescapedHTML);
           sidebar['content']= response.data;
           this.sidebar = sidebar;
-        })
+          this.updateHash(post)
+        }).catch(function (error) {
+          // handle error
+          var fourofour = vue.sitePages.filter(elem => elem['url'].indexOf('404') > -1);
+          if (fourofour.length > 0){
+            vue.buildMapView(fourofour[0])
+          } else {
+            sidebar['content'] = '<h2>Error!</h2>Page does not exist'
+            vue.sidebar = sidebar;
+          }
+      })
       }
       document.getElementsByClassName('sidebar')[0].scrollTop = 0;
       if (marker && marker.length > 0) {
