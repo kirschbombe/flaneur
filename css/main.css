@@ -13,7 +13,7 @@ body {
 }
 
 html {
-  font-family: {{site.default_font}};
+  font-family: {{site.base_font}};
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
@@ -192,7 +192,7 @@ ul {
 	margin-top: 10px;
 	color: white;
 	text-decoration: none;
-  font-family: {{site.default_font}};
+  font-family: {{site.base_font}};
 	font-size: 16px;
 	width: 100%;
 	display: block;
@@ -404,7 +404,7 @@ ul {
 
 /* Liquid attributes */
 .caption {
-  font-family: {{site.default_font}};
+  font-family: {{site.base_font}};
   line-height: 1.4em;
   font-size: .9em;
   font-style: italic;
@@ -458,18 +458,18 @@ img.article-marker {
 }
 
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
-  font-family: {{site.default_font}};
+  font-family: {{site.base_font}};
   font-weight: 300;
   font-size: 14px;
 }
 
 label.leaflet-panel-layers-title {
-  font-family: {{site.default_font}};
+  font-family: {{site.base_font}};
   font-weight: 300;
   text-transform: uppercase;
 }
 div.leaflet-control-layers-overlays {
-  font-family: {{site.default_font}};
+  font-family: {{site.base_font}};
   font-weight: 300;
   text-transform: uppercase;
   font-size: .9em;
