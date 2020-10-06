@@ -86,8 +86,9 @@ const mapview = Vue.component('mapview', {
     <div id="sidebar-content">
       <header class="defaultheader">
         <p class="post-header" v-bind:class="sidebar.layout">
-          <span v-if="sidebar.headertitle">{{sidebar.headertitle}}</span>
-          <span v-else>{{siteTitle}}</span>
+          <img v-if="headerimage" class="headerimage" v-bind:src="headerimage">
+          <span v-else-if="sidebar.headertitle">{{sidebar.headertitle}}</span>
+          <span v-else>{{sitetitle}}</span>
         </p>
         <div class="nextprev">
           <router-link v-if="sidebar.previous" class="previous" :to="sidebar.previous.url">
@@ -141,12 +142,12 @@ const mapview = Vue.component('mapview', {
     </div>
   </div>
   <div id="map"></div>
-  <div v-bind:class="menuType">
-    <transition v-bind:name="menuType">
-      <button aria-label="open menu" v-bind:class="menuType" v-if="!menuShown" class="menu-button" v-on:click="menuShown = !menuShown;">
+  <div v-bind:class="menutype">
+    <transition v-bind:name="menutype">
+      <button aria-label="open menu" v-bind:class="menutype" v-if="!menuShown" class="menu-button" v-on:click="menuShown = !menuShown;">
         <i class="fa fa-bars"></i>
       </button>
-      <div v-if="menuShown" v-bind:class="menuType + '-content'" class="sub-menu" >
+      <div v-if="menuShown" v-bind:class="menutype + '-content'" class="sub-menu" >
       <a aria-label="close menu" v-on:click="menuShown = !menuShown" key="close">
         <i v-if="menuShown" class="fa fa-times close-btn"></i>
       </a>
@@ -180,9 +181,7 @@ const mapview = Vue.component('mapview', {
       menuItems: [],
       postData: [],
       searchData: [],
-      menuType: this.menutype,
       menuShown: false,
-      siteTitle: this.sitetitle,
       current: {'position': '', 'accuracy': ''},
       routeInfo: false,
       showRoute: false,
@@ -201,7 +200,8 @@ const mapview = Vue.component('mapview', {
     'searchfields': Array,
     'icons': Array,
     'baseurl': String,
-    'postdata': Array
+    'postdata': Array,
+    'headerimage': String
   },
   components: {
     'searchview': searchview

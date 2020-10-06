@@ -20,6 +20,7 @@ To use this theme, fork this repo to your GitHub account and follow the setup in
 
 **Menu:** There are two menu display options, `dropdown` (default) and `circle`.
 
+**headerimage:** By default there is a running title on each page which is the site title. This can be replaced by an image. Put the url for the image in the config file and it will display the image instead of text.
 
 ### Posts
 Create posts in the standard `YYYY-MM-DD-title.md` format required for Jekyll. The front matter for posts has several important liquid markup points:
