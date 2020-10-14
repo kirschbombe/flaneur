@@ -44,6 +44,13 @@ Bibliographies also have special formatting using Liquid attributes:
 1. Entry 1
 2. Entry 2
 ```
+
+### Icons
+
+By default icons are stored in the `/assets/leaflet/img/` folder. To update icons used add images to that folder. The application will grab icons in alphabetically order so you can number them if you have a specific order you want them to be used in. 
+
+If you want a specific icon to be used for a specific category this is easily done. Simply rename the icon to the category in lowercase with spaces replaced with underscores. For example, `Arts and Culture` would become `arts_and_culture.svg`
+
 ### Pages
 Create pages that will show up in the sidebar. 
 

@@ -479,7 +479,6 @@ const mapview = Vue.component('mapview', {
           overLayers.push({"name":key, icon: image, active: true, "layer": L.layerGroup(markers)})
           this.removeMarkers = this.removeMarkers.concat(markers.map(element => element['_leaflet_id']))
        }
-        
       }
       if (this.markergrouping == 'single') {
         this.layerControl = new L.Control.PanelLayers(null, overLayers, {
@@ -499,7 +498,9 @@ const mapview = Vue.component('mapview', {
       for (var i=0; i<this.postData.length; i++){
         const post = JSON.parse(JSON.stringify(this.postData[i], this.replaceNull));
         var icon = post.leafleticon;
-        var iconindex = categories.indexOf(post.categories);
+        const iconname = post.categories.replace(" ", "_").toLowerCase();
+        const categoryicon = this.icons.findIndex(elem => iconname == elem.split('/').slice(-1)[0].split('.')[0].trim());
+        var iconindex = categoryicon > -1 ? categoryicon : categories.indexOf(post.categories);
         iconindex = iconindex >= this.icons.length || iconindex == -1 ? 0 : iconindex;
         var iconurl = icon ? icon : this.baseurl + this.icons[iconindex];
         var order = post.order ? parseInt(post.order) : '';
