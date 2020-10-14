@@ -21,6 +21,7 @@ layout: default
     {'field': 'categories', 'boost': 10}, {'field': 'author', 'boost': 1},
     {'field': 'date', 'boost': 1}, {'field': 'headertitle', 'boost': 10},
     {'field': 'menutitle', 'boost': 1}, {'field': 'output', 'boost': 10}, {'field': 'slug', 'boost': 1}, {'field': 'content', 'boost': 10}]"
+    headerimage='{{site.headerimage}}'
     :icons='{{icons | jsonify}}'
     baseurl="{{site.baseurl}}"
     :postdata='{{collections | jsonify | escape}}'
