@@ -496,8 +496,8 @@ const mapview = Vue.component('mapview', {
       for (var i=0; i<this.postData.length; i++){
         const post = JSON.parse(JSON.stringify(this.postData[i], this.replaceNull));
         var icon = post.leafleticon;
-        const iconindex = categories.indexOf(post.categories);
-        var counter = iconindex >= this.icons.length ? 0 : iconindex;
+        var iconindex = categories.indexOf(post.categories);
+        iconindex = iconindex >= this.icons.length || iconindex == -1 ? 0 : iconindex;
         var iconurl = icon ? icon : this.baseurl + this.icons[iconindex];
         var order = post.order ? parseInt(post.order) : '';
         var mbox = new L.DivIcon({
