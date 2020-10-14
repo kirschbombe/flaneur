@@ -447,6 +447,8 @@ const mapview = Vue.component('mapview', {
     },
     addMarkers: function() {
       var groupedMarkers = _.groupBy(this.mapMarkers, function(b) { return b.group});
+      const gMKeys = Object.keys(groupedMarkers);
+      groupedMarkers = gMKeys.length < 2 && !gMKeys[0] ? _.groupBy(this.mapMarkers, function(b) { return b.marker.legendIcon}) : groupedMarkers;
       var overLayers = [];
       if (this.layerControl) {
         this.layerControl.remove(this.map);
@@ -462,6 +464,7 @@ const mapview = Vue.component('mapview', {
       for (var key in groupedMarkers){
         var markers = groupedMarkers[key].map(element => element['marker']);
         var image = [...new Set(markers.map(element=>element.legendIcon))]
+        key = key != image ? key : '';
         image = `<div style="width: ${100/image.length}%">${image.join("")}</div>`;
         if (this.markergrouping == 'grouped') {
           var group = L.featureGroup.subGroup(this.markers, markers);
