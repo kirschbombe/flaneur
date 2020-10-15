@@ -187,7 +187,6 @@ const mapview = Vue.component('mapview', {
       showRoute: false,
       apiUrl: this.mapdata.directionapi,
       searchview: false,
-      removeMarkers: [],
       getdir: false,
       geoCurrent: '',
       homePage: '/home'
@@ -208,7 +207,10 @@ const mapview = Vue.component('mapview', {
   },
   watch: {
     markergrouping: function() {
-      this.addMarkers();   
+      const latlng = this.map.getCenter();
+      latlng['zoom'] = this.map.getZoom();
+      this.map.remove();
+      this.createMap(latlng);
     },
     geoCurrent: function(newVal, oldVal){
       if (oldVal){
@@ -405,8 +407,7 @@ const mapview = Vue.component('mapview', {
       } else {
         var posts = this.mapMarkers.filter(element => this.cleanHash(element['post']['url']) == path);
         if (posts.length > 0){
-          var markers = posts.map(post => post['marker'])
-          this.buildMapView(posts[0]['post'], markers)
+          this.buildMapView(posts[0]['post'])
         } else {
           this.buildMapView({'url': this.baseurl + this.$route.fullPath})
         }
@@ -415,7 +416,7 @@ const mapview = Vue.component('mapview', {
     cleanHash: function(hash) {
       return hash.replace(/^\/+|\/+$/g, '');
     },
-    createMap: function() {
+    createMap: function(bounds=false) {
       this.map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1);
       L.tileLayer(this.mapdata['map-tileset'], {
         "attribution" : this.mapdata['map-credits'],
@@ -427,9 +428,13 @@ const mapview = Vue.component('mapview', {
       }).addTo(this.map);
       this.createMarkers();
       this.addMarkers();
-      var setview = this.mapdata.setView.split(',');
-      setview = setview.map(element => parseFloat(element.replace(/[^0-9.-]/g,'')));
-      this.map.setView([setview[0], setview[1]], setview[2]);
+      if (bounds){
+        this.map.setView([bounds.lat, bounds.lng], bounds.zoom)
+      } else {
+        var setview = this.mapdata.setView.split(',');
+        setview = setview.map(element => parseFloat(element.replace(/[^0-9.-]/g,'')));
+        this.map.setView([setview[0], setview[1]], setview[2]);
+      }
     },
     lightBox: function() {
       var images = document.getElementsByClassName("image");
@@ -447,36 +452,30 @@ const mapview = Vue.component('mapview', {
     },
     addMarkers: function() {
       var groupedMarkers = _.groupBy(this.mapMarkers, function(b) { return b.group});
+      const gMKeys = Object.keys(groupedMarkers);
+      groupedMarkers = gMKeys.length < 2 && !gMKeys[0] ? _.groupBy(this.mapMarkers, function(b) { return b.marker.legendIcon}) : groupedMarkers;
       var overLayers = [];
-      if (this.layerControl) {
-        this.layerControl.remove(this.map);
-      }
-      this.map.eachLayer((existinglayer) => {
-        if (this.removeMarkers.indexOf(existinglayer['_leaflet_id']) > -1){
-          existinglayer.remove();
-        }
-      });
-      this.removeMarkers = [];
       this.layerControl = L.control.layers(null, null, { collapsed: true, position: 'topleft' });  
       this.markers = this.getMarkers();        
       for (var key in groupedMarkers){
         var markers = groupedMarkers[key].map(element => element['marker']);
-        var image = [...new Set(markers.map(element=>element.legendIcon))]
-        image = `<div style="width: ${100/image.length}%">${image.join("")}</div>`;
+        const icons = [...new Set(markers.map(elem => elem.legendIcon))];
+        const label = icons.indexOf(key) > -1 ? '' : key;
         if (this.markergrouping == 'grouped') {
+          var image = icons.map(icon=>
+          `<img class="legend" alt="icon" src="${icon}"/>`);
+          image = `${image.join("")} ${label}`
           var group = L.featureGroup.subGroup(this.markers, markers);
-          this.removeMarkers.push(group['_leaflet_id']);
           this.map.addLayer(this.markers);
-          var name = `${image} ${key}`;
-          overLayers.push({"name":key, "layer":group})
-          this.layerControl.addOverlay(group, name);
+          overLayers.push({"name":label, "layer":group})
+          this.layerControl.addOverlay(group, image);
           this.layerControl.addTo(this.map);
           group.addTo(this.map)
         } else if (this.markergrouping == 'single') {
-          overLayers.push({"name":key, icon: image, active: true, "layer": L.layerGroup(markers)})
-          this.removeMarkers = this.removeMarkers.concat(markers.map(element => element['_leaflet_id']))
+          var image = icons.map(icon => 
+            `<img style="width: ${100/icons.length}%" class="legend" alt="icon" src="${icon}"/>`);
+          overLayers.push({"name":label, icon: image.join(""), active: true, "layer": L.layerGroup(markers)})
        }
-        
       }
       if (this.markergrouping == 'single') {
         this.layerControl = new L.Control.PanelLayers(null, overLayers, {
@@ -496,15 +495,16 @@ const mapview = Vue.component('mapview', {
       for (var i=0; i<this.postData.length; i++){
         const post = JSON.parse(JSON.stringify(this.postData[i], this.replaceNull));
         var icon = post.leafleticon;
-        const iconindex = categories.indexOf(post.categories);
-        var counter = iconindex >= this.icons.length ? 0 : iconindex;
+        const categoryicon = post.categories && post.categories.length > 0 ? this.icons.findIndex(elem => post.categories.replace(" ", "_").toLowerCase() == elem.split('/').slice(-1)[0].split('.')[0].trim()) : -1;
+        var iconindex = categoryicon > -1 ? categoryicon : categories.indexOf(post.categories);
+        iconindex = iconindex >= this.icons.length || iconindex == -1 ? 0 : iconindex;
         var iconurl = icon ? icon : this.baseurl + this.icons[iconindex];
         var order = post.order ? parseInt(post.order) : '';
         var mbox = new L.DivIcon({
-          html: `<img alt="${post.title} icon" class="my-div-image ${post.categories}" src="${iconurl}"/>
+          html: `<img alt="${post.title} icon" class=" ${post.categories}" src="${iconurl}"/>
                 <span class="ordernumber">${order}</span>`,
-          className: 'my-div-icon',
-          iconSize : [30, 50],
+          className: 'leaflet-marker-icon',
+          iconSize : [46, 50],
           popupAnchor : [-1, 5],
         });
         
@@ -512,10 +512,10 @@ const mapview = Vue.component('mapview', {
           icon: mbox,
         }).bindPopup(`<strong>${post.title}</strong><br>${post.desc ? post.desc : ''}`, {offset:new L.Point(0,-30)});
         marker.iconURL = `<span class="referenceIcons" style="position:relative">${mbox.options.html}</span>`;
-        marker.legendIcon = `<img class="legend" alt="${post.categories} icon" src="${iconurl}"/>`
+        marker.legendIcon = iconurl;
         var vue = this;
         marker.on('click', function(){
-          vue.buildMapView(post, [this]);
+          vue.updateHash(post);
         });
         const noorder = JSON.stringify(Object.keys(orderlist)) === '["undefined"]'
         post['next'] = noorder ? [post.next] : orderlist[order+1];
@@ -532,10 +532,12 @@ const mapview = Vue.component('mapview', {
         return val; // return unchanged
       }
     },
-    buildMapView: function(post, marker=false) {
+    buildMapView: function(post) {
       var vue = this;
       const sidebar = JSON.parse(JSON.stringify(post));
-      sidebar['markers'] = marker;
+      var matchingPosts = this.mapMarkers.filter(element => element['post']['url'] == post['url']);
+      var markers = matchingPosts.length > 0 ? matchingPosts.map(post => post['marker']) : false;
+      sidebar['markers'] = markers;
       sidebar['next'] = post.next ? post.next[0] : post.next;
       sidebar['previous'] = post.previous ? post.previous[0] : post.previous;
       if (post.html){
@@ -565,8 +567,8 @@ const mapview = Vue.component('mapview', {
       })
       }
       document.getElementsByClassName('sidebar')[0].scrollTop = 0;
-      if (marker && marker.length > 0) {
-        this.goToMarker(marker[0])
+      if (markers && !markers.some(elem => elem.getPopup().isOpen())) {
+        this.goToMarker(markers[0]);
       }
     },
     javaScriptInserts: function(returnedHTML) {
