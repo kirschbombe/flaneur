@@ -459,11 +459,11 @@ const mapview = Vue.component('mapview', {
       this.markers = this.getMarkers();        
       for (var key in groupedMarkers){
         var markers = groupedMarkers[key].map(element => element['marker']);
-        const icons = markers.map(elem => elem.legendIcon);
-        const label = icons.join("") == key ? '' : key;
+        const icons = [...new Set(markers.map(elem => elem.legendIcon))];
+        const label = icons.indexOf(key) > -1 ? '' : key;
         if (this.markergrouping == 'grouped') {
-          var image = [...new Set(icons.map(icon=>
-          `<img class="legend" alt="icon" src="${icon}"/>`))]
+          var image = icons.map(icon=>
+          `<img class="legend" alt="icon" src="${icon}"/>`);
           image = `${image.join("")} ${label}`
           var group = L.featureGroup.subGroup(this.markers, markers);
           this.map.addLayer(this.markers);
@@ -472,8 +472,8 @@ const mapview = Vue.component('mapview', {
           this.layerControl.addTo(this.map);
           group.addTo(this.map)
         } else if (this.markergrouping == 'single') {
-          var image = [...new Set(icons.map(icon=>
-          `<img style="width: ${100/markers.length}%" class="legend" alt="icon" src="${icon}"/>`))]
+          var image = icons.map(icon => 
+            `<img style="width: ${100/icons.length}%" class="legend" alt="icon" src="${icon}"/>`);
           overLayers.push({"name":label, icon: image.join(""), active: true, "layer": L.layerGroup(markers)})
        }
       }
@@ -567,7 +567,7 @@ const mapview = Vue.component('mapview', {
       })
       }
       document.getElementsByClassName('sidebar')[0].scrollTop = 0;
-      if (!markers.some(elem => elem.getPopup().isOpen())) {
+      if (markers && !markers.some(elem => elem.getPopup().isOpen())) {
         this.goToMarker(markers[0]);
       }
     },
