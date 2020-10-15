@@ -428,6 +428,7 @@ ul {
 	vertical-align: middle;
 	position: relative;
   display: inline-block;
+
 }
 
 .legend img {
@@ -614,5 +615,5 @@ input[type="submit"] {
 }
 
 .post-header.home {
-  display: none;
+	display: none;
 }
