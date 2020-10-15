@@ -102,7 +102,7 @@ const mapview = Vue.component('mapview', {
         <h1 class="title" v-if="sidebar.title">{{sidebar.title}}
         <span v-if="sidebar.markers">
           <a v-for="marker in sidebar.markers"
-            v-on:click="goToMarker(marker)" class="legend" 
+            v-on:click="goToMarker(marker)" class="sidebarIcon"
             v-if="marker" v-html="marker.iconURL">
           </a>
         </span>

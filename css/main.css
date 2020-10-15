@@ -421,6 +421,17 @@ ul {
   font-weight: 300;
 }
 
+.sidebarIcon {
+  padding: 0px;
+  vertical-align: middle;
+  position: relative;
+  display: inline-block;
+}
+
+.referenceIcons img {
+  height: 40px;
+}
+
 /* Leaflet */
 .legend {
 	height: 24px;
@@ -430,17 +441,13 @@ ul {
   display: inline-block;
 }
 
-.legend img {
-  height: 40px;
-}
-
 .ordernumber {
   font-weight: 900;
   font-size: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -70%);
+  transform: translate(-55%, -35%);
 }
 
 .referenceIcons .ordernumber {
