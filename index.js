@@ -442,7 +442,7 @@ const mapview = Vue.component('mapview', {
       for (var i = 0; i < images.length; i++) {
           var image = images[i].querySelector('img');
           var link = image.src;
-          images[i].innerHTML = "<a href='" + link + "' data-lightbox=' ' data-title='" + caption[i].innerHTML  + "'>" + image.outerHTML + "</a>";
+          images[i].innerHTML = `<a href='${link}' data-lightbox=" " data-title='${caption[i].innerHTML.replace(/'/g, '&#39;')}'>${image.outerHTML.replace(/'/g, '&#39;')}</a>`;
       }
 
       lightbox.option({
