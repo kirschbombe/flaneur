@@ -1,5 +1,18 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2600530.svg)](https://doi.org/10.5281/zenodo.2600530)
 
+<!-- MarkdownTOC -->
+
+- Flâneur
+	- Config file
+	- Posts
+	- Icons
+	- Pages
+	- Index
+	- Leaflet
+
+<!-- /MarkdownTOC -->
+
+
 ## Flâneur
 
 Flâneur is a Jekyll theme for maps and texts using Leaflet, and based on the earlier [Boulevardier](https://github.com/kirschbombe/boulevardier) framework.
@@ -20,7 +33,7 @@ To use this theme, fork this repo to your GitHub account and follow the setup in
 
 **Menu:** There are two menu display options, `dropdown` (default) and `circle`.
 
-**headerimage:** By default there is a running title on each page which is the site title. This can be replaced by an image. Put the url for the image in the config file and it will display the image instead of text.
+**headerimage:** By default there is a header title on each page which is the site title. This can be replaced by an image. Put the url for the image in the config file and it will display the image instead of text.
 
 ### Posts
 Create posts in the standard `YYYY-MM-DD-title.md` format required for Jekyll. The front matter for posts has several important liquid markup points:
