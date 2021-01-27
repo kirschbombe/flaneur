@@ -9,7 +9,9 @@ layout: page
 {% endif %}
 
 {% for status in site.article-index %}
+  {% if status.status %}
     <a href="{{site.baseurl}}/#{{ status.url }}" class="index-button">{{ status.status }}</a>
+  {% endif %}
 {% endfor %}
 
 <!-- sort a-z -->
