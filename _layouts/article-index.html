@@ -9,7 +9,9 @@ layout: page
 {% endif %}
 
 {% for status in site.article-index %}
+  {% if status.status %}
     <a href="{{site.baseurl}}/#{{ status.url }}" class="index-button">{{ status.status }}</a>
+  {% endif %}
 {% endfor %}
 
 <!-- sort a-z -->
@@ -34,20 +36,22 @@ layout: page
      {% endfor %}
 <!-- sort date -->
    {% elsif status == 'date' %}
-         {% for post in site.posts %}
-	         {% unless post.next %}
-	           <h3>{{ post.date | date: '%Y %b' }}</h3>
-	           {% else %}
-	             {% capture year %}{{ post.date | date: '%Y %b' }}{% endcapture %}
-	             {% capture nyear %}{{ post.next.date | date: '%Y %b' }}{% endcapture %}
-	           {% if year != nyear %}
-	             <h3>{{ post.date | date: '%Y %b' }}</h3>
-	           {% endif %}
-	         {% endunless %}
-             <ul>
-	             <li><a href="{{site.baseurl}}/#{{ post.url }}">{{ post.title }}</a></li>
-             </ul>
-	       {% endfor %}
+     {% assign years = '' | split: "" %}
+     {% assign groupedposts = site.posts | group_by_exp: "item", "item.date | date: '%Y %b'" | sort: "name" | reverse %}
+
+    {% for postgroup in groupedposts %}
+
+    <h3><b>{{postgroup.name}}</b></h3>
+    <ul>
+    {% assign groupedbyyear = postgroup.items | sort: "date" | reverse | group_by: "date" %}
+    {% for groupedyear in groupedbyyear %}
+      {% assign sortedposts = groupedyear.items | sort_natural: "title" %}
+      {% for post in sortedposts %}
+      <li><a href="#{{post.url}}">{{post.title }}</a></li>
+    {% endfor %}
+  {% endfor %}
+  </ul>
+{% endfor %}
 {% else %}
     {% assign sorted = site.posts | sort: status | group_by: status %}
     {% for item in sorted %}
