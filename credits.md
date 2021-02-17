@@ -5,8 +5,8 @@ permalink: /credits/
 order: 3
 ---
 
-#### Jekyll theme
-* Flâneur is based on my earlier mapping and texts framework, [Boulevardier](https://github.com/kirschbombe/boulevardier). The framework was ported to Jekyll by [Dawn Childress](https://github.com/kirschbombe) and [Niqui O'Neill](https://github.com/dnoneill).
+#### Flâneur
+* The Flâneur framework and Jekyll theme is developed and maintained by [Dawn Childress](https://github.com/kirschbombe) and [Niqui O'Neill](https://github.com/dnoneill). Flâneur was ported from the earlier mapping and texts framework, [Boulevardier](https://github.com/kirschbombe/boulevardier).
 
 
 #### Icons
