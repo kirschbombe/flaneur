@@ -1,5 +1,5 @@
 ---
 layout: article-index
-title: Browse Articles
+title: "Browse Articles: A-Z"
 status: a-z
 ---

@@ -2,14 +2,7 @@
 layout: default
 ---
 <div class="post">
-    <header>
-  	  <!-- <p class="post-header">{{page.runningtitle}}</p> -->
-      <!-- OR -->
-      <p class="post-header">{{ site.title }}</p>
-
-      <h1 class="post-title">{{ page.title }}</h1>
-      <p class="byline">{% if page.author %}{{ page.author }}, {{ page.date | date_to_string }}{% endif %}</p>
-    </header>
+	<p class="byline">{% if page.author %}{{ page.author }}, {{ page.date | date_to_string }}{% endif %}</p>
     <div id="content">
       {{ page.content }}
     </div>
@@ -18,19 +11,3 @@ layout: default
       <p class="citation">{% include citation.html %}</p>
     </div>
 </div>
-
-
-<script>
-var images = document.getElementsByClassName("image");
-var caption = document.getElementsByClassName("caption");
-
-for (var i = 0; i < images.length; i++) {
-   	var link = images[i].childNodes[0].src;
-   	images[i].innerHTML = "<a href='" + link + "' data-lightbox=' ' data-title='" + caption[i].innerHTML  + "'>" + images[i].childNodes[0].outerHTML + "</a>";
-}
-
-lightbox.option({
-      'resizeDuration': 200,
-      'wrapAround': true
- })
-</script>

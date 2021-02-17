@@ -19,19 +19,23 @@ encoding: utf-8
 # --STYLES--
 accent_color: rgba(18, 127, 157, 1)  # accent color can be any css accepted value
 accent_font: Della Respira  # Gogle Fonts import link is in head.html. You can specify the accent font here and it will add it to the main.css
+base_font: >
+  "Lato", sans-serif
 
 # --SOCIAL--
 twitter_username: kirschbombe
 github_username:  kirschbombe
 
 # --MAP SETTINGS--
-map-tileset: 'https://api.mapbox.com/styles/v1/kirschbombe/cje1t61823u2p2rrwv3u68kf3/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia2lyc2NoYm9tYmUiLCJhIjoiMTQxVVBocyJ9.vWLKsRKrVWU-WG2QlMb6kA'
-map-credits: '<a target="_blank" href="https://github.com/kirschbombe/flaneur">Flâneur</a> | Tiles: Mapbox'
-minZoom: 0
-maxZoom: 20
-setView: '[48.856614, 2.352222], 12'  # set map center point and zoom. See http://leafletjs.com/reference-1.2.0.html for more info.
-marker-grouping: grouped # sets the default clustering action. Options: grouped, single
-
+mapsettings:
+  map-tileset: 'https://api.mapbox.com/styles/v1/kirschbombe/cje1t61823u2p2rrwv3u68kf3/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia2lyc2NoYm9tYmUiLCJhIjoiMTQxVVBocyJ9.vWLKsRKrVWU-WG2QlMb6kA'
+  map-credits: '<a target="_blank" href="https://github.com/kirschbombe/flaneur">Flâneur</a> | Tiles: Mapbox'
+  minZoom: 0
+  maxZoom: 20
+  setView: '[48.856614, 2.352222], 12'  # set map center point and zoom. See http://leafletjs.com/reference-1.2.0.html for more info.
+  marker-grouping: grouped # sets the default clustering action. Options: grouped, single
+  #directionapi: https://router.project-osrm.org/route/v1/walking/
+  
 # Truncates map marker popup on small screens to only display post title
 window-height: 600
 window-width: 550
@@ -55,6 +59,3 @@ menu-type: dropdown  # options: dropdown, circle
 menu-height: '200px'
 menu-width: '200px'
 menu-opacity: '.95'
-
-#pages to exclude in menu
-exclude_pages: [ "index.html", 'home.md']
