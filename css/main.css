@@ -60,6 +60,7 @@ a {
   color: {{ site.accent_color }};
   text-decoration: none;
   font-weight: 400;
+  cursor: pointer;
 }
 
 .container {
@@ -243,7 +244,7 @@ ul {
   display: inline-block;
 }
 
-#choose > * {
+#choose > *, .where-am-i {
   background-color: {{ site.accent_color }};
   color: white;
   font-size: 16px;
@@ -252,6 +253,9 @@ ul {
   border-radius: 10px;
 }
 
+.where-am-i {
+  display: block;
+}
 /* Media */
 @media (max-width:768px) {
     html {
@@ -421,17 +425,24 @@ ul {
   font-weight: 300;
 }
 
+.sidebarIcon {
+  padding: 0px;
+  vertical-align: middle;
+  position: relative;
+  display: inline-block;
+}
+
+.referenceIcons img {
+  height: 40px;
+}
+
 /* Leaflet */
 .legend {
-	max-height: 24px;
+	height: 24px;
 	padding: 0px;
 	vertical-align: middle;
 	position: relative;
-
-}
-
-.legend img {
-  height: 40px;
+  display: inline-block;
 }
 
 .ordernumber {
@@ -611,4 +622,8 @@ input[type="submit"] {
 .headerimage {
   max-width: 100%;
   max-height: 20px;
+}
+
+.post-header.home {
+  display: none;
 }
